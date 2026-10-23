@@ -1,0 +1,159 @@
+{
+  "format_version": "1.0",
+  "result": {
+    "chip_id": "lm2596-adj",
+    "status": "answered",
+    "question": "LM2596-ADJ 条件检查",
+    "answer": "工作输入电压 VIN：满足该项。12 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。\n反馈分压标称输出：标称估算。R1 为 FB→GND，R2 为 VOUT→FB；VOUT≈1.23×(1+R2/R1)=4.92 V。仅为标称估算，不含基准与电阻误差。\n应用建议：下侧电阻 R1：满足该项。1000 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+    "inputs": {
+      "vin": "12 V",
+      "r_lower": "1 kΩ",
+      "r_upper": "3 kΩ"
+    },
+    "parameters": [],
+    "checks": [
+      {
+        "rule": "vin",
+        "title": "工作输入电压 VIN",
+        "status": "satisfied",
+        "message": "12 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+        "evidence_ids": [
+          "recommended"
+        ],
+        "value": 12.0,
+        "unit": "V",
+        "minimum": null,
+        "maximum": null,
+        "fields": []
+      },
+      {
+        "rule": "divider_voltage",
+        "title": "反馈分压标称输出",
+        "status": "estimated",
+        "message": "R1 为 FB→GND，R2 为 VOUT→FB；VOUT≈1.23×(1+R2/R1)=4.92 V。仅为标称估算，不含基准与电阻误差。",
+        "evidence_ids": [
+          "divider"
+        ],
+        "value": 4.92,
+        "unit": "V",
+        "minimum": null,
+        "maximum": null,
+        "fields": []
+      },
+      {
+        "rule": "divider_r1",
+        "title": "应用建议：下侧电阻 R1",
+        "status": "satisfied",
+        "message": "1000 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+        "evidence_ids": [
+          "divider"
+        ],
+        "value": 1000.0,
+        "unit": "Ω",
+        "minimum": null,
+        "maximum": null,
+        "fields": []
+      }
+    ],
+    "evidence_ids": [
+      "recommended",
+      "divider"
+    ],
+    "hits": [
+      {
+        "evidence_id": "recommended",
+        "score": 1.0
+      },
+      {
+        "evidence_id": "divider",
+        "score": 1.0
+      }
+    ],
+    "notices": [
+      "每项仅核对该项限制，不代表完整电路设计通过。",
+      "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+      "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+    ],
+    "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+    "source_revision": "SNVS124G (Rev. G)",
+    "condition_inputs": {},
+    "applicability": [],
+    "condition_errors": {}
+  },
+  "source": {
+    "doc_id": "lm2596-adj-snvs124g",
+    "chip_id": "lm2596-adj",
+    "manufacturer": "TI",
+    "model": "LM2596-ADJ",
+    "title": "LM2596 SIMPLE SWITCHER Power Converter 150-kHz 3-A Step-Down Voltage Regulator",
+    "revision": "SNVS124G (Rev. G)",
+    "revision_date": "2023-03",
+    "url": "https://www.ti.com/lit/ds/symlink/lm2596.pdf",
+    "downloaded_at": "2026-10-22T14:47:50.489164+00:00",
+    "sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+    "pages": 47,
+    "indexed_core_pages": 35,
+    "pdf_file": "lm2596.pdf",
+    "extraction": {
+      "tool": "pdfplumber",
+      "version": "0.11.10",
+      "x_tolerance": 1
+    },
+    "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+  },
+  "evidence": [
+    {
+      "id": "recommended",
+      "title": "推荐工作条件",
+      "page": 5,
+      "printed_page": "5",
+      "bbox": [
+        54.0,
+        459.0,
+        558.0,
+        519.0
+      ],
+      "context_bboxes": [],
+      "text": "7.3 Operating Conditions\nMIN MAX UNIT\nSupply voltage 4.5 40 V\nTemperature –40 125 °C",
+      "context": "",
+      "aliases": [
+        "推荐工作条件",
+        "推荐输入电压",
+        "供电范围",
+        "输入范围",
+        "工作温度",
+        "VIN",
+        "operating conditions"
+      ],
+      "summary": "LM2596-ADJ 工作供电范围为 4.5–40 V；45 V 是绝对最大值。工作温度行原表未明确温度类型。",
+      "curated": true,
+      "context_only": false
+    },
+    {
+      "id": "divider",
+      "title": "反馈分压",
+      "page": 28,
+      "printed_page": "28",
+      "bbox": [
+        54.0,
+        222.0,
+        558.0,
+        405.0
+      ],
+      "context_bboxes": [],
+      "text": "9.2.2.2.1 Programming Output Voltage\nSelect R and R , as shown in Table 9-6\n1 2\nUse Equation 5 to select the appropriate resistor values.\n(5)\nR2\nSelect a V O v U a T lu = e V f R o E r F R 1 + b R e1tw w ee h n er e 2 V 4 R 0 E F Ω = a 1 n .2 d 3 1 V .5 kΩ. The lower resistor values minimize noise pickup in the\n1\nsensitive feedback pin. (For the lowest temperature coefficient and the best stability with time, use 1% metal film\nresistors.). Calculate R with Equation 6.\n2\n(6)\nVOUT\nSelect R R2 to = b R e 1 1 V kRΩEF, 1 − % 1 . Solve for R in Equation 7.\n1 2",
+      "context": "",
+      "aliases": [
+        "反馈分压",
+        "分压电阻",
+        "输出电压计算",
+        "输出公式",
+        "R1",
+        "R2"
+      ],
+      "summary": "标称 VOUT≈1.23×(1+R2/R1)，R1 是 FB 到 GND 的下侧电阻，建议取 240 Ω–1.5 kΩ；R2 是输出到 FB 的上侧电阻。",
+      "curated": true,
+      "context_only": false
+    }
+  ]
+}

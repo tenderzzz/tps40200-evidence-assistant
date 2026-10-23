@@ -1,0 +1,20 @@
+{
+  "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+  "method": "先保存未经修正的 pdfplumber 文本与表格，再按原图独立抄录关键三类表格。",
+  "reviewed_pages": [
+    4,
+    5,
+    6,
+    12
+  ],
+  "reviewer": "Codex 对照原图复核（无独立第三方复核）",
+  "manual_transcription": true,
+  "notes": [
+    "VFB 的 VDD 条件为合并单元格，只适用于后三行；第一行为 COMP=FB。",
+    "Isrc/Isnk/AOL/GBWP 的第二个数在 TYP 栏；tMIN 的两个数在 TYP/MAX 栏。",
+    "DMAX 的两个数在 MIN/TYP 栏，MAX 留空；OCDF 的 2% 在 MAX 栏。",
+    "p.12 的 μ 被文本提取误写成 m，定时电阻电流上限按原图保存为 750 μA。",
+    "p.6 AOL/GBWP 的脚注 (1) 指向 p.5 的设计保证说明，p.6 本地只印出脚注 (2)。",
+    "p.12 正文的约 4.3/4.1 V 不覆盖 p.5 电气特性表和 p.4 推荐条件。"
+  ]
+}

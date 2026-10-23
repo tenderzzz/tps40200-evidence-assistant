@@ -1,0 +1,21 @@
+{
+  "doc_id": "ne555-slfs022k",
+  "chip_id": "ne555",
+  "manufacturer": "TI",
+  "model": "NE555",
+  "title": "xx555 Precision Timers",
+  "revision": "SLFS022K (Rev. K)",
+  "revision_date": "2026-03",
+  "url": "https://www.ti.com/lit/ds/symlink/ne555.pdf",
+  "downloaded_at": "2026-10-22T14:47:52.086531+00:00",
+  "sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+  "pages": 39,
+  "indexed_core_pages": 20,
+  "pdf_file": "ne555.pdf",
+  "extraction": {
+    "tool": "pdfplumber",
+    "version": "0.11.10",
+    "x_tolerance": 1
+  },
+  "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+}

@@ -1,0 +1,150 @@
+{
+  "format_version": "1.0",
+  "result": {
+    "chip_id": "ne555",
+    "status": "answered",
+    "question": "TRIG",
+    "answer": "TRIG 典型阈值约为 VCC/3；NE555 的 5 V 与 15 V 参数行分别保留。",
+    "inputs": {},
+    "parameters": [
+      {
+        "id": "trigger-15",
+        "symbol": "TRIG",
+        "name": "触发阈值",
+        "rating": "electrical",
+        "minimum": 4.5,
+        "typical": 5.0,
+        "maximum": 5.6,
+        "unit": "V",
+        "conditions": "VCC=15 V；TA=25°C",
+        "notes": [],
+        "evidence_ids": [
+          "trigger"
+        ],
+        "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+      },
+      {
+        "id": "trigger-5",
+        "symbol": "TRIG",
+        "name": "触发阈值",
+        "rating": "electrical",
+        "minimum": 1.1,
+        "typical": 1.67,
+        "maximum": 2.2,
+        "unit": "V",
+        "conditions": "VCC=5 V；TA=25°C",
+        "notes": [],
+        "evidence_ids": [
+          "trigger"
+        ],
+        "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+      }
+    ],
+    "checks": [],
+    "evidence_ids": [
+      "trigger"
+    ],
+    "hits": [
+      {
+        "evidence_id": "trigger",
+        "score": 104.9666
+      },
+      {
+        "evidence_id": "trigger-current",
+        "score": 1.23788
+      },
+      {
+        "evidence_id": "monostable",
+        "score": 1.07489
+      }
+    ],
+    "notices": [
+      "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+      "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+      "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+    ],
+    "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+    "source_revision": "SLFS022K (Rev. K)",
+    "condition_inputs": {
+      "vcc": "5 V",
+      "ambient_temperature": "25 °C"
+    },
+    "applicability": [
+      {
+        "parameter_id": "trigger-15",
+        "status": "not_applicable",
+        "reasons": [
+          "不符合 供电电压 VCC 的原表条件。"
+        ],
+        "evidence_ids": [
+          "trigger"
+        ]
+      },
+      {
+        "parameter_id": "trigger-5",
+        "status": "applicable",
+        "reasons": [
+          "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+        ],
+        "evidence_ids": [
+          "trigger"
+        ]
+      }
+    ],
+    "condition_errors": {}
+  },
+  "source": {
+    "doc_id": "ne555-slfs022k",
+    "chip_id": "ne555",
+    "manufacturer": "TI",
+    "model": "NE555",
+    "title": "xx555 Precision Timers",
+    "revision": "SLFS022K (Rev. K)",
+    "revision_date": "2026-03",
+    "url": "https://www.ti.com/lit/ds/symlink/ne555.pdf",
+    "downloaded_at": "2026-10-22T14:47:52.086531+00:00",
+    "sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+    "pages": 39,
+    "indexed_core_pages": 20,
+    "pdf_file": "ne555.pdf",
+    "extraction": {
+      "tool": "pdfplumber",
+      "version": "0.11.10",
+      "x_tolerance": 1
+    },
+    "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+  },
+  "evidence": [
+    {
+      "id": "trigger",
+      "title": "触发阈值",
+      "page": 5,
+      "printed_page": "5",
+      "bbox": [
+        54.0,
+        445.0,
+        558.0,
+        527.0
+      ],
+      "context_bboxes": [
+        [
+          54.0,
+          329.0,
+          558.0,
+          373.0
+        ]
+      ],
+      "text": "NA555, NE555, SA555 4.5 5 5.6\nV = 15V\nCC\nSE555 4.8 5 5.2\nV = 15V, T = –55°C to +125°C SE555 3 6\nCC A\nTRIG voltage level V\nNA555, NE555, SA555 1.1 1.67 2.2\nV = 5V\nCC\nSE555 1.45 1.67 1.9\nV = 5V, T = –55°C to +125°C SE555 1.9\nCC A",
+      "context": "5.5 Electrical Characteristics\nat V = 5V to 15V and T = 25°C (unless otherwise noted)\nCC A\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n跨页脚注（p.6）：(1) This parameter influences the maximum value of the timing resistors R and R in the circuit of Figure 6-5. For example, when\nA B\nV CC = 5V, the maximum value is R = R A + R B ≅ 3.4MΩ, and for V CC = 15V, the maximum value is R A + R B ≅ 10MΩ.",
+      "aliases": [
+        "触发阈值",
+        "触发电压",
+        "TRIG",
+        "trigger"
+      ],
+      "summary": "TRIG 典型阈值约为 VCC/3；NE555 的 5 V 与 15 V 参数行分别保留。",
+      "curated": true,
+      "context_only": false
+    }
+  ]
+}

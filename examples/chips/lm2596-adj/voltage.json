@@ -1,0 +1,131 @@
+{
+  "format_version": "1.0",
+  "result": {
+    "chip_id": "lm2596-adj",
+    "status": "answered",
+    "question": "输入电压 41 V 能正常工作吗？",
+    "answer": "工作输入电压 VIN：不满足该项。41 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+    "inputs": {
+      "vin": "41 V"
+    },
+    "parameters": [],
+    "checks": [
+      {
+        "rule": "vin",
+        "title": "工作输入电压 VIN",
+        "status": "violated",
+        "message": "41 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+        "evidence_ids": [
+          "recommended"
+        ],
+        "value": 41.0,
+        "unit": "V",
+        "minimum": null,
+        "maximum": null,
+        "fields": []
+      },
+      {
+        "rule": "divider_voltage",
+        "title": "反馈分压标称输出",
+        "status": "needs_information",
+        "message": "请提供下侧电阻 R1（FB → GND）、上侧电阻 R2（VOUT → FB）；不使用隐含默认值。",
+        "evidence_ids": [
+          "divider"
+        ],
+        "value": null,
+        "unit": null,
+        "minimum": null,
+        "maximum": null,
+        "fields": [
+          "r_lower",
+          "r_upper"
+        ]
+      },
+      {
+        "rule": "divider_r1",
+        "title": "应用建议：下侧电阻 R1",
+        "status": "needs_information",
+        "message": "请提供下侧电阻 R1（FB → GND）；不使用隐含默认值。",
+        "evidence_ids": [
+          "divider"
+        ],
+        "value": null,
+        "unit": null,
+        "minimum": null,
+        "maximum": null,
+        "fields": [
+          "r_lower"
+        ]
+      }
+    ],
+    "evidence_ids": [
+      "recommended"
+    ],
+    "hits": [
+      {
+        "evidence_id": "recommended",
+        "score": 1.0
+      }
+    ],
+    "notices": [
+      "每项仅核对该项限制，不代表完整电路设计通过。",
+      "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+      "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+    ],
+    "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+    "source_revision": "SNVS124G (Rev. G)",
+    "condition_inputs": {},
+    "applicability": [],
+    "condition_errors": {}
+  },
+  "source": {
+    "doc_id": "lm2596-adj-snvs124g",
+    "chip_id": "lm2596-adj",
+    "manufacturer": "TI",
+    "model": "LM2596-ADJ",
+    "title": "LM2596 SIMPLE SWITCHER Power Converter 150-kHz 3-A Step-Down Voltage Regulator",
+    "revision": "SNVS124G (Rev. G)",
+    "revision_date": "2023-03",
+    "url": "https://www.ti.com/lit/ds/symlink/lm2596.pdf",
+    "downloaded_at": "2026-10-22T14:47:50.489164+00:00",
+    "sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+    "pages": 47,
+    "indexed_core_pages": 35,
+    "pdf_file": "lm2596.pdf",
+    "extraction": {
+      "tool": "pdfplumber",
+      "version": "0.11.10",
+      "x_tolerance": 1
+    },
+    "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+  },
+  "evidence": [
+    {
+      "id": "recommended",
+      "title": "推荐工作条件",
+      "page": 5,
+      "printed_page": "5",
+      "bbox": [
+        54.0,
+        459.0,
+        558.0,
+        519.0
+      ],
+      "context_bboxes": [],
+      "text": "7.3 Operating Conditions\nMIN MAX UNIT\nSupply voltage 4.5 40 V\nTemperature –40 125 °C",
+      "context": "",
+      "aliases": [
+        "推荐工作条件",
+        "推荐输入电压",
+        "供电范围",
+        "输入范围",
+        "工作温度",
+        "VIN",
+        "operating conditions"
+      ],
+      "summary": "LM2596-ADJ 工作供电范围为 4.5–40 V；45 V 是绝对最大值。工作温度行原表未明确温度类型。",
+      "curated": true,
+      "context_only": false
+    }
+  ]
+}

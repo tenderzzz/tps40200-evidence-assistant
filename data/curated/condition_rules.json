@@ -1,0 +1,929 @@
+{
+  "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+  "review": "Codex transcription of pp.4–6 and inherited table headers; not independently reviewed.",
+  "method": "Row overrides replace matching header dimensions. TA=TJ requires an explicitly selected test-temperature input. Other missing conditions stay unknown.",
+  "rules": {
+    "vfb-comp": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "eq",
+          "value": 25,
+          "label": "TA = TJ = 25 °C"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        },
+        {
+          "field": "comp_equals_fb",
+          "op": "eq",
+          "value": true,
+          "label": "COMP = FB"
+        }
+      ],
+      "notes": []
+    },
+    "vfb-25": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "eq",
+          "value": 25,
+          "label": "TA = TJ = 25 °C"
+        },
+        {
+          "field": "vdd",
+          "op": "open",
+          "low": 4.5,
+          "high": 52,
+          "label": "4.5 V < VDD < 52 V"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "vfb-85": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "open",
+          "low": 4.5,
+          "high": 52,
+          "label": "4.5 V < VDD < 52 V"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "vfb-125": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 125,
+          "label": "−40 °C < TA = TJ < 125 °C"
+        },
+        {
+          "field": "vdd",
+          "op": "open",
+          "low": 4.5,
+          "high": 52,
+          "label": "4.5 V < VDD < 52 V"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "gate-source": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "gate-sink": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "rss-charge": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "rss-discharge": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "ss-reset": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "ocdf": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "ilim-reset": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "kpwm": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "iib": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "aol": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "gbwp": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "gate-voltage": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "open",
+          "low": 12,
+          "high": 52,
+          "label": "12 V < VDD < 52 V"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "line-high": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "open",
+          "low": 12,
+          "high": 52,
+          "label": "12 V < VDD < 52 V"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "iqq": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "open",
+          "low": 4.5,
+          "high": 52,
+          "label": "4.5 V < VDD < 52 V"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 300000,
+          "label": "fOSC = 300 kHz"
+        },
+        {
+          "field": "driver_switching",
+          "op": "eq",
+          "value": false,
+          "label": "驱动不切换"
+        }
+      ],
+      "notes": []
+    },
+    "uvlo-on": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 125,
+          "label": "−40 °C < TA = TJ < 125 °C"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": [
+        "VUVLO(on) 是被测的电压扫描阈值，不能用表头 12 V 把阈值本身筛掉。"
+      ]
+    },
+    "uvlo-off": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": [
+        "此项由 VDD 扫描测得；仅匹配温度与频率条件，不用表头 12 V 替代扫描阈值或验证扫描过程。"
+      ]
+    },
+    "uvlo-hyst": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": [
+        "此项由 VDD 扫描测得；仅匹配温度与频率条件，不用表头 12 V 替代扫描阈值或验证扫描过程。"
+      ]
+    },
+    "ilim-0": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": 0,
+          "high": 125,
+          "label": "0 °C < TA = TJ < 125 °C"
+        },
+        {
+          "field": "vdd",
+          "op": "open",
+          "low": 4.5,
+          "high": 52,
+          "label": "4.5 V < VDD < 52 V"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "ilim-40": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 125,
+          "label": "−40 °C < TA = TJ < 125 °C"
+        },
+        {
+          "field": "vdd",
+          "op": "open",
+          "low": 4.5,
+          "high": 52,
+          "label": "4.5 V < VDD < 52 V"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "fosc-100": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "resistance",
+          "op": "eq",
+          "value": 200000,
+          "label": "RRC = 200 kΩ"
+        },
+        {
+          "field": "capacitance",
+          "op": "eq",
+          "value": 4.7e-10,
+          "label": "CRC = 470 pF"
+        }
+      ],
+      "notes": [
+        "fOSC 是该行的测量结果，按指定 RRC/CRC 匹配，不把它当独立的频率输入条件。"
+      ]
+    },
+    "fosc-300": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "resistance",
+          "op": "eq",
+          "value": 68100,
+          "label": "RRC = 68.1 kΩ"
+        },
+        {
+          "field": "capacitance",
+          "op": "eq",
+          "value": 4.7e-10,
+          "label": "CRC = 470 pF"
+        }
+      ],
+      "notes": [
+        "fOSC 是该行的测量结果，按指定 RRC/CRC 匹配，不把它当独立的频率输入条件。"
+      ]
+    },
+    "line-low": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "open",
+          "low": 4.5,
+          "high": 12,
+          "label": "4.5 V < VDD < 12 V"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "ramp": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "open",
+          "low": 4.5,
+          "high": 52,
+          "label": "4.5 V < VDD < 52 V"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "tmin-12": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "tmin-30": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 30,
+          "label": "VDD = 30 V"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        }
+      ],
+      "notes": []
+    },
+    "dmax-100": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        },
+        {
+          "field": "load_capacitance",
+          "op": "eq",
+          "value": 4.7e-10,
+          "label": "负载电容 CL = 470 pF；不是定时电容 CRC"
+        }
+      ],
+      "notes": []
+    },
+    "dmax-300": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 300000,
+          "label": "fOSC = 300 kHz"
+        },
+        {
+          "field": "load_capacitance",
+          "op": "eq",
+          "value": 4.7e-10,
+          "label": "负载电容 CL = 470 pF；不是定时电容 CRC"
+        }
+      ],
+      "notes": []
+    },
+    "comp-source": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        },
+        {
+          "field": "vfb",
+          "op": "eq",
+          "value": 0.6,
+          "label": "VFB = 0.6 V"
+        },
+        {
+          "field": "comp",
+          "op": "eq",
+          "value": 1,
+          "label": "COMP = 1 V"
+        }
+      ],
+      "notes": []
+    },
+    "comp-sink": {
+      "constraints": [
+        {
+          "field": "test_temperature",
+          "op": "open",
+          "low": -40,
+          "high": 85,
+          "label": "−40 °C < TA = TJ < 85 °C（表头）"
+        },
+        {
+          "field": "vdd",
+          "op": "eq",
+          "value": 12,
+          "label": "VDD = 12 V（表头）"
+        },
+        {
+          "field": "frequency",
+          "op": "eq",
+          "value": 100000,
+          "label": "fOSC = 100 kHz（表头）"
+        },
+        {
+          "field": "vfb",
+          "op": "eq",
+          "value": 1.2,
+          "label": "VFB = 1.2 V"
+        },
+        {
+          "field": "comp",
+          "op": "eq",
+          "value": 1,
+          "label": "COMP = 1 V"
+        }
+      ],
+      "notes": []
+    },
+    "abs-vdd": {
+      "constraints": [],
+      "limit": true,
+      "notes": [
+        "此行是额定值或范围限制，不是测试条件行；不能用测试条件筛选替代工作条件检查。"
+      ]
+    },
+    "abs-rc-fb": {
+      "constraints": [],
+      "limit": true,
+      "notes": [
+        "此行是额定值或范围限制，不是测试条件行；不能用测试条件筛选替代工作条件检查。"
+      ]
+    },
+    "abs-ss": {
+      "constraints": [],
+      "limit": true,
+      "notes": [
+        "此行是额定值或范围限制，不是测试条件行；不能用测试条件筛选替代工作条件检查。"
+      ]
+    },
+    "abs-comp": {
+      "constraints": [],
+      "limit": true,
+      "notes": [
+        "此行是额定值或范围限制，不是测试条件行；不能用测试条件筛选替代工作条件检查。"
+      ]
+    },
+    "abs-gdrv": {
+      "constraints": [],
+      "limit": true,
+      "notes": [
+        "此行是额定值或范围限制，不是测试条件行；不能用测试条件筛选替代工作条件检查。"
+      ]
+    },
+    "abs-tj": {
+      "constraints": [],
+      "limit": true,
+      "notes": [
+        "此行是额定值或范围限制，不是测试条件行；不能用测试条件筛选替代工作条件检查。"
+      ]
+    },
+    "abs-lead": {
+      "constraints": [],
+      "limit": true,
+      "notes": [
+        "此行是额定值或范围限制，不是测试条件行；不能用测试条件筛选替代工作条件检查。"
+      ]
+    },
+    "rec-vdd": {
+      "constraints": [],
+      "limit": true,
+      "notes": [
+        "此行是额定值或范围限制，不是测试条件行；不能用测试条件筛选替代工作条件检查。"
+      ]
+    },
+    "rec-tj": {
+      "constraints": [],
+      "limit": true,
+      "notes": [
+        "此行是额定值或范围限制，不是测试条件行；不能用测试条件筛选替代工作条件检查。"
+      ]
+    },
+    "fosc-range": {
+      "constraints": [],
+      "limit": true,
+      "notes": [
+        "此行是额定值或范围限制，不是测试条件行；不能用测试条件筛选替代工作条件检查。"
+      ]
+    }
+  }
+}

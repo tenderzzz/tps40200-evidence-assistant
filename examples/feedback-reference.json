@@ -1,0 +1,159 @@
+{
+  "format_version": "1.0",
+  "result": {
+    "status": "answered",
+    "question": "反馈参考电压 VFB 是多少？",
+    "answer": "VFB 的典型值是 696 mV；上下限取决于测试条件，必须逐行读取。",
+    "inputs": {},
+    "parameters": [
+      {
+        "id": "vfb-comp",
+        "symbol": "VFB",
+        "name": "反馈参考电压",
+        "rating": "electrical",
+        "minimum": 689.0,
+        "typical": 696.0,
+        "maximum": 702.0,
+        "unit": "mV",
+        "conditions": "COMP=FB；TA=25 °C；其余默认条件见表头",
+        "notes": [
+          "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+        ],
+        "evidence_ids": [
+          "reference"
+        ],
+        "review": "按 PDF 原图逐行复核；非自动提取保证"
+      },
+      {
+        "id": "vfb-25",
+        "symbol": "VFB",
+        "name": "反馈参考电压",
+        "rating": "electrical",
+        "minimum": 686.0,
+        "typical": 696.0,
+        "maximum": 703.0,
+        "unit": "mV",
+        "conditions": "4.5 V < VDD < 52 V；TA=25 °C",
+        "notes": [
+          "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+        ],
+        "evidence_ids": [
+          "reference"
+        ],
+        "review": "按 PDF 原图逐行复核；非自动提取保证"
+      },
+      {
+        "id": "vfb-85",
+        "symbol": "VFB",
+        "name": "反馈参考电压",
+        "rating": "electrical",
+        "minimum": 679.0,
+        "typical": 696.0,
+        "maximum": 708.0,
+        "unit": "mV",
+        "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 85 °C",
+        "notes": [
+          "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+        ],
+        "evidence_ids": [
+          "reference"
+        ],
+        "review": "按 PDF 原图逐行复核；非自动提取保证"
+      },
+      {
+        "id": "vfb-125",
+        "symbol": "VFB",
+        "name": "反馈参考电压",
+        "rating": "electrical",
+        "minimum": 679.0,
+        "typical": 696.0,
+        "maximum": 710.0,
+        "unit": "mV",
+        "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 125 °C",
+        "notes": [
+          "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+        ],
+        "evidence_ids": [
+          "reference"
+        ],
+        "review": "按 PDF 原图逐行复核；非自动提取保证"
+      }
+    ],
+    "checks": [],
+    "evidence_ids": [
+      "reference"
+    ],
+    "hits": [
+      {
+        "evidence_id": "reference",
+        "score": 133.3969
+      },
+      {
+        "evidence_id": "recommended",
+        "score": 3.00458
+      },
+      {
+        "evidence_id": "line-regulation",
+        "score": 2.43231
+      }
+    ],
+    "notices": [
+      "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+    ],
+    "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+    "source_revision": "SLUS659G (Rev. G)"
+  },
+  "source": {
+    "doc_id": "tps40200-slus659g",
+    "title": "TPS40200 Wide Input Range Non-Synchronous Voltage Mode Controller",
+    "revision": "SLUS659G (Rev. G)",
+    "revision_date": "2014-11",
+    "url": "https://www.ti.com/lit/ds/symlink/tps40200.pdf",
+    "downloaded_at": "2026-10-21T13:03:03.278425+00:00",
+    "sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+    "pages": 52,
+    "indexed_core_pages": 40,
+    "pdf_file": "tps40200-rev-g.pdf",
+    "extraction": {
+      "tool": "pdfplumber",
+      "version": "0.11.10",
+      "x_tolerance": 1
+    },
+    "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+  },
+  "evidence": [
+    {
+      "id": "reference",
+      "title": "6.5 反馈参考电压 VFB",
+      "page": 5,
+      "printed_page": "5",
+      "bbox": [
+        54.0,
+        114.0,
+        558.0,
+        181.0
+      ],
+      "context_bboxes": [
+        [
+          54.0,
+          74.0,
+          558.0,
+          114.0
+        ]
+      ],
+      "text": "VOLTAGE REFERENCE\nCOMP = FB, T = 25°C 689 696 702\nA\nT = 25°C 686 696 703\nA\nV Feedback voltage mV\nFB\n4.5 < V < 52 –40°C < T < 85°C 679 696 708\nDD A\n–40°C < T < 125°C 679 696 710\nA",
+      "context": "6.5 Electrical Characteristics\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT",
+      "aliases": [
+        "VFB",
+        "反馈电压",
+        "反馈参考",
+        "基准电压",
+        "reference",
+        "Feedback voltage",
+        "温漂"
+      ],
+      "summary": "VFB 的典型值是 696 mV；上下限取决于测试条件，必须逐行读取。",
+      "curated": true
+    }
+  ]
+}

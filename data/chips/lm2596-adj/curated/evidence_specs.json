@@ -1,0 +1,499 @@
+[
+  {
+    "id": "abs",
+    "title": "绝对最大额定值",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      94,
+      558,
+      304
+    ],
+    "context_bboxes": [
+      [
+        54,
+        312,
+        558,
+        380
+      ]
+    ],
+    "aliases": [
+      "绝对最大额定值",
+      "absolute maximum",
+      "极限电压"
+    ],
+    "summary": "绝对最大额定值属于应力限制，不能作为正常工作范围。SD/SS、Delay、Flag 与本型号引脚表不一致，保留原文，暂不转录这些行。",
+    "curated": true
+  },
+  {
+    "id": "recommended",
+    "title": "推荐工作条件",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      459,
+      558,
+      519
+    ],
+    "context_bboxes": [],
+    "aliases": [
+      "推荐工作条件",
+      "推荐输入电压",
+      "供电范围",
+      "输入范围",
+      "工作温度",
+      "VIN",
+      "operating conditions"
+    ],
+    "summary": "LM2596-ADJ 工作供电范围为 4.5–40 V；45 V 是绝对最大值。工作温度行原表未明确温度类型。",
+    "curated": true
+  },
+  {
+    "id": "vfb",
+    "title": "反馈基准",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      589,
+      558,
+      695
+    ],
+    "context_bboxes": [
+      [
+        54,
+        703,
+        558,
+        733
+      ]
+    ],
+    "aliases": [
+      "反馈基准",
+      "反馈参考电压",
+      "VFB",
+      "VREF",
+      "参考电压"
+    ],
+    "summary": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+    "curated": true
+  },
+  {
+    "id": "bias",
+    "title": "反馈偏置电流",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      169,
+      558,
+      195
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "aliases": [
+      "反馈偏置电流",
+      "Ib"
+    ],
+    "summary": "反馈偏置电流须按结温条件读取。",
+    "curated": true
+  },
+  {
+    "id": "oscillator",
+    "title": "振荡频率",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      197,
+      558,
+      223
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "aliases": [
+      "振荡频率",
+      "开关频率",
+      "fO",
+      "fOSC",
+      "频率范围"
+    ],
+    "summary": "内部振荡器固定为标称 150 kHz；上下限随结温条件分别给出，不能使用 TPS40200 的外部 RC 公式。",
+    "curated": true
+  },
+  {
+    "id": "saturation",
+    "title": "饱和电压",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      225,
+      558,
+      251
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "aliases": [
+      "饱和电压",
+      "VSAT"
+    ],
+    "summary": "饱和电压测试采用手册脚注指定的强制导通设置。",
+    "curated": true
+  },
+  {
+    "id": "duty",
+    "title": "占空比",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      252,
+      558,
+      278
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "aliases": [
+      "占空比",
+      "DC"
+    ],
+    "summary": "表中 ON/OFF 占空比数值按原列保留，不能据此保证任意降压比。",
+    "curated": true
+  },
+  {
+    "id": "current-limit",
+    "title": "限流",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      281,
+      558,
+      307
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "aliases": [
+      "限流",
+      "过流阈值",
+      "ICL",
+      "current limit"
+    ],
+    "summary": "ICL 是开关峰值限流参数，不是持续负载电流保证。",
+    "curated": true
+  },
+  {
+    "id": "leakage",
+    "title": "输出漏电流",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      309,
+      558,
+      334
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "aliases": [
+      "输出漏电流",
+      "漏电流",
+      "IL"
+    ],
+    "summary": "输出漏电流使用强制关断且无外接二极管、电感、电容的测试设置。",
+    "curated": true
+  },
+  {
+    "id": "quiescent",
+    "title": "静态电流",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      337,
+      558,
+      357
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "aliases": [
+      "静态电流",
+      "工作电流",
+      "IQ"
+    ],
+    "summary": "工作静态电流典型 5 mA；须保留脚注中的强制关断测试。",
+    "curated": true
+  },
+  {
+    "id": "standby",
+    "title": "待机电流",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      360,
+      558,
+      386
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "aliases": [
+      "待机电流",
+      "ISTBY",
+      "standby"
+    ],
+    "summary": "待机电流的室温与全结温上限不同，VIN=40 V 且 ON/OFF=5 V。",
+    "curated": true
+  },
+  {
+    "id": "shutdown",
+    "title": "关闭控制",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      389,
+      558,
+      456
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "aliases": [
+      "关闭控制",
+      "关闭阈值",
+      "ON/OFF",
+      "VIH",
+      "VIL",
+      "如何关闭"
+    ],
+    "summary": "ON/OFF 低电平启用、高电平关闭。原表 VIH/VIL 名称照录，具体逻辑以 Low ON / High OFF 为准。",
+    "curated": true
+  },
+  {
+    "id": "logic-current",
+    "title": "ON/OFF输入电流",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      458,
+      558,
+      484
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "aliases": [
+      "ON/OFF输入电流",
+      "IH",
+      "逻辑输入电流"
+    ],
+    "summary": "ON/OFF 输入电流分别对应 2.5 V 关闭和 0.5 V 启用。",
+    "curated": true
+  },
+  {
+    "id": "divider",
+    "title": "反馈分压",
+    "page": 28,
+    "printed_page": "28",
+    "bbox": [
+      54,
+      222,
+      558,
+      405
+    ],
+    "context_bboxes": [],
+    "aliases": [
+      "反馈分压",
+      "分压电阻",
+      "输出电压计算",
+      "输出公式",
+      "R1",
+      "R2"
+    ],
+    "summary": "标称 VOUT≈1.23×(1+R2/R1)，R1 是 FB 到 GND 的下侧电阻，建议取 240 Ω–1.5 kΩ；R2 是输出到 FB 的上侧电阻。",
+    "curated": true
+  },
+  {
+    "id": "pins",
+    "title": "引脚",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      78,
+      558,
+      414
+    ],
+    "context_bboxes": [],
+    "aliases": [
+      "引脚",
+      "接线",
+      "pinout",
+      "引脚功能"
+    ],
+    "summary": "5 引脚包括 VIN、开关 Output、GND、Feedback 和 ON/OFF。Output 是开关节点，不能当作滤波后的稳压输出。",
+    "curated": true
+  },
+  {
+    "id": "protection",
+    "title": "保护机制",
+    "page": 3,
+    "printed_page": "3",
+    "bbox": [
+      54,
+      123,
+      558,
+      179
+    ],
+    "context_bboxes": [],
+    "aliases": [
+      "保护机制",
+      "过流后如何恢复",
+      "过流恢复",
+      "热关断"
+    ],
+    "summary": "手册说明有两级降频限流和过温关断保护；此段未给出完整恢复时序，不能据此承诺恢复时间。",
+    "curated": true
+  },
+  {
+    "id": "vfb-note",
+    "title": "系统参数外部元件脚注",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      71,
+      558,
+      93
+    ],
+    "context_bboxes": [],
+    "aliases": [
+      "系统参数外部元件脚注"
+    ],
+    "summary": "系统参数受外部二极管、电感与电容影响；系统性能按 Figure 9-13 测试设置读取。",
+    "curated": true,
+    "context_only": true
+  }
+]

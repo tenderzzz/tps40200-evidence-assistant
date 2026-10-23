@@ -1,0 +1,6246 @@
+{
+  "evaluated_at": "2026-10-23T01:14:52.624859+00:00",
+  "source": {
+    "doc_id": "ne555-slfs022k",
+    "chip_id": "ne555",
+    "manufacturer": "TI",
+    "model": "NE555",
+    "title": "xx555 Precision Timers",
+    "revision": "SLFS022K (Rev. K)",
+    "revision_date": "2026-03",
+    "url": "https://www.ti.com/lit/ds/symlink/ne555.pdf",
+    "downloaded_at": "2026-10-22T14:47:52.086531+00:00",
+    "sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+    "pages": 39,
+    "indexed_core_pages": 20,
+    "pdf_file": "ne555.pdf",
+    "extraction": {
+      "tool": "pdfplumber",
+      "version": "0.11.10",
+      "x_tolerance": 1
+    },
+    "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+  },
+  "chip_id": "ne555",
+  "benchmark_corrections": [],
+  "methodology": "自建固定验证集，开发/留出各30题，同一问题的改写同组；期望数值来自固定PDF转录或独立有理数计算，未从被测引擎生成。增强检索包含人工别名、结构化表格与中文说明，不单独归因于分块。",
+  "limitations": [
+    "题目、参数整理和实现由同一开发过程完成，不是独立盲测。",
+    "证据命中按预标注区域评价；不等于任意问题的引用语义正确率。",
+    "留出集规模小，比例仅适用于本组案例，不代表通用芯片手册准确率。"
+  ],
+  "metrics": {
+    "cases": 60,
+    "passed": 60,
+    "query_retrieval_cases": 38,
+    "top3_recall": 1.0,
+    "plain_top3_recall": 0.0,
+    "fact_cases": 27,
+    "fact_answered": 27,
+    "fact_accuracy": 1.0,
+    "fact_coverage": 1.0,
+    "unsupported_correct": 4,
+    "unsupported_cases": 4,
+    "by_category": {
+      "conditions": {
+        "total": 6,
+        "passed": 6
+      },
+      "mechanism": {
+        "total": 5,
+        "passed": 5
+      },
+      "parameter": {
+        "total": 27,
+        "passed": 27
+      },
+      "rule": {
+        "total": 14,
+        "passed": 14
+      },
+      "unanswerable": {
+        "total": 4,
+        "passed": 4
+      },
+      "unsupported": {
+        "total": 4,
+        "passed": 4
+      }
+    }
+  },
+  "splits": {
+    "dev": {
+      "cases": 30,
+      "passed": 30,
+      "query_retrieval_cases": 28,
+      "top3_recall": 1.0,
+      "plain_top3_recall": 0.0,
+      "fact_cases": 18,
+      "fact_answered": 18,
+      "fact_accuracy": 1.0,
+      "fact_coverage": 1.0,
+      "unsupported_correct": 0,
+      "unsupported_cases": 0,
+      "by_category": {
+        "conditions": {
+          "total": 6,
+          "passed": 6
+        },
+        "mechanism": {
+          "total": 4,
+          "passed": 4
+        },
+        "parameter": {
+          "total": 18,
+          "passed": 18
+        },
+        "unanswerable": {
+          "total": 2,
+          "passed": 2
+        }
+      }
+    },
+    "holdout": {
+      "cases": 30,
+      "passed": 30,
+      "query_retrieval_cases": 10,
+      "top3_recall": 1.0,
+      "plain_top3_recall": 0.0,
+      "fact_cases": 9,
+      "fact_answered": 9,
+      "fact_accuracy": 1.0,
+      "fact_coverage": 1.0,
+      "unsupported_correct": 4,
+      "unsupported_cases": 4,
+      "by_category": {
+        "mechanism": {
+          "total": 1,
+          "passed": 1
+        },
+        "parameter": {
+          "total": 9,
+          "passed": 9
+        },
+        "rule": {
+          "total": 14,
+          "passed": 14
+        },
+        "unanswerable": {
+          "total": 2,
+          "passed": 2
+        },
+        "unsupported": {
+          "total": 4,
+          "passed": 4
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "ne555-01",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-trigger",
+      "kind": "query",
+      "question": "TRIG",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "trigger",
+        "trigger-current",
+        "monostable"
+      ],
+      "expected_evidence": [
+        "trigger"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "TRIG",
+        "answer": "TRIG 典型阈值约为 VCC/3；NE555 的 5 V 与 15 V 参数行分别保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "trigger-15",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 4.5,
+            "typical": 5.0,
+            "maximum": 5.6,
+            "unit": "V",
+            "conditions": "VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "trigger-5",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 1.1,
+            "typical": 1.67,
+            "maximum": 2.2,
+            "unit": "V",
+            "conditions": "VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "trigger"
+        ],
+        "hits": [
+          {
+            "evidence_id": "trigger",
+            "score": 104.9666
+          },
+          {
+            "evidence_id": "trigger-current",
+            "score": 1.23788
+          },
+          {
+            "evidence_id": "monostable",
+            "score": 1.07489
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-02",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-trigger",
+      "kind": "query",
+      "question": "触发阈值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "trigger",
+        "reset",
+        "trigger-current"
+      ],
+      "expected_evidence": [
+        "trigger"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "触发阈值",
+        "answer": "TRIG 典型阈值约为 VCC/3；NE555 的 5 V 与 15 V 参数行分别保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "trigger-15",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 4.5,
+            "typical": 5.0,
+            "maximum": 5.6,
+            "unit": "V",
+            "conditions": "VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "trigger-5",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 1.1,
+            "typical": 1.67,
+            "maximum": 2.2,
+            "unit": "V",
+            "conditions": "VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "trigger"
+        ],
+        "hits": [
+          {
+            "evidence_id": "trigger",
+            "score": 111.22108
+          },
+          {
+            "evidence_id": "reset",
+            "score": 3.46319
+          },
+          {
+            "evidence_id": "trigger-current",
+            "score": 1.9893
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-03",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-trigger",
+      "kind": "query",
+      "question": "触发电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "trigger",
+        "reset",
+        "trigger-current"
+      ],
+      "expected_evidence": [
+        "trigger"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "触发电压",
+        "answer": "TRIG 典型阈值约为 VCC/3；NE555 的 5 V 与 15 V 参数行分别保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "trigger-15",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 4.5,
+            "typical": 5.0,
+            "maximum": 5.6,
+            "unit": "V",
+            "conditions": "VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "trigger-5",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 1.1,
+            "typical": 1.67,
+            "maximum": 2.2,
+            "unit": "V",
+            "conditions": "VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "trigger"
+        ],
+        "hits": [
+          {
+            "evidence_id": "trigger",
+            "score": 108.83423
+          },
+          {
+            "evidence_id": "reset",
+            "score": 2.00837
+          },
+          {
+            "evidence_id": "trigger-current",
+            "score": 1.9893
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-04",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-threshold",
+      "kind": "query",
+      "question": "THRES",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "threshold",
+        "threshold-current",
+        "pins"
+      ],
+      "expected_evidence": [
+        "threshold"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "THRES",
+        "answer": "THRES 阈值的典型值约为供电的 2/3，但保证范围须按 5 V、15 V 条件分别读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "threshold-15",
+            "symbol": "THRES",
+            "name": "阈值电压",
+            "rating": "electrical",
+            "minimum": 8.8,
+            "typical": 10.0,
+            "maximum": 11.2,
+            "unit": "V",
+            "conditions": "VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "threshold"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "threshold-5",
+            "symbol": "THRES",
+            "name": "阈值电压",
+            "rating": "electrical",
+            "minimum": 2.4,
+            "typical": 3.3,
+            "maximum": 4.2,
+            "unit": "V",
+            "conditions": "VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "threshold"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "threshold"
+        ],
+        "hits": [
+          {
+            "evidence_id": "threshold",
+            "score": 105.99464
+          },
+          {
+            "evidence_id": "threshold-current",
+            "score": 1.12001
+          },
+          {
+            "evidence_id": "pins",
+            "score": 1.01147
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-05",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-threshold",
+      "kind": "query",
+      "question": "阈值电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "threshold",
+        "reset",
+        "trigger"
+      ],
+      "expected_evidence": [
+        "threshold"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "阈值电压",
+        "answer": "THRES 阈值的典型值约为供电的 2/3，但保证范围须按 5 V、15 V 条件分别读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "threshold-15",
+            "symbol": "THRES",
+            "name": "阈值电压",
+            "rating": "electrical",
+            "minimum": 8.8,
+            "typical": 10.0,
+            "maximum": 11.2,
+            "unit": "V",
+            "conditions": "VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "threshold"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "threshold-5",
+            "symbol": "THRES",
+            "name": "阈值电压",
+            "rating": "electrical",
+            "minimum": 2.4,
+            "typical": 3.3,
+            "maximum": 4.2,
+            "unit": "V",
+            "conditions": "VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "threshold"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "threshold"
+        ],
+        "hits": [
+          {
+            "evidence_id": "threshold",
+            "score": 110.2853
+          },
+          {
+            "evidence_id": "reset",
+            "score": 2.69062
+          },
+          {
+            "evidence_id": "trigger",
+            "score": 2.36415
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-06",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-reset",
+      "kind": "query",
+      "question": "RESET",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "reset",
+        "pins",
+        "abs"
+      ],
+      "expected_evidence": [
+        "reset"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "RESET",
+        "answer": "RESET 低有效，并覆盖触发和阈值输入；电压与电流测试条件分开读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "reset-voltage",
+            "symbol": "RESET",
+            "name": "复位阈值",
+            "rating": "electrical",
+            "minimum": 0.3,
+            "typical": 0.7,
+            "maximum": 1.0,
+            "unit": "V",
+            "conditions": "VCC=5–15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "reset"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "reset-high-current",
+            "symbol": "IRESET",
+            "name": "复位输入电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.1,
+            "maximum": 0.4,
+            "unit": "mA",
+            "conditions": "RESET=VCC；VCC=5–15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "reset"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "reset-low-current",
+            "symbol": "IRESET",
+            "name": "复位输入电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": -0.4,
+            "maximum": -1.5,
+            "unit": "mA",
+            "conditions": "RESET=0 V；VCC=5–15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "reset"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "reset"
+        ],
+        "hits": [
+          {
+            "evidence_id": "reset",
+            "score": 106.76548
+          },
+          {
+            "evidence_id": "pins",
+            "score": 1.45544
+          },
+          {
+            "evidence_id": "abs",
+            "score": 0.79508
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-07",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-reset",
+      "kind": "query",
+      "question": "复位阈值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "reset",
+        "threshold",
+        "trigger"
+      ],
+      "expected_evidence": [
+        "reset"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "复位阈值",
+        "answer": "RESET 低有效，并覆盖触发和阈值输入；电压与电流测试条件分开读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "reset-voltage",
+            "symbol": "RESET",
+            "name": "复位阈值",
+            "rating": "electrical",
+            "minimum": 0.3,
+            "typical": 0.7,
+            "maximum": 1.0,
+            "unit": "V",
+            "conditions": "VCC=5–15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "reset"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "reset-high-current",
+            "symbol": "IRESET",
+            "name": "复位输入电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.1,
+            "maximum": 0.4,
+            "unit": "mA",
+            "conditions": "RESET=VCC；VCC=5–15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "reset"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "reset-low-current",
+            "symbol": "IRESET",
+            "name": "复位输入电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": -0.4,
+            "maximum": -1.5,
+            "unit": "mA",
+            "conditions": "RESET=0 V；VCC=5–15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "reset"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "reset"
+        ],
+        "hits": [
+          {
+            "evidence_id": "reset",
+            "score": 114.92209
+          },
+          {
+            "evidence_id": "threshold",
+            "score": 1.91524
+          },
+          {
+            "evidence_id": "trigger",
+            "score": 1.86124
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-08",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-control",
+      "kind": "query",
+      "question": "CONT",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "control",
+        "pins",
+        "astable"
+      ],
+      "expected_evidence": [
+        "control"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "CONT",
+        "answer": "CONT 开路电压随供电条件变化，不能默认把外部控制电压接入后仍按开路值计算。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "control-15",
+            "symbol": "CONT",
+            "name": "开路控制电压",
+            "rating": "electrical",
+            "minimum": 9.0,
+            "typical": 10.0,
+            "maximum": 11.0,
+            "unit": "V",
+            "conditions": "CONT 开路；VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "control"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "control-5",
+            "symbol": "CONT",
+            "name": "开路控制电压",
+            "rating": "electrical",
+            "minimum": 2.6,
+            "typical": 3.3,
+            "maximum": 4.0,
+            "unit": "V",
+            "conditions": "CONT 开路；VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "control"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "control"
+        ],
+        "hits": [
+          {
+            "evidence_id": "control",
+            "score": 105.37611
+          },
+          {
+            "evidence_id": "pins",
+            "score": 1.45544
+          },
+          {
+            "evidence_id": "astable",
+            "score": 0.83255
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-09",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-control",
+      "kind": "query",
+      "question": "控制电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "control",
+        "discharge",
+        "threshold"
+      ],
+      "expected_evidence": [
+        "control"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "控制电压",
+        "answer": "CONT 开路电压随供电条件变化，不能默认把外部控制电压接入后仍按开路值计算。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "control-15",
+            "symbol": "CONT",
+            "name": "开路控制电压",
+            "rating": "electrical",
+            "minimum": 9.0,
+            "typical": 10.0,
+            "maximum": 11.0,
+            "unit": "V",
+            "conditions": "CONT 开路；VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "control"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "control-5",
+            "symbol": "CONT",
+            "name": "开路控制电压",
+            "rating": "electrical",
+            "minimum": 2.6,
+            "typical": 3.3,
+            "maximum": 4.0,
+            "unit": "V",
+            "conditions": "CONT 开路；VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "control"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "control"
+        ],
+        "hits": [
+          {
+            "evidence_id": "control",
+            "score": 112.93036
+          },
+          {
+            "evidence_id": "discharge",
+            "score": 0.83888
+          },
+          {
+            "evidence_id": "threshold",
+            "score": 0.73923
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-10",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-supply-current",
+      "kind": "query",
+      "question": "ICC",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "supply-current"
+      ],
+      "expected_evidence": [
+        "supply-current"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "ICC",
+        "answer": "供电电流与输出高低状态、零负载和供电电压有关。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "icc-15-low",
+            "symbol": "ICC",
+            "name": "零负载供电电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 10.0,
+            "maximum": 15.0,
+            "unit": "mA",
+            "conditions": "VCC=15 V；output low；no load；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "supply-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "icc-5-low",
+            "symbol": "ICC",
+            "name": "零负载供电电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 3.0,
+            "maximum": 6.0,
+            "unit": "mA",
+            "conditions": "VCC=5 V；output low；no load；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "supply-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "icc-15-high",
+            "symbol": "ICC",
+            "name": "零负载供电电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 9.0,
+            "maximum": 13.0,
+            "unit": "mA",
+            "conditions": "VCC=15 V；output high；no load；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "supply-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "icc-5-high",
+            "symbol": "ICC",
+            "name": "零负载供电电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.0,
+            "maximum": 5.0,
+            "unit": "mA",
+            "conditions": "VCC=5 V；output high；no load；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "supply-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "supply-current"
+        ],
+        "hits": [
+          {
+            "evidence_id": "supply-current",
+            "score": 105.44613
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-11",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-supply-current",
+      "kind": "query",
+      "question": "供电电流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "supply-current",
+        "recommended",
+        "trigger-current"
+      ],
+      "expected_evidence": [
+        "supply-current"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "供电电流",
+        "answer": "供电电流与输出高低状态、零负载和供电电压有关。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "icc-15-low",
+            "symbol": "ICC",
+            "name": "零负载供电电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 10.0,
+            "maximum": 15.0,
+            "unit": "mA",
+            "conditions": "VCC=15 V；output low；no load；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "supply-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "icc-5-low",
+            "symbol": "ICC",
+            "name": "零负载供电电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 3.0,
+            "maximum": 6.0,
+            "unit": "mA",
+            "conditions": "VCC=5 V；output low；no load；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "supply-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "icc-15-high",
+            "symbol": "ICC",
+            "name": "零负载供电电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 9.0,
+            "maximum": 13.0,
+            "unit": "mA",
+            "conditions": "VCC=15 V；output high；no load；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "supply-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "icc-5-high",
+            "symbol": "ICC",
+            "name": "零负载供电电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.0,
+            "maximum": 5.0,
+            "unit": "mA",
+            "conditions": "VCC=5 V；output high；no load；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "supply-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "supply-current"
+        ],
+        "hits": [
+          {
+            "evidence_id": "supply-current",
+            "score": 108.16872
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 2.38194
+          },
+          {
+            "evidence_id": "trigger-current",
+            "score": 0.70668
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-12",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-output-low",
+      "kind": "query",
+      "question": "VOL",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "output-low"
+      ],
+      "expected_evidence": [
+        "output-low"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "VOL",
+        "answer": "输出低电平电压依赖供电和灌电流，200 mA 行只给典型值。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vol-15-10",
+            "symbol": "VOL",
+            "name": "低电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.1,
+            "maximum": 0.25,
+            "unit": "V",
+            "conditions": "VCC=15 V；IOL=10 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-low"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vol-15-50",
+            "symbol": "VOL",
+            "name": "低电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.4,
+            "maximum": 0.75,
+            "unit": "V",
+            "conditions": "VCC=15 V；IOL=50 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-low"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vol-15-100",
+            "symbol": "VOL",
+            "name": "低电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.0,
+            "maximum": 2.5,
+            "unit": "V",
+            "conditions": "VCC=15 V；IOL=100 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-low"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vol-15-200",
+            "symbol": "VOL",
+            "name": "低电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.5,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "VCC=15 V；IOL=200 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-low"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vol-5-5",
+            "symbol": "VOL",
+            "name": "低电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.1,
+            "maximum": 0.35,
+            "unit": "V",
+            "conditions": "VCC=5 V；IOL=5 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-low"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vol-5-8",
+            "symbol": "VOL",
+            "name": "低电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.15,
+            "maximum": 0.4,
+            "unit": "V",
+            "conditions": "VCC=5 V；IOL=8 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-low"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "output-low"
+        ],
+        "hits": [
+          {
+            "evidence_id": "output-low",
+            "score": 104.90189
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-13",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-output-low",
+      "kind": "query",
+      "question": "低电平输出电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "output-low",
+        "output-high",
+        "supply-current"
+      ],
+      "expected_evidence": [
+        "output-low"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "低电平输出电压",
+        "answer": "输出低电平电压依赖供电和灌电流，200 mA 行只给典型值。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vol-15-10",
+            "symbol": "VOL",
+            "name": "低电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.1,
+            "maximum": 0.25,
+            "unit": "V",
+            "conditions": "VCC=15 V；IOL=10 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-low"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vol-15-50",
+            "symbol": "VOL",
+            "name": "低电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.4,
+            "maximum": 0.75,
+            "unit": "V",
+            "conditions": "VCC=15 V；IOL=50 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-low"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vol-15-100",
+            "symbol": "VOL",
+            "name": "低电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.0,
+            "maximum": 2.5,
+            "unit": "V",
+            "conditions": "VCC=15 V；IOL=100 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-low"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vol-15-200",
+            "symbol": "VOL",
+            "name": "低电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.5,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "VCC=15 V；IOL=200 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-low"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vol-5-5",
+            "symbol": "VOL",
+            "name": "低电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.1,
+            "maximum": 0.35,
+            "unit": "V",
+            "conditions": "VCC=5 V；IOL=5 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-low"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vol-5-8",
+            "symbol": "VOL",
+            "name": "低电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.15,
+            "maximum": 0.4,
+            "unit": "V",
+            "conditions": "VCC=5 V；IOL=8 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-low"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "output-low"
+        ],
+        "hits": [
+          {
+            "evidence_id": "output-low",
+            "score": 119.2643
+          },
+          {
+            "evidence_id": "output-high",
+            "score": 10.48221
+          },
+          {
+            "evidence_id": "supply-current",
+            "score": 1.61874
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-14",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-output-high",
+      "kind": "query",
+      "question": "VOH",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "output-high"
+      ],
+      "expected_evidence": [
+        "output-high"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "VOH",
+        "answer": "NE555 高电平输出不能无条件视为等于 VCC；按供电和源电流读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "voh-15-100",
+            "symbol": "VOH",
+            "name": "高电平输出电压",
+            "rating": "electrical",
+            "minimum": 12.75,
+            "typical": 13.3,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "VCC=15 V；IOH=-100 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-high"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "voh-15-200",
+            "symbol": "VOH",
+            "name": "高电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 12.5,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "VCC=15 V；IOH=-200 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-high"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "voh-5-100",
+            "symbol": "VOH",
+            "name": "高电平输出电压",
+            "rating": "electrical",
+            "minimum": 2.75,
+            "typical": 3.3,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "VCC=5 V；IOH=-100 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-high"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "output-high"
+        ],
+        "hits": [
+          {
+            "evidence_id": "output-high",
+            "score": 105.31159
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-15",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-output-high",
+      "kind": "query",
+      "question": "高电平输出电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "output-high",
+        "output-low",
+        "astable"
+      ],
+      "expected_evidence": [
+        "output-high"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "高电平输出电压",
+        "answer": "NE555 高电平输出不能无条件视为等于 VCC；按供电和源电流读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "voh-15-100",
+            "symbol": "VOH",
+            "name": "高电平输出电压",
+            "rating": "electrical",
+            "minimum": 12.75,
+            "typical": 13.3,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "VCC=15 V；IOH=-100 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-high"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "voh-15-200",
+            "symbol": "VOH",
+            "name": "高电平输出电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 12.5,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "VCC=15 V；IOH=-200 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-high"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "voh-5-100",
+            "symbol": "VOH",
+            "name": "高电平输出电压",
+            "rating": "electrical",
+            "minimum": 2.75,
+            "typical": 3.3,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "VCC=5 V；IOH=-100 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "output-high"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "output-high"
+        ],
+        "hits": [
+          {
+            "evidence_id": "output-high",
+            "score": 120.46133
+          },
+          {
+            "evidence_id": "output-low",
+            "score": 8.77357
+          },
+          {
+            "evidence_id": "astable",
+            "score": 2.76332
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-16",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-discharge",
+      "kind": "query",
+      "question": "DISCH",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "discharge",
+        "pins",
+        "monostable"
+      ],
+      "expected_evidence": [
+        "discharge"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "DISCH",
+        "answer": "DISCH 关断漏电和导通电压分别列出；导通电压在 5 V、8 mA 条件给出。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "discharge-off",
+            "symbol": "IDISCH",
+            "name": "放电关断漏电",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 20.0,
+            "maximum": 100.0,
+            "unit": "nA",
+            "conditions": "DISCH off；VCC=5–15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "discharge"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "discharge-on",
+            "symbol": "VDISCH",
+            "name": "放电开关导通电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.15,
+            "maximum": 0.4,
+            "unit": "V",
+            "conditions": "VCC=5 V；IO=8 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "discharge"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "discharge"
+        ],
+        "hits": [
+          {
+            "evidence_id": "discharge",
+            "score": 107.23755
+          },
+          {
+            "evidence_id": "pins",
+            "score": 1.8156
+          },
+          {
+            "evidence_id": "monostable",
+            "score": 1.04235
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-17",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-discharge",
+      "kind": "query",
+      "question": "放电开关",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "discharge",
+        "switching"
+      ],
+      "expected_evidence": [
+        "discharge"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "放电开关",
+        "answer": "DISCH 关断漏电和导通电压分别列出；导通电压在 5 V、8 mA 条件给出。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "discharge-off",
+            "symbol": "IDISCH",
+            "name": "放电关断漏电",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 20.0,
+            "maximum": 100.0,
+            "unit": "nA",
+            "conditions": "DISCH off；VCC=5–15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "discharge"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "discharge-on",
+            "symbol": "VDISCH",
+            "name": "放电开关导通电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.15,
+            "maximum": 0.4,
+            "unit": "V",
+            "conditions": "VCC=5 V；IO=8 mA；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "discharge"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "discharge"
+        ],
+        "hits": [
+          {
+            "evidence_id": "discharge",
+            "score": 115.85504
+          },
+          {
+            "evidence_id": "switching",
+            "score": 1.4637
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-18",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-threshold-current",
+      "kind": "query",
+      "question": "THRES电流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "threshold-current",
+        "threshold",
+        "pins"
+      ],
+      "expected_evidence": [
+        "threshold-current"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "THRES电流",
+        "answer": "THRES 电流会影响定时电阻可用范围，见跨页脚注。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "threshold-current",
+            "symbol": "ITHRES",
+            "name": "阈值输入电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 30.0,
+            "maximum": 250.0,
+            "unit": "nA",
+            "conditions": "VCC=5–15 V；TA=25°C；见 p.6 脚注",
+            "notes": [],
+            "evidence_ids": [
+              "threshold-current",
+              "resistor-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "threshold-current",
+          "resistor-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "threshold-current",
+            "score": 108.78052
+          },
+          {
+            "evidence_id": "threshold",
+            "score": 105.99464
+          },
+          {
+            "evidence_id": "pins",
+            "score": 1.01147
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-19",
+      "category": "mechanism",
+      "split": "dev",
+      "family": "query-monostable",
+      "kind": "query",
+      "question": "单稳态",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "monostable",
+        "switching",
+        "astable"
+      ],
+      "expected_evidence": [
+        "monostable"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "evidence_only",
+        "question": "单稳态",
+        "answer": "单稳态标称脉宽约为 1.1×RA×C；应核对触发回高至少 10 μs 等时序条件，公式不能保证精度。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "monostable"
+        ],
+        "hits": [
+          {
+            "evidence_id": "monostable",
+            "score": 108.25239
+          },
+          {
+            "evidence_id": "switching",
+            "score": 3.19021
+          },
+          {
+            "evidence_id": "astable",
+            "score": 1.79754
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-20",
+      "category": "mechanism",
+      "split": "dev",
+      "family": "query-astable",
+      "kind": "query",
+      "question": "无稳态",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "astable",
+        "switching",
+        "monostable"
+      ],
+      "expected_evidence": [
+        "astable"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "evidence_only",
+        "question": "无稳态",
+        "answer": "无稳态 tH≈0.693(RA+RB)C，tL≈0.693 RB C，f=1/(tH+tL)，输出高电平占空比=tH/(tH+tL)。手册建议频率不超过100 kHz以减小失真。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "astable"
+        ],
+        "hits": [
+          {
+            "evidence_id": "astable",
+            "score": 107.10494
+          },
+          {
+            "evidence_id": "switching",
+            "score": 3.19021
+          },
+          {
+            "evidence_id": "monostable",
+            "score": 2.3
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-21",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-trigger",
+      "kind": "query",
+      "question": "TRIG",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "trigger",
+        "trigger-current",
+        "monostable"
+      ],
+      "expected_evidence": [
+        "trigger"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "TRIG",
+        "answer": "TRIG 典型阈值约为 VCC/3；NE555 的 5 V 与 15 V 参数行分别保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "trigger-15",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 4.5,
+            "typical": 5.0,
+            "maximum": 5.6,
+            "unit": "V",
+            "conditions": "VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "trigger-5",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 1.1,
+            "typical": 1.67,
+            "maximum": 2.2,
+            "unit": "V",
+            "conditions": "VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "trigger"
+        ],
+        "hits": [
+          {
+            "evidence_id": "trigger",
+            "score": 104.9666
+          },
+          {
+            "evidence_id": "trigger-current",
+            "score": 1.23788
+          },
+          {
+            "evidence_id": "monostable",
+            "score": 1.07489
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {
+          "vcc": "5 V",
+          "ambient_temperature": "25 °C"
+        },
+        "applicability": [
+          {
+            "parameter_id": "trigger-15",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 供电电压 VCC 的原表条件。"
+            ],
+            "evidence_ids": [
+              "trigger"
+            ]
+          },
+          {
+            "parameter_id": "trigger-5",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "trigger"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-22",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-trigger",
+      "kind": "query",
+      "question": "TRIG",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "trigger",
+        "trigger-current",
+        "monostable"
+      ],
+      "expected_evidence": [
+        "trigger"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "TRIG",
+        "answer": "TRIG 典型阈值约为 VCC/3；NE555 的 5 V 与 15 V 参数行分别保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "trigger-15",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 4.5,
+            "typical": 5.0,
+            "maximum": 5.6,
+            "unit": "V",
+            "conditions": "VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "trigger-5",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 1.1,
+            "typical": 1.67,
+            "maximum": 2.2,
+            "unit": "V",
+            "conditions": "VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "trigger"
+        ],
+        "hits": [
+          {
+            "evidence_id": "trigger",
+            "score": 104.9666
+          },
+          {
+            "evidence_id": "trigger-current",
+            "score": 1.23788
+          },
+          {
+            "evidence_id": "monostable",
+            "score": 1.07489
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {
+          "vcc": "15 V",
+          "ambient_temperature": "25 °C"
+        },
+        "applicability": [
+          {
+            "parameter_id": "trigger-15",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "trigger"
+            ]
+          },
+          {
+            "parameter_id": "trigger-5",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 供电电压 VCC 的原表条件。"
+            ],
+            "evidence_ids": [
+              "trigger"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-23",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-trigger",
+      "kind": "query",
+      "question": "TRIG",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "trigger",
+        "trigger-current",
+        "monostable"
+      ],
+      "expected_evidence": [
+        "trigger"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "TRIG",
+        "answer": "TRIG 典型阈值约为 VCC/3；NE555 的 5 V 与 15 V 参数行分别保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "trigger-15",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 4.5,
+            "typical": 5.0,
+            "maximum": 5.6,
+            "unit": "V",
+            "conditions": "VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "trigger-5",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 1.1,
+            "typical": 1.67,
+            "maximum": 2.2,
+            "unit": "V",
+            "conditions": "VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "trigger"
+        ],
+        "hits": [
+          {
+            "evidence_id": "trigger",
+            "score": 104.9666
+          },
+          {
+            "evidence_id": "trigger-current",
+            "score": 1.23788
+          },
+          {
+            "evidence_id": "monostable",
+            "score": 1.07489
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {
+          "vcc": "5000 mV",
+          "ambient_temperature": "25 °C"
+        },
+        "applicability": [
+          {
+            "parameter_id": "trigger-15",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 供电电压 VCC 的原表条件。"
+            ],
+            "evidence_ids": [
+              "trigger"
+            ]
+          },
+          {
+            "parameter_id": "trigger-5",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "trigger"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-24",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-trigger",
+      "kind": "query",
+      "question": "TRIG",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "trigger",
+        "trigger-current",
+        "monostable"
+      ],
+      "expected_evidence": [
+        "trigger"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "TRIG",
+        "answer": "TRIG 典型阈值约为 VCC/3；NE555 的 5 V 与 15 V 参数行分别保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "trigger-15",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 4.5,
+            "typical": 5.0,
+            "maximum": 5.6,
+            "unit": "V",
+            "conditions": "VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "trigger-5",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 1.1,
+            "typical": 1.67,
+            "maximum": 2.2,
+            "unit": "V",
+            "conditions": "VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "trigger"
+        ],
+        "hits": [
+          {
+            "evidence_id": "trigger",
+            "score": 104.9666
+          },
+          {
+            "evidence_id": "trigger-current",
+            "score": 1.23788
+          },
+          {
+            "evidence_id": "monostable",
+            "score": 1.07489
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {
+          "vcc": "5 V"
+        },
+        "applicability": [
+          {
+            "parameter_id": "trigger-15",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 供电电压 VCC 的原表条件。",
+              "待确认 环境温度 TA。"
+            ],
+            "evidence_ids": [
+              "trigger"
+            ]
+          },
+          {
+            "parameter_id": "trigger-5",
+            "status": "needs_information",
+            "reasons": [
+              "待确认 环境温度 TA。"
+            ],
+            "evidence_ids": [
+              "trigger"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-25",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-trigger",
+      "kind": "query",
+      "question": "TRIG",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "trigger",
+        "trigger-current",
+        "monostable"
+      ],
+      "expected_evidence": [
+        "trigger"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "TRIG",
+        "answer": "TRIG 典型阈值约为 VCC/3；NE555 的 5 V 与 15 V 参数行分别保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "trigger-15",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 4.5,
+            "typical": 5.0,
+            "maximum": 5.6,
+            "unit": "V",
+            "conditions": "VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "trigger-5",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 1.1,
+            "typical": 1.67,
+            "maximum": 2.2,
+            "unit": "V",
+            "conditions": "VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "trigger"
+        ],
+        "hits": [
+          {
+            "evidence_id": "trigger",
+            "score": 104.9666
+          },
+          {
+            "evidence_id": "trigger-current",
+            "score": 1.23788
+          },
+          {
+            "evidence_id": "monostable",
+            "score": 1.07489
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {
+          "vcc": "5 V",
+          "ambient_temperature": "70 °C"
+        },
+        "applicability": [
+          {
+            "parameter_id": "trigger-15",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 供电电压 VCC 的原表条件。",
+              "不符合 环境温度 TA 的原表条件。"
+            ],
+            "evidence_ids": [
+              "trigger"
+            ]
+          },
+          {
+            "parameter_id": "trigger-5",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 环境温度 TA 的原表条件。"
+            ],
+            "evidence_ids": [
+              "trigger"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-26",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-trigger",
+      "kind": "query",
+      "question": "TRIG",
+      "passed": true,
+      "errors": [],
+      "actual_status": "invalid",
+      "top3": [
+        "trigger",
+        "trigger-current",
+        "monostable"
+      ],
+      "expected_evidence": [
+        "trigger"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "invalid",
+        "question": "TRIG",
+        "answer": "筛选条件需要修改；原始参数行保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "trigger-15",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 4.5,
+            "typical": 5.0,
+            "maximum": 5.6,
+            "unit": "V",
+            "conditions": "VCC=15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "trigger-5",
+            "symbol": "TRIG",
+            "name": "触发阈值",
+            "rating": "electrical",
+            "minimum": 1.1,
+            "typical": 1.67,
+            "maximum": 2.2,
+            "unit": "V",
+            "conditions": "VCC=5 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "trigger"
+        ],
+        "hits": [
+          {
+            "evidence_id": "trigger",
+            "score": 104.9666
+          },
+          {
+            "evidence_id": "trigger-current",
+            "score": 1.23788
+          },
+          {
+            "evidence_id": "monostable",
+            "score": 1.07489
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {
+          "vcc": "5",
+          "ambient_temperature": "25 °C"
+        },
+        "applicability": [
+          {
+            "parameter_id": "trigger-15",
+            "status": "invalid",
+            "reasons": [
+              "供电电压 VCC：请输入有限数值并明确单位，例如 12 V、100 kHz、200 kΩ、470 pF、25 °C。"
+            ],
+            "evidence_ids": [
+              "trigger"
+            ]
+          },
+          {
+            "parameter_id": "trigger-5",
+            "status": "invalid",
+            "reasons": [
+              "供电电压 VCC：请输入有限数值并明确单位，例如 12 V、100 kHz、200 kΩ、470 pF、25 °C。"
+            ],
+            "evidence_ids": [
+              "trigger"
+            ]
+          }
+        ],
+        "condition_errors": {
+          "vcc": "请输入有限数值并明确单位，例如 12 V、100 kHz、200 kΩ、470 pF、25 °C。"
+        }
+      }
+    },
+    {
+      "id": "ne555-27",
+      "category": "mechanism",
+      "split": "dev",
+      "family": "query-pins",
+      "kind": "query",
+      "question": "引脚",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "pins"
+      ],
+      "expected_evidence": [
+        "pins"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "evidence_only",
+        "question": "引脚",
+        "answer": "NE555：GND、TRIG、OUT、RESET、CONT、THRES、DISCH、VCC；RESET 低有效。仅显示8引脚 SOIC（D）顶视图。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "pins"
+        ],
+        "hits": [
+          {
+            "evidence_id": "pins",
+            "score": 105.96283
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-28",
+      "category": "mechanism",
+      "split": "dev",
+      "family": "query-pins",
+      "kind": "query",
+      "question": "接线",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "pins"
+      ],
+      "expected_evidence": [
+        "pins"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "evidence_only",
+        "question": "接线",
+        "answer": "NE555：GND、TRIG、OUT、RESET、CONT、THRES、DISCH、VCC；RESET 低有效。仅显示8引脚 SOIC（D）顶视图。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "pins"
+        ],
+        "hits": [
+          {
+            "evidence_id": "pins",
+            "score": 103.96487
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-29",
+      "category": "unanswerable",
+      "split": "dev",
+      "family": "unknown-dev",
+      "kind": "query",
+      "question": "qzxw987654",
+      "passed": true,
+      "errors": [],
+      "actual_status": "not_found",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "not_found",
+        "question": "qzxw987654",
+        "answer": "在当前型号的已整理证据中未找到匹配内容。请试用明确参数符号或中文参数名。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-30",
+      "category": "unanswerable",
+      "split": "dev",
+      "family": "unknown-dev",
+      "kind": "query",
+      "question": "做一盘番茄炒蛋",
+      "passed": true,
+      "errors": [],
+      "actual_status": "not_found",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "not_found",
+        "question": "做一盘番茄炒蛋",
+        "answer": "在当前型号的已整理证据中未找到匹配内容。请试用明确参数符号或中文参数名。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-31",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-recommended",
+      "kind": "query",
+      "question": "推荐工作条件",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended",
+        "abs",
+        "trigger-current"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "推荐工作条件",
+        "answer": "NE555 推荐供电 4.5–16 V，环境温度 0–70°C。电气特性表另有 5–15 V 测试范围，不能把测试范围与推荐范围混为一谈。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "rec-vcc",
+            "symbol": "VCC",
+            "name": "推荐供电",
+            "rating": "recommended",
+            "minimum": 4.5,
+            "typical": null,
+            "maximum": 16.0,
+            "unit": "V",
+            "conditions": "NE555；相对 GND",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rec-current",
+            "symbol": "IO",
+            "name": "推荐输出电流",
+            "rating": "recommended",
+            "minimum": null,
+            "typical": null,
+            "maximum": "±200",
+            "unit": "mA",
+            "conditions": "原文MAX列为±200 mA；还需按输出电压与散热核对",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rec-ta",
+            "symbol": "TA",
+            "name": "环境温度",
+            "rating": "recommended",
+            "minimum": 0.0,
+            "typical": null,
+            "maximum": 70.0,
+            "unit": "°C",
+            "conditions": "NE555；Operating free-air temperature",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 322.06472
+          },
+          {
+            "evidence_id": "abs",
+            "score": 1.76698
+          },
+          {
+            "evidence_id": "trigger-current",
+            "score": 0.15787
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-32",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-recommended",
+      "kind": "query",
+      "question": "供电范围",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended",
+        "threshold-current",
+        "threshold"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "供电范围",
+        "answer": "NE555 推荐供电 4.5–16 V，环境温度 0–70°C。电气特性表另有 5–15 V 测试范围，不能把测试范围与推荐范围混为一谈。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "rec-vcc",
+            "symbol": "VCC",
+            "name": "推荐供电",
+            "rating": "recommended",
+            "minimum": 4.5,
+            "typical": null,
+            "maximum": 16.0,
+            "unit": "V",
+            "conditions": "NE555；相对 GND",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rec-current",
+            "symbol": "IO",
+            "name": "推荐输出电流",
+            "rating": "recommended",
+            "minimum": null,
+            "typical": null,
+            "maximum": "±200",
+            "unit": "mA",
+            "conditions": "原文MAX列为±200 mA；还需按输出电压与散热核对",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rec-ta",
+            "symbol": "TA",
+            "name": "环境温度",
+            "rating": "recommended",
+            "minimum": 0.0,
+            "typical": null,
+            "maximum": 70.0,
+            "unit": "°C",
+            "conditions": "NE555；Operating free-air temperature",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 109.85666
+          },
+          {
+            "evidence_id": "threshold-current",
+            "score": 1.69688
+          },
+          {
+            "evidence_id": "threshold",
+            "score": 1.66434
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-33",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-abs",
+      "kind": "query",
+      "question": "绝对最大额定值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "abs"
+      ],
+      "expected_evidence": [
+        "abs"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "绝对最大额定值",
+        "answer": "NE555 的供电绝对最大值为 18 V；推荐供电为 4.5–16 V，二者不能互换。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "abs-vcc",
+            "symbol": "VCC",
+            "name": "供电应力电压",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 18.0,
+            "unit": "V",
+            "conditions": "相对 GND",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-input",
+            "symbol": "VI",
+            "name": "输入应力电压",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": "VCC",
+            "unit": "V",
+            "conditions": "CONT、RESET、THRES、TRIG；相对 GND",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-current",
+            "symbol": "IO",
+            "name": "输出应力电流",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": "±225",
+            "unit": "mA",
+            "conditions": "±225 mA 在原表MAX列；保留列位置与双向含义",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-tj",
+            "symbol": "TJ",
+            "name": "虚结温",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "应力限制；不能替代 TA",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-storage",
+            "symbol": "Tstg",
+            "name": "储存温度",
+            "rating": "absolute_maximum",
+            "minimum": -65.0,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "储存条件",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "abs"
+        ],
+        "hits": [
+          {
+            "evidence_id": "abs",
+            "score": 328.81927
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-34",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-abs",
+      "kind": "query",
+      "question": "极限电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "abs",
+        "control",
+        "discharge"
+      ],
+      "expected_evidence": [
+        "abs"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "极限电压",
+        "answer": "NE555 的供电绝对最大值为 18 V；推荐供电为 4.5–16 V，二者不能互换。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "abs-vcc",
+            "symbol": "VCC",
+            "name": "供电应力电压",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 18.0,
+            "unit": "V",
+            "conditions": "相对 GND",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-input",
+            "symbol": "VI",
+            "name": "输入应力电压",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": "VCC",
+            "unit": "V",
+            "conditions": "CONT、RESET、THRES、TRIG；相对 GND",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-current",
+            "symbol": "IO",
+            "name": "输出应力电流",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": "±225",
+            "unit": "mA",
+            "conditions": "±225 mA 在原表MAX列；保留列位置与双向含义",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-tj",
+            "symbol": "TJ",
+            "name": "虚结温",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "应力限制；不能替代 TA",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-storage",
+            "symbol": "Tstg",
+            "name": "储存温度",
+            "rating": "absolute_maximum",
+            "minimum": -65.0,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "储存条件",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "abs"
+        ],
+        "hits": [
+          {
+            "evidence_id": "abs",
+            "score": 109.11727
+          },
+          {
+            "evidence_id": "control",
+            "score": 0.89179
+          },
+          {
+            "evidence_id": "discharge",
+            "score": 0.83888
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-35",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-switching",
+      "kind": "query",
+      "question": "上升时间",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "switching"
+      ],
+      "expected_evidence": [
+        "switching"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "上升时间",
+        "answer": "开关特性按设计或表征给出、非生产测试；单稳态与无稳态的元件设置和参数分别读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "timing-temp-mono",
+            "symbol": "αt",
+            "name": "定时温度系数",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 50.0,
+            "maximum": null,
+            "unit": "ppm/°C",
+            "conditions": "单稳态；TA=MIN–MAX；RA=2–100 kΩ；C=0.1 μF；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "timing-temp-astable",
+            "symbol": "αt",
+            "name": "定时温度系数",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 150.0,
+            "maximum": null,
+            "unit": "ppm/°C",
+            "conditions": "无稳态；TA=MIN–MAX；RA=1–100 kΩ；C=0.1 μF；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "timing-supply-mono",
+            "symbol": "SVt",
+            "name": "定时电源敏感度",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.1,
+            "maximum": 0.5,
+            "unit": "%/V",
+            "conditions": "单稳态；RA=2–100 kΩ；C=0.1 μF；TA=25°C；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "timing-supply-astable",
+            "symbol": "SVt",
+            "name": "定时电源敏感度",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.3,
+            "maximum": null,
+            "unit": "%/V",
+            "conditions": "无稳态；RA=1–100 kΩ；C=0.1 μF；TA=25°C；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rise",
+            "symbol": "tr",
+            "name": "输出上升时间",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 300.0,
+            "unit": "ns",
+            "conditions": "CL=15 pF；TA=25°C；20%→80%；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "fall",
+            "symbol": "tf",
+            "name": "输出下降时间",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 300.0,
+            "unit": "ns",
+            "conditions": "CL=15 pF；TA=25°C；80%→20%；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "switching"
+        ],
+        "hits": [
+          {
+            "evidence_id": "switching",
+            "score": 110.75995
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-36",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-switching",
+      "kind": "query",
+      "question": "下降时间",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "switching"
+      ],
+      "expected_evidence": [
+        "switching"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "下降时间",
+        "answer": "开关特性按设计或表征给出、非生产测试；单稳态与无稳态的元件设置和参数分别读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "timing-temp-mono",
+            "symbol": "αt",
+            "name": "定时温度系数",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 50.0,
+            "maximum": null,
+            "unit": "ppm/°C",
+            "conditions": "单稳态；TA=MIN–MAX；RA=2–100 kΩ；C=0.1 μF；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "timing-temp-astable",
+            "symbol": "αt",
+            "name": "定时温度系数",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 150.0,
+            "maximum": null,
+            "unit": "ppm/°C",
+            "conditions": "无稳态；TA=MIN–MAX；RA=1–100 kΩ；C=0.1 μF；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "timing-supply-mono",
+            "symbol": "SVt",
+            "name": "定时电源敏感度",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.1,
+            "maximum": 0.5,
+            "unit": "%/V",
+            "conditions": "单稳态；RA=2–100 kΩ；C=0.1 μF；TA=25°C；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "timing-supply-astable",
+            "symbol": "SVt",
+            "name": "定时电源敏感度",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.3,
+            "maximum": null,
+            "unit": "%/V",
+            "conditions": "无稳态；RA=1–100 kΩ；C=0.1 μF；TA=25°C；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rise",
+            "symbol": "tr",
+            "name": "输出上升时间",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 300.0,
+            "unit": "ns",
+            "conditions": "CL=15 pF；TA=25°C；20%→80%；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "fall",
+            "symbol": "tf",
+            "name": "输出下降时间",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 300.0,
+            "unit": "ns",
+            "conditions": "CL=15 pF；TA=25°C；80%→20%；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "switching"
+        ],
+        "hits": [
+          {
+            "evidence_id": "switching",
+            "score": 110.75995
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-37",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-switching",
+      "kind": "query",
+      "question": "定时温漂",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "switching",
+        "resistor-note",
+        "threshold-current"
+      ],
+      "expected_evidence": [
+        "switching"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "定时温漂",
+        "answer": "开关特性按设计或表征给出、非生产测试；单稳态与无稳态的元件设置和参数分别读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "timing-temp-mono",
+            "symbol": "αt",
+            "name": "定时温度系数",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 50.0,
+            "maximum": null,
+            "unit": "ppm/°C",
+            "conditions": "单稳态；TA=MIN–MAX；RA=2–100 kΩ；C=0.1 μF；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "timing-temp-astable",
+            "symbol": "αt",
+            "name": "定时温度系数",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 150.0,
+            "maximum": null,
+            "unit": "ppm/°C",
+            "conditions": "无稳态；TA=MIN–MAX；RA=1–100 kΩ；C=0.1 μF；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "timing-supply-mono",
+            "symbol": "SVt",
+            "name": "定时电源敏感度",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.1,
+            "maximum": 0.5,
+            "unit": "%/V",
+            "conditions": "单稳态；RA=2–100 kΩ；C=0.1 μF；TA=25°C；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "timing-supply-astable",
+            "symbol": "SVt",
+            "name": "定时电源敏感度",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.3,
+            "maximum": null,
+            "unit": "%/V",
+            "conditions": "无稳态；RA=1–100 kΩ；C=0.1 μF；TA=25°C；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rise",
+            "symbol": "tr",
+            "name": "输出上升时间",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 300.0,
+            "unit": "ns",
+            "conditions": "CL=15 pF；TA=25°C；20%→80%；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "fall",
+            "symbol": "tf",
+            "name": "输出下降时间",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 300.0,
+            "unit": "ns",
+            "conditions": "CL=15 pF；TA=25°C；80%→20%；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "switching"
+        ],
+        "hits": [
+          {
+            "evidence_id": "switching",
+            "score": 111.43576
+          },
+          {
+            "evidence_id": "resistor-note",
+            "score": 1.86112
+          },
+          {
+            "evidence_id": "threshold-current",
+            "score": 1.31154
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-38",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-switching",
+      "kind": "query",
+      "question": "定时电源敏感度",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "switching",
+        "resistor-note",
+        "threshold-current"
+      ],
+      "expected_evidence": [
+        "switching"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "定时电源敏感度",
+        "answer": "开关特性按设计或表征给出、非生产测试；单稳态与无稳态的元件设置和参数分别读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "timing-temp-mono",
+            "symbol": "αt",
+            "name": "定时温度系数",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 50.0,
+            "maximum": null,
+            "unit": "ppm/°C",
+            "conditions": "单稳态；TA=MIN–MAX；RA=2–100 kΩ；C=0.1 μF；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "timing-temp-astable",
+            "symbol": "αt",
+            "name": "定时温度系数",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 150.0,
+            "maximum": null,
+            "unit": "ppm/°C",
+            "conditions": "无稳态；TA=MIN–MAX；RA=1–100 kΩ；C=0.1 μF；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "timing-supply-mono",
+            "symbol": "SVt",
+            "name": "定时电源敏感度",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.1,
+            "maximum": 0.5,
+            "unit": "%/V",
+            "conditions": "单稳态；RA=2–100 kΩ；C=0.1 μF；TA=25°C；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "timing-supply-astable",
+            "symbol": "SVt",
+            "name": "定时电源敏感度",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.3,
+            "maximum": null,
+            "unit": "%/V",
+            "conditions": "无稳态；RA=1–100 kΩ；C=0.1 μF；TA=25°C；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rise",
+            "symbol": "tr",
+            "name": "输出上升时间",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 300.0,
+            "unit": "ns",
+            "conditions": "CL=15 pF；TA=25°C；20%→80%；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "fall",
+            "symbol": "tf",
+            "name": "输出下降时间",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 300.0,
+            "unit": "ns",
+            "conditions": "CL=15 pF；TA=25°C；80%→20%；设计/表征，非生产测试",
+            "notes": [
+              "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+            ],
+            "evidence_ids": [
+              "switching"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "switching"
+        ],
+        "hits": [
+          {
+            "evidence_id": "switching",
+            "score": 117.44531
+          },
+          {
+            "evidence_id": "resistor-note",
+            "score": 4.26904
+          },
+          {
+            "evidence_id": "threshold-current",
+            "score": 3.00842
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-39",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-trigger-current",
+      "kind": "query",
+      "question": "触发输入电流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "trigger-current",
+        "threshold-current",
+        "reset"
+      ],
+      "expected_evidence": [
+        "trigger-current"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "触发输入电流",
+        "answer": "TRIG 输入电流在 TRIG=0 V 条件给出。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "trigger-current",
+            "symbol": "ITRIG",
+            "name": "触发输入电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.5,
+            "maximum": 2.0,
+            "unit": "μA",
+            "conditions": "TRIG=0 V；VCC=5–15 V；TA=25°C",
+            "notes": [],
+            "evidence_ids": [
+              "trigger-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "trigger-current"
+        ],
+        "hits": [
+          {
+            "evidence_id": "trigger-current",
+            "score": 119.5103
+          },
+          {
+            "evidence_id": "threshold-current",
+            "score": 4.53557
+          },
+          {
+            "evidence_id": "reset",
+            "score": 3.75491
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-40",
+      "category": "mechanism",
+      "split": "holdout",
+      "family": "duty-definition",
+      "kind": "query",
+      "question": "输出高电平占空比",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "astable",
+        "output-high",
+        "output-low"
+      ],
+      "expected_evidence": [
+        "astable"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "evidence_only",
+        "question": "输出高电平占空比",
+        "answer": "无稳态 tH≈0.693(RA+RB)C，tL≈0.693 RB C，f=1/(tH+tL)，输出高电平占空比=tH/(tH+tL)。手册建议频率不超过100 kHz以减小失真。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "astable"
+        ],
+        "hits": [
+          {
+            "evidence_id": "astable",
+            "score": 113.31233
+          },
+          {
+            "evidence_id": "output-high",
+            "score": 7.2641
+          },
+          {
+            "evidence_id": "output-low",
+            "score": 3.66848
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-41",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-vcc",
+      "kind": "check",
+      "question": "{'vcc': '4.5 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "NE555 条件检查",
+        "answer": "推荐供电电压 VCC：满足该项。4.5 V；该项范围为 4.5–16 V（含边界）。18 V 是绝对最大额定值。",
+        "inputs": {
+          "vcc": "4.5 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "satisfied",
+            "message": "4.5 V；该项范围为 4.5–16 V（含边界）。18 V 是绝对最大额定值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 4.5,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "timing",
+            "title": "定时公式输入",
+            "status": "needs_information",
+            "message": "请提供定时模式、定时电阻 RA、定时电容 C；不使用隐含默认值。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "mode",
+              "ra",
+              "capacitance"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-42",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-vcc",
+      "kind": "check",
+      "question": "{'vcc': '16 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "NE555 条件检查",
+        "answer": "推荐供电电压 VCC：满足该项。16 V；该项范围为 4.5–16 V（含边界）。18 V 是绝对最大额定值。",
+        "inputs": {
+          "vcc": "16 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "satisfied",
+            "message": "16 V；该项范围为 4.5–16 V（含边界）。18 V 是绝对最大额定值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 16.0,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "timing",
+            "title": "定时公式输入",
+            "status": "needs_information",
+            "message": "请提供定时模式、定时电阻 RA、定时电容 C；不使用隐含默认值。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "mode",
+              "ra",
+              "capacitance"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-43",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-vcc",
+      "kind": "check",
+      "question": "{'vcc': '4.499 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "NE555 条件检查",
+        "answer": "推荐供电电压 VCC：不满足该项。4.499 V；该项范围为 4.5–16 V（含边界）。18 V 是绝对最大额定值。",
+        "inputs": {
+          "vcc": "4.499 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "violated",
+            "message": "4.499 V；该项范围为 4.5–16 V（含边界）。18 V 是绝对最大额定值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 4.499,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "timing",
+            "title": "定时公式输入",
+            "status": "needs_information",
+            "message": "请提供定时模式、定时电阻 RA、定时电容 C；不使用隐含默认值。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "mode",
+              "ra",
+              "capacitance"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-44",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-vcc",
+      "kind": "check",
+      "question": "{'vcc': '16.001 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "NE555 条件检查",
+        "answer": "推荐供电电压 VCC：不满足该项。16.001 V；该项范围为 4.5–16 V（含边界）。18 V 是绝对最大额定值。",
+        "inputs": {
+          "vcc": "16.001 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "violated",
+            "message": "16.001 V；该项范围为 4.5–16 V（含边界）。18 V 是绝对最大额定值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 16.001,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "timing",
+            "title": "定时公式输入",
+            "status": "needs_information",
+            "message": "请提供定时模式、定时电阻 RA、定时电容 C；不使用隐含默认值。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "mode",
+              "ra",
+              "capacitance"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-45",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-ambient_temperature",
+      "kind": "check",
+      "question": "{'ambient_temperature': '0 °C'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "NE555 条件检查",
+        "answer": "推荐环境温度 TA：满足该项。0 °C；该项范围为 0–70 °C（含边界）。",
+        "inputs": {
+          "ambient_temperature": "0 °C"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "needs_information",
+            "message": "请提供供电电压 VCC；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vcc"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "satisfied",
+            "message": "0 °C；该项范围为 0–70 °C（含边界）。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 0.0,
+            "unit": "°C",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "timing",
+            "title": "定时公式输入",
+            "status": "needs_information",
+            "message": "请提供定时模式、定时电阻 RA、定时电容 C；不使用隐含默认值。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "mode",
+              "ra",
+              "capacitance"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-46",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-ambient_temperature",
+      "kind": "check",
+      "question": "{'ambient_temperature': '70 °C'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "NE555 条件检查",
+        "answer": "推荐环境温度 TA：满足该项。70 °C；该项范围为 0–70 °C（含边界）。",
+        "inputs": {
+          "ambient_temperature": "70 °C"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "needs_information",
+            "message": "请提供供电电压 VCC；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vcc"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "satisfied",
+            "message": "70 °C；该项范围为 0–70 °C（含边界）。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 70.0,
+            "unit": "°C",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "timing",
+            "title": "定时公式输入",
+            "status": "needs_information",
+            "message": "请提供定时模式、定时电阻 RA、定时电容 C；不使用隐含默认值。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "mode",
+              "ra",
+              "capacitance"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-47",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-ambient_temperature",
+      "kind": "check",
+      "question": "{'ambient_temperature': '-1 °C'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "NE555 条件检查",
+        "answer": "推荐环境温度 TA：不满足该项。-1 °C；该项范围为 0–70 °C（含边界）。",
+        "inputs": {
+          "ambient_temperature": "-1 °C"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "needs_information",
+            "message": "请提供供电电压 VCC；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vcc"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "violated",
+            "message": "-1 °C；该项范围为 0–70 °C（含边界）。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": -1.0,
+            "unit": "°C",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "timing",
+            "title": "定时公式输入",
+            "status": "needs_information",
+            "message": "请提供定时模式、定时电阻 RA、定时电容 C；不使用隐含默认值。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "mode",
+              "ra",
+              "capacitance"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-48",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-ambient_temperature",
+      "kind": "check",
+      "question": "{'ambient_temperature': '71 °C'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "NE555 条件检查",
+        "answer": "推荐环境温度 TA：不满足该项。71 °C；该项范围为 0–70 °C（含边界）。",
+        "inputs": {
+          "ambient_temperature": "71 °C"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "needs_information",
+            "message": "请提供供电电压 VCC；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vcc"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "violated",
+            "message": "71 °C；该项范围为 0–70 °C（含边界）。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 71.0,
+            "unit": "°C",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "timing",
+            "title": "定时公式输入",
+            "status": "needs_information",
+            "message": "请提供定时模式、定时电阻 RA、定时电容 C；不使用隐含默认值。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "mode",
+              "ra",
+              "capacitance"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-49",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-frequency",
+      "kind": "check",
+      "question": "{'mode': 'astable', 'ra': '10 kΩ', 'rb': '10 kΩ', 'capacitance': '10 nF'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "astable"
+      ],
+      "expected_evidence": [
+        "astable"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "NE555 条件检查",
+        "answer": "输出高电平时间：标称估算。0.1386 ms。根据标准接线的标称公式估算；芯片误差未计入。\n输出低电平时间：标称估算。0.0693 ms。根据标准接线的标称公式估算；芯片误差未计入。\n标称周期：标称估算。0.2079 ms。根据标准接线的标称公式估算；芯片误差未计入。\n标称振荡频率：标称估算。4.81 kHz。根据标准接线的标称公式估算；芯片误差未计入。\n输出高电平占空比：标称估算。66.6667 %。占空比指输出高电平比例，不是手册中的驱动器占空比。\n应用建议：频率不超过100 kHz：满足该项。估算频率符合手册为减小失真而给出的≤100 kHz建议。这不是保证精度或绝对最大频率。",
+        "inputs": {
+          "mode": "astable",
+          "ra": "10 kΩ",
+          "rb": "10 kΩ",
+          "capacitance": "10 nF"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "needs_information",
+            "message": "请提供供电电压 VCC；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vcc"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "high_time",
+            "title": "输出高电平时间",
+            "status": "estimated",
+            "message": "0.1386 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 0.1386,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "low_time",
+            "title": "输出低电平时间",
+            "status": "estimated",
+            "message": "0.0693 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 0.0693,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "period",
+            "title": "标称周期",
+            "status": "estimated",
+            "message": "0.2079 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 0.2079,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "frequency",
+            "title": "标称振荡频率",
+            "status": "estimated",
+            "message": "4.81 kHz。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 4.81000481000481,
+            "unit": "kHz",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "duty",
+            "title": "输出高电平占空比",
+            "status": "estimated",
+            "message": "66.6667 %。占空比指输出高电平比例，不是手册中的驱动器占空比。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 66.66666666666667,
+            "unit": "%",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "frequency_guidance",
+            "title": "应用建议：频率不超过100 kHz",
+            "status": "satisfied",
+            "message": "估算频率符合手册为减小失真而给出的≤100 kHz建议。这不是保证精度或绝对最大频率。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 4.81000481000481,
+            "unit": "kHz",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          }
+        ],
+        "evidence_ids": [
+          "astable"
+        ],
+        "hits": [
+          {
+            "evidence_id": "astable",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-50",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-duty",
+      "kind": "check",
+      "question": "{'mode': 'astable', 'ra': '10 kΩ', 'rb': '10 kΩ', 'capacitance': '10 nF'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "astable"
+      ],
+      "expected_evidence": [
+        "astable"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "NE555 条件检查",
+        "answer": "输出高电平时间：标称估算。0.1386 ms。根据标准接线的标称公式估算；芯片误差未计入。\n输出低电平时间：标称估算。0.0693 ms。根据标准接线的标称公式估算；芯片误差未计入。\n标称周期：标称估算。0.2079 ms。根据标准接线的标称公式估算；芯片误差未计入。\n标称振荡频率：标称估算。4.81 kHz。根据标准接线的标称公式估算；芯片误差未计入。\n输出高电平占空比：标称估算。66.6667 %。占空比指输出高电平比例，不是手册中的驱动器占空比。\n应用建议：频率不超过100 kHz：满足该项。估算频率符合手册为减小失真而给出的≤100 kHz建议。这不是保证精度或绝对最大频率。",
+        "inputs": {
+          "mode": "astable",
+          "ra": "10 kΩ",
+          "rb": "10 kΩ",
+          "capacitance": "10 nF"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "needs_information",
+            "message": "请提供供电电压 VCC；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vcc"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "high_time",
+            "title": "输出高电平时间",
+            "status": "estimated",
+            "message": "0.1386 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 0.1386,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "low_time",
+            "title": "输出低电平时间",
+            "status": "estimated",
+            "message": "0.0693 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 0.0693,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "period",
+            "title": "标称周期",
+            "status": "estimated",
+            "message": "0.2079 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 0.2079,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "frequency",
+            "title": "标称振荡频率",
+            "status": "estimated",
+            "message": "4.81 kHz。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 4.81000481000481,
+            "unit": "kHz",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "duty",
+            "title": "输出高电平占空比",
+            "status": "estimated",
+            "message": "66.6667 %。占空比指输出高电平比例，不是手册中的驱动器占空比。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 66.66666666666667,
+            "unit": "%",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "frequency_guidance",
+            "title": "应用建议：频率不超过100 kHz",
+            "status": "satisfied",
+            "message": "估算频率符合手册为减小失真而给出的≤100 kHz建议。这不是保证精度或绝对最大频率。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 4.81000481000481,
+            "unit": "kHz",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          }
+        ],
+        "evidence_ids": [
+          "astable"
+        ],
+        "hits": [
+          {
+            "evidence_id": "astable",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-51",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-pulse_width",
+      "kind": "check",
+      "question": "{'mode': 'monostable', 'ra': '10 kΩ', 'capacitance': '10 nF'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "monostable"
+      ],
+      "expected_evidence": [
+        "monostable"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "NE555 条件检查",
+        "answer": "单稳态标称脉宽：标称估算。0.11 ms。根据标准接线的标称公式估算；芯片误差未计入。\n应用时序：脉宽与触发：标称估算。手册讨论了10 μs最小脉宽与TRIG在结束前至少10 μs回高的条件；输入波形未提供，本工具不核验这些时序。",
+        "inputs": {
+          "mode": "monostable",
+          "ra": "10 kΩ",
+          "capacitance": "10 nF"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "needs_information",
+            "message": "请提供供电电压 VCC；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vcc"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "pulse_width",
+            "title": "单稳态标称脉宽",
+            "status": "estimated",
+            "message": "0.11 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "monostable"
+            ],
+            "value": 0.11,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "pulse_guidance",
+            "title": "应用时序：脉宽与触发",
+            "status": "estimated",
+            "message": "手册讨论了10 μs最小脉宽与TRIG在结束前至少10 μs回高的条件；输入波形未提供，本工具不核验这些时序。",
+            "evidence_ids": [
+              "monostable"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          }
+        ],
+        "evidence_ids": [
+          "monostable"
+        ],
+        "hits": [
+          {
+            "evidence_id": "monostable",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-52",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-timing",
+      "kind": "check",
+      "question": "{'mode': 'astable', 'ra': '0 Ω', 'rb': '10 kΩ', 'capacitance': '10 nF'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "invalid",
+      "top3": [
+        "astable"
+      ],
+      "expected_evidence": [
+        "astable"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "invalid",
+        "question": "NE555 条件检查",
+        "answer": "定时公式输入：输入需要修改。定时电阻 RA：电阻和电容必须大于零。",
+        "inputs": {
+          "mode": "astable",
+          "ra": "0 Ω",
+          "rb": "10 kΩ",
+          "capacitance": "10 nF"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "needs_information",
+            "message": "请提供供电电压 VCC；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vcc"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "timing",
+            "title": "定时公式输入",
+            "status": "invalid",
+            "message": "定时电阻 RA：电阻和电容必须大于零。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ra"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "astable"
+        ],
+        "hits": [
+          {
+            "evidence_id": "astable",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-53",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-timing_tolerance",
+      "kind": "check",
+      "question": "{'mode': 'astable', 'ra': '10 kΩ', 'rb': '10 kΩ', 'capacitance': '10 nF', 'ra_tolerance': '1%'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "astable"
+      ],
+      "expected_evidence": [
+        "astable"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "answered",
+        "question": "NE555 条件检查",
+        "answer": "输出高电平时间：标称估算。0.1386 ms。根据标准接线的标称公式估算；芯片误差未计入。\n输出低电平时间：标称估算。0.0693 ms。根据标准接线的标称公式估算；芯片误差未计入。\n标称周期：标称估算。0.2079 ms。根据标准接线的标称公式估算；芯片误差未计入。\n标称振荡频率：标称估算。4.81 kHz。根据标准接线的标称公式估算；芯片误差未计入。\n输出高电平占空比：标称估算。66.6667 %。占空比指输出高电平比例，不是手册中的驱动器占空比。\n应用建议：频率不超过100 kHz：满足该项。估算频率符合手册为减小失真而给出的≤100 kHz建议。这不是保证精度或绝对最大频率。",
+        "inputs": {
+          "mode": "astable",
+          "ra": "10 kΩ",
+          "rb": "10 kΩ",
+          "capacitance": "10 nF",
+          "ra_tolerance": "1%"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "needs_information",
+            "message": "请提供供电电压 VCC；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vcc"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "high_time",
+            "title": "输出高电平时间",
+            "status": "estimated",
+            "message": "0.1386 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 0.1386,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "low_time",
+            "title": "输出低电平时间",
+            "status": "estimated",
+            "message": "0.0693 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 0.0693,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "period",
+            "title": "标称周期",
+            "status": "estimated",
+            "message": "0.2079 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 0.2079,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "frequency",
+            "title": "标称振荡频率",
+            "status": "estimated",
+            "message": "4.81 kHz。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 4.81000481000481,
+            "unit": "kHz",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "duty",
+            "title": "输出高电平占空比",
+            "status": "estimated",
+            "message": "66.6667 %。占空比指输出高电平比例，不是手册中的驱动器占空比。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 66.66666666666667,
+            "unit": "%",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "frequency_guidance",
+            "title": "应用建议：频率不超过100 kHz",
+            "status": "satisfied",
+            "message": "估算频率符合手册为减小失真而给出的≤100 kHz建议。这不是保证精度或绝对最大频率。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 4.81000481000481,
+            "unit": "kHz",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "timing_tolerance",
+            "title": "元件容差区间",
+            "status": "needs_information",
+            "message": "请提供C 容差（可选）、RB 容差（无稳态，可选）；不使用隐含默认值。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "capacitance_tolerance",
+              "rb_tolerance"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "astable"
+        ],
+        "hits": [
+          {
+            "evidence_id": "astable",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-54",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-timing_tolerance",
+      "kind": "check",
+      "question": "{'mode': 'astable', 'ra': '10 kΩ', 'rb': '10 kΩ', 'capacitance': '10 nF', 'ra_tolerance': '100%', 'rb_tolerance': '1%', 'capacitance_tolerance': '5%'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "invalid",
+      "top3": [
+        "astable"
+      ],
+      "expected_evidence": [
+        "astable"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "invalid",
+        "question": "NE555 条件检查",
+        "answer": "输出高电平时间：标称估算。0.1386 ms。根据标准接线的标称公式估算；芯片误差未计入。\n输出低电平时间：标称估算。0.0693 ms。根据标准接线的标称公式估算；芯片误差未计入。\n标称周期：标称估算。0.2079 ms。根据标准接线的标称公式估算；芯片误差未计入。\n标称振荡频率：标称估算。4.81 kHz。根据标准接线的标称公式估算；芯片误差未计入。\n输出高电平占空比：标称估算。66.6667 %。占空比指输出高电平比例，不是手册中的驱动器占空比。\n应用建议：频率不超过100 kHz：满足该项。估算频率符合手册为减小失真而给出的≤100 kHz建议。这不是保证精度或绝对最大频率。\n元件容差区间：输入需要修改。RA 容差（可选）：容差须为0%至小于100%，且明确填写%。",
+        "inputs": {
+          "mode": "astable",
+          "ra": "10 kΩ",
+          "rb": "10 kΩ",
+          "capacitance": "10 nF",
+          "ra_tolerance": "100%",
+          "rb_tolerance": "1%",
+          "capacitance_tolerance": "5%"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vcc",
+            "title": "推荐供电电压 VCC",
+            "status": "needs_information",
+            "message": "请提供供电电压 VCC；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vcc"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "high_time",
+            "title": "输出高电平时间",
+            "status": "estimated",
+            "message": "0.1386 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 0.1386,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "low_time",
+            "title": "输出低电平时间",
+            "status": "estimated",
+            "message": "0.0693 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 0.0693,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "period",
+            "title": "标称周期",
+            "status": "estimated",
+            "message": "0.2079 ms。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 0.2079,
+            "unit": "ms",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "frequency",
+            "title": "标称振荡频率",
+            "status": "estimated",
+            "message": "4.81 kHz。根据标准接线的标称公式估算；芯片误差未计入。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 4.81000481000481,
+            "unit": "kHz",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "duty",
+            "title": "输出高电平占空比",
+            "status": "estimated",
+            "message": "66.6667 %。占空比指输出高电平比例，不是手册中的驱动器占空比。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 66.66666666666667,
+            "unit": "%",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "frequency_guidance",
+            "title": "应用建议：频率不超过100 kHz",
+            "status": "satisfied",
+            "message": "估算频率符合手册为减小失真而给出的≤100 kHz建议。这不是保证精度或绝对最大频率。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": 4.81000481000481,
+            "unit": "kHz",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "timing_tolerance",
+            "title": "元件容差区间",
+            "status": "invalid",
+            "message": "RA 容差（可选）：容差须为0%至小于100%，且明确填写%。",
+            "evidence_ids": [
+              "astable"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ra_tolerance"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "astable"
+        ],
+        "hits": [
+          {
+            "evidence_id": "astable",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "供电与温度检查独立于标称定时估算；公式可算不代表器件在超范围供电下可用。",
+          "容差须显式提供，空白不当0%；单稳态不使用RB或RB容差。",
+          "频率按1/(tH+tL)计算，避免1.44与0.693两个近似系数导致内部不一致。"
+        ],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-55",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unsupported-holdout",
+      "kind": "query",
+      "question": "SE555 的供电范围",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "unsupported",
+        "question": "SE555 的供电范围",
+        "answer": "当前所选资料只覆盖 NE555（TI）。问题包含其他型号或后缀，请切换对应芯片；没有收录的型号不能沿用当前规格。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-56",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unsupported-holdout",
+      "kind": "query",
+      "question": "TLC555 的参数",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "unsupported",
+        "question": "TLC555 的参数",
+        "answer": "当前所选资料只覆盖 NE555（TI）。问题包含其他型号或后缀，请切换对应芯片；没有收录的型号不能沿用当前规格。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-57",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unsupported-holdout",
+      "kind": "query",
+      "question": "从曲线读出精确值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "unsupported",
+        "question": "从曲线读出精确值",
+        "answer": "当前支持手册证据与有限检查；曲线自动读数和完整电路设计判断暂不支持。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-58",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unsupported-holdout",
+      "kind": "query",
+      "question": "生成完整电路BOM",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "unsupported",
+        "question": "生成完整电路BOM",
+        "answer": "当前支持手册证据与有限检查；曲线自动读数和完整电路设计判断暂不支持。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-59",
+      "category": "unanswerable",
+      "split": "holdout",
+      "family": "missing-unit",
+      "kind": "query",
+      "question": "供电5能工作吗",
+      "passed": true,
+      "errors": [],
+      "actual_status": "needs_information",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "needs_information",
+        "question": "供电5能工作吗",
+        "answer": "请在条件检查页确认输入量与单位，不自动从多个电压中选择供电。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "ne555-60",
+      "category": "unanswerable",
+      "split": "holdout",
+      "family": "unknown-holdout",
+      "kind": "query",
+      "question": "qzxw555000",
+      "passed": true,
+      "errors": [],
+      "actual_status": "not_found",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "ne555",
+        "status": "not_found",
+        "question": "qzxw555000",
+        "answer": "在当前型号的已整理证据中未找到匹配内容。请试用明确参数符号或中文参数名。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "source_revision": "SLFS022K (Rev. K)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    }
+  ]
+}

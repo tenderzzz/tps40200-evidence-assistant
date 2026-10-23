@@ -1,0 +1,465 @@
+[
+  {
+    "id": "abs",
+    "title": "绝对最大额定值",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      93,
+      558,
+      237
+    ],
+    "context_bboxes": [
+      [
+        54,
+        245,
+        558,
+        293
+      ]
+    ],
+    "aliases": [
+      "绝对最大额定值",
+      "absolute maximum",
+      "极限电压"
+    ],
+    "summary": "NE555 的供电绝对最大值为 18 V；推荐供电为 4.5–16 V，二者不能互换。",
+    "curated": true
+  },
+  {
+    "id": "recommended",
+    "title": "推荐工作条件",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      399,
+      558,
+      542
+    ],
+    "context_bboxes": [],
+    "aliases": [
+      "推荐工作条件",
+      "推荐供电电压",
+      "供电范围",
+      "工作温度",
+      "VCC",
+      "环境温度"
+    ],
+    "summary": "NE555 推荐供电 4.5–16 V，环境温度 0–70°C。电气特性表另有 5–15 V 测试范围，不能把测试范围与推荐范围混为一谈。",
+    "curated": true
+  },
+  {
+    "id": "threshold",
+    "title": "阈值电压",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      376,
+      558,
+      428
+    ],
+    "context_bboxes": [
+      [
+        54,
+        329,
+        558,
+        373
+      ]
+    ],
+    "aliases": [
+      "阈值电压",
+      "THRES",
+      "threshold"
+    ],
+    "summary": "THRES 阈值的典型值约为供电的 2/3，但保证范围须按 5 V、15 V 条件分别读取。",
+    "curated": true
+  },
+  {
+    "id": "threshold-current",
+    "title": "THRES电流",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      430,
+      558,
+      442
+    ],
+    "context_bboxes": [
+      [
+        54,
+        329,
+        558,
+        373
+      ]
+    ],
+    "aliases": [
+      "THRES电流",
+      "阈值输入电流"
+    ],
+    "summary": "THRES 电流会影响定时电阻可用范围，见跨页脚注。",
+    "curated": true
+  },
+  {
+    "id": "trigger",
+    "title": "触发阈值",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      445,
+      558,
+      527
+    ],
+    "context_bboxes": [
+      [
+        54,
+        329,
+        558,
+        373
+      ]
+    ],
+    "aliases": [
+      "触发阈值",
+      "触发电压",
+      "TRIG",
+      "trigger"
+    ],
+    "summary": "TRIG 典型阈值约为 VCC/3；NE555 的 5 V 与 15 V 参数行分别保留。",
+    "curated": true
+  },
+  {
+    "id": "trigger-current",
+    "title": "触发输入电流",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      529,
+      558,
+      554
+    ],
+    "context_bboxes": [
+      [
+        54,
+        329,
+        558,
+        373
+      ]
+    ],
+    "aliases": [
+      "触发输入电流",
+      "TRIG电流"
+    ],
+    "summary": "TRIG 输入电流在 TRIG=0 V 条件给出。",
+    "curated": true
+  },
+  {
+    "id": "reset",
+    "title": "复位阈值",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      557,
+      558,
+      624
+    ],
+    "context_bboxes": [
+      [
+        54,
+        329,
+        558,
+        373
+      ]
+    ],
+    "aliases": [
+      "复位阈值",
+      "RESET",
+      "复位电流",
+      "如何复位"
+    ],
+    "summary": "RESET 低有效，并覆盖触发和阈值输入；电压与电流测试条件分开读取。",
+    "curated": true
+  },
+  {
+    "id": "discharge",
+    "title": "放电开关",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      627,
+      558,
+      653
+    ],
+    "context_bboxes": [
+      [
+        54,
+        329,
+        558,
+        373
+      ]
+    ],
+    "aliases": [
+      "放电开关",
+      "DISCH",
+      "放电漏电流"
+    ],
+    "summary": "DISCH 关断漏电和导通电压分别列出；导通电压在 5 V、8 mA 条件给出。",
+    "curated": true
+  },
+  {
+    "id": "control",
+    "title": "控制电压",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      119,
+      558,
+      201
+    ],
+    "context_bboxes": [
+      [
+        54,
+        73,
+        558,
+        116
+      ],
+      [
+        54,
+        708,
+        558,
+        730
+      ]
+    ],
+    "aliases": [
+      "控制电压",
+      "CONT",
+      "control voltage"
+    ],
+    "summary": "CONT 开路电压随供电条件变化，不能默认把外部控制电压接入后仍按开路值计算。",
+    "curated": true
+  },
+  {
+    "id": "output-low",
+    "title": "低电平输出电压",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      203,
+      558,
+      471
+    ],
+    "context_bboxes": [
+      [
+        54,
+        73,
+        558,
+        116
+      ],
+      [
+        54,
+        708,
+        558,
+        730
+      ]
+    ],
+    "aliases": [
+      "低电平输出电压",
+      "VOL",
+      "灌电流"
+    ],
+    "summary": "输出低电平电压依赖供电和灌电流，200 mA 行只给典型值。",
+    "curated": true
+  },
+  {
+    "id": "output-high",
+    "title": "高电平输出电压",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      474,
+      558,
+      589
+    ],
+    "context_bboxes": [
+      [
+        54,
+        73,
+        558,
+        116
+      ],
+      [
+        54,
+        708,
+        558,
+        730
+      ]
+    ],
+    "aliases": [
+      "高电平输出电压",
+      "VOH",
+      "源电流",
+      "输出摆幅"
+    ],
+    "summary": "NE555 高电平输出不能无条件视为等于 VCC；按供电和源电流读取。",
+    "curated": true
+  },
+  {
+    "id": "supply-current",
+    "title": "供电电流",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      591,
+      558,
+      700
+    ],
+    "context_bboxes": [
+      [
+        54,
+        73,
+        558,
+        116
+      ],
+      [
+        54,
+        708,
+        558,
+        730
+      ]
+    ],
+    "aliases": [
+      "供电电流",
+      "静态电流",
+      "ICC",
+      "IQ"
+    ],
+    "summary": "供电电流与输出高低状态、零负载和供电电压有关。",
+    "curated": true
+  },
+  {
+    "id": "switching",
+    "title": "定时温漂",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      76,
+      558,
+      357
+    ],
+    "context_bboxes": [
+      [
+        54,
+        366,
+        558,
+        415
+      ]
+    ],
+    "aliases": [
+      "定时温漂",
+      "定时电源敏感度",
+      "上升时间",
+      "下降时间",
+      "tr",
+      "tf"
+    ],
+    "summary": "开关特性按设计或表征给出、非生产测试；单稳态与无稳态的元件设置和参数分别读取。",
+    "curated": true
+  },
+  {
+    "id": "monostable",
+    "title": "单稳态",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      76,
+      558,
+      395
+    ],
+    "context_bboxes": [],
+    "aliases": [
+      "单稳态",
+      "单次脉冲",
+      "脉宽公式",
+      "1.1RC",
+      "monostable"
+    ],
+    "summary": "单稳态标称脉宽约为 1.1×RA×C；应核对触发回高至少 10 μs 等时序条件，公式不能保证精度。",
+    "curated": true
+  },
+  {
+    "id": "astable",
+    "title": "无稳态",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      76,
+      558,
+      720
+    ],
+    "context_bboxes": [],
+    "aliases": [
+      "无稳态",
+      "自激",
+      "频率公式",
+      "定时公式",
+      "占空比",
+      "RA",
+      "RB",
+      "astable"
+    ],
+    "summary": "无稳态 tH≈0.693(RA+RB)C，tL≈0.693 RB C，f=1/(tH+tL)，输出高电平占空比=tH/(tH+tL)。手册建议频率不超过100 kHz以减小失真。",
+    "curated": true
+  },
+  {
+    "id": "pins",
+    "title": "引脚",
+    "page": 3,
+    "printed_page": "3",
+    "bbox": [
+      54,
+      76,
+      558,
+      720
+    ],
+    "context_bboxes": [],
+    "aliases": [
+      "引脚",
+      "引脚功能",
+      "接线",
+      "pinout"
+    ],
+    "summary": "NE555：GND、TRIG、OUT、RESET、CONT、THRES、DISCH、VCC；RESET 低有效。仅显示8引脚 SOIC（D）顶视图。",
+    "curated": true
+  },
+  {
+    "id": "resistor-note",
+    "title": "定时电阻上限脚注",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      708,
+      558,
+      730
+    ],
+    "context_bboxes": [],
+    "aliases": [
+      "定时电阻上限脚注"
+    ],
+    "summary": "手册脚注给出特定供电下 RA+RB 的近似上限；不要对其他供电自动插值。",
+    "curated": true,
+    "context_only": true
+  }
+]

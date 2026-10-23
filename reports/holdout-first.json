@@ -1,0 +1,5749 @@
+{
+  "evaluated_at": "2026-10-21T13:19:42.388008+00:00",
+  "source": {
+    "doc_id": "tps40200-slus659g",
+    "title": "TPS40200 Wide Input Range Non-Synchronous Voltage Mode Controller",
+    "revision": "SLUS659G (Rev. G)",
+    "revision_date": "2014-11",
+    "url": "https://www.ti.com/lit/ds/symlink/tps40200.pdf",
+    "downloaded_at": "2026-10-21T13:03:03.278425+00:00",
+    "sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+    "pages": 52,
+    "indexed_core_pages": 40,
+    "pdf_file": "tps40200-rev-g.pdf",
+    "extraction": {
+      "tool": "pdfplumber",
+      "version": "0.11.10",
+      "x_tolerance": 1
+    },
+    "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+  },
+  "methodology": "自建验证集；先定义期望再实现。开发/留出各30题。基线与增强检索用同一BM25分词器；增强额外包含人工别名、结构化表格与整理说明，因此不能把差异单独归因于分块。",
+  "limitations": [
+    "题目、参数整理和实现由同一开发过程完成，不是独立盲测。",
+    "证据命中按预标注区域评价；不等于任意问题的引用语义正确率。",
+    "留出集规模小，比例仅适用于本组案例，不代表通用芯片手册准确率。"
+  ],
+  "metrics": {
+    "cases": 60,
+    "passed": 59,
+    "query_retrieval_cases": 40,
+    "top3_recall": 1.0,
+    "plain_top3_recall": 0.375,
+    "fact_cases": 29,
+    "fact_answered": 29,
+    "fact_accuracy": 1.0,
+    "fact_coverage": 1.0,
+    "unsupported_correct": 10,
+    "unsupported_cases": 10,
+    "by_category": {
+      "citations": {
+        "total": 10,
+        "passed": 10
+      },
+      "conditions": {
+        "total": 10,
+        "passed": 10
+      },
+      "parameters": {
+        "total": 10,
+        "passed": 10
+      },
+      "rules": {
+        "total": 10,
+        "passed": 9
+      },
+      "traps": {
+        "total": 10,
+        "passed": 10
+      },
+      "unsupported": {
+        "total": 10,
+        "passed": 10
+      }
+    }
+  },
+  "splits": {
+    "dev": {
+      "cases": 30,
+      "passed": 30,
+      "query_retrieval_cases": 20,
+      "top3_recall": 1.0,
+      "plain_top3_recall": 0.35,
+      "fact_cases": 13,
+      "fact_answered": 13,
+      "fact_accuracy": 1.0,
+      "fact_coverage": 1.0,
+      "unsupported_correct": 5,
+      "unsupported_cases": 5,
+      "by_category": {
+        "citations": {
+          "total": 5,
+          "passed": 5
+        },
+        "conditions": {
+          "total": 5,
+          "passed": 5
+        },
+        "parameters": {
+          "total": 5,
+          "passed": 5
+        },
+        "rules": {
+          "total": 5,
+          "passed": 5
+        },
+        "traps": {
+          "total": 5,
+          "passed": 5
+        },
+        "unsupported": {
+          "total": 5,
+          "passed": 5
+        }
+      }
+    },
+    "holdout": {
+      "cases": 30,
+      "passed": 29,
+      "query_retrieval_cases": 20,
+      "top3_recall": 1.0,
+      "plain_top3_recall": 0.4,
+      "fact_cases": 16,
+      "fact_answered": 16,
+      "fact_accuracy": 1.0,
+      "fact_coverage": 1.0,
+      "unsupported_correct": 5,
+      "unsupported_cases": 5,
+      "by_category": {
+        "citations": {
+          "total": 5,
+          "passed": 5
+        },
+        "conditions": {
+          "total": 5,
+          "passed": 5
+        },
+        "parameters": {
+          "total": 5,
+          "passed": 5
+        },
+        "rules": {
+          "total": 5,
+          "passed": 4
+        },
+        "traps": {
+          "total": 5,
+          "passed": 5
+        },
+        "unsupported": {
+          "total": 5,
+          "passed": 5
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "parameters-dev-01",
+      "category": "parameters",
+      "split": "dev",
+      "family": "feedback-overview",
+      "kind": "query",
+      "question": "反馈参考电压 VFB 是多少？",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "reference",
+        "recommended",
+        "line-regulation"
+      ],
+      "expected_evidence": [
+        "reference"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "反馈参考电压 VFB 是多少？",
+        "answer": "VFB 的典型值是 696 mV；上下限取决于测试条件，必须逐行读取。",
+        "parameters": [
+          {
+            "id": "vfb-comp",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 689.0,
+            "typical": 696.0,
+            "maximum": 702.0,
+            "unit": "mV",
+            "conditions": "COMP=FB；TA=25 °C；其余默认条件见表头",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 686.0,
+            "typical": 696.0,
+            "maximum": 703.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；TA=25 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "vfb-85",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 679.0,
+            "typical": 696.0,
+            "maximum": 708.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 85 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "vfb-125",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 679.0,
+            "typical": 696.0,
+            "maximum": 710.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 125 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "reference"
+        ],
+        "hits": [
+          {
+            "evidence_id": "reference",
+            "score": 133.3969
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 3.00458
+          },
+          {
+            "evidence_id": "line-regulation",
+            "score": 2.43231
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "parameters-dev-02",
+      "category": "parameters",
+      "split": "dev",
+      "family": "uvlo-on-values",
+      "kind": "query",
+      "question": "欠压启动阈值的范围是什么？",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "uvlo",
+        "uvlo-mechanism",
+        "softstart-values"
+      ],
+      "expected_evidence": [
+        "uvlo"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "欠压启动阈值的范围是什么？",
+        "answer": "启动阈值典型为 4.25 V；推荐输入下限仍为 4.5 V。关断阈值只列典型值 4.05 V。",
+        "parameters": [
+          {
+            "id": "uvlo-on",
+            "symbol": "VUVLO(on)",
+            "name": "欠压启动阈值",
+            "rating": "electrical",
+            "minimum": 3.8,
+            "typical": 4.25,
+            "maximum": 4.5,
+            "unit": "V",
+            "conditions": "−40 °C < TA < 125 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "uvlo"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "uvlo-off",
+            "symbol": "VUVLO(off)",
+            "name": "欠压关断阈值",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 4.05,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "默认测试条件；未给出最小值与最大值",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "uvlo"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "uvlo-hyst",
+            "symbol": "VUVLO(HYST)",
+            "name": "欠压迟滞",
+            "rating": "electrical",
+            "minimum": 110.0,
+            "typical": 200.0,
+            "maximum": 275.0,
+            "unit": "mV",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "uvlo"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "uvlo"
+        ],
+        "hits": [
+          {
+            "evidence_id": "uvlo",
+            "score": 122.69755
+          },
+          {
+            "evidence_id": "uvlo-mechanism",
+            "score": 6.43339
+          },
+          {
+            "evidence_id": "softstart-values",
+            "score": 5.96166
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "parameters-dev-03",
+      "category": "parameters",
+      "split": "dev",
+      "family": "oscillator-range",
+      "kind": "query",
+      "question": "开关频率允许的范围？",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "oscillator",
+        "line-regulation",
+        "recommended"
+      ],
+      "expected_evidence": [
+        "oscillator"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "开关频率允许的范围？",
+        "answer": "振荡频率范围为 35–500 kHz，仅由设计保证、未进行生产测试；特定 RC 的频率上下限须另看对应行。",
+        "parameters": [
+          {
+            "id": "fosc-range",
+            "symbol": "fOSC",
+            "name": "振荡频率范围",
+            "rating": "electrical",
+            "minimum": 35.0,
+            "typical": null,
+            "maximum": 500.0,
+            "unit": "kHz",
+            "conditions": "范围限制",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "oscillator",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "fosc-100",
+            "symbol": "fOSC",
+            "name": "振荡频率",
+            "rating": "electrical",
+            "minimum": 85.0,
+            "typical": 100.0,
+            "maximum": 115.0,
+            "unit": "kHz",
+            "conditions": "RRC=200 kΩ；CRC=470 pF",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "fosc-300",
+            "symbol": "fOSC",
+            "name": "振荡频率",
+            "rating": "electrical",
+            "minimum": 255.0,
+            "typical": 300.0,
+            "maximum": 345.0,
+            "unit": "kHz",
+            "conditions": "RRC=68.1 kΩ；CRC=470 pF",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "oscillator",
+          "design-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "oscillator",
+            "score": 119.84418
+          },
+          {
+            "evidence_id": "line-regulation",
+            "score": 6.77988
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 5.18412
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "parameters-dev-04",
+      "category": "parameters",
+      "split": "dev",
+      "family": "min-pulse-12",
+      "kind": "query",
+      "question": "tMIN 在 12 V 时的值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "pwm",
+        "line-regulation",
+        "auto-p1-12"
+      ],
+      "expected_evidence": [
+        "pwm"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "tMIN 在 12 V 时的值",
+        "answer": "最小脉宽列出典型值和最大值；最大占空比列出最小值和典型值，并依赖频率与负载条件。",
+        "parameters": [
+          {
+            "id": "tmin-12",
+            "symbol": "tMIN",
+            "name": "最小可控脉宽",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 200.0,
+            "maximum": 400.0,
+            "unit": "ns",
+            "conditions": "VDD=12 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (2)：参见图 21 的 tMIN 与 fOSC 关系；首版不自动读曲线。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "tmin-30",
+            "symbol": "tMIN",
+            "name": "最小可控脉宽",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 200.0,
+            "unit": "ns",
+            "conditions": "VDD=30 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (2)：参见图 21；不在离散条件之间插值。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "dmax-100",
+            "symbol": "DMAX",
+            "name": "最大占空比",
+            "rating": "electrical",
+            "minimum": 93.0,
+            "typical": 95.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "fOSC=100 kHz；CL=470 pF",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "dmax-300",
+            "symbol": "DMAX",
+            "name": "最大占空比",
+            "rating": "electrical",
+            "minimum": 90.0,
+            "typical": 93.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "fOSC=300 kHz；CL=470 pF",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "kpwm",
+            "symbol": "KPWM",
+            "name": "调制器与功率级直流增益",
+            "rating": "electrical",
+            "minimum": 8.0,
+            "typical": 10.0,
+            "maximum": 12.0,
+            "unit": "V/V",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "pwm"
+        ],
+        "hits": [
+          {
+            "evidence_id": "pwm",
+            "score": 109.29414
+          },
+          {
+            "evidence_id": "line-regulation",
+            "score": 4.54403
+          },
+          {
+            "evidence_id": "auto-p1-12",
+            "score": 4.42884
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "parameters-dev-05",
+      "category": "parameters",
+      "split": "dev",
+      "family": "recommended-voltage",
+      "kind": "query",
+      "question": "推荐输入电压上下限",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended",
+        "uvlo",
+        "reference"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "推荐输入电压上下限",
+        "answer": "推荐 VDD 为 4.5–52 V，推荐结温 TJ 为 −40–125 °C。范围内只表示满足该项限制。",
+        "parameters": [
+          {
+            "id": "rec-vdd",
+            "symbol": "VDD",
+            "name": "推荐输入电压",
+            "rating": "recommended",
+            "minimum": 4.5,
+            "typical": null,
+            "maximum": 52.0,
+            "unit": "V",
+            "conditions": "推荐工作条件；不是对整个电路的保证",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "rec-tj",
+            "symbol": "TJ",
+            "name": "推荐工作结温",
+            "rating": "recommended",
+            "minimum": -40.0,
+            "typical": null,
+            "maximum": 125.0,
+            "unit": "°C",
+            "conditions": "结温 TJ；不能用环境温度 TA 代替",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 320.87855
+          },
+          {
+            "evidence_id": "uvlo",
+            "score": 10.36027
+          },
+          {
+            "evidence_id": "reference",
+            "score": 9.26598
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "parameters-holdout-06",
+      "category": "parameters",
+      "split": "holdout",
+      "family": "gate-source-values",
+      "kind": "query",
+      "question": "Isrc 栅极拉高电流的数据",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "gate",
+        "application-boundary",
+        "quiescent"
+      ],
+      "expected_evidence": [
+        "gate"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "Isrc 栅极拉高电流的数据",
+        "answer": "驱动输出面向外部 P 沟道 MOSFET；拉高和拉低电流的最小值不同，表格未给最大值。",
+        "parameters": [
+          {
+            "id": "gate-source",
+            "symbol": "Isrc",
+            "name": "栅极驱动拉高电流",
+            "rating": "electrical",
+            "minimum": 125.0,
+            "typical": 300.0,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "gate"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "gate-sink",
+            "symbol": "Isnk",
+            "name": "栅极驱动拉低电流",
+            "rating": "electrical",
+            "minimum": 200.0,
+            "typical": 300.0,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "gate"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "gate-voltage",
+            "symbol": "VGATE",
+            "name": "栅极驱动电压",
+            "rating": "electrical",
+            "minimum": 6.0,
+            "typical": 8.0,
+            "maximum": 10.0,
+            "unit": "V",
+            "conditions": "VGATE=VDD−VGDRV；12 V < VDD < 52 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "gate"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "gate"
+        ],
+        "hits": [
+          {
+            "evidence_id": "gate",
+            "score": 122.62385
+          },
+          {
+            "evidence_id": "application-boundary",
+            "score": 5.62389
+          },
+          {
+            "evidence_id": "quiescent",
+            "score": 4.93147
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "parameters-holdout-07",
+      "category": "parameters",
+      "split": "holdout",
+      "family": "quiescent-values",
+      "kind": "query",
+      "question": "Iqq 静态电流的典型值与最大值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "quiescent",
+        "gate",
+        "pwm"
+      ],
+      "expected_evidence": [
+        "quiescent"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "Iqq 静态电流的典型值与最大值",
+        "answer": "Iqq 的 1.5 mA 典型值、3.0 mA 最大值适用于驱动不切换等指定测试条件。",
+        "parameters": [
+          {
+            "id": "iqq",
+            "symbol": "Iqq",
+            "name": "静态电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 1.5,
+            "maximum": 3.0,
+            "unit": "mA",
+            "conditions": "fOSC=300 kHz；驱动不切换；4.5 V < VDD < 52 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "quiescent"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "quiescent"
+        ],
+        "hits": [
+          {
+            "evidence_id": "quiescent",
+            "score": 139.22129
+          },
+          {
+            "evidence_id": "gate",
+            "score": 12.66256
+          },
+          {
+            "evidence_id": "pwm",
+            "score": 11.31617
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "parameters-holdout-08",
+      "category": "parameters",
+      "split": "holdout",
+      "family": "amplifier-bandwidth",
+      "kind": "query",
+      "question": "GBWP 单位增益带宽",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "amplifier",
+        "pwm"
+      ],
+      "expected_evidence": [
+        "amplifier"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "GBWP 单位增益带宽",
+        "answer": "误差放大器的开环增益和单位增益带宽仅由设计保证；输出源、灌电流依赖 FB 和 COMP 测试电压。",
+        "parameters": [
+          {
+            "id": "iib",
+            "symbol": "IIB",
+            "name": "输入偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 250.0,
+            "unit": "nA",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "aol",
+            "symbol": "AOL",
+            "name": "开环增益",
+            "rating": "electrical",
+            "minimum": 60.0,
+            "typical": 80.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "amplifier",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "gbwp",
+            "symbol": "GBWP",
+            "name": "单位增益带宽",
+            "rating": "electrical",
+            "minimum": 1.5,
+            "typical": 3.0,
+            "maximum": null,
+            "unit": "MHz",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "amplifier",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "comp-source",
+            "symbol": "ICOMP(src)",
+            "name": "误差放大器输出源电流",
+            "rating": "electrical",
+            "minimum": 100.0,
+            "typical": 250.0,
+            "maximum": null,
+            "unit": "μA",
+            "conditions": "VFB=0.6 V；COMP=1 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "comp-sink",
+            "symbol": "ICOMP(snk)",
+            "name": "误差放大器输出灌电流",
+            "rating": "electrical",
+            "minimum": 1.0,
+            "typical": 2.5,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VFB=1.2 V；COMP=1 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "amplifier",
+          "design-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "amplifier",
+            "score": 123.46265
+          },
+          {
+            "evidence_id": "pwm",
+            "score": 3.48888
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "parameters-holdout-09",
+      "category": "parameters",
+      "split": "holdout",
+      "family": "overcurrent-duty-column",
+      "kind": "query",
+      "question": "OCDF 过流占空比 2% 位于哪一列",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "current-limit",
+        "pwm",
+        "overcurrent-recovery"
+      ],
+      "expected_evidence": [
+        "current-limit"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "OCDF 过流占空比 2% 位于哪一列",
+        "answer": "VILIM 是采样压降阈值而不是输出电流额定值；低温行下限为 55 mV。OCDF 的 2% 在 MAX 列，且仅由设计保证。",
+        "parameters": [
+          {
+            "id": "ilim-0",
+            "symbol": "VILIM",
+            "name": "过流阈值",
+            "rating": "electrical",
+            "minimum": 65.0,
+            "typical": 100.0,
+            "maximum": 140.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；0 °C < TA < 125 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "current-limit"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "ilim-40",
+            "symbol": "VILIM",
+            "name": "过流阈值",
+            "rating": "electrical",
+            "minimum": 55.0,
+            "typical": 100.0,
+            "maximum": 140.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 125 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "current-limit"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "ocdf",
+            "symbol": "OCDF",
+            "name": "过流占空比",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 2.0,
+            "unit": "%",
+            "conditions": "默认测试条件；2% 在 MAX 列",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "current-limit",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "ilim-reset",
+            "symbol": "VILIM(rst)",
+            "name": "过流复位阈值",
+            "rating": "electrical",
+            "minimum": 100.0,
+            "typical": 150.0,
+            "maximum": 200.0,
+            "unit": "mV",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "current-limit"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "current-limit",
+          "design-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "current-limit",
+            "score": 123.61101
+          },
+          {
+            "evidence_id": "pwm",
+            "score": 10.15845
+          },
+          {
+            "evidence_id": "overcurrent-recovery",
+            "score": 5.4154
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "parameters-holdout-10",
+      "category": "parameters",
+      "split": "holdout",
+      "family": "gate-sink-values",
+      "kind": "query",
+      "question": "Isnk 栅极拉低电流参数",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "gate",
+        "application-boundary",
+        "quiescent"
+      ],
+      "expected_evidence": [
+        "gate"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "Isnk 栅极拉低电流参数",
+        "answer": "驱动输出面向外部 P 沟道 MOSFET；拉高和拉低电流的最小值不同，表格未给最大值。",
+        "parameters": [
+          {
+            "id": "gate-source",
+            "symbol": "Isrc",
+            "name": "栅极驱动拉高电流",
+            "rating": "electrical",
+            "minimum": 125.0,
+            "typical": 300.0,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "gate"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "gate-sink",
+            "symbol": "Isnk",
+            "name": "栅极驱动拉低电流",
+            "rating": "electrical",
+            "minimum": 200.0,
+            "typical": 300.0,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "gate"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "gate-voltage",
+            "symbol": "VGATE",
+            "name": "栅极驱动电压",
+            "rating": "electrical",
+            "minimum": 6.0,
+            "typical": 8.0,
+            "maximum": 10.0,
+            "unit": "V",
+            "conditions": "VGATE=VDD−VGDRV；12 V < VDD < 52 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "gate"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "gate"
+        ],
+        "hits": [
+          {
+            "evidence_id": "gate",
+            "score": 122.35287
+          },
+          {
+            "evidence_id": "application-boundary",
+            "score": 5.62389
+          },
+          {
+            "evidence_id": "quiescent",
+            "score": 4.93147
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "conditions-dev-11",
+      "category": "conditions",
+      "split": "dev",
+      "family": "reference-full-temp",
+      "kind": "query",
+      "question": "VFB 在 -40 到 125 度的上下限",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "reference",
+        "ramp",
+        "current-limit"
+      ],
+      "expected_evidence": [
+        "reference"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "VFB 在 -40 到 125 度的上下限",
+        "answer": "VFB 的典型值是 696 mV；上下限取决于测试条件，必须逐行读取。",
+        "parameters": [
+          {
+            "id": "vfb-comp",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 689.0,
+            "typical": 696.0,
+            "maximum": 702.0,
+            "unit": "mV",
+            "conditions": "COMP=FB；TA=25 °C；其余默认条件见表头",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 686.0,
+            "typical": 696.0,
+            "maximum": 703.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；TA=25 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "vfb-85",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 679.0,
+            "typical": 696.0,
+            "maximum": 708.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 85 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "vfb-125",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 679.0,
+            "typical": 696.0,
+            "maximum": 710.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 125 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "reference"
+        ],
+        "hits": [
+          {
+            "evidence_id": "reference",
+            "score": 117.90672
+          },
+          {
+            "evidence_id": "ramp",
+            "score": 11.36034
+          },
+          {
+            "evidence_id": "current-limit",
+            "score": 6.07799
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "conditions-dev-12",
+      "category": "conditions",
+      "split": "dev",
+      "family": "ilim-cold-range",
+      "kind": "query",
+      "question": "低温时 VILIM 最小值是多少？",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "current-limit",
+        "pwm",
+        "gate"
+      ],
+      "expected_evidence": [
+        "current-limit"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "低温时 VILIM 最小值是多少？",
+        "answer": "VILIM 是采样压降阈值而不是输出电流额定值；低温行下限为 55 mV。OCDF 的 2% 在 MAX 列，且仅由设计保证。",
+        "parameters": [
+          {
+            "id": "ilim-0",
+            "symbol": "VILIM",
+            "name": "过流阈值",
+            "rating": "electrical",
+            "minimum": 65.0,
+            "typical": 100.0,
+            "maximum": 140.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；0 °C < TA < 125 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "current-limit"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "ilim-40",
+            "symbol": "VILIM",
+            "name": "过流阈值",
+            "rating": "electrical",
+            "minimum": 55.0,
+            "typical": 100.0,
+            "maximum": 140.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 125 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "current-limit"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "ocdf",
+            "symbol": "OCDF",
+            "name": "过流占空比",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 2.0,
+            "unit": "%",
+            "conditions": "默认测试条件；2% 在 MAX 列",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "current-limit",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "ilim-reset",
+            "symbol": "VILIM(rst)",
+            "name": "过流复位阈值",
+            "rating": "electrical",
+            "minimum": 100.0,
+            "typical": 150.0,
+            "maximum": 200.0,
+            "unit": "mV",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "current-limit"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "current-limit",
+          "design-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "current-limit",
+            "score": 113.17519
+          },
+          {
+            "evidence_id": "pwm",
+            "score": 7.48551
+          },
+          {
+            "evidence_id": "gate",
+            "score": 5.2956
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "conditions-dev-13",
+      "category": "conditions",
+      "split": "dev",
+      "family": "duty-100-condition",
+      "kind": "query",
+      "question": "100 kHz 下最大占空比 DMAX",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "pwm",
+        "current-limit",
+        "quiescent"
+      ],
+      "expected_evidence": [
+        "pwm"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "100 kHz 下最大占空比 DMAX",
+        "answer": "最小脉宽列出典型值和最大值；最大占空比列出最小值和典型值，并依赖频率与负载条件。",
+        "parameters": [
+          {
+            "id": "tmin-12",
+            "symbol": "tMIN",
+            "name": "最小可控脉宽",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 200.0,
+            "maximum": 400.0,
+            "unit": "ns",
+            "conditions": "VDD=12 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (2)：参见图 21 的 tMIN 与 fOSC 关系；首版不自动读曲线。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "tmin-30",
+            "symbol": "tMIN",
+            "name": "最小可控脉宽",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 200.0,
+            "unit": "ns",
+            "conditions": "VDD=30 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (2)：参见图 21；不在离散条件之间插值。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "dmax-100",
+            "symbol": "DMAX",
+            "name": "最大占空比",
+            "rating": "electrical",
+            "minimum": 93.0,
+            "typical": 95.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "fOSC=100 kHz；CL=470 pF",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "dmax-300",
+            "symbol": "DMAX",
+            "name": "最大占空比",
+            "rating": "electrical",
+            "minimum": 90.0,
+            "typical": 93.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "fOSC=300 kHz；CL=470 pF",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "kpwm",
+            "symbol": "KPWM",
+            "name": "调制器与功率级直流增益",
+            "rating": "electrical",
+            "minimum": 8.0,
+            "typical": 10.0,
+            "maximum": 12.0,
+            "unit": "V/V",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "pwm"
+        ],
+        "hits": [
+          {
+            "evidence_id": "pwm",
+            "score": 128.10725
+          },
+          {
+            "evidence_id": "current-limit",
+            "score": 8.09809
+          },
+          {
+            "evidence_id": "quiescent",
+            "score": 6.32751
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "conditions-dev-14",
+      "category": "conditions",
+      "split": "dev",
+      "family": "pulse-30-condition",
+      "kind": "query",
+      "question": "30 V 供电下的最小脉宽 tMIN",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "pwm",
+        "gate",
+        "auto-p8-2"
+      ],
+      "expected_evidence": [
+        "pwm"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "30 V 供电下的最小脉宽 tMIN",
+        "answer": "最小脉宽列出典型值和最大值；最大占空比列出最小值和典型值，并依赖频率与负载条件。",
+        "parameters": [
+          {
+            "id": "tmin-12",
+            "symbol": "tMIN",
+            "name": "最小可控脉宽",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 200.0,
+            "maximum": 400.0,
+            "unit": "ns",
+            "conditions": "VDD=12 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (2)：参见图 21 的 tMIN 与 fOSC 关系；首版不自动读曲线。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "tmin-30",
+            "symbol": "tMIN",
+            "name": "最小可控脉宽",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 200.0,
+            "unit": "ns",
+            "conditions": "VDD=30 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (2)：参见图 21；不在离散条件之间插值。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "dmax-100",
+            "symbol": "DMAX",
+            "name": "最大占空比",
+            "rating": "electrical",
+            "minimum": 93.0,
+            "typical": 95.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "fOSC=100 kHz；CL=470 pF",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "dmax-300",
+            "symbol": "DMAX",
+            "name": "最大占空比",
+            "rating": "electrical",
+            "minimum": 90.0,
+            "typical": 93.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "fOSC=300 kHz；CL=470 pF",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "kpwm",
+            "symbol": "KPWM",
+            "name": "调制器与功率级直流增益",
+            "rating": "electrical",
+            "minimum": 8.0,
+            "typical": 10.0,
+            "maximum": 12.0,
+            "unit": "V/V",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "pwm"
+        ],
+        "hits": [
+          {
+            "evidence_id": "pwm",
+            "score": 122.8834
+          },
+          {
+            "evidence_id": "gate",
+            "score": 6.87371
+          },
+          {
+            "evidence_id": "auto-p8-2",
+            "score": 5.32534
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "conditions-dev-15",
+      "category": "conditions",
+      "split": "dev",
+      "family": "frequency-line-high",
+      "kind": "query",
+      "question": "12 V 以上的频率线性调整率",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "line-regulation",
+        "oscillator",
+        "pwm"
+      ],
+      "expected_evidence": [
+        "line-regulation"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "12 V 以上的频率线性调整率",
+        "answer": "两行频率线性调整率分别对应 12–52 V 和 4.5–12 V 供电条件，典型值栏为空。",
+        "parameters": [
+          {
+            "id": "line-high",
+            "symbol": "Frequency line regulation",
+            "name": "频率线性调整率",
+            "rating": "electrical",
+            "minimum": -9.0,
+            "typical": null,
+            "maximum": 0.0,
+            "unit": "%",
+            "conditions": "12 V < VDD < 52 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "line-regulation"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "line-low",
+            "symbol": "Frequency line regulation",
+            "name": "频率线性调整率",
+            "rating": "electrical",
+            "minimum": -20.0,
+            "typical": null,
+            "maximum": 0.0,
+            "unit": "%",
+            "conditions": "4.5 V < VDD < 12 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "line-regulation"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "line-regulation"
+        ],
+        "hits": [
+          {
+            "evidence_id": "line-regulation",
+            "score": 151.421
+          },
+          {
+            "evidence_id": "oscillator",
+            "score": 10.82446
+          },
+          {
+            "evidence_id": "pwm",
+            "score": 4.76513
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "conditions-holdout-16",
+      "category": "conditions",
+      "split": "holdout",
+      "family": "gate-voltage-condition",
+      "kind": "query",
+      "question": "VGATE 的测试条件是什么",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "gate",
+        "quiescent",
+        "reference"
+      ],
+      "expected_evidence": [
+        "gate"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "VGATE 的测试条件是什么",
+        "answer": "驱动输出面向外部 P 沟道 MOSFET；拉高和拉低电流的最小值不同，表格未给最大值。",
+        "parameters": [
+          {
+            "id": "gate-source",
+            "symbol": "Isrc",
+            "name": "栅极驱动拉高电流",
+            "rating": "electrical",
+            "minimum": 125.0,
+            "typical": 300.0,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "gate"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "gate-sink",
+            "symbol": "Isnk",
+            "name": "栅极驱动拉低电流",
+            "rating": "electrical",
+            "minimum": 200.0,
+            "typical": 300.0,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "gate"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "gate-voltage",
+            "symbol": "VGATE",
+            "name": "栅极驱动电压",
+            "rating": "electrical",
+            "minimum": 6.0,
+            "typical": 8.0,
+            "maximum": 10.0,
+            "unit": "V",
+            "conditions": "VGATE=VDD−VGDRV；12 V < VDD < 52 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "gate"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "gate"
+        ],
+        "hits": [
+          {
+            "evidence_id": "gate",
+            "score": 107.91878
+          },
+          {
+            "evidence_id": "quiescent",
+            "score": 8.34102
+          },
+          {
+            "evidence_id": "reference",
+            "score": 7.02073
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "conditions-holdout-17",
+      "category": "conditions",
+      "split": "holdout",
+      "family": "reference-comp-condition",
+      "kind": "query",
+      "question": "COMP=FB 的 VFB 那一行",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "reference",
+        "pins",
+        "abs"
+      ],
+      "expected_evidence": [
+        "reference"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "COMP=FB 的 VFB 那一行",
+        "answer": "VFB 的典型值是 696 mV；上下限取决于测试条件，必须逐行读取。",
+        "parameters": [
+          {
+            "id": "vfb-comp",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 689.0,
+            "typical": 696.0,
+            "maximum": 702.0,
+            "unit": "mV",
+            "conditions": "COMP=FB；TA=25 °C；其余默认条件见表头",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 686.0,
+            "typical": 696.0,
+            "maximum": 703.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；TA=25 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "vfb-85",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 679.0,
+            "typical": 696.0,
+            "maximum": 708.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 85 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "vfb-125",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 679.0,
+            "typical": 696.0,
+            "maximum": 710.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 125 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "reference"
+        ],
+        "hits": [
+          {
+            "evidence_id": "reference",
+            "score": 113.84099
+          },
+          {
+            "evidence_id": "pins",
+            "score": 108.74561
+          },
+          {
+            "evidence_id": "abs",
+            "score": 108.46514
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "conditions-holdout-18",
+      "category": "conditions",
+      "split": "holdout",
+      "family": "comp-source-condition",
+      "kind": "query",
+      "question": "ICOMP(src) 输出源电流适用条件",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "amplifier",
+        "application-boundary",
+        "quiescent"
+      ],
+      "expected_evidence": [
+        "amplifier"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "ICOMP(src) 输出源电流适用条件",
+        "answer": "误差放大器的开环增益和单位增益带宽仅由设计保证；输出源、灌电流依赖 FB 和 COMP 测试电压。",
+        "parameters": [
+          {
+            "id": "iib",
+            "symbol": "IIB",
+            "name": "输入偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 250.0,
+            "unit": "nA",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "aol",
+            "symbol": "AOL",
+            "name": "开环增益",
+            "rating": "electrical",
+            "minimum": 60.0,
+            "typical": 80.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "amplifier",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "gbwp",
+            "symbol": "GBWP",
+            "name": "单位增益带宽",
+            "rating": "electrical",
+            "minimum": 1.5,
+            "typical": 3.0,
+            "maximum": null,
+            "unit": "MHz",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "amplifier",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "comp-source",
+            "symbol": "ICOMP(src)",
+            "name": "误差放大器输出源电流",
+            "rating": "electrical",
+            "minimum": 100.0,
+            "typical": 250.0,
+            "maximum": null,
+            "unit": "μA",
+            "conditions": "VFB=0.6 V；COMP=1 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "comp-sink",
+            "symbol": "ICOMP(snk)",
+            "name": "误差放大器输出灌电流",
+            "rating": "electrical",
+            "minimum": 1.0,
+            "typical": 2.5,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VFB=1.2 V；COMP=1 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "amplifier",
+          "design-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "amplifier",
+            "score": 125.66269
+          },
+          {
+            "evidence_id": "application-boundary",
+            "score": 13.27102
+          },
+          {
+            "evidence_id": "quiescent",
+            "score": 10.59388
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "conditions-holdout-19",
+      "category": "conditions",
+      "split": "holdout",
+      "family": "comp-sink-condition",
+      "kind": "query",
+      "question": "ICOMP(snk) 输出灌电流的条件",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "amplifier",
+        "gate",
+        "application-boundary"
+      ],
+      "expected_evidence": [
+        "amplifier"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "ICOMP(snk) 输出灌电流的条件",
+        "answer": "误差放大器的开环增益和单位增益带宽仅由设计保证；输出源、灌电流依赖 FB 和 COMP 测试电压。",
+        "parameters": [
+          {
+            "id": "iib",
+            "symbol": "IIB",
+            "name": "输入偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 250.0,
+            "unit": "nA",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "aol",
+            "symbol": "AOL",
+            "name": "开环增益",
+            "rating": "electrical",
+            "minimum": 60.0,
+            "typical": 80.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "amplifier",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "gbwp",
+            "symbol": "GBWP",
+            "name": "单位增益带宽",
+            "rating": "electrical",
+            "minimum": 1.5,
+            "typical": 3.0,
+            "maximum": null,
+            "unit": "MHz",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "amplifier",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "comp-source",
+            "symbol": "ICOMP(src)",
+            "name": "误差放大器输出源电流",
+            "rating": "electrical",
+            "minimum": 100.0,
+            "typical": 250.0,
+            "maximum": null,
+            "unit": "μA",
+            "conditions": "VFB=0.6 V；COMP=1 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "comp-sink",
+            "symbol": "ICOMP(snk)",
+            "name": "误差放大器输出灌电流",
+            "rating": "electrical",
+            "minimum": 1.0,
+            "typical": 2.5,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VFB=1.2 V；COMP=1 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "amplifier",
+          "design-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "amplifier",
+            "score": 125.44943
+          },
+          {
+            "evidence_id": "gate",
+            "score": 118.59663
+          },
+          {
+            "evidence_id": "application-boundary",
+            "score": 10.59099
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "conditions-holdout-20",
+      "category": "conditions",
+      "split": "holdout",
+      "family": "frequency-line-low",
+      "kind": "query",
+      "question": "低于 12 V 的 Frequency line regulation",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "line-regulation",
+        "auto-p20-2",
+        "auto-p20-3"
+      ],
+      "expected_evidence": [
+        "line-regulation"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "低于 12 V 的 Frequency line regulation",
+        "answer": "两行频率线性调整率分别对应 12–52 V 和 4.5–12 V 供电条件，典型值栏为空。",
+        "parameters": [
+          {
+            "id": "line-high",
+            "symbol": "Frequency line regulation",
+            "name": "频率线性调整率",
+            "rating": "electrical",
+            "minimum": -9.0,
+            "typical": null,
+            "maximum": 0.0,
+            "unit": "%",
+            "conditions": "12 V < VDD < 52 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "line-regulation"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "line-low",
+            "symbol": "Frequency line regulation",
+            "name": "频率线性调整率",
+            "rating": "electrical",
+            "minimum": -20.0,
+            "typical": null,
+            "maximum": 0.0,
+            "unit": "%",
+            "conditions": "4.5 V < VDD < 12 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "line-regulation"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "line-regulation"
+        ],
+        "hits": [
+          {
+            "evidence_id": "line-regulation",
+            "score": 138.65817
+          },
+          {
+            "evidence_id": "auto-p20-2",
+            "score": 10.17744
+          },
+          {
+            "evidence_id": "auto-p20-3",
+            "score": 8.19903
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "traps-dev-21",
+      "category": "traps",
+      "split": "dev",
+      "family": "low-input-uvlo",
+      "kind": "query",
+      "question": "4.3 V 能正常工作吗？",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "answered",
+        "question": "4.3 V 能正常工作吗？",
+        "answer": "输入电压 VDD：不满足该项。不满足该项范围：4.3 V；允许 4.5–52 V（含边界）。欠压启动阈值的典型值不能代替推荐工作条件。",
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vdd",
+            "title": "输入电压 VDD",
+            "status": "violated",
+            "message": "不满足该项范围：4.3 V；允许 4.5–52 V（含边界）。欠压启动阈值的典型值不能代替推荐工作条件。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 4.3,
+            "unit": "V"
+          },
+          {
+            "rule": "tj",
+            "title": "结温 TJ",
+            "status": "needs_information",
+            "message": "请提供结温 TJ及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "frequency",
+            "title": "振荡频率 fOSC",
+            "status": "needs_information",
+            "message": "请提供振荡频率 fOSC及单位。",
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_frequency",
+            "title": "RC 标称频率",
+            "status": "needs_information",
+            "message": "需要定时电阻 RRC 和电容 CRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_current",
+            "title": "定时电阻电流",
+            "status": "needs_information",
+            "message": "需要输入电压 VDD 和定时电阻 RRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项结论仅核对该项限制，不表示完整电路设计已通过。",
+          "RC 公式为标称估算；不包含完整器件与元件容差模型。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "traps-dev-22",
+      "category": "traps",
+      "split": "dev",
+      "family": "typical-is-not-limit",
+      "kind": "query",
+      "question": "VFB 的 696 mV 是否是保证值？",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "reference",
+        "design-note",
+        "auto-p18-1"
+      ],
+      "expected_evidence": [
+        "reference"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "VFB 的 696 mV 是否是保证值？",
+        "answer": "VFB 的典型值是 696 mV；上下限取决于测试条件，必须逐行读取。",
+        "parameters": [
+          {
+            "id": "vfb-comp",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 689.0,
+            "typical": 696.0,
+            "maximum": 702.0,
+            "unit": "mV",
+            "conditions": "COMP=FB；TA=25 °C；其余默认条件见表头",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 686.0,
+            "typical": 696.0,
+            "maximum": 703.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；TA=25 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "vfb-85",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 679.0,
+            "typical": 696.0,
+            "maximum": 708.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 85 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "vfb-125",
+            "symbol": "VFB",
+            "name": "反馈参考电压",
+            "rating": "electrical",
+            "minimum": 679.0,
+            "typical": 696.0,
+            "maximum": 710.0,
+            "unit": "mV",
+            "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 125 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "reference"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "reference"
+        ],
+        "hits": [
+          {
+            "evidence_id": "reference",
+            "score": 118.58133
+          },
+          {
+            "evidence_id": "design-note",
+            "score": 6.12466
+          },
+          {
+            "evidence_id": "auto-p18-1",
+            "score": 5.67595
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "traps-dev-23",
+      "category": "traps",
+      "split": "dev",
+      "family": "negative-abs-input",
+      "kind": "query",
+      "question": "VDD 绝对最大额定值是否允许 -0.3 V",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "abs",
+        "recommended",
+        "auto-p34-3"
+      ],
+      "expected_evidence": [
+        "abs"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "VDD 绝对最大额定值是否允许 -0.3 V",
+        "answer": "绝对最大额定值描述应力限制，不代表在这些条件下保证功能正常。",
+        "parameters": [
+          {
+            "id": "abs-vdd",
+            "symbol": "VDD / ISNS",
+            "name": "输入电压",
+            "rating": "absolute_maximum",
+            "minimum": -0.3,
+            "typical": null,
+            "maximum": 52.0,
+            "unit": "V",
+            "conditions": "VDD、ISNS 引脚",
+            "notes": [
+              "应力额定值，不代表保证功能正常。"
+            ],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "abs-rc-fb",
+            "symbol": "RC / FB",
+            "name": "输入电压",
+            "rating": "absolute_maximum",
+            "minimum": -0.3,
+            "typical": null,
+            "maximum": 5.5,
+            "unit": "V",
+            "conditions": "RC、FB 引脚",
+            "notes": [
+              "应力额定值，不代表保证功能正常。"
+            ],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "abs-ss",
+            "symbol": "SS",
+            "name": "输入电压",
+            "rating": "absolute_maximum",
+            "minimum": -0.3,
+            "typical": null,
+            "maximum": 9.0,
+            "unit": "V",
+            "conditions": "SS 引脚",
+            "notes": [
+              "应力额定值，不代表保证功能正常。"
+            ],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "abs-comp",
+            "symbol": "COMP",
+            "name": "输出电压",
+            "rating": "absolute_maximum",
+            "minimum": -0.3,
+            "typical": null,
+            "maximum": 9.0,
+            "unit": "V",
+            "conditions": "COMP 引脚",
+            "notes": [
+              "应力额定值，不代表保证功能正常。"
+            ],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "abs-gdrv",
+            "symbol": "GDRV",
+            "name": "输出电压",
+            "rating": "absolute_maximum",
+            "minimum": "VIN − 10",
+            "typical": null,
+            "maximum": "VIN",
+            "unit": "V",
+            "conditions": "GDRV 引脚；边界依赖 VIN",
+            "notes": [
+              "应力额定值，不代表保证功能正常。"
+            ],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "abs-tj",
+            "symbol": "TJ",
+            "name": "工作结温",
+            "rating": "absolute_maximum",
+            "minimum": -40.0,
+            "typical": null,
+            "maximum": 125.0,
+            "unit": "°C",
+            "conditions": "工作结温",
+            "notes": [
+              "应力额定值，不代表保证功能正常。"
+            ],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "abs-lead",
+            "symbol": "Lead temperature",
+            "name": "引线温度",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 260.0,
+            "unit": "°C",
+            "conditions": "距封装 1.6 mm，持续 10 秒",
+            "notes": [
+              "应力额定值，不代表保证功能正常。"
+            ],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "abs"
+        ],
+        "hits": [
+          {
+            "evidence_id": "abs",
+            "score": 334.52079
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 106.96047
+          },
+          {
+            "evidence_id": "auto-p34-3",
+            "score": 7.33904
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "traps-dev-24",
+      "category": "traps",
+      "split": "dev",
+      "family": "output-current-controller",
+      "kind": "query",
+      "question": "最大输出电流是否保证 2.5 A",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "application-boundary",
+        "current-limit",
+        "gate"
+      ],
+      "expected_evidence": [
+        "application-boundary"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "evidence_only",
+        "question": "最大输出电流是否保证 2.5 A",
+        "answer": "TPS40200 是控制器，应用示例中的负载电流不等于芯片保证的输出电流能力；实际能力取决于外部功率器件等设计。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "application-boundary"
+        ],
+        "hits": [
+          {
+            "evidence_id": "application-boundary",
+            "score": 131.71937
+          },
+          {
+            "evidence_id": "current-limit",
+            "score": 10.28059
+          },
+          {
+            "evidence_id": "gate",
+            "score": 10.20821
+          }
+        ],
+        "notices": [
+          "中文整理说明与英文原文分开展示；以引用的条件和脚注为准。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "traps-dev-25",
+      "category": "traps",
+      "split": "dev",
+      "family": "uvlo-off-missing-limits",
+      "kind": "query",
+      "question": "VUVLO(off) 的最小最大值有给出吗",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "uvlo",
+        "pwm",
+        "gate"
+      ],
+      "expected_evidence": [
+        "uvlo"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "VUVLO(off) 的最小最大值有给出吗",
+        "answer": "启动阈值典型为 4.25 V；推荐输入下限仍为 4.5 V。关断阈值只列典型值 4.05 V。",
+        "parameters": [
+          {
+            "id": "uvlo-on",
+            "symbol": "VUVLO(on)",
+            "name": "欠压启动阈值",
+            "rating": "electrical",
+            "minimum": 3.8,
+            "typical": 4.25,
+            "maximum": 4.5,
+            "unit": "V",
+            "conditions": "−40 °C < TA < 125 °C",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "uvlo"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "uvlo-off",
+            "symbol": "VUVLO(off)",
+            "name": "欠压关断阈值",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 4.05,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "默认测试条件；未给出最小值与最大值",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "uvlo"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "uvlo-hyst",
+            "symbol": "VUVLO(HYST)",
+            "name": "欠压迟滞",
+            "rating": "electrical",
+            "minimum": 110.0,
+            "typical": 200.0,
+            "maximum": 275.0,
+            "unit": "mV",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "uvlo"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "uvlo"
+        ],
+        "hits": [
+          {
+            "evidence_id": "uvlo",
+            "score": 120.65465
+          },
+          {
+            "evidence_id": "pwm",
+            "score": 11.21362
+          },
+          {
+            "evidence_id": "gate",
+            "score": 10.26289
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "traps-holdout-26",
+      "category": "traps",
+      "split": "holdout",
+      "family": "min-pulse-typ-column",
+      "kind": "query",
+      "question": "最小脉宽的 200 ns 是最小值吗",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "pwm",
+        "gate",
+        "sync"
+      ],
+      "expected_evidence": [
+        "pwm"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "最小脉宽的 200 ns 是最小值吗",
+        "answer": "最小脉宽列出典型值和最大值；最大占空比列出最小值和典型值，并依赖频率与负载条件。",
+        "parameters": [
+          {
+            "id": "tmin-12",
+            "symbol": "tMIN",
+            "name": "最小可控脉宽",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 200.0,
+            "maximum": 400.0,
+            "unit": "ns",
+            "conditions": "VDD=12 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (2)：参见图 21 的 tMIN 与 fOSC 关系；首版不自动读曲线。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "tmin-30",
+            "symbol": "tMIN",
+            "name": "最小可控脉宽",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 200.0,
+            "unit": "ns",
+            "conditions": "VDD=30 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (2)：参见图 21；不在离散条件之间插值。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "dmax-100",
+            "symbol": "DMAX",
+            "name": "最大占空比",
+            "rating": "electrical",
+            "minimum": 93.0,
+            "typical": 95.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "fOSC=100 kHz；CL=470 pF",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "dmax-300",
+            "symbol": "DMAX",
+            "name": "最大占空比",
+            "rating": "electrical",
+            "minimum": 90.0,
+            "typical": 93.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "fOSC=300 kHz；CL=470 pF",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "kpwm",
+            "symbol": "KPWM",
+            "name": "调制器与功率级直流增益",
+            "rating": "electrical",
+            "minimum": 8.0,
+            "typical": 10.0,
+            "maximum": 12.0,
+            "unit": "V/V",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "pwm"
+        ],
+        "hits": [
+          {
+            "evidence_id": "pwm",
+            "score": 129.98907
+          },
+          {
+            "evidence_id": "gate",
+            "score": 9.54287
+          },
+          {
+            "evidence_id": "sync",
+            "score": 4.69231
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "traps-holdout-27",
+      "category": "traps",
+      "split": "holdout",
+      "family": "duty-typ-column",
+      "kind": "query",
+      "question": "最大占空比 95% 能当保证下限吗",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "pwm",
+        "ramp",
+        "current-limit"
+      ],
+      "expected_evidence": [
+        "pwm"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "最大占空比 95% 能当保证下限吗",
+        "answer": "最小脉宽列出典型值和最大值；最大占空比列出最小值和典型值，并依赖频率与负载条件。",
+        "parameters": [
+          {
+            "id": "tmin-12",
+            "symbol": "tMIN",
+            "name": "最小可控脉宽",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 200.0,
+            "maximum": 400.0,
+            "unit": "ns",
+            "conditions": "VDD=12 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (2)：参见图 21 的 tMIN 与 fOSC 关系；首版不自动读曲线。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "tmin-30",
+            "symbol": "tMIN",
+            "name": "最小可控脉宽",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 200.0,
+            "unit": "ns",
+            "conditions": "VDD=30 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (2)：参见图 21；不在离散条件之间插值。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "dmax-100",
+            "symbol": "DMAX",
+            "name": "最大占空比",
+            "rating": "electrical",
+            "minimum": 93.0,
+            "typical": 95.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "fOSC=100 kHz；CL=470 pF",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "dmax-300",
+            "symbol": "DMAX",
+            "name": "最大占空比",
+            "rating": "electrical",
+            "minimum": 90.0,
+            "typical": 93.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "fOSC=300 kHz；CL=470 pF",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "kpwm",
+            "symbol": "KPWM",
+            "name": "调制器与功率级直流增益",
+            "rating": "electrical",
+            "minimum": 8.0,
+            "typical": 10.0,
+            "maximum": 12.0,
+            "unit": "V/V",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "pwm"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "pwm"
+        ],
+        "hits": [
+          {
+            "evidence_id": "pwm",
+            "score": 123.78901
+          },
+          {
+            "evidence_id": "ramp",
+            "score": 9.27813
+          },
+          {
+            "evidence_id": "current-limit",
+            "score": 8.22857
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "traps-holdout-28",
+      "category": "traps",
+      "split": "holdout",
+      "family": "junction-not-ambient",
+      "kind": "query",
+      "question": "环境温度 25 °C 能直接作为结温检查吗",
+      "passed": true,
+      "errors": [],
+      "actual_status": "needs_information",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "needs_information",
+        "question": "环境温度 25 °C 能直接作为结温检查吗",
+        "answer": "环境温度 TA 不能直接作为结温 TJ。请补充结温或经验证的热模型。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "traps-holdout-29",
+      "category": "traps",
+      "split": "holdout",
+      "family": "gbwp-max-absent",
+      "kind": "query",
+      "question": "GBWP 的 3 MHz 是最大值吗",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "amplifier",
+        "pwm",
+        "quiescent"
+      ],
+      "expected_evidence": [
+        "amplifier"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "GBWP 的 3 MHz 是最大值吗",
+        "answer": "误差放大器的开环增益和单位增益带宽仅由设计保证；输出源、灌电流依赖 FB 和 COMP 测试电压。",
+        "parameters": [
+          {
+            "id": "iib",
+            "symbol": "IIB",
+            "name": "输入偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 250.0,
+            "unit": "nA",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "aol",
+            "symbol": "AOL",
+            "name": "开环增益",
+            "rating": "electrical",
+            "minimum": 60.0,
+            "typical": 80.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "amplifier",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "gbwp",
+            "symbol": "GBWP",
+            "name": "单位增益带宽",
+            "rating": "electrical",
+            "minimum": 1.5,
+            "typical": 3.0,
+            "maximum": null,
+            "unit": "MHz",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "amplifier",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "comp-source",
+            "symbol": "ICOMP(src)",
+            "name": "误差放大器输出源电流",
+            "rating": "electrical",
+            "minimum": 100.0,
+            "typical": 250.0,
+            "maximum": null,
+            "unit": "μA",
+            "conditions": "VFB=0.6 V；COMP=1 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "comp-sink",
+            "symbol": "ICOMP(snk)",
+            "name": "误差放大器输出灌电流",
+            "rating": "electrical",
+            "minimum": 1.0,
+            "typical": 2.5,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VFB=1.2 V；COMP=1 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "amplifier",
+          "design-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "amplifier",
+            "score": 110.77536
+          },
+          {
+            "evidence_id": "pwm",
+            "score": 5.75434
+          },
+          {
+            "evidence_id": "quiescent",
+            "score": 5.64743
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "traps-holdout-30",
+      "category": "traps",
+      "split": "holdout",
+      "family": "design-not-production",
+      "kind": "query",
+      "question": "仅由设计保证是生产测试过了吗",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "design-note",
+        "oscillator",
+        "amplifier"
+      ],
+      "expected_evidence": [
+        "design-note"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "evidence_only",
+        "question": "仅由设计保证是生产测试过了吗",
+        "answer": "脚注 (1) 表示仅由设计保证，未进行生产测试。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "design-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "design-note",
+            "score": 153.91978
+          },
+          {
+            "evidence_id": "oscillator",
+            "score": 17.8304
+          },
+          {
+            "evidence_id": "amplifier",
+            "score": 10.53996
+          }
+        ],
+        "notices": [
+          "中文整理说明与英文原文分开展示；以引用的条件和脚注为准。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "citations-dev-31",
+      "category": "citations",
+      "split": "dev",
+      "family": "overcurrent-restart-mechanism",
+      "kind": "query",
+      "question": "过流后如何恢复",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "overcurrent-recovery",
+        "current-limit"
+      ],
+      "expected_evidence": [
+        "overcurrent-recovery"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "evidence_only",
+        "question": "过流后如何恢复",
+        "answer": "过流触发后关断 MOSFET 并放电软启动电容；软启动电压降至复位阈值以下后重试。持续故障会重复此过程；正文约 100 mV、150 mV 为机制描述，保证界限需查第 5 页。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "overcurrent-recovery"
+        ],
+        "hits": [
+          {
+            "evidence_id": "overcurrent-recovery",
+            "score": 113.81197
+          },
+          {
+            "evidence_id": "current-limit",
+            "score": 5.97824
+          }
+        ],
+        "notices": [
+          "中文整理说明与英文原文分开展示；以引用的条件和脚注为准。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "citations-dev-32",
+      "category": "citations",
+      "split": "dev",
+      "family": "timing-equations-location",
+      "kind": "query",
+      "question": "RC 频率公式在哪里",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "timing",
+        "pins",
+        "oscillator"
+      ],
+      "expected_evidence": [
+        "timing"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "evidence_only",
+        "question": "RC 频率公式在哪里",
+        "answer": "标称频率估算 fSW=1/(RRC×CRC×0.105)，R 用 Ω、C 用 F；同时满足 VIN/RRC≤750 μA。公式未给出完整容差模型，不能保证实际频率精度。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "timing"
+        ],
+        "hits": [
+          {
+            "evidence_id": "timing",
+            "score": 119.67029
+          },
+          {
+            "evidence_id": "pins",
+            "score": 105.13353
+          },
+          {
+            "evidence_id": "oscillator",
+            "score": 10.27674
+          }
+        ],
+        "notices": [
+          "中文整理说明与英文原文分开展示；以引用的条件和脚注为准。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "citations-dev-33",
+      "category": "citations",
+      "split": "dev",
+      "family": "sync-requirements",
+      "kind": "query",
+      "question": "外部时钟同步有什么要求",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "sync",
+        "application-boundary",
+        "gate"
+      ],
+      "expected_evidence": [
+        "sync"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "evidence_only",
+        "question": "外部时钟同步有什么要求",
+        "answer": "同步需要将 RC 拉至 150 mV 以下至少 20 ns，外部时钟高于自由振荡频率；拉低时间还受到上限约束，须完整阅读本节。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "sync"
+        ],
+        "hits": [
+          {
+            "evidence_id": "sync",
+            "score": 125.95223
+          },
+          {
+            "evidence_id": "application-boundary",
+            "score": 2.36323
+          },
+          {
+            "evidence_id": "gate",
+            "score": 2.3348
+          }
+        ],
+        "notices": [
+          "中文整理说明与英文原文分开展示；以引用的条件和脚注为准。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "citations-dev-34",
+      "category": "citations",
+      "split": "dev",
+      "family": "softstart-process",
+      "kind": "query",
+      "question": "软启动原理是什么",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "softstart-mechanism",
+        "softstart-values",
+        "overcurrent-recovery"
+      ],
+      "expected_evidence": [
+        "softstart-mechanism"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "evidence_only",
+        "question": "软启动原理是什么",
+        "answer": "SS 电容控制软启动过程，内部充电电阻形成上升参考。首版只提供机制证据，暂不自动计算软启动时间。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "softstart-mechanism"
+        ],
+        "hits": [
+          {
+            "evidence_id": "softstart-mechanism",
+            "score": 116.79033
+          },
+          {
+            "evidence_id": "softstart-values",
+            "score": 7.49795
+          },
+          {
+            "evidence_id": "overcurrent-recovery",
+            "score": 5.81971
+          }
+        ],
+        "notices": [
+          "中文整理说明与英文原文分开展示；以引用的条件和脚注为准。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "citations-dev-35",
+      "category": "citations",
+      "split": "dev",
+      "family": "pin-rc-wiring",
+      "kind": "query",
+      "question": "RC 引脚应该怎么接线",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "pins",
+        "auto-p13-5",
+        "auto-p13-1"
+      ],
+      "expected_evidence": [
+        "pins"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "evidence_only",
+        "question": "RC 引脚应该怎么接线",
+        "answer": "RC 接定时网络，SS 接软启动电容，ISNS 与 VDD 间接电流采样电阻；GDRV 驱动外部 P 沟道 MOSFET。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "pins"
+        ],
+        "hits": [
+          {
+            "evidence_id": "pins",
+            "score": 109.41509
+          },
+          {
+            "evidence_id": "auto-p13-5",
+            "score": 4.77759
+          },
+          {
+            "evidence_id": "auto-p13-1",
+            "score": 4.59958
+          }
+        ],
+        "notices": [
+          "中文整理说明与英文原文分开展示；以引用的条件和脚注为准。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "citations-holdout-36",
+      "category": "citations",
+      "split": "holdout",
+      "family": "uvlo-mechanism-hysteresis",
+      "kind": "query",
+      "question": "欠压工作原理中为什么有迟滞",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "uvlo-mechanism",
+        "uvlo",
+        "recommended"
+      ],
+      "expected_evidence": [
+        "uvlo-mechanism"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "evidence_only",
+        "question": "欠压工作原理中为什么有迟滞",
+        "answer": "本节用约 4.3 V 启动、约 4.1 V 关断描述典型机制；精确的电气特性应看第 5 页，推荐工作条件看第 4 页。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "uvlo-mechanism"
+        ],
+        "hits": [
+          {
+            "evidence_id": "uvlo-mechanism",
+            "score": 121.69902
+          },
+          {
+            "evidence_id": "uvlo",
+            "score": 109.13516
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 5.55992
+          }
+        ],
+        "notices": [
+          "中文整理说明与英文原文分开展示；以引用的条件和脚注为准。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "citations-holdout-37",
+      "category": "citations",
+      "split": "holdout",
+      "family": "ramp-source-location",
+      "kind": "query",
+      "question": "VRMP 斜坡幅度的原文",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "ramp",
+        "auto-p14-11",
+        "auto-p19-6"
+      ],
+      "expected_evidence": [
+        "ramp"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "VRMP 斜坡幅度的原文",
+        "answer": "斜坡幅度的典型表达式为 VDD/10，不能当成有上下限的数值保证。",
+        "parameters": [
+          {
+            "id": "ramp",
+            "symbol": "VRMP",
+            "name": "斜坡幅度",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": "VDD / 10",
+            "maximum": null,
+            "unit": "V",
+            "conditions": "4.5 V < VDD < 52 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "ramp"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "ramp"
+        ],
+        "hits": [
+          {
+            "evidence_id": "ramp",
+            "score": 133.48013
+          },
+          {
+            "evidence_id": "auto-p14-11",
+            "score": 2.00609
+          },
+          {
+            "evidence_id": "auto-p19-6",
+            "score": 2.00609
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "citations-holdout-38",
+      "category": "citations",
+      "split": "holdout",
+      "family": "softstart-internal-resistors",
+      "kind": "query",
+      "question": "RSS(chg) 内部充电电阻在哪页",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "softstart-values",
+        "softstart-mechanism",
+        "timing"
+      ],
+      "expected_evidence": [
+        "softstart-values"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "RSS(chg) 内部充电电阻在哪页",
+        "answer": "充电电阻典型为 105 kΩ，放电电阻典型为 305 kΩ；这些是内部参数，具有表内上下限。",
+        "parameters": [
+          {
+            "id": "rss-charge",
+            "symbol": "RSS(chg)",
+            "name": "内部软启动充电电阻",
+            "rating": "electrical",
+            "minimum": 65.0,
+            "typical": 105.0,
+            "maximum": 170.0,
+            "unit": "kΩ",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "softstart-values"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "rss-discharge",
+            "symbol": "RSS(dchg)",
+            "name": "内部软启动放电电阻",
+            "rating": "electrical",
+            "minimum": 190.0,
+            "typical": 305.0,
+            "maximum": 485.0,
+            "unit": "kΩ",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "softstart-values"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "ss-reset",
+            "symbol": "VSSRST",
+            "name": "软启动复位阈值",
+            "rating": "electrical",
+            "minimum": 100.0,
+            "typical": 150.0,
+            "maximum": 200.0,
+            "unit": "mV",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "softstart-values"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "softstart-values"
+        ],
+        "hits": [
+          {
+            "evidence_id": "softstart-values",
+            "score": 133.94901
+          },
+          {
+            "evidence_id": "softstart-mechanism",
+            "score": 6.54449
+          },
+          {
+            "evidence_id": "timing",
+            "score": 1.49151
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "citations-holdout-39",
+      "category": "citations",
+      "split": "holdout",
+      "family": "error-input-bias-location",
+      "kind": "query",
+      "question": "IIB 输入偏置电流的表格",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "amplifier",
+        "gate",
+        "application-boundary"
+      ],
+      "expected_evidence": [
+        "amplifier"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "status": "answered",
+        "question": "IIB 输入偏置电流的表格",
+        "answer": "误差放大器的开环增益和单位增益带宽仅由设计保证；输出源、灌电流依赖 FB 和 COMP 测试电压。",
+        "parameters": [
+          {
+            "id": "iib",
+            "symbol": "IIB",
+            "name": "输入偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 100.0,
+            "maximum": 250.0,
+            "unit": "nA",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "aol",
+            "symbol": "AOL",
+            "name": "开环增益",
+            "rating": "electrical",
+            "minimum": 60.0,
+            "typical": 80.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "amplifier",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "gbwp",
+            "symbol": "GBWP",
+            "name": "单位增益带宽",
+            "rating": "electrical",
+            "minimum": 1.5,
+            "typical": 3.0,
+            "maximum": null,
+            "unit": "MHz",
+            "conditions": "默认测试条件",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。",
+              "脚注 (1)：仅由设计保证，未进行生产测试。"
+            ],
+            "evidence_ids": [
+              "amplifier",
+              "design-note"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "comp-source",
+            "symbol": "ICOMP(src)",
+            "name": "误差放大器输出源电流",
+            "rating": "electrical",
+            "minimum": 100.0,
+            "typical": 250.0,
+            "maximum": null,
+            "unit": "μA",
+            "conditions": "VFB=0.6 V；COMP=1 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          },
+          {
+            "id": "comp-sink",
+            "symbol": "ICOMP(snk)",
+            "name": "误差放大器输出灌电流",
+            "rating": "electrical",
+            "minimum": 1.0,
+            "typical": 2.5,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VFB=1.2 V；COMP=1 V",
+            "notes": [
+              "默认 −40 °C < TA = TJ < 85 °C；VDD=12 V；fOSC=100 kHz，除非另有注明。"
+            ],
+            "evidence_ids": [
+              "amplifier"
+            ],
+            "review": "按 PDF 原图逐行复核；非自动提取保证"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "amplifier",
+          "design-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "amplifier",
+            "score": 113.67294
+          },
+          {
+            "evidence_id": "gate",
+            "score": 10.88501
+          },
+          {
+            "evidence_id": "application-boundary",
+            "score": 5.62389
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "citations-holdout-40",
+      "category": "citations",
+      "split": "holdout",
+      "family": "sense-pin-role",
+      "kind": "query",
+      "question": "ISNS 管脚作用和采样电阻接线",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "pins",
+        "auto-p1-3",
+        "softstart-values"
+      ],
+      "expected_evidence": [
+        "pins"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "evidence_only",
+        "question": "ISNS 管脚作用和采样电阻接线",
+        "answer": "RC 接定时网络，SS 接软启动电容，ISNS 与 VDD 间接电流采样电阻；GDRV 驱动外部 P 沟道 MOSFET。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "pins"
+        ],
+        "hits": [
+          {
+            "evidence_id": "pins",
+            "score": 114.63195
+          },
+          {
+            "evidence_id": "auto-p1-3",
+            "score": 5.00613
+          },
+          {
+            "evidence_id": "softstart-values",
+            "score": 4.98837
+          }
+        ],
+        "notices": [
+          "中文整理说明与英文原文分开展示；以引用的条件和脚注为准。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "rules-dev-41",
+      "category": "rules",
+      "split": "dev",
+      "family": "vdd-too-low",
+      "kind": "check",
+      "question": "{'vdd': '4.3 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "answered",
+        "question": "条件检查",
+        "answer": "输入电压 VDD：不满足该项。不满足该项范围：4.3 V；允许 4.5–52 V（含边界）。欠压启动阈值的典型值不能代替推荐工作条件。",
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vdd",
+            "title": "输入电压 VDD",
+            "status": "violated",
+            "message": "不满足该项范围：4.3 V；允许 4.5–52 V（含边界）。欠压启动阈值的典型值不能代替推荐工作条件。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 4.3,
+            "unit": "V"
+          },
+          {
+            "rule": "tj",
+            "title": "结温 TJ",
+            "status": "needs_information",
+            "message": "请提供结温 TJ及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "frequency",
+            "title": "振荡频率 fOSC",
+            "status": "needs_information",
+            "message": "请提供振荡频率 fOSC及单位。",
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_frequency",
+            "title": "RC 标称频率",
+            "status": "needs_information",
+            "message": "需要定时电阻 RRC 和电容 CRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_current",
+            "title": "定时电阻电流",
+            "status": "needs_information",
+            "message": "需要输入电压 VDD 和定时电阻 RRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项结论仅核对该项限制，不表示完整电路设计已通过。",
+          "RC 公式为标称估算；不包含完整器件与元件容差模型。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "rules-dev-42",
+      "category": "rules",
+      "split": "dev",
+      "family": "timing-current-valid",
+      "kind": "check",
+      "question": "{'vdd': '12 V', 'resistance': '200 kΩ', 'capacitance': '470 pF'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended",
+        "timing",
+        "oscillator"
+      ],
+      "expected_evidence": [
+        "timing"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "answered",
+        "question": "条件检查",
+        "answer": "输入电压 VDD：满足该项。满足该项范围：12 V；允许 4.5–52 V（含边界）。\nRC 标称频率：标称估算。fSW=1/(RRC×CRC×0.105)≈101.317 kHz；这是标称估算，不保证实际频率精度。\nRC 估算频率范围：满足该项。估算频率在35–500 kHz 范围；实际频率仍受器件及 RC 容差影响。\n定时电阻电流：满足该项。VIN/RRC=60 μA；满足≤750 μA 的约束（含边界）。",
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vdd",
+            "title": "输入电压 VDD",
+            "status": "satisfied",
+            "message": "满足该项范围：12 V；允许 4.5–52 V（含边界）。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 12.0,
+            "unit": "V"
+          },
+          {
+            "rule": "tj",
+            "title": "结温 TJ",
+            "status": "needs_information",
+            "message": "请提供结温 TJ及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "frequency",
+            "title": "振荡频率 fOSC",
+            "status": "needs_information",
+            "message": "请提供振荡频率 fOSC及单位。",
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_frequency",
+            "title": "RC 标称频率",
+            "status": "estimated",
+            "message": "fSW=1/(RRC×CRC×0.105)≈101.317 kHz；这是标称估算，不保证实际频率精度。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": 101.31712259371834,
+            "unit": "kHz"
+          },
+          {
+            "rule": "rc_range",
+            "title": "RC 估算频率范围",
+            "status": "satisfied",
+            "message": "估算频率在35–500 kHz 范围；实际频率仍受器件及 RC 容差影响。",
+            "evidence_ids": [
+              "oscillator",
+              "timing"
+            ],
+            "value": 101.31712259371834,
+            "unit": "kHz"
+          },
+          {
+            "rule": "rc_current",
+            "title": "定时电阻电流",
+            "status": "satisfied",
+            "message": "VIN/RRC=60 μA；满足≤750 μA 的约束（含边界）。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": 60.0,
+            "unit": "μA"
+          }
+        ],
+        "evidence_ids": [
+          "recommended",
+          "timing",
+          "oscillator"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          },
+          {
+            "evidence_id": "timing",
+            "score": 1.0
+          },
+          {
+            "evidence_id": "oscillator",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项结论仅核对该项限制，不表示完整电路设计已通过。",
+          "RC 公式为标称估算；不包含完整器件与元件容差模型。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "rules-dev-43",
+      "category": "rules",
+      "split": "dev",
+      "family": "frequency-too-high",
+      "kind": "check",
+      "question": "{'frequency': '600 kHz'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "oscillator"
+      ],
+      "expected_evidence": [
+        "oscillator"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "answered",
+        "question": "条件检查",
+        "answer": "振荡频率 fOSC：不满足该项。不满足该项范围：600 kHz；允许 35–500 kHz（含边界）。该频率范围仅由设计保证，未进行生产测试。",
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vdd",
+            "title": "输入电压 VDD",
+            "status": "needs_information",
+            "message": "请提供输入电压 VDD及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "tj",
+            "title": "结温 TJ",
+            "status": "needs_information",
+            "message": "请提供结温 TJ及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "frequency",
+            "title": "振荡频率 fOSC",
+            "status": "violated",
+            "message": "不满足该项范围：600 kHz；允许 35–500 kHz（含边界）。该频率范围仅由设计保证，未进行生产测试。",
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "value": 600.0,
+            "unit": "kHz"
+          },
+          {
+            "rule": "rc_frequency",
+            "title": "RC 标称频率",
+            "status": "needs_information",
+            "message": "需要定时电阻 RRC 和电容 CRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_current",
+            "title": "定时电阻电流",
+            "status": "needs_information",
+            "message": "需要输入电压 VDD 和定时电阻 RRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_ids": [
+          "oscillator"
+        ],
+        "hits": [
+          {
+            "evidence_id": "oscillator",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项结论仅核对该项限制，不表示完整电路设计已通过。",
+          "RC 公式为标称估算；不包含完整器件与元件容差模型。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "rules-dev-44",
+      "category": "rules",
+      "split": "dev",
+      "family": "millivolt-conversion",
+      "kind": "check",
+      "question": "{'vdd': '3000 mV'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "answered",
+        "question": "条件检查",
+        "answer": "输入电压 VDD：不满足该项。不满足该项范围：3 V；允许 4.5–52 V（含边界）。欠压启动阈值的典型值不能代替推荐工作条件。",
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vdd",
+            "title": "输入电压 VDD",
+            "status": "violated",
+            "message": "不满足该项范围：3 V；允许 4.5–52 V（含边界）。欠压启动阈值的典型值不能代替推荐工作条件。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 3.0,
+            "unit": "V"
+          },
+          {
+            "rule": "tj",
+            "title": "结温 TJ",
+            "status": "needs_information",
+            "message": "请提供结温 TJ及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "frequency",
+            "title": "振荡频率 fOSC",
+            "status": "needs_information",
+            "message": "请提供振荡频率 fOSC及单位。",
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_frequency",
+            "title": "RC 标称频率",
+            "status": "needs_information",
+            "message": "需要定时电阻 RRC 和电容 CRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_current",
+            "title": "定时电阻电流",
+            "status": "needs_information",
+            "message": "需要输入电压 VDD 和定时电阻 RRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项结论仅核对该项限制，不表示完整电路设计已通过。",
+          "RC 公式为标称估算；不包含完整器件与元件容差模型。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "rules-dev-45",
+      "category": "rules",
+      "split": "dev",
+      "family": "ambient-only-input",
+      "kind": "check",
+      "question": "{'ambient_temperature': '25 °C'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "needs_information",
+      "top3": [
+        "recommended",
+        "oscillator",
+        "timing"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "needs_information",
+        "question": "条件检查",
+        "answer": "输入电压 VDD：信息不足。请提供输入电压 VDD及单位。\n结温 TJ：信息不足。环境温度 TA 不能直接当成结温 TJ；需要结温或经验证的热模型。\n振荡频率 fOSC：信息不足。请提供振荡频率 fOSC及单位。\nRC 标称频率：信息不足。需要定时电阻 RRC 和电容 CRC，并明确单位。\n定时电阻电流：信息不足。需要输入电压 VDD 和定时电阻 RRC，并明确单位。",
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vdd",
+            "title": "输入电压 VDD",
+            "status": "needs_information",
+            "message": "请提供输入电压 VDD及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "tj",
+            "title": "结温 TJ",
+            "status": "needs_information",
+            "message": "环境温度 TA 不能直接当成结温 TJ；需要结温或经验证的热模型。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "frequency",
+            "title": "振荡频率 fOSC",
+            "status": "needs_information",
+            "message": "请提供振荡频率 fOSC及单位。",
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_frequency",
+            "title": "RC 标称频率",
+            "status": "needs_information",
+            "message": "需要定时电阻 RRC 和电容 CRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_current",
+            "title": "定时电阻电流",
+            "status": "needs_information",
+            "message": "需要输入电压 VDD 和定时电阻 RRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_ids": [
+          "recommended",
+          "oscillator",
+          "timing"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          },
+          {
+            "evidence_id": "oscillator",
+            "score": 1.0
+          },
+          {
+            "evidence_id": "timing",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项结论仅核对该项限制，不表示完整电路设计已通过。",
+          "RC 公式为标称估算；不包含完整器件与元件容差模型。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "rules-holdout-46",
+      "category": "rules",
+      "split": "holdout",
+      "family": "junction-too-high",
+      "kind": "check",
+      "question": "{'tj': '126 °C'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "answered",
+        "question": "条件检查",
+        "answer": "结温 TJ：不满足该项。不满足该项范围：126 °C；允许 -40–125 °C（含边界）。",
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vdd",
+            "title": "输入电压 VDD",
+            "status": "needs_information",
+            "message": "请提供输入电压 VDD及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "tj",
+            "title": "结温 TJ",
+            "status": "violated",
+            "message": "不满足该项范围：126 °C；允许 -40–125 °C（含边界）。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 126.0,
+            "unit": "°C"
+          },
+          {
+            "rule": "frequency",
+            "title": "振荡频率 fOSC",
+            "status": "needs_information",
+            "message": "请提供振荡频率 fOSC及单位。",
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_frequency",
+            "title": "RC 标称频率",
+            "status": "needs_information",
+            "message": "需要定时电阻 RRC 和电容 CRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_current",
+            "title": "定时电阻电流",
+            "status": "needs_information",
+            "message": "需要输入电压 VDD 和定时电阻 RRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项结论仅核对该项限制，不表示完整电路设计已通过。",
+          "RC 公式为标称估算；不包含完整器件与元件容差模型。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "rules-holdout-47",
+      "category": "rules",
+      "split": "holdout",
+      "family": "timing-current-exact-boundary",
+      "kind": "check",
+      "question": "{'vdd': '48 V', 'resistance': '64 kΩ'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended",
+        "timing"
+      ],
+      "expected_evidence": [
+        "timing"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "answered",
+        "question": "条件检查",
+        "answer": "输入电压 VDD：满足该项。满足该项范围：48 V；允许 4.5–52 V（含边界）。\n定时电阻电流：满足该项。VIN/RRC=750 μA；满足≤750 μA 的约束（含边界）。",
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vdd",
+            "title": "输入电压 VDD",
+            "status": "satisfied",
+            "message": "满足该项范围：48 V；允许 4.5–52 V（含边界）。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 48.0,
+            "unit": "V"
+          },
+          {
+            "rule": "tj",
+            "title": "结温 TJ",
+            "status": "needs_information",
+            "message": "请提供结温 TJ及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "frequency",
+            "title": "振荡频率 fOSC",
+            "status": "needs_information",
+            "message": "请提供振荡频率 fOSC及单位。",
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_frequency",
+            "title": "RC 标称频率",
+            "status": "needs_information",
+            "message": "需要定时电阻 RRC 和电容 CRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_current",
+            "title": "定时电阻电流",
+            "status": "satisfied",
+            "message": "VIN/RRC=750 μA；满足≤750 μA 的约束（含边界）。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": 750.0,
+            "unit": "μA"
+          }
+        ],
+        "evidence_ids": [
+          "recommended",
+          "timing"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          },
+          {
+            "evidence_id": "timing",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项结论仅核对该项限制，不表示完整电路设计已通过。",
+          "RC 公式为标称估算；不包含完整器件与元件容差模型。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "rules-holdout-48",
+      "category": "rules",
+      "split": "holdout",
+      "family": "nominal-frequency-estimate",
+      "kind": "check",
+      "question": "{'resistance': '68.1 kΩ', 'capacitance': '470 pF'}",
+      "passed": false,
+      "errors": [
+        "rule numeric value mismatch"
+      ],
+      "actual_status": "answered",
+      "top3": [
+        "timing",
+        "oscillator"
+      ],
+      "expected_evidence": [
+        "timing"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "answered",
+        "question": "条件检查",
+        "answer": "RC 标称频率：标称估算。fSW=1/(RRC×CRC×0.105)≈297.554 kHz；这是标称估算，不保证实际频率精度。\nRC 估算频率范围：满足该项。估算频率在35–500 kHz 范围；实际频率仍受器件及 RC 容差影响。",
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vdd",
+            "title": "输入电压 VDD",
+            "status": "needs_information",
+            "message": "请提供输入电压 VDD及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "tj",
+            "title": "结温 TJ",
+            "status": "needs_information",
+            "message": "请提供结温 TJ及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "frequency",
+            "title": "振荡频率 fOSC",
+            "status": "needs_information",
+            "message": "请提供振荡频率 fOSC及单位。",
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_frequency",
+            "title": "RC 标称频率",
+            "status": "estimated",
+            "message": "fSW=1/(RRC×CRC×0.105)≈297.554 kHz；这是标称估算，不保证实际频率精度。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": 297.55395769080275,
+            "unit": "kHz"
+          },
+          {
+            "rule": "rc_range",
+            "title": "RC 估算频率范围",
+            "status": "satisfied",
+            "message": "估算频率在35–500 kHz 范围；实际频率仍受器件及 RC 容差影响。",
+            "evidence_ids": [
+              "oscillator",
+              "timing"
+            ],
+            "value": 297.55395769080275,
+            "unit": "kHz"
+          },
+          {
+            "rule": "rc_current",
+            "title": "定时电阻电流",
+            "status": "needs_information",
+            "message": "需要输入电压 VDD 和定时电阻 RRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_ids": [
+          "timing",
+          "oscillator"
+        ],
+        "hits": [
+          {
+            "evidence_id": "timing",
+            "score": 1.0
+          },
+          {
+            "evidence_id": "oscillator",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项结论仅核对该项限制，不表示完整电路设计已通过。",
+          "RC 公式为标称估算；不包含完整器件与元件容差模型。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "rules-holdout-49",
+      "category": "rules",
+      "split": "holdout",
+      "family": "resistance-missing-unit",
+      "kind": "check",
+      "question": "{'vdd': '12 V', 'resistance': '200'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "invalid",
+      "top3": [
+        "recommended",
+        "timing"
+      ],
+      "expected_evidence": [
+        "timing"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "invalid",
+        "question": "条件检查",
+        "answer": "输入电压 VDD：满足该项。满足该项范围：12 V；允许 4.5–52 V（含边界）。\nRC 标称频率：输入需要修改。请输入有限数值并明确单位，例如 12 V、100 kHz、200 kΩ、470 pF、25 °C。\n定时电阻电流：输入需要修改。请输入有限数值并明确单位，例如 12 V、100 kHz、200 kΩ、470 pF、25 °C。",
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vdd",
+            "title": "输入电压 VDD",
+            "status": "satisfied",
+            "message": "满足该项范围：12 V；允许 4.5–52 V（含边界）。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 12.0,
+            "unit": "V"
+          },
+          {
+            "rule": "tj",
+            "title": "结温 TJ",
+            "status": "needs_information",
+            "message": "请提供结温 TJ及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "frequency",
+            "title": "振荡频率 fOSC",
+            "status": "needs_information",
+            "message": "请提供振荡频率 fOSC及单位。",
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_frequency",
+            "title": "RC 标称频率",
+            "status": "invalid",
+            "message": "请输入有限数值并明确单位，例如 12 V、100 kHz、200 kΩ、470 pF、25 °C。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_current",
+            "title": "定时电阻电流",
+            "status": "invalid",
+            "message": "请输入有限数值并明确单位，例如 12 V、100 kHz、200 kΩ、470 pF、25 °C。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_ids": [
+          "recommended",
+          "timing"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          },
+          {
+            "evidence_id": "timing",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项结论仅核对该项限制，不表示完整电路设计已通过。",
+          "RC 公式为标称估算；不包含完整器件与元件容差模型。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "rules-holdout-50",
+      "category": "rules",
+      "split": "holdout",
+      "family": "negative-capacitance",
+      "kind": "check",
+      "question": "{'resistance': '200 kΩ', 'capacitance': '-1 nF'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "invalid",
+      "top3": [
+        "timing"
+      ],
+      "expected_evidence": [
+        "timing"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "invalid",
+        "question": "条件检查",
+        "answer": "RC 标称频率：输入需要修改。定时电容必须大于 0 F。",
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vdd",
+            "title": "输入电压 VDD",
+            "status": "needs_information",
+            "message": "请提供输入电压 VDD及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "tj",
+            "title": "结温 TJ",
+            "status": "needs_information",
+            "message": "请提供结温 TJ及单位。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "frequency",
+            "title": "振荡频率 fOSC",
+            "status": "needs_information",
+            "message": "请提供振荡频率 fOSC及单位。",
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_frequency",
+            "title": "RC 标称频率",
+            "status": "invalid",
+            "message": "定时电容必须大于 0 F。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          },
+          {
+            "rule": "rc_current",
+            "title": "定时电阻电流",
+            "status": "needs_information",
+            "message": "需要输入电压 VDD 和定时电阻 RRC，并明确单位。",
+            "evidence_ids": [
+              "timing"
+            ],
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_ids": [
+          "timing"
+        ],
+        "hits": [
+          {
+            "evidence_id": "timing",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项结论仅核对该项限制，不表示完整电路设计已通过。",
+          "RC 公式为标称估算；不包含完整器件与元件容差模型。"
+        ],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "unsupported-dev-51",
+      "category": "unsupported",
+      "split": "dev",
+      "family": "other-buck",
+      "kind": "query",
+      "question": "LM2596 的输入范围？",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "unsupported",
+        "question": "LM2596 的输入范围？",
+        "answer": "当前资料只覆盖 TPS40200 Rev. G；不能用它回答其他芯片的参数。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "unsupported-dev-52",
+      "category": "unsupported",
+      "split": "dev",
+      "family": "curve-read",
+      "kind": "query",
+      "question": "请读取图 21 的曲线数值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "unsupported",
+        "question": "请读取图 21 的曲线数值",
+        "answer": "当前支持参数证据查询和有限条件检查；曲线读数、完整电路设计及整机性能保证需要进一步分析。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "unsupported-dev-53",
+      "category": "unsupported",
+      "split": "dev",
+      "family": "complete-design",
+      "kind": "query",
+      "question": "帮我设计完整电路",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "unsupported",
+        "question": "帮我设计完整电路",
+        "answer": "当前支持参数证据查询和有限条件检查；曲线读数、完整电路设计及整机性能保证需要进一步分析。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "unsupported-dev-54",
+      "category": "unsupported",
+      "split": "dev",
+      "family": "pcb-guarantee",
+      "kind": "query",
+      "question": "确认整个 PCB 一定稳定",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "unsupported",
+        "question": "确认整个 PCB 一定稳定",
+        "answer": "当前支持参数证据查询和有限条件检查；曲线读数、完整电路设计及整机性能保证需要进一步分析。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "unsupported-dev-55",
+      "category": "unsupported",
+      "split": "dev",
+      "family": "unrelated-weather",
+      "kind": "query",
+      "question": "今天北京天气怎么样",
+      "passed": true,
+      "errors": [],
+      "actual_status": "not_found",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "not_found",
+        "question": "今天北京天气怎么样",
+        "answer": "在当前手册证据中未找到匹配内容。可试用参数符号、中文参数名，或选择示例问题。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "unsupported-holdout-56",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "other-mcu",
+      "kind": "query",
+      "question": "STM32F103 的参考电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "unsupported",
+        "question": "STM32F103 的参考电压",
+        "answer": "当前资料只覆盖 TPS40200 Rev. G；不能用它回答其他芯片的参数。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "unsupported-holdout-57",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "curve-interpolation",
+      "kind": "query",
+      "question": "根据曲线插值 150 kHz 的最小导通时间",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "unsupported",
+        "question": "根据曲线插值 150 kHz 的最小导通时间",
+        "answer": "当前支持参数证据查询和有限条件检查；曲线读数、完整电路设计及整机性能保证需要进一步分析。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "unsupported-holdout-58",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "generate-bom",
+      "kind": "query",
+      "question": "生成完整 BOM 和原理图",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "unsupported",
+        "question": "生成完整 BOM 和原理图",
+        "answer": "当前支持参数证据查询和有限条件检查；曲线读数、完整电路设计及整机性能保证需要进一步分析。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "unsupported-holdout-59",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "thermal-curve-digitize",
+      "kind": "query",
+      "question": "从温度曲线读取精确值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "unsupported",
+        "question": "从温度曲线读取精确值",
+        "answer": "当前支持参数证据查询和有限条件检查；曲线读数、完整电路设计及整机性能保证需要进一步分析。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    },
+    {
+      "id": "unsupported-holdout-60",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unrelated-recipe",
+      "kind": "query",
+      "question": "教我做红烧茄子",
+      "passed": true,
+      "errors": [],
+      "actual_status": "not_found",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "status": "not_found",
+        "question": "教我做红烧茄子",
+        "answer": "在当前手册证据中未找到匹配内容。可试用参数符号、中文参数名，或选择示例问题。",
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "source_revision": "SLUS659G (Rev. G)"
+      }
+    }
+  ],
+  "initial_holdout_metrics": {
+    "cases": 30,
+    "passed": 29,
+    "query_retrieval_cases": 20,
+    "top3_recall": 1.0,
+    "plain_top3_recall": 0.4,
+    "fact_cases": 16,
+    "fact_answered": 16,
+    "fact_accuracy": 1.0,
+    "fact_coverage": 1.0,
+    "unsupported_correct": 5,
+    "unsupported_cases": 5,
+    "by_category": {
+      "citations": {
+        "total": 5,
+        "passed": 5
+      },
+      "conditions": {
+        "total": 5,
+        "passed": 5
+      },
+      "parameters": {
+        "total": 5,
+        "passed": 5
+      },
+      "rules": {
+        "total": 5,
+        "passed": 4
+      },
+      "traps": {
+        "total": 5,
+        "passed": 5
+      },
+      "unsupported": {
+        "total": 5,
+        "passed": 5
+      }
+    }
+  }
+}

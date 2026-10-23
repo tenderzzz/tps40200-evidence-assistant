@@ -1,0 +1,9 @@
+{
+  "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+  "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。",
+  "decisions": [
+    "只转录 LM358（无 A/B/BA 后缀）行及明确共享行；LM358A 的 SR/共同行保留，专属偏置、输出源电流 −60 mA 等排除。推荐共模范围第5页为 V− 至 V+−2 V，与第10页室温电气特性分开。"
+  ],
+  "coverage": "适用型号的绝对最大额定值、工作条件和电气特性；NE555 另含开关特性。排除项见 decisions；ESD、热阻和封装不是本轮结构化参数表。",
+  "manual_transcription": true
+}

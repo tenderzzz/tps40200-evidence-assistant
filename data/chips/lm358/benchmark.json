@@ -1,0 +1,1212 @@
+{
+  "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+  "provenance": "固定PDF对照转录与有理数计算期望；未从被测实现生成。自建开发/留出分组，不是独立盲测。",
+  "cases": [
+    {
+      "id": "lm358-01",
+      "kind": "query",
+      "question": "VOS",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-vos",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vos-25": {
+            "typical": 3,
+            "maximum": 7,
+            "unit": "mV"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vos"
+        ]
+      }
+    },
+    {
+      "id": "lm358-02",
+      "kind": "query",
+      "question": "输入失调电压",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-vos",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vos-25": {
+            "typical": 3,
+            "maximum": 7,
+            "unit": "mV"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vos"
+        ]
+      }
+    },
+    {
+      "id": "lm358-03",
+      "kind": "query",
+      "question": "失调电压是多少",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-vos",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vos-25": {
+            "typical": 3,
+            "maximum": 7,
+            "unit": "mV"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vos"
+        ]
+      }
+    },
+    {
+      "id": "lm358-04",
+      "kind": "query",
+      "question": "推荐工作条件",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-recommended",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "rec-vs": {
+            "minimum": 3,
+            "maximum": 30
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-05",
+      "kind": "query",
+      "question": "供电范围",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-recommended",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "rec-vs": {
+            "minimum": 3,
+            "maximum": 30
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-06",
+      "kind": "query",
+      "question": "IB",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-bias",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "ib-25": {
+            "typical": -20,
+            "maximum": -250,
+            "unit": "nA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "bias"
+        ]
+      }
+    },
+    {
+      "id": "lm358-07",
+      "kind": "query",
+      "question": "输入偏置电流",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-bias",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "ib-25": {
+            "typical": -20,
+            "maximum": -250,
+            "unit": "nA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "bias"
+        ]
+      }
+    },
+    {
+      "id": "lm358-08",
+      "kind": "query",
+      "question": "输入噪声",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-noise",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "noise": {
+            "typical": 40,
+            "unit": "nV/√Hz"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "noise"
+        ]
+      }
+    },
+    {
+      "id": "lm358-09",
+      "kind": "query",
+      "question": "噪声密度",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-noise",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "noise": {
+            "typical": 40,
+            "unit": "nV/√Hz"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "noise"
+        ]
+      }
+    },
+    {
+      "id": "lm358-10",
+      "kind": "query",
+      "question": "AOL",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-gain",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "aol-full": {
+            "minimum": 15,
+            "typical": null
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "gain"
+        ]
+      }
+    },
+    {
+      "id": "lm358-11",
+      "kind": "query",
+      "question": "开环增益",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-gain",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "aol-full": {
+            "minimum": 15,
+            "typical": null
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "gain"
+        ]
+      }
+    },
+    {
+      "id": "lm358-12",
+      "kind": "query",
+      "question": "输出摆幅",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-output-swing",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "swing-high-10k": {
+            "typical": 2,
+            "maximum": 3
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "output-swing"
+        ]
+      }
+    },
+    {
+      "id": "lm358-13",
+      "kind": "query",
+      "question": "输出电压范围",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-output-swing",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "swing-high-10k": {
+            "typical": 2,
+            "maximum": 3
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "output-swing"
+        ]
+      }
+    },
+    {
+      "id": "lm358-14",
+      "kind": "query",
+      "question": "IQ",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-quiescent",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "iq-5v": {
+            "typical": 350,
+            "maximum": 600,
+            "unit": "μA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "quiescent"
+        ]
+      }
+    },
+    {
+      "id": "lm358-15",
+      "kind": "query",
+      "question": "静态电流",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-quiescent",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "iq-5v": {
+            "typical": 350,
+            "maximum": 600,
+            "unit": "μA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "quiescent"
+        ]
+      }
+    },
+    {
+      "id": "lm358-16",
+      "kind": "query",
+      "question": "IO",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-output-current",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "source-25": {
+            "minimum": -20,
+            "typical": -30,
+            "maximum": null
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "output-current"
+        ]
+      }
+    },
+    {
+      "id": "lm358-17",
+      "kind": "query",
+      "question": "输出电流",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-output-current",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "source-25": {
+            "minimum": -20,
+            "typical": -30,
+            "maximum": null
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "output-current"
+        ]
+      }
+    },
+    {
+      "id": "lm358-18",
+      "kind": "query",
+      "question": "PSRR",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-rejection",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "psrr": {
+            "minimum": 65,
+            "typical": 100,
+            "unit": "dB"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "rejection"
+        ]
+      }
+    },
+    {
+      "id": "lm358-19",
+      "kind": "query",
+      "question": "电源抑制比",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-rejection",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "psrr": {
+            "minimum": 65,
+            "typical": 100,
+            "unit": "dB"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "rejection"
+        ]
+      }
+    },
+    {
+      "id": "lm358-20",
+      "kind": "query",
+      "question": "通道隔离",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-rejection",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "separation": {
+            "typical": 120
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "rejection"
+        ]
+      }
+    },
+    {
+      "id": "lm358-21",
+      "kind": "query",
+      "question": "VOS",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vos",
+      "expected": {
+        "status": "answered",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "vos"
+        ],
+        "applicability": {
+          "vos-25": "applicable"
+        }
+      },
+      "conditions": {
+        "supply_voltage": "5 V",
+        "ambient_temperature": "25 °C",
+        "common_mode_voltage": "0 V",
+        "output_voltage": "1.4 V",
+        "open_loop": true
+      }
+    },
+    {
+      "id": "lm358-22",
+      "kind": "query",
+      "question": "VOS",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vos",
+      "expected": {
+        "status": "answered",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "vos"
+        ],
+        "applicability": {
+          "vos-25": "not_applicable",
+          "vos-full": "applicable"
+        }
+      },
+      "conditions": {
+        "supply_voltage": "5 V",
+        "ambient_temperature": "70 °C",
+        "common_mode_voltage": "0 V",
+        "output_voltage": "1.4 V",
+        "open_loop": true
+      }
+    },
+    {
+      "id": "lm358-23",
+      "kind": "query",
+      "question": "VOS",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vos",
+      "expected": {
+        "status": "answered",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "vos"
+        ],
+        "applicability": {
+          "vos-25": "needs_information"
+        }
+      },
+      "conditions": {
+        "supply_voltage": "5 V",
+        "ambient_temperature": "25 °C",
+        "common_mode_voltage": "0 V",
+        "output_voltage": "1.4 V",
+        "open_loop": null
+      }
+    },
+    {
+      "id": "lm358-24",
+      "kind": "query",
+      "question": "VOS",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vos",
+      "expected": {
+        "status": "answered",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "vos"
+        ],
+        "applicability": {
+          "vos-25": "needs_information"
+        }
+      },
+      "conditions": {
+        "supply_voltage": "5 V",
+        "ambient_temperature": null,
+        "common_mode_voltage": "0 V",
+        "output_voltage": "1.4 V",
+        "open_loop": true
+      }
+    },
+    {
+      "id": "lm358-25",
+      "kind": "query",
+      "question": "VOS",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vos",
+      "expected": {
+        "status": "answered",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "vos"
+        ],
+        "applicability": {
+          "vos-full": "not_applicable"
+        }
+      },
+      "conditions": {
+        "supply_voltage": "35 V",
+        "ambient_temperature": "25 °C",
+        "common_mode_voltage": "0 V",
+        "output_voltage": "1.4 V",
+        "open_loop": true
+      }
+    },
+    {
+      "id": "lm358-26",
+      "kind": "query",
+      "question": "VOS",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vos",
+      "expected": {
+        "status": "invalid",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "vos"
+        ],
+        "applicability": {
+          "vos-25": "invalid"
+        }
+      },
+      "conditions": {
+        "supply_voltage": "5 V",
+        "ambient_temperature": "25 K",
+        "common_mode_voltage": "0 V",
+        "output_voltage": "1.4 V",
+        "open_loop": true
+      }
+    },
+    {
+      "id": "lm358-27",
+      "kind": "query",
+      "question": "引脚",
+      "split": "dev",
+      "category": "mechanism",
+      "family": "query-pins",
+      "expected": {
+        "status": "evidence_only",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "pins"
+        ]
+      }
+    },
+    {
+      "id": "lm358-28",
+      "kind": "query",
+      "question": "接线",
+      "split": "dev",
+      "category": "mechanism",
+      "family": "query-pins",
+      "expected": {
+        "status": "evidence_only",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "pins"
+        ]
+      }
+    },
+    {
+      "id": "lm358-29",
+      "kind": "query",
+      "question": "qzxw987654",
+      "split": "dev",
+      "category": "unanswerable",
+      "family": "unknown-dev",
+      "expected": {
+        "status": "not_found",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm358-30",
+      "kind": "query",
+      "question": "做一盘番茄炒蛋",
+      "split": "dev",
+      "category": "unanswerable",
+      "family": "unknown-dev",
+      "expected": {
+        "status": "not_found",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm358-31",
+      "kind": "query",
+      "question": "GBW",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-frequency",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "gbw": {
+            "typical": 0.7,
+            "unit": "MHz"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "frequency"
+        ]
+      }
+    },
+    {
+      "id": "lm358-32",
+      "kind": "query",
+      "question": "增益带宽积",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-frequency",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "gbw": {
+            "typical": 0.7,
+            "unit": "MHz"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "frequency"
+        ]
+      }
+    },
+    {
+      "id": "lm358-33",
+      "kind": "query",
+      "question": "SR",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-frequency",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "sr": {
+            "typical": 0.3,
+            "unit": "V/μs"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "frequency"
+        ]
+      }
+    },
+    {
+      "id": "lm358-34",
+      "kind": "query",
+      "question": "压摆率",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-frequency",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "sr": {
+            "typical": 0.3,
+            "unit": "V/μs"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "frequency"
+        ]
+      }
+    },
+    {
+      "id": "lm358-35",
+      "kind": "query",
+      "question": "VCM",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-common-mode",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vcm-full": {
+            "minimum": "V−",
+            "maximum": "V+ − 2"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "common-mode"
+        ]
+      }
+    },
+    {
+      "id": "lm358-36",
+      "kind": "query",
+      "question": "输入共模范围",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-common-mode",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vcm-full": {
+            "minimum": "V−",
+            "maximum": "V+ − 2"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "common-mode"
+        ]
+      }
+    },
+    {
+      "id": "lm358-37",
+      "kind": "query",
+      "question": "绝对最大额定值",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-abs",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "abs-vs": {
+            "maximum": 32
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "abs"
+        ]
+      }
+    },
+    {
+      "id": "lm358-38",
+      "kind": "query",
+      "question": "极限电压",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-abs",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "abs-vs": {
+            "maximum": 32
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "abs"
+        ]
+      }
+    },
+    {
+      "id": "lm358-39",
+      "kind": "query",
+      "question": "absolute maximum",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-abs",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "abs-vs": {
+            "maximum": 32
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "abs"
+        ]
+      }
+    },
+    {
+      "id": "lm358-40",
+      "kind": "query",
+      "question": "输入失调电流漂移",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-ios-drift",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "ios-drift": {
+            "typical": 10,
+            "unit": "pA/°C"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "bias"
+        ]
+      }
+    },
+    {
+      "id": "lm358-41",
+      "kind": "check",
+      "point": {
+        "supply_positive": "3 V",
+        "supply_negative": "0 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-supply_voltage",
+      "expected": {
+        "rule": "supply_voltage",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-42",
+      "kind": "check",
+      "point": {
+        "supply_positive": "15 V",
+        "supply_negative": "-15 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-supply_voltage",
+      "expected": {
+        "rule": "supply_voltage",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-43",
+      "kind": "check",
+      "point": {
+        "supply_positive": "30.001 V",
+        "supply_negative": "0 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-supply_voltage",
+      "expected": {
+        "rule": "supply_voltage",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-44",
+      "kind": "check",
+      "point": {
+        "supply_positive": "2.999 V",
+        "supply_negative": "0 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-supply_voltage",
+      "expected": {
+        "rule": "supply_voltage",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-45",
+      "kind": "check",
+      "point": {
+        "supply_positive": "0 V",
+        "supply_negative": "0 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-supply_voltage",
+      "expected": {
+        "rule": "supply_voltage",
+        "rule_status": "invalid",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-46",
+      "kind": "check",
+      "point": {
+        "supply_positive": "0 V",
+        "supply_negative": "5 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-supply_voltage",
+      "expected": {
+        "rule": "supply_voltage",
+        "rule_status": "invalid",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-47",
+      "kind": "check",
+      "point": {
+        "supply_positive": "5000 mV",
+        "supply_negative": "0 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-supply_voltage",
+      "expected": {
+        "rule": "supply_voltage",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-48",
+      "kind": "check",
+      "point": {
+        "ambient_temperature": "0 °C"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-ambient_temperature",
+      "expected": {
+        "rule": "ambient_temperature",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-49",
+      "kind": "check",
+      "point": {
+        "ambient_temperature": "70 °C"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-ambient_temperature",
+      "expected": {
+        "rule": "ambient_temperature",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-50",
+      "kind": "check",
+      "point": {
+        "ambient_temperature": "-0.01 °C"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-ambient_temperature",
+      "expected": {
+        "rule": "ambient_temperature",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-51",
+      "kind": "check",
+      "point": {
+        "ambient_temperature": "70.01 °C"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-ambient_temperature",
+      "expected": {
+        "rule": "ambient_temperature",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm358-52",
+      "kind": "check",
+      "point": {
+        "supply_positive": "5 V",
+        "supply_negative": "0 V",
+        "common_mode_voltage": "4.5 V",
+        "ambient_temperature": "25 °C"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-common_mode_electrical",
+      "expected": {
+        "rule": "common_mode_electrical",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "common-mode"
+        ]
+      }
+    },
+    {
+      "id": "lm358-53",
+      "kind": "check",
+      "point": {
+        "supply_positive": "5 V",
+        "supply_negative": "0 V",
+        "common_mode_voltage": "3.5 V",
+        "ambient_temperature": "25 °C"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-common_mode_electrical",
+      "expected": {
+        "rule": "common_mode_electrical",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "common-mode"
+        ]
+      }
+    },
+    {
+      "id": "lm358-54",
+      "kind": "check",
+      "point": {
+        "supply_positive": "5 V",
+        "supply_negative": "0 V",
+        "common_mode_voltage": "3 V",
+        "ambient_temperature": null
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-common_mode_electrical",
+      "expected": {
+        "rule": "common_mode_electrical",
+        "rule_status": "needs_information",
+        "value": null,
+        "evidence": [
+          "common-mode"
+        ]
+      }
+    },
+    {
+      "id": "lm358-55",
+      "kind": "query",
+      "question": "LM358B 的供电",
+      "split": "holdout",
+      "category": "unsupported",
+      "family": "unsupported-holdout",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm358-56",
+      "kind": "query",
+      "question": "LM358A 的失调电压",
+      "split": "holdout",
+      "category": "unsupported",
+      "family": "unsupported-holdout",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm358-57",
+      "kind": "query",
+      "question": "从曲线读出精确值",
+      "split": "holdout",
+      "category": "unsupported",
+      "family": "unsupported-holdout",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm358-58",
+      "kind": "query",
+      "question": "生成完整电路BOM",
+      "split": "holdout",
+      "category": "unsupported",
+      "family": "unsupported-holdout",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm358-59",
+      "kind": "query",
+      "question": "5能工作吗",
+      "split": "holdout",
+      "category": "unanswerable",
+      "family": "missing-unit",
+      "expected": {
+        "status": "needs_information",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm358-60",
+      "kind": "query",
+      "question": "qzxw555000",
+      "split": "holdout",
+      "category": "unanswerable",
+      "family": "unknown-holdout",
+      "expected": {
+        "status": "not_found",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    }
+  ]
+}

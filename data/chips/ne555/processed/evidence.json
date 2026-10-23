@@ -1,0 +1,499 @@
+[
+  {
+    "id": "abs",
+    "title": "绝对最大额定值",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      93,
+      558,
+      237
+    ],
+    "context_bboxes": [
+      [
+        54,
+        245,
+        558,
+        293
+      ]
+    ],
+    "text": "5.1 Absolute Maximum Ratings\nover operating free-air temperature range (unless otherwise noted)(1)\nMIN MAX UNIT\nV Supply voltage(2) 18 V\nCC\nV Input voltage CONT, RESET, THRES, TRIG V V\nI CC\nI Output current ±225 mA\nO\nT Operating virtual junction temperature 150 °C\nJ\nCase temperature for 60 seconds FK package 260 °C\nLead temperature 1.6mm (1/16 inch) from case JG package, 60 seconds 300 °C\nT Storage temperature –65 150 °C\nstg",
+    "context": "(1) Operation outside the Absolute Maximum Ratings may cause permanent device damage. Absolute Maximum Ratings do not imply\nfunctional operation of the device at these or any other conditions beyond those listed under Recommended Operating Conditions.\nIf used outside the Recommended Operating Conditions but within the Absolute Maximum Ratings, the device may not be fully\nfunctional, and this may affect device reliability, functionality, performance, and shorten the device lifetime.\n(2) All voltage values are with respect to GND.",
+    "aliases": [
+      "绝对最大额定值",
+      "absolute maximum",
+      "极限电压"
+    ],
+    "summary": "NE555 的供电绝对最大值为 18 V；推荐供电为 4.5–16 V，二者不能互换。",
+    "curated": true
+  },
+  {
+    "id": "recommended",
+    "title": "推荐工作条件",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      399,
+      558,
+      542
+    ],
+    "context_bboxes": [],
+    "text": "5.3 Recommended Operating Conditions\nover operating free-air temperature range (unless otherwise noted)\nMIN MAX UNIT\nNA555, NE555, SA555 4.5 16\nV Supply voltage V\nCC\nSE555 4.5 18\nI Output current ±200 mA\nO\nNA555 –40 105\nNE555 0 70\nT Operating free-air temperature °C\nA\nSA555 –40 85\nSE555 –55 125",
+    "context": "",
+    "aliases": [
+      "推荐工作条件",
+      "推荐供电电压",
+      "供电范围",
+      "工作温度",
+      "VCC",
+      "环境温度"
+    ],
+    "summary": "NE555 推荐供电 4.5–16 V，环境温度 0–70°C。电气特性表另有 5–15 V 测试范围，不能把测试范围与推荐范围混为一谈。",
+    "curated": true
+  },
+  {
+    "id": "threshold",
+    "title": "阈值电压",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      376,
+      558,
+      428
+    ],
+    "context_bboxes": [
+      [
+        54,
+        329,
+        558,
+        373
+      ]
+    ],
+    "text": "NA555, NE555, SA555 8.8 10 11.2\nV = 15V\nCC\nSE555 9.4 10 10.6\nTHRES voltage level V\nNA555, NE555, SA555 2.4 3.3 4.2\nV = 5V\nCC\nSE555 2.7 3.3 4",
+    "context": "5.5 Electrical Characteristics\nat V = 5V to 15V and T = 25°C (unless otherwise noted)\nCC A\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n跨页脚注（p.6）：(1) This parameter influences the maximum value of the timing resistors R and R in the circuit of Figure 6-5. For example, when\nA B\nV CC = 5V, the maximum value is R = R A + R B ≅ 3.4MΩ, and for V CC = 15V, the maximum value is R A + R B ≅ 10MΩ.",
+    "aliases": [
+      "阈值电压",
+      "THRES",
+      "threshold"
+    ],
+    "summary": "THRES 阈值的典型值约为供电的 2/3，但保证范围须按 5 V、15 V 条件分别读取。",
+    "curated": true
+  },
+  {
+    "id": "threshold-current",
+    "title": "THRES电流",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      430,
+      558,
+      442
+    ],
+    "context_bboxes": [
+      [
+        54,
+        329,
+        558,
+        373
+      ]
+    ],
+    "text": "THRES current(1) 30 250 nA",
+    "context": "5.5 Electrical Characteristics\nat V = 5V to 15V and T = 25°C (unless otherwise noted)\nCC A\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n跨页脚注（p.6）：(1) This parameter influences the maximum value of the timing resistors R and R in the circuit of Figure 6-5. For example, when\nA B\nV CC = 5V, the maximum value is R = R A + R B ≅ 3.4MΩ, and for V CC = 15V, the maximum value is R A + R B ≅ 10MΩ.",
+    "aliases": [
+      "THRES电流",
+      "阈值输入电流"
+    ],
+    "summary": "THRES 电流会影响定时电阻可用范围，见跨页脚注。",
+    "curated": true
+  },
+  {
+    "id": "trigger",
+    "title": "触发阈值",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      445,
+      558,
+      527
+    ],
+    "context_bboxes": [
+      [
+        54,
+        329,
+        558,
+        373
+      ]
+    ],
+    "text": "NA555, NE555, SA555 4.5 5 5.6\nV = 15V\nCC\nSE555 4.8 5 5.2\nV = 15V, T = –55°C to +125°C SE555 3 6\nCC A\nTRIG voltage level V\nNA555, NE555, SA555 1.1 1.67 2.2\nV = 5V\nCC\nSE555 1.45 1.67 1.9\nV = 5V, T = –55°C to +125°C SE555 1.9\nCC A",
+    "context": "5.5 Electrical Characteristics\nat V = 5V to 15V and T = 25°C (unless otherwise noted)\nCC A\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n跨页脚注（p.6）：(1) This parameter influences the maximum value of the timing resistors R and R in the circuit of Figure 6-5. For example, when\nA B\nV CC = 5V, the maximum value is R = R A + R B ≅ 3.4MΩ, and for V CC = 15V, the maximum value is R A + R B ≅ 10MΩ.",
+    "aliases": [
+      "触发阈值",
+      "触发电压",
+      "TRIG",
+      "trigger"
+    ],
+    "summary": "TRIG 典型阈值约为 VCC/3；NE555 的 5 V 与 15 V 参数行分别保留。",
+    "curated": true
+  },
+  {
+    "id": "trigger-current",
+    "title": "触发输入电流",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      529,
+      558,
+      554
+    ],
+    "context_bboxes": [
+      [
+        54,
+        329,
+        558,
+        373
+      ]
+    ],
+    "text": "NA555, NE555, SA555 0.5 2 μA\nTRIG current TRIG at 0V\nSE555 0.5 0.9",
+    "context": "5.5 Electrical Characteristics\nat V = 5V to 15V and T = 25°C (unless otherwise noted)\nCC A\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT",
+    "aliases": [
+      "触发输入电流",
+      "TRIG电流"
+    ],
+    "summary": "TRIG 输入电流在 TRIG=0 V 条件给出。",
+    "curated": true
+  },
+  {
+    "id": "reset",
+    "title": "复位阈值",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      557,
+      558,
+      624
+    ],
+    "context_bboxes": [
+      [
+        54,
+        329,
+        558,
+        373
+      ]
+    ],
+    "text": "0.3 0.7 1\nRESET voltage level V\nT = –55°C to +125°C SE555 1.1\nA\nRESET at V 0.1 0.4\nCC\nRESET current NA555, NE555, SA555 –0.4 –1.5 mA\nRESET at 0V\nSE555 –0.4 –1",
+    "context": "5.5 Electrical Characteristics\nat V = 5V to 15V and T = 25°C (unless otherwise noted)\nCC A\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT",
+    "aliases": [
+      "复位阈值",
+      "RESET",
+      "复位电流",
+      "如何复位"
+    ],
+    "summary": "RESET 低有效，并覆盖触发和阈值输入；电压与电流测试条件分开读取。",
+    "curated": true
+  },
+  {
+    "id": "discharge",
+    "title": "放电开关",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      627,
+      558,
+      653
+    ],
+    "context_bboxes": [
+      [
+        54,
+        329,
+        558,
+        373
+      ]
+    ],
+    "text": "DISCH switch off-state current 20 100 nA\nDISCH switch on-state voltage V = 5V, I = 8mA NA555, NE555, SA555 0.15 0.4 V\nCC O",
+    "context": "5.5 Electrical Characteristics\nat V = 5V to 15V and T = 25°C (unless otherwise noted)\nCC A\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT",
+    "aliases": [
+      "放电开关",
+      "DISCH",
+      "放电漏电流"
+    ],
+    "summary": "DISCH 关断漏电和导通电压分别列出；导通电压在 5 V、8 mA 条件给出。",
+    "curated": true
+  },
+  {
+    "id": "control",
+    "title": "控制电压",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      119,
+      558,
+      201
+    ],
+    "context_bboxes": [
+      [
+        54,
+        73,
+        558,
+        116
+      ],
+      [
+        54,
+        708,
+        558,
+        730
+      ]
+    ],
+    "text": "NA555, NE555, SA555 9 10 11\nV = 15V\nCC\nSE555 9.6 10 10.4\nV = 15V, T = –55°C to +125°C SE555 9.6 10.4\nCC A\nCONT voltage (open circuit) V\nNA555, NE555, SA555 2.6 3.3 4\nV = 5V\nCC\nSE555 2.9 3.3 3.8\nV = 5V, T = –55°C to +125°C SE555 2.9 3.8\nCC A",
+    "context": "5.5 Electrical Characteristics (continued)\nat V = 5V to 15V and T = 25°C (unless otherwise noted)\nCC A\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n(1) This parameter influences the maximum value of the timing resistors R and R in the circuit of Figure 6-5. For example, when\nA B\nV CC = 5V, the maximum value is R = R A + R B ≅ 3.4MΩ, and for V CC = 15V, the maximum value is R A + R B ≅ 10MΩ.",
+    "aliases": [
+      "控制电压",
+      "CONT",
+      "control voltage"
+    ],
+    "summary": "CONT 开路电压随供电条件变化，不能默认把外部控制电压接入后仍按开路值计算。",
+    "curated": true
+  },
+  {
+    "id": "output-low",
+    "title": "低电平输出电压",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      203,
+      558,
+      471
+    ],
+    "context_bboxes": [
+      [
+        54,
+        73,
+        558,
+        116
+      ],
+      [
+        54,
+        708,
+        558,
+        730
+      ]
+    ],
+    "text": "NA555, NE555, SA555 0.1 0.25\nV = 15V, I = 10mA\nCC OL\nSE555 0.1 0.15\nV = 15V, I = 10mA,\nCC OL SE555 0.2\nT = –55°C to +125°C\nA\nNA555, NE555, SA555 0.4 0.75\nV = 15V, I = 50mA\nCC OL\nSE555 0.4 0.5\nV = 15V, I = 50mA,\nCC OL SE555 1\nT = –55°C to +125°C\nA\nNA555, NE555, SA555 2 2.5\nV = 15V, I = 100mA\nCC OL\nSE555 2 2.2\nLow-level output voltage V = 15V, I = 100mA, V\nCC OL SE555 2.7\nT = –55°C to +125°C\nA\nV = 15V, I = 200mA 2.5\nCC OL\nV = 5V, I = 3.5mA,\nCC OL SE555 0.35\nT = –55°C to +125°C\nA\nNA555, NE555, SA555 0.1 0.35\nV = 5V, I = 5mA\nCC OL\nSE555 0.1 0.2\nV = 5V, I = 5mA,\nCC OL SE555 0.8\nT = –55°C to +125°C\nA\nNA555, NE555, SA555 0.15 0.4\nV = 5V, I = 8mA\nCC OL\nSE555 0.15 0.25",
+    "context": "5.5 Electrical Characteristics (continued)\nat V = 5V to 15V and T = 25°C (unless otherwise noted)\nCC A\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n(1) This parameter influences the maximum value of the timing resistors R and R in the circuit of Figure 6-5. For example, when\nA B\nV CC = 5V, the maximum value is R = R A + R B ≅ 3.4MΩ, and for V CC = 15V, the maximum value is R A + R B ≅ 10MΩ.",
+    "aliases": [
+      "低电平输出电压",
+      "VOL",
+      "灌电流"
+    ],
+    "summary": "输出低电平电压依赖供电和灌电流，200 mA 行只给典型值。",
+    "curated": true
+  },
+  {
+    "id": "output-high",
+    "title": "高电平输出电压",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      474,
+      558,
+      589
+    ],
+    "context_bboxes": [
+      [
+        54,
+        73,
+        558,
+        116
+      ],
+      [
+        54,
+        708,
+        558,
+        730
+      ]
+    ],
+    "text": "NA555, NE555, SA555 12.75 13.3\nV = 15V, I = –100mA\nCC OH\nSE555 13 13.3\nV = 15V, I = –100mA,\nCC OH SE555 12\nT = –55°C to +125°C\nA\nHigh-level output voltage V = 15V, I = –200mA 12.5 V\nCC OH\nNA555, NE555, SA555 2.75 3.3\nV = 5V, I = –100mA\nCC OH\nSE555 3 3.3\nV = 5V, I = –100mA,\nCC OH SE555 2\nT = –55°C to +125°C\nA",
+    "context": "5.5 Electrical Characteristics (continued)\nat V = 5V to 15V and T = 25°C (unless otherwise noted)\nCC A\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n(1) This parameter influences the maximum value of the timing resistors R and R in the circuit of Figure 6-5. For example, when\nA B\nV CC = 5V, the maximum value is R = R A + R B ≅ 3.4MΩ, and for V CC = 15V, the maximum value is R A + R B ≅ 10MΩ.",
+    "aliases": [
+      "高电平输出电压",
+      "VOH",
+      "源电流",
+      "输出摆幅"
+    ],
+    "summary": "NE555 高电平输出不能无条件视为等于 VCC；按供电和源电流读取。",
+    "curated": true
+  },
+  {
+    "id": "supply-current",
+    "title": "供电电流",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      591,
+      558,
+      700
+    ],
+    "context_bboxes": [
+      [
+        54,
+        73,
+        558,
+        116
+      ],
+      [
+        54,
+        708,
+        558,
+        730
+      ]
+    ],
+    "text": "NA555, NE555, SA555 10 15\nOutput low, no load, V = 15V\nCC\nSE555 10 12\nNA555, NE555, SA555 3 6\nOutput low, no load, V = 5V\nCC\nSE555 3 5\nSupply current mA\nNA555, NE555, SA555 9 13\nOutput high, no load, V = 15V\nCC\nSE555 9 10\nNA555, NE555, SA555 2 5\nOutput high, no load, V = 5V\nCC\nSE555 2 4",
+    "context": "5.5 Electrical Characteristics (continued)\nat V = 5V to 15V and T = 25°C (unless otherwise noted)\nCC A\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n(1) This parameter influences the maximum value of the timing resistors R and R in the circuit of Figure 6-5. For example, when\nA B\nV CC = 5V, the maximum value is R = R A + R B ≅ 3.4MΩ, and for V CC = 15V, the maximum value is R A + R B ≅ 10MΩ.",
+    "aliases": [
+      "供电电流",
+      "静态电流",
+      "ICC",
+      "IQ"
+    ],
+    "summary": "供电电流与输出高低状态、零负载和供电电压有关。",
+    "curated": true
+  },
+  {
+    "id": "switching",
+    "title": "定时温漂",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      76,
+      558,
+      357
+    ],
+    "context_bboxes": [
+      [
+        54,
+        366,
+        558,
+        415
+      ]
+    ],
+    "text": "5.6 Switching Characteristics\nV = 5V to 15V and T = 25°C (unless otherwise noted); characteristic values are specified by design, characterization, or\nCC A\nboth, and are not production tested\nPARAMETER TEST CONDITIONS(1) MIN TYP MAX UNIT\nNA555, NE555,\nEach timer, monostable(2), SA555 50\nT = MIN to MAX\nA\nTemperature coefficient of SE555 30 100\nppm/°C\ntiming interval NA555, NE555,\nEach timer, astable(3), SA555 150\nT = MIN to MAX\nA\nSE555 90\nNA555, NE555,\n0.1 0.5\nEach timer, monostable(2) SA555\nSupply-voltage sensitivity of SE555 0.05 0.2\n%/V\ntiming interval NA555, NE555,\n0.3\nEach timer, astable(3) SA555\nSE555 0.15\nt NA555, NE555,\nr Output-pulse rise time C L = 15pF, T A = 25°C, SA555 100 300 ns\n20% to 80%\nSE555 100 200\nt NA555, NE555,\nf Output-pulse fall time C L = 15pF, T A = 25°C, SA555 100 300 ns\n80% to 20%\nSE555 100 200",
+    "context": "(1) For conditions shown as MIN or MAX, use the appropriate value specified under Recommended Operating Conditions.\n(2) Values specified are for a device in a monostable circuit similar to Figure 6-2, with the following component values: R = 2kΩ to 100kΩ,\nA\nC = 0.1μF.\n(3) Values specified are for a device in an astable circuit similar to Figure 6-5, with the following component values: R = 1kΩ to 100kΩ,\nA\nC = 0.1μF.",
+    "aliases": [
+      "定时温漂",
+      "定时电源敏感度",
+      "上升时间",
+      "下降时间",
+      "tr",
+      "tf"
+    ],
+    "summary": "开关特性按设计或表征给出、非生产测试；单稳态与无稳态的元件设置和参数分别读取。",
+    "curated": true
+  },
+  {
+    "id": "monostable",
+    "title": "单稳态",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      76,
+      558,
+      395
+    ],
+    "context_bboxes": [],
+    "text": "6.3 Feature Description\n6.3.1 Monostable Operation\nFor monostable operation, Figure 6-2 shows how to connect any of these timers. If the output is low, application\nof a negative-going pulse to the trigger (TRIG) sets the flip-flop ( Q goes low), drives the output high, and turns\noff Q1. Capacitor C is then charged through R until the voltage across the capacitor reaches the threshold\nA\nvoltage of the threshold (THRES) input. If TRIG has returned to a high level, the output of the threshold\ncomparator resets the flip-flop ( Q goes high), drives the output low, and discharges C through Q1.\nV\nCC\nR\nA\nCONT V\nCC\nRESET\nDISCH\nOUT Output\nTHRES\nInput TRIG\nGND\nC\nFigure 6-2. Circuit for Monostable Operation\nMonostable operation is initiated when the TRIG voltage is less than the trigger threshold. After being initiated,\nthe sequence ends only if TRIG is high for at least 10µs before the end of the timing interval. When the trigger",
+    "context": "",
+    "aliases": [
+      "单稳态",
+      "单次脉冲",
+      "脉宽公式",
+      "1.1RC",
+      "monostable"
+    ],
+    "summary": "单稳态标称脉宽约为 1.1×RA×C；应核对触发回高至少 10 μs 等时序条件，公式不能保证精度。",
+    "curated": true
+  },
+  {
+    "id": "astable",
+    "title": "无稳态",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      76,
+      558,
+      720
+    ],
+    "context_bboxes": [],
+    "text": "6.3.2 Astable Operation\nFigure 6-5 shows that adding a second resistor, R , to the circuit of Figure 6-2 and connecting the trigger input\nB\nto the threshold input causes the timer to self-trigger and run as a multivibrator. Capacitor C charges through R\nA\nand R and then discharges through R only. Therefore, the duty cycle is controlled by the values of R and R .\nB B A B\nVCC\n(5 V to 15 V)\n0.01 µF\n(see Note A) RA\nCONT VCC\nRL\nRESET\nDISCH\nOUT Output\nRB\nTHRES\nTRIG\nGND\nC\nÎ\nÎ\nÎ\nOpen\n5 8\n4\n7\n3\n6\n2\n1\nPin numbers shown are for the D, JG, P, PS, and PW packages.\nNOTE A: Decoupling CONT voltage to ground with a capacitor can\nimprove operation. This should be evaluated for individual\napplications.\nFigure 6-5. Circuit for Astable Operation\nvid/V\n1 − egatloV\ntH\ntL Output Voltage\nCapacitor Voltage\nTime − 0.5 ms/div\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nÎ\nRA = 5 k(cid:1) RL = 1 k(cid:1)\nRB = 3 k(cid:1) See Figure 12\nC = 0.15 µF\nFigure 6-6. Typical Astable Waveforms\nThis astable connection results in capacitor C charging and discharging between the threshold-voltage level\n(≅ 0.67 × V ) and the trigger-voltage level (≅ 0.33 × V ). As in the mono-stable circuit, charge and discharge\nCC CC\ntimes (and, therefore, the frequency and duty cycle) are independent of the supply voltage. To reduce distortion,\nuse at maximum frequency of 100kHz or below. If higher-frequency operation is required, consider using the\nTLC555 CMOS Timer instead.\nFigure 6-6 shows typical waveforms generated during astable operation. The output high-level duration t and\nH\nlow-level duration t are calculated as follows:\nL\n(1)\ntH ≅ 0.693 × RA + RB × C (2)\nOther u t sLe ≅ fu 0 l .6 re 9 l 3 a × tio R nBs × hi C ps for period, frequency, and driver-referred and waveform-referred duty cycle are\ncalculated as follows:\n(3)\nT = tH + tL ≅ 0.693 × RA + 2RB × C\n(4)\n1 1.44\nf = T ≅ RA + 2RB × C\n(5)\ntL RB\nOutput driver duty cycle = T ≅ RA + 2RB\n(6)\ntH RB RA + RB\nOutput waveform duty cycle = T ≅ 1 − RA + 2RB = RA + 2RB",
+    "context": "",
+    "aliases": [
+      "无稳态",
+      "自激",
+      "频率公式",
+      "定时公式",
+      "占空比",
+      "RA",
+      "RB",
+      "astable"
+    ],
+    "summary": "无稳态 tH≈0.693(RA+RB)C，tL≈0.693 RB C，f=1/(tH+tL)，输出高电平占空比=tH/(tH+tL)。手册建议频率不超过100 kHz以减小失真。",
+    "curated": true
+  },
+  {
+    "id": "pins",
+    "title": "引脚",
+    "page": 3,
+    "printed_page": "3",
+    "bbox": [
+      54,
+      76,
+      558,
+      720
+    ],
+    "context_bboxes": [],
+    "text": "4 Pin Configuration and Functions\nNA555...D OR P PACKAGE\nSE555...FK PACKAGE\nNE555...D, P, PS, OR PW PACKAGE\n(TOP VIEW)\nSA555...D OR P PACKAGE\nSE555...D, JG, OR P PACKAGE D\n(TOP VIEW) N C G N N C V C C N C\nGND 1 8 V CC NC 4 3 2 1 20 19 18 NC\nTRIG 2 7 DISCH TRIG 5 17 DISCH\nOUT 3 6 THRES NC 6 16 NC\nRESET 4 5 CONT OUT 7 15 THRES\nNC 8 14 NC\n9 10 11 12 13\nC T C T C\nN E N N N\nS O\nE C\nR\nNC – No internal connection\nTable 4-1. Pin Functions\nPIN\nNO.\nD (SOIC),\nTYPE DESCRIPTION\nNAME P (PDIP),\nPS (SO), FK (LCCC)\nPW (TSSOP),\nJG (CDIP)\nControls comparator thresholds, Outputs 2/3 × VCC, allows bypass\nCONT 5 12 Input/output\ncapacitor connection\nDISCH 7 17 Output Open collector output to discharge timing capacitor\nGND 1 2 — Ground\n1, 3, 4, 6, 8, 9,\nNC — 11, 13, 14, 16, — No internal connection\n18, 19\nOUT 3 7 Output High current timer output signal\nRESET 4 10 Input Active low reset input forces output and discharge low.\nTHRES 6 15 Input End of timing input. THRES > CONT sets output low and discharge low\nTRIG 2 5 Input Start of timing input. TRIG < ½ CONT sets output high and discharge open\nV 8 20 — Input supply voltage, 4.5V to 16V. SE555 maximum is 18V.\nCC",
+    "context": "",
+    "aliases": [
+      "引脚",
+      "引脚功能",
+      "接线",
+      "pinout"
+    ],
+    "summary": "NE555：GND、TRIG、OUT、RESET、CONT、THRES、DISCH、VCC；RESET 低有效。仅显示8引脚 SOIC（D）顶视图。",
+    "curated": true
+  },
+  {
+    "id": "resistor-note",
+    "title": "定时电阻上限脚注",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      708,
+      558,
+      730
+    ],
+    "context_bboxes": [],
+    "text": "(1) This parameter influences the maximum value of the timing resistors R and R in the circuit of Figure 6-5. For example, when\nA B\nV CC = 5V, the maximum value is R = R A + R B ≅ 3.4MΩ, and for V CC = 15V, the maximum value is R A + R B ≅ 10MΩ.",
+    "context": "",
+    "aliases": [
+      "定时电阻上限脚注"
+    ],
+    "summary": "手册脚注给出特定供电下 RA+RB 的近似上限；不要对其他供电自动插值。",
+    "curated": true,
+    "context_only": true
+  }
+]

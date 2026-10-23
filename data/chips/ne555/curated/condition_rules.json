@@ -1,0 +1,630 @@
+{
+  "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+  "rules": {
+    "abs-vcc": {
+      "limit": true,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "abs-input": {
+      "limit": true,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "abs-current": {
+      "limit": true,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "abs-tj": {
+      "limit": true,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "abs-storage": {
+      "limit": true,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "rec-vcc": {
+      "limit": true,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "rec-current": {
+      "limit": true,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "rec-ta": {
+      "limit": true,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "threshold-15": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        }
+      ],
+      "notes": []
+    },
+    "threshold-5": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 5
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        }
+      ],
+      "notes": []
+    },
+    "threshold-current": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "range",
+          "low": 5,
+          "high": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        }
+      ],
+      "notes": []
+    },
+    "trigger-15": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        }
+      ],
+      "notes": []
+    },
+    "trigger-5": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 5
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        }
+      ],
+      "notes": []
+    },
+    "trigger-current": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "range",
+          "low": 5,
+          "high": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "trigger_voltage",
+          "op": "eq",
+          "value": 0
+        }
+      ],
+      "notes": []
+    },
+    "reset-voltage": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "range",
+          "low": 5,
+          "high": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        }
+      ],
+      "notes": []
+    },
+    "reset-high-current": {
+      "limit": false,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "reset-low-current": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "range",
+          "low": 5,
+          "high": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "reset_voltage",
+          "op": "eq",
+          "value": 0
+        }
+      ],
+      "notes": []
+    },
+    "discharge-off": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "range",
+          "low": 5,
+          "high": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "discharge_off",
+          "op": "eq",
+          "value": true
+        }
+      ],
+      "notes": []
+    },
+    "discharge-on": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 5
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": 0.008
+        }
+      ],
+      "notes": []
+    },
+    "control-15": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "control_open",
+          "op": "eq",
+          "value": true
+        }
+      ],
+      "notes": []
+    },
+    "control-5": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 5
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "control_open",
+          "op": "eq",
+          "value": true
+        }
+      ],
+      "notes": []
+    },
+    "vol-15-10": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": 0.01
+        }
+      ],
+      "notes": []
+    },
+    "vol-15-50": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": 0.05
+        }
+      ],
+      "notes": []
+    },
+    "vol-15-100": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": 0.1
+        }
+      ],
+      "notes": []
+    },
+    "vol-15-200": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": 0.2
+        }
+      ],
+      "notes": []
+    },
+    "vol-5-5": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 5
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": 0.005
+        }
+      ],
+      "notes": []
+    },
+    "vol-5-8": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 5
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": 0.008
+        }
+      ],
+      "notes": []
+    },
+    "voh-15-100": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": -0.1
+        }
+      ],
+      "notes": []
+    },
+    "voh-15-200": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": -0.2
+        }
+      ],
+      "notes": []
+    },
+    "voh-5-100": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 5
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": -0.1
+        }
+      ],
+      "notes": []
+    },
+    "icc-15-low": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "output_state",
+          "op": "eq",
+          "value": "low"
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": 0
+        }
+      ],
+      "notes": []
+    },
+    "icc-5-low": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 5
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "output_state",
+          "op": "eq",
+          "value": "low"
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": 0
+        }
+      ],
+      "notes": []
+    },
+    "icc-15-high": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 15
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "output_state",
+          "op": "eq",
+          "value": "high"
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": 0
+        }
+      ],
+      "notes": []
+    },
+    "icc-5-high": {
+      "limit": false,
+      "constraints": [
+        {
+          "field": "vcc",
+          "op": "eq",
+          "value": 5
+        },
+        {
+          "field": "ambient_temperature",
+          "op": "eq",
+          "value": 25
+        },
+        {
+          "field": "output_state",
+          "op": "eq",
+          "value": "high"
+        },
+        {
+          "field": "load_current",
+          "op": "eq",
+          "value": 0
+        }
+      ],
+      "notes": []
+    },
+    "timing-temp-mono": {
+      "limit": false,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "timing-temp-astable": {
+      "limit": false,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "timing-supply-mono": {
+      "limit": false,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "timing-supply-astable": {
+      "limit": false,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "rise": {
+      "limit": false,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    },
+    "fall": {
+      "limit": false,
+      "constraints": null,
+      "notes": [
+        "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+      ]
+    }
+  }
+}

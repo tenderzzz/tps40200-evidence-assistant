@@ -1,0 +1,448 @@
+[
+  {
+    "id": "abs",
+    "title": "绝对最大额定值",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      93,
+      558,
+      465
+    ],
+    "context_bboxes": [
+      [
+        54,
+        473,
+        558,
+        523
+      ]
+    ],
+    "text": "5.1 Absolute Maximum Ratings\nover operating ambient temperature range (unless otherwise noted)(1)\nMIN MAX UNIT\nLM358B, LM358BA,\n±20 or 40\nLM2904B, LM2904BA\nLM158, LM258, LM358,\nSupply voltage, V = ([V+] – [V–]) V\nS LM158A, LM258A, LM358A, ±16 or 32\nLM2904V\nLM2904 ±13 or 26\nLM358B, LM358BA,\nLM2904B, LM2904BA,LM158,\n–32 32\nDifferential input voltage, V (2) LM258, LM358, LM158A, V\nID\nLM258A, LM358A, LM2904V\nLM2904 –26 26\nLM358B, LM358BA,\n–0.3 40\nLM2904B, LM2904BA\nLM158, LM258, LM358,\nInput voltage, V Either input V\nI LM158A, LM258A, LM358A, –0.3 32\nLM2904V\nLM2904 –0.3 26\nDuration of output short circuit (one amplifier) to ground at (or below) T = 25°C,\nA Unlimited s\nV ≤ 15 V(3)\nS\nLM158, LM158A –55 125\nLM258, LM258A –25 85\nLM358B, LM358BA –40 85\nOperating ambient temperature, T °C\nA\nLM358, LM358A 0 70\nLM2904B, LM2904BA,\n–40 125\nLM2904, LM2904V\nOperating virtual-junction temperature, T 150 °C\nJ\nStorage temperature, T –65 150 °C\nstg",
+    "context": "(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings\nonly, and do not imply functional operation of the device at these or any other conditions beyond those indicated under Recommended\nOperating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.\n(2) Differential voltages are at IN+, with respect to IN−.\n(3) Short circuits from outputs to V can cause excessive heating and eventual destruction.\nS",
+    "aliases": [
+      "绝对最大额定值",
+      "absolute maximum",
+      "极限电压"
+    ],
+    "summary": "LM358 的最大供电压差为 32 V，应力限制不能替代 3–30 V 推荐工作范围。仅整理 LM358 适用行。",
+    "curated": true
+  },
+  {
+    "id": "recommended",
+    "title": "推荐工作条件",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      76,
+      558,
+      273
+    ],
+    "context_bboxes": [
+      [
+        54,
+        95,
+        558,
+        117
+      ]
+    ],
+    "text": "5.3 Recommended Operating Conditions\nover operating ambient temperature range (unless otherwise noted)\nMIN MAX UNIT\nLM358B, LM358BA, LM2904B,\n3 36\nLM2904BA\nV Supply voltage, V = ([V+] – [V–]) LM158, LM258, LM358, LM158A, V\nS S 3 30\nLM258A, LM358A, LM2904V\nLM2904 3 26\nV Common-mode voltage V– V+ – 2 V\nCM\nLM358B, LM358BA –40 85\nLM2904B, LM2904BA, LM2904,\n–40 125\nLM2904V\nT Operating ambient temperature °C\nA LM358, LM358A 0 70\nLM258, LM258A –20 85\nLM158, LM158A –55 125",
+    "context": "over operating ambient temperature range (unless otherwise noted)\nMIN MAX UNIT",
+    "aliases": [
+      "推荐工作条件",
+      "供电范围",
+      "推荐供电电压",
+      "工作温度",
+      "VS",
+      "环境温度"
+    ],
+    "summary": "LM358 推荐总供电压差为 3–30 V，环境温度为 0–70°C；推荐共模范围为 V− 到 V+−2 V。",
+    "curated": true
+  },
+  {
+    "id": "vos",
+    "title": "输入失调电压",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      123,
+      558,
+      201
+    ],
+    "context_bboxes": [
+      [
+        54,
+        82,
+        558,
+        119
+      ],
+      [
+        54,
+        702,
+        558,
+        732
+      ]
+    ],
+    "text": "OFFSET VOLTAGE\n3 7\nLM358\nVOS Input offset voltage V\nV\nS = 5 V to 30 V; VC M = 0 V; VO = 1.4\nLM358A\nTA = 0°C to 70°C\n2\n9\n3\nmV\nTA = 0°C to 70°C 5\nLM358 TA = 0°C to 70°C 7\ndVOS/dT Input offset voltage drift µV/°C\nLM358A TA = 0°C to 70°C 7 20",
+    "context": "5.7 Electrical Characteristics: LM358, LM358A\nFor V = (V+) – (V–) = 5 V, T = 25°C (unless otherwise noted)\nS A\nPARAMETER TEST CONDITIONS(1) MIN TYP(2) MAX UNIT\n(1) All characteristics are measured under open-loop conditions, with zero common-mode input voltage, unless otherwise specified.\nMaximum V for testing purposes is 30 V for LM358 and LM358A.\nS\n(2) All typical values are T = 25°C.\nA",
+    "aliases": [
+      "输入失调电压",
+      "失调电压",
+      "VOS",
+      "失调温漂"
+    ],
+    "summary": "LM358 的失调电压典型 3 mV，25°C 最大 7 mV，全环境温度最大 9 mV；不混入 LM358A 或 B 版数值。",
+    "curated": true
+  },
+  {
+    "id": "rejection",
+    "title": "电源抑制比",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      204,
+      558,
+      232
+    ],
+    "context_bboxes": [
+      [
+        54,
+        82,
+        558,
+        119
+      ],
+      [
+        54,
+        702,
+        558,
+        732
+      ]
+    ],
+    "text": "Input offset voltage vs power\nPSRR\nsupply (ΔVIO/ΔVS)\nVS = 5 V to 30 V 65 100 dB\nVO1/ VO2 Channel separation f = 1 kHz to 20 kHz 120 dB",
+    "context": "5.7 Electrical Characteristics: LM358, LM358A\nFor V = (V+) – (V–) = 5 V, T = 25°C (unless otherwise noted)\nS A\nPARAMETER TEST CONDITIONS(1) MIN TYP(2) MAX UNIT\n(1) All characteristics are measured under open-loop conditions, with zero common-mode input voltage, unless otherwise specified.\nMaximum V for testing purposes is 30 V for LM358 and LM358A.\nS\n(2) All typical values are T = 25°C.\nA",
+    "aliases": [
+      "电源抑制比",
+      "PSRR",
+      "通道隔离",
+      "串扰"
+    ],
+    "summary": "电源抑制和通道隔离需按供电、频率与表头测试条件分别读取。",
+    "curated": true
+  },
+  {
+    "id": "common-mode",
+    "title": "输入共模范围",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      234,
+      558,
+      301
+    ],
+    "context_bboxes": [
+      [
+        54,
+        82,
+        558,
+        119
+      ],
+      [
+        54,
+        702,
+        558,
+        732
+      ]
+    ],
+    "text": "INPUT VOLTAGE RANGE\nVS = 5 V to 30 V LM358\n(V–) (V+) – 1.5\nVS = 30 V LM358A\nVCM Common-mode voltage range V\nVS = 5 V to 30 V LM358\nTA = 0°C to 70°C (V–) (V+) – 2\nVS = 30 V LM358A\nCMRR Common-mode rejection ratio VS = 5 V to 30 V; VCM = 0 V 65 80 dB",
+    "context": "5.7 Electrical Characteristics: LM358, LM358A\nFor V = (V+) – (V–) = 5 V, T = 25°C (unless otherwise noted)\nS A\nPARAMETER TEST CONDITIONS(1) MIN TYP(2) MAX UNIT\n(1) All characteristics are measured under open-loop conditions, with zero common-mode input voltage, unless otherwise specified.\nMaximum V for testing purposes is 30 V for LM358 and LM358A.\nS\n(2) All typical values are T = 25°C.\nA",
+    "aliases": [
+      "输入共模范围",
+      "共模电压",
+      "VCM",
+      "CMRR",
+      "共模抑制比",
+      "输入能到电源吗"
+    ],
+    "summary": "共模范围的 25°C 与全温条件分别列出；满足输入共模不等于输出可以到达同样电压。",
+    "curated": true
+  },
+  {
+    "id": "bias",
+    "title": "输入偏置电流",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      303,
+      558,
+      428
+    ],
+    "context_bboxes": [
+      [
+        54,
+        82,
+        558,
+        119
+      ],
+      [
+        54,
+        702,
+        558,
+        732
+      ]
+    ],
+    "text": "INPUT BIAS CURRENT\n–20 –250\nLM358\nTA = 0°C to 70°C –500\nIB Input bias current VO = 1.4 V nA\n–15 –100\nLM358A\nTA = 0°C to 70°C –200\n2 50\nLM358\nTA = 0°C to 70°C 150\nIOS Input offset current VO = 1.4 V nA\n2 30\nLM358A\nTA = 0°C to 70°C 75\n10\ndIOS/dT Input offset current drift pA/°C\nLM358A TA = 0°C to 70°C 300",
+    "context": "5.7 Electrical Characteristics: LM358, LM358A\nFor V = (V+) – (V–) = 5 V, T = 25°C (unless otherwise noted)\nS A\nPARAMETER TEST CONDITIONS(1) MIN TYP(2) MAX UNIT\n(1) All characteristics are measured under open-loop conditions, with zero common-mode input voltage, unless otherwise specified.\nMaximum V for testing purposes is 30 V for LM358 and LM358A.\nS\n(2) All typical values are T = 25°C.\nA",
+    "aliases": [
+      "输入偏置电流",
+      "偏置电流",
+      "IB",
+      "IOS",
+      "输入失调电流"
+    ],
+    "summary": "保留 LM358 偏置电流的负号和各温度行；负号表达电流方向，不把负数列当成通用幅值比较。",
+    "curated": true
+  },
+  {
+    "id": "noise",
+    "title": "输入噪声",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      431,
+      558,
+      451
+    ],
+    "context_bboxes": [
+      [
+        54,
+        82,
+        558,
+        119
+      ],
+      [
+        54,
+        702,
+        558,
+        732
+      ]
+    ],
+    "text": "NOISE\nen Input voltage noise density f = 1 kHz 40 nV/√ Hz",
+    "context": "5.7 Electrical Characteristics: LM358, LM358A\nFor V = (V+) – (V–) = 5 V, T = 25°C (unless otherwise noted)\nS A\nPARAMETER TEST CONDITIONS(1) MIN TYP(2) MAX UNIT\n(1) All characteristics are measured under open-loop conditions, with zero common-mode input voltage, unless otherwise specified.\nMaximum V for testing purposes is 30 V for LM358 and LM358A.\nS\n(2) All typical values are T = 25°C.\nA",
+    "aliases": [
+      "输入噪声",
+      "en",
+      "噪声密度"
+    ],
+    "summary": "输入噪声密度典型值在 1 kHz 条件给出，不是任意带宽的积分噪声。",
+    "curated": true
+  },
+  {
+    "id": "gain",
+    "title": "开环增益",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      454,
+      558,
+      486
+    ],
+    "context_bboxes": [
+      [
+        54,
+        82,
+        558,
+        119
+      ],
+      [
+        54,
+        702,
+        558,
+        732
+      ]
+    ],
+    "text": "OPEN-LOOP GAIN\n25 100\nAOL Open-loop voltage gain VS = 15 V; VO = 1 V to 11 V; RL ≥ 2 kΩ V/mV\nTA = 0°C to 70°C 15",
+    "context": "5.7 Electrical Characteristics: LM358, LM358A\nFor V = (V+) – (V–) = 5 V, T = 25°C (unless otherwise noted)\nS A\nPARAMETER TEST CONDITIONS(1) MIN TYP(2) MAX UNIT\n(1) All characteristics are measured under open-loop conditions, with zero common-mode input voltage, unless otherwise specified.\nMaximum V for testing purposes is 30 V for LM358 and LM358A.\nS\n(2) All typical values are T = 25°C.\nA",
+    "aliases": [
+      "开环增益",
+      "AOL"
+    ],
+    "summary": "开环增益的供电、输出范围、负载和温度条件须同时保留。",
+    "curated": true
+  },
+  {
+    "id": "frequency",
+    "title": "增益带宽积",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      488,
+      558,
+      520
+    ],
+    "context_bboxes": [
+      [
+        54,
+        82,
+        558,
+        119
+      ],
+      [
+        54,
+        702,
+        558,
+        732
+      ]
+    ],
+    "text": "FREQUENCY RESPONSE\nGBW Gain bandwidth product 0.7 MHz\nSR Slew rate G = +1 0.3 V/µs",
+    "context": "5.7 Electrical Characteristics: LM358, LM358A\nFor V = (V+) – (V–) = 5 V, T = 25°C (unless otherwise noted)\nS A\nPARAMETER TEST CONDITIONS(1) MIN TYP(2) MAX UNIT\n(1) All characteristics are measured under open-loop conditions, with zero common-mode input voltage, unless otherwise specified.\nMaximum V for testing purposes is 30 V for LM358 and LM358A.\nS\n(2) All typical values are T = 25°C.\nA",
+    "aliases": [
+      "增益带宽积",
+      "带宽",
+      "GBW",
+      "压摆率",
+      "SR",
+      "slew rate"
+    ],
+    "summary": "LM358 的 GBW 典型 0.7 MHz、压摆率典型 0.3 V/μs；它们不是保证的闭环带宽或输出能力。",
+    "curated": true
+  },
+  {
+    "id": "output-swing",
+    "title": "输出摆幅",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      523,
+      558,
+      578
+    ],
+    "context_bboxes": [
+      [
+        54,
+        82,
+        558,
+        119
+      ],
+      [
+        54,
+        702,
+        558,
+        732
+      ]
+    ],
+    "text": "OUTPUT\nVS = 30 V; RL = 2 kΩ TA = 0°C to 70°C 4\nPositive rail VS = 30 V; RL ≥ 10 kΩ 2 3 V\nVO Voltage output swing from rail\nVS = 5 V; RL ≥ 2 kΩ 1.5\nNegative rail VS = 5 V; RL ≤ 10 kΩ TA = 0°C to 70°C 5 20 mV",
+    "context": "5.7 Electrical Characteristics: LM358, LM358A\nFor V = (V+) – (V–) = 5 V, T = 25°C (unless otherwise noted)\nS A\nPARAMETER TEST CONDITIONS(1) MIN TYP(2) MAX UNIT\n(1) All characteristics are measured under open-loop conditions, with zero common-mode input voltage, unless otherwise specified.\nMaximum V for testing purposes is 30 V for LM358 and LM358A.\nS\n(2) All typical values are T = 25°C.\nA",
+    "aliases": [
+      "输出摆幅",
+      "输出电压范围",
+      "VO",
+      "能输出5V吗",
+      "轨到轨"
+    ],
+    "summary": "输出离正负电源轨的余量与供电、负载和温度有关；不能合并成无条件轨到轨答案。",
+    "curated": true
+  },
+  {
+    "id": "output-current",
+    "title": "输出电流",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      580,
+      558,
+      659
+    ],
+    "context_bboxes": [
+      [
+        54,
+        82,
+        558,
+        119
+      ],
+      [
+        54,
+        702,
+        558,
+        732
+      ]
+    ],
+    "text": "–20 –30\nVS = 15 V; VO = 0 V; VID\nSource LM358A –60\n= 1 V\nTA = 0°C to 70°C –10 mA\nIO Output current\nVS = 15 V; VO = 15 V;\nSink\n10 20\nVID = –1 V TA = 0°C to 70°C 5\nVID = –1 V; VO = 200 mV 12 30 µA\nISC Short-circuit current VS = 10 V; VO = VS / 2 ±40 ±60 mA",
+    "context": "5.7 Electrical Characteristics: LM358, LM358A\nFor V = (V+) – (V–) = 5 V, T = 25°C (unless otherwise noted)\nS A\nPARAMETER TEST CONDITIONS(1) MIN TYP(2) MAX UNIT\n(1) All characteristics are measured under open-loop conditions, with zero common-mode input voltage, unless otherwise specified.\nMaximum V for testing purposes is 30 V for LM358 and LM358A.\nS\n(2) All typical values are T = 25°C.\nA",
+    "aliases": [
+      "输出电流",
+      "IO",
+      "短路电流",
+      "ISC"
+    ],
+    "summary": "源电流、灌电流和短路电流按方向与测试设置分别展示，不能直接当作持续负载保证。",
+    "curated": true
+  },
+  {
+    "id": "quiescent",
+    "title": "静态电流",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      662,
+      558,
+      695
+    ],
+    "context_bboxes": [
+      [
+        54,
+        82,
+        558,
+        119
+      ],
+      [
+        54,
+        702,
+        558,
+        732
+      ]
+    ],
+    "text": "POWER SUPPLY\nVO = 2.5 V; IO = 0 A 350 600\nIQ Quiescent current per amplifier TA = 0°C to 70°C µA\nVS = 30 V; VO = 15 V; IO = 0 A 500 1000",
+    "context": "5.7 Electrical Characteristics: LM358, LM358A\nFor V = (V+) – (V–) = 5 V, T = 25°C (unless otherwise noted)\nS A\nPARAMETER TEST CONDITIONS(1) MIN TYP(2) MAX UNIT\n(1) All characteristics are measured under open-loop conditions, with zero common-mode input voltage, unless otherwise specified.\nMaximum V for testing purposes is 30 V for LM358 and LM358A.\nS\n(2) All typical values are T = 25°C.\nA",
+    "aliases": [
+      "静态电流",
+      "IQ",
+      "供电电流"
+    ],
+    "summary": "静态电流按每个放大器给出，且依赖供电、输出与零负载设置。",
+    "curated": true
+  },
+  {
+    "id": "pins",
+    "title": "引脚",
+    "page": 3,
+    "printed_page": "3",
+    "bbox": [
+      54,
+      75,
+      558,
+      730
+    ],
+    "context_bboxes": [],
+    "text": "4 Pin Configuration and Functions\nOUT1 1 8 V+\nIN1± 2 7 OUT2\nIN1+ 3 6 IN2±\nNC 4\nV± 4 5 IN2+ IN1± 5\nNC 6\nNot to scale IN1+ 7\nFigure 4-1. D, DDF, DGK, P, PS, PW, and JG NC 8\nPackage\n8-Pin SOIC, SOT23-8, VSSOP, PDIP, SO, TSSOP,\nand CDIP\nTop View\n9\nCN\n01\n±V\n11\nCN\n21\n+2NI\n31\nCN\n18 NC\n17 OUT2\n16 NC\n15 IN2±\n14 NC\nCN\n3\n1TUO\n2\nCN\n1\n+V\n02\nCN\n91\nNot to scale\nNC - No internal connection\nFigure 4-2. FK Package\n20-Pin LCCC\nTop View\nTable 4-1. Pin Functions\nPIN\nSOIC, SOT23-8, VSSOP, CDIP, I/O DESCRIPTION\nNAME LCCC(1)\nPDIP, SO, TSSOP, CFP(1)\nIN1– 5 2 I Negative input\nIN1+ 7 3 I Positive input\nIN2– 15 6 I Negative input\nIN2+ 12 5 I Positive input\nOUT1 2 1 O Output\nOUT2 17 7 O Output\nNegative (lowest) supply or ground (for single-\nV– 10 4 —\nsupply operation)\n1, 3, 4, 6, 8, 9, 11,\nNC — — No internal connection\n13, 14, 16, 18, 19\nV+ 20 8 — Positive (highest) supply\n(1) For a listing of which devices are available in what packages, see Section 3.",
+    "context": "",
+    "aliases": [
+      "引脚",
+      "引脚功能",
+      "接线",
+      "pinout"
+    ],
+    "summary": "LM358 有两个运放通道；引脚图按 SOIC（D）顶视图显示，电源用 V+ 与 V− 表示。",
+    "curated": true
+  }
+]

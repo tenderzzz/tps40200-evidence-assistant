@@ -1,0 +1,706 @@
+[
+  {
+    "id": "abs-vs",
+    "symbol": "VS",
+    "name": "供电压差",
+    "rating": "absolute_maximum",
+    "minimum": null,
+    "typical": null,
+    "maximum": 32,
+    "unit": "V",
+    "conditions": "总压差；原文 ±16 or 32 V",
+    "notes": [],
+    "evidence_ids": [
+      "abs"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "abs-vid",
+    "symbol": "VID",
+    "name": "差分输入电压",
+    "rating": "absolute_maximum",
+    "minimum": -32,
+    "typical": null,
+    "maximum": 32,
+    "unit": "V",
+    "conditions": "IN+ 相对 IN−",
+    "notes": [],
+    "evidence_ids": [
+      "abs"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "abs-vi",
+    "symbol": "VI",
+    "name": "单端输入应力电压",
+    "rating": "absolute_maximum",
+    "minimum": -0.3,
+    "typical": null,
+    "maximum": 32,
+    "unit": "V",
+    "conditions": "Either input；原表数值",
+    "notes": [],
+    "evidence_ids": [
+      "abs"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "abs-short",
+    "symbol": "tSC",
+    "name": "输出对地短路持续时间",
+    "rating": "absolute_maximum",
+    "minimum": null,
+    "typical": null,
+    "maximum": null,
+    "unit": "s",
+    "conditions": "原表合并限制栏：Unlimited；一个放大器；TA≤25°C；VS≤15 V；不适用于输出短接正电源",
+    "notes": [],
+    "evidence_ids": [
+      "abs"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "abs-ta",
+    "symbol": "TA",
+    "name": "环境温度",
+    "rating": "absolute_maximum",
+    "minimum": 0,
+    "typical": null,
+    "maximum": 70,
+    "unit": "°C",
+    "conditions": "LM358；absolute maximum 表",
+    "notes": [],
+    "evidence_ids": [
+      "abs"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "abs-tj",
+    "symbol": "TJ",
+    "name": "虚结温",
+    "rating": "absolute_maximum",
+    "minimum": null,
+    "typical": null,
+    "maximum": 150,
+    "unit": "°C",
+    "conditions": "应力额定值",
+    "notes": [],
+    "evidence_ids": [
+      "abs"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "abs-storage",
+    "symbol": "Tstg",
+    "name": "储存温度",
+    "rating": "absolute_maximum",
+    "minimum": -65,
+    "typical": null,
+    "maximum": 150,
+    "unit": "°C",
+    "conditions": "储存条件",
+    "notes": [],
+    "evidence_ids": [
+      "abs"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "rec-vs",
+    "symbol": "VS",
+    "name": "总供电压差",
+    "rating": "recommended",
+    "minimum": 3,
+    "typical": null,
+    "maximum": 30,
+    "unit": "V",
+    "conditions": "VS = V+−V−；LM358",
+    "notes": [],
+    "evidence_ids": [
+      "recommended"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "rec-vcm",
+    "symbol": "VCM",
+    "name": "推荐输入共模电压",
+    "rating": "recommended",
+    "minimum": "V−",
+    "typical": null,
+    "maximum": "V+ − 2",
+    "unit": "V",
+    "conditions": "LM358；推荐工作条件",
+    "notes": [],
+    "evidence_ids": [
+      "recommended"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "rec-ta",
+    "symbol": "TA",
+    "name": "推荐环境温度",
+    "rating": "recommended",
+    "minimum": 0,
+    "typical": null,
+    "maximum": 70,
+    "unit": "°C",
+    "conditions": "LM358；不是结温 TJ",
+    "notes": [],
+    "evidence_ids": [
+      "recommended"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "vos-25",
+    "symbol": "VOS",
+    "name": "输入失调电压",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 3,
+    "maximum": 7,
+    "unit": "mV",
+    "conditions": "VS=5–30 V；TA=25°C；VCM=0 V；VO=1.4 V",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "vos"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "vos-full",
+    "symbol": "VOS",
+    "name": "输入失调电压",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": null,
+    "maximum": 9,
+    "unit": "mV",
+    "conditions": "VS=5–30 V；0≤TA≤70°C；VCM=0 V；VO=1.4 V",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "vos"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "vos-drift",
+    "symbol": "dVOS/dT",
+    "name": "失调电压漂移",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 7,
+    "maximum": null,
+    "unit": "μV/°C",
+    "conditions": "0≤TA≤70°C；VS=5 V；开环，VCM=0 V",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "vos"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "psrr",
+    "symbol": "PSRR",
+    "name": "电源抑制比",
+    "rating": "electrical",
+    "minimum": 65,
+    "typical": 100,
+    "maximum": null,
+    "unit": "dB",
+    "conditions": "VS=5–30 V；TA=25°C；开环，VCM=0 V",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "rejection"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "separation",
+    "symbol": "VO1/VO2",
+    "name": "通道隔离",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 120,
+    "maximum": null,
+    "unit": "dB",
+    "conditions": "f=1–20 kHz；VS=5 V；TA=25°C；开环，VCM=0 V",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "rejection"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "vcm-25",
+    "symbol": "VCM",
+    "name": "输入共模范围",
+    "rating": "electrical",
+    "minimum": "V−",
+    "typical": null,
+    "maximum": "V+ − 1.5",
+    "unit": "V",
+    "conditions": "VS=5–30 V；TA=25°C；LM358",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "common-mode"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "vcm-full",
+    "symbol": "VCM",
+    "name": "输入共模范围",
+    "rating": "electrical",
+    "minimum": "V−",
+    "typical": null,
+    "maximum": "V+ − 2",
+    "unit": "V",
+    "conditions": "VS=5–30 V；0≤TA≤70°C；LM358",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "common-mode"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "cmrr",
+    "symbol": "CMRR",
+    "name": "共模抑制比",
+    "rating": "electrical",
+    "minimum": 65,
+    "typical": 80,
+    "maximum": null,
+    "unit": "dB",
+    "conditions": "VS=5–30 V；VCM=0 V；TA=25°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "common-mode"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "ib-25",
+    "symbol": "IB",
+    "name": "输入偏置电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": -20,
+    "maximum": -250,
+    "unit": "nA",
+    "conditions": "VS=5 V；VO=1.4 V；TA=25°C；开环，VCM=0 V",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+      "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+    ],
+    "evidence_ids": [
+      "bias"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "ib-full",
+    "symbol": "IB",
+    "name": "输入偏置电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": null,
+    "maximum": -500,
+    "unit": "nA",
+    "conditions": "VS=5 V；VO=1.4 V；0≤TA≤70°C；开环，VCM=0 V",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+      "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+    ],
+    "evidence_ids": [
+      "bias"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "ios-25",
+    "symbol": "IOS",
+    "name": "输入失调电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 2,
+    "maximum": 50,
+    "unit": "nA",
+    "conditions": "VS=5 V；VO=1.4 V；TA=25°C；开环，VCM=0 V",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "bias"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "ios-full",
+    "symbol": "IOS",
+    "name": "输入失调电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": null,
+    "maximum": 150,
+    "unit": "nA",
+    "conditions": "VS=5 V；VO=1.4 V；0≤TA≤70°C；开环，VCM=0 V",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "bias"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "ios-drift",
+    "symbol": "dIOS/dT",
+    "name": "失调电流漂移",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 10,
+    "maximum": null,
+    "unit": "pA/°C",
+    "conditions": "VS=5 V；TA=25°C；开环，VCM=0 V",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "bias"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "noise",
+    "symbol": "en",
+    "name": "输入电压噪声密度",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 40,
+    "maximum": null,
+    "unit": "nV/√Hz",
+    "conditions": "f=1 kHz；VS=5 V；TA=25°C；开环，VCM=0 V",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "noise"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "aol-25",
+    "symbol": "AOL",
+    "name": "开环电压增益",
+    "rating": "electrical",
+    "minimum": 25,
+    "typical": 100,
+    "maximum": null,
+    "unit": "V/mV",
+    "conditions": "VS=15 V；VO=1–11 V；RL≥2 kΩ；TA=25°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "gain"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "aol-full",
+    "symbol": "AOL",
+    "name": "开环电压增益",
+    "rating": "electrical",
+    "minimum": 15,
+    "typical": null,
+    "maximum": null,
+    "unit": "V/mV",
+    "conditions": "VS=15 V；VO=1–11 V；RL≥2 kΩ；0≤TA≤70°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "gain"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "gbw",
+    "symbol": "GBW",
+    "name": "增益带宽积",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 0.7,
+    "maximum": null,
+    "unit": "MHz",
+    "conditions": "VS=5 V；TA=25°C；典型值，按表头",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "frequency"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "sr",
+    "symbol": "SR",
+    "name": "压摆率",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 0.3,
+    "maximum": null,
+    "unit": "V/μs",
+    "conditions": "G=+1；VS=5 V；TA=25°C；典型值",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "frequency"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "swing-high-2k",
+    "symbol": "VO",
+    "name": "离正电源轨余量",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": null,
+    "maximum": 4,
+    "unit": "V",
+    "conditions": "VS=30 V；RL=2 kΩ；0≤TA≤70°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "output-swing"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "swing-high-10k",
+    "symbol": "VO",
+    "name": "离正电源轨余量",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 2,
+    "maximum": 3,
+    "unit": "V",
+    "conditions": "VS=30 V；RL≥10 kΩ；TA=25°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "output-swing"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "swing-high-5v",
+    "symbol": "VO",
+    "name": "离正电源轨余量",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 1.5,
+    "maximum": null,
+    "unit": "V",
+    "conditions": "VS=5 V；RL≥2 kΩ；TA=25°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "output-swing"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "swing-low",
+    "symbol": "VO",
+    "name": "离负电源轨余量",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 5,
+    "maximum": 20,
+    "unit": "mV",
+    "conditions": "VS=5 V；RL≤10 kΩ；0≤TA≤70°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "output-swing"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "source-25",
+    "symbol": "IO",
+    "name": "源输出电流",
+    "rating": "electrical",
+    "minimum": -20,
+    "typical": -30,
+    "maximum": null,
+    "unit": "mA",
+    "conditions": "VS=15 V；VO=0 V；VID=1 V；TA=25°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+      "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+    ],
+    "evidence_ids": [
+      "output-current"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "source-full",
+    "symbol": "IO",
+    "name": "源输出电流",
+    "rating": "electrical",
+    "minimum": -10,
+    "typical": null,
+    "maximum": null,
+    "unit": "mA",
+    "conditions": "VS=15 V；VO=0 V；VID=1 V；0≤TA≤70°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+      "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+    ],
+    "evidence_ids": [
+      "output-current"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "sink-25",
+    "symbol": "IO",
+    "name": "灌输出电流",
+    "rating": "electrical",
+    "minimum": 10,
+    "typical": 20,
+    "maximum": null,
+    "unit": "mA",
+    "conditions": "VS=15 V；VO=15 V；VID=−1 V；TA=25°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "output-current"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "sink-full",
+    "symbol": "IO",
+    "name": "灌输出电流",
+    "rating": "electrical",
+    "minimum": 5,
+    "typical": null,
+    "maximum": null,
+    "unit": "mA",
+    "conditions": "VS=15 V；VO=15 V；VID=−1 V；0≤TA≤70°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "output-current"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "sink-low",
+    "symbol": "IO",
+    "name": "低输出电压灌电流",
+    "rating": "electrical",
+    "minimum": 12,
+    "typical": 30,
+    "maximum": null,
+    "unit": "μA",
+    "conditions": "VID=−1 V；VO=200 mV；VS=5 V；TA=25°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "output-current"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "isc",
+    "symbol": "ISC",
+    "name": "短路电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": "±40",
+    "maximum": "±60",
+    "unit": "mA",
+    "conditions": "VS=10 V；VO=VS/2；TA=25°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "output-current"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "iq-5v",
+    "symbol": "IQ",
+    "name": "每放大器静态电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 350,
+    "maximum": 600,
+    "unit": "μA",
+    "conditions": "VS=5 V；VO=2.5 V；IO=0 A；0≤TA≤70°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "quiescent"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "iq-30v",
+    "symbol": "IQ",
+    "name": "每放大器静态电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 500,
+    "maximum": 1000,
+    "unit": "μA",
+    "conditions": "VS=30 V；VO=15 V；IO=0 A；0≤TA≤70°C",
+    "notes": [
+      "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+    ],
+    "evidence_ids": [
+      "quiescent"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  }
+]

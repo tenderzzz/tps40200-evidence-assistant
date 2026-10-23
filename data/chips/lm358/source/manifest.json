@@ -1,0 +1,21 @@
+{
+  "doc_id": "lm358-slos068ab",
+  "chip_id": "lm358",
+  "manufacturer": "TI",
+  "model": "LM358",
+  "title": "Industry-Standard Dual Operational Amplifiers",
+  "revision": "SLOS068AB (Rev. AB)",
+  "revision_date": "2024-10",
+  "url": "https://www.ti.com/lit/ds/symlink/lm358.pdf",
+  "downloaded_at": "2026-10-22T14:47:51.407960+00:00",
+  "sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+  "pages": 68,
+  "indexed_core_pages": 31,
+  "pdf_file": "lm358.pdf",
+  "extraction": {
+    "tool": "pdfplumber",
+    "version": "0.11.10",
+    "x_tolerance": 1
+  },
+  "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+}

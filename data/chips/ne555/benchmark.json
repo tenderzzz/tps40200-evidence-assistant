@@ -1,0 +1,1188 @@
+{
+  "source_sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+  "provenance": "固定PDF对照转录与有理数计算期望；未从被测实现生成。自建开发/留出分组，不是独立盲测。",
+  "cases": [
+    {
+      "id": "ne555-01",
+      "kind": "query",
+      "question": "TRIG",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-trigger",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "trigger-5": {
+            "minimum": 1.1,
+            "typical": 1.67,
+            "maximum": 2.2
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "trigger"
+        ]
+      }
+    },
+    {
+      "id": "ne555-02",
+      "kind": "query",
+      "question": "触发阈值",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-trigger",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "trigger-5": {
+            "minimum": 1.1,
+            "typical": 1.67,
+            "maximum": 2.2
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "trigger"
+        ]
+      }
+    },
+    {
+      "id": "ne555-03",
+      "kind": "query",
+      "question": "触发电压",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-trigger",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "trigger-5": {
+            "minimum": 1.1,
+            "typical": 1.67,
+            "maximum": 2.2
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "trigger"
+        ]
+      }
+    },
+    {
+      "id": "ne555-04",
+      "kind": "query",
+      "question": "THRES",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-threshold",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "threshold-15": {
+            "minimum": 8.8,
+            "typical": 10,
+            "maximum": 11.2
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "threshold"
+        ]
+      }
+    },
+    {
+      "id": "ne555-05",
+      "kind": "query",
+      "question": "阈值电压",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-threshold",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "threshold-15": {
+            "minimum": 8.8,
+            "typical": 10,
+            "maximum": 11.2
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "threshold"
+        ]
+      }
+    },
+    {
+      "id": "ne555-06",
+      "kind": "query",
+      "question": "RESET",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-reset",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "reset-voltage": {
+            "minimum": 0.3,
+            "typical": 0.7,
+            "maximum": 1
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "reset"
+        ]
+      }
+    },
+    {
+      "id": "ne555-07",
+      "kind": "query",
+      "question": "复位阈值",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-reset",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "reset-voltage": {
+            "minimum": 0.3,
+            "typical": 0.7,
+            "maximum": 1
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "reset"
+        ]
+      }
+    },
+    {
+      "id": "ne555-08",
+      "kind": "query",
+      "question": "CONT",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-control",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "control-5": {
+            "minimum": 2.6,
+            "typical": 3.3,
+            "maximum": 4
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "control"
+        ]
+      }
+    },
+    {
+      "id": "ne555-09",
+      "kind": "query",
+      "question": "控制电压",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-control",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "control-5": {
+            "minimum": 2.6,
+            "typical": 3.3,
+            "maximum": 4
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "control"
+        ]
+      }
+    },
+    {
+      "id": "ne555-10",
+      "kind": "query",
+      "question": "ICC",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-supply-current",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "icc-5-high": {
+            "typical": 2,
+            "maximum": 5
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "supply-current"
+        ]
+      }
+    },
+    {
+      "id": "ne555-11",
+      "kind": "query",
+      "question": "供电电流",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-supply-current",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "icc-5-high": {
+            "typical": 2,
+            "maximum": 5
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "supply-current"
+        ]
+      }
+    },
+    {
+      "id": "ne555-12",
+      "kind": "query",
+      "question": "VOL",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-output-low",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vol-15-200": {
+            "typical": 2.5,
+            "maximum": null
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "output-low"
+        ]
+      }
+    },
+    {
+      "id": "ne555-13",
+      "kind": "query",
+      "question": "低电平输出电压",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-output-low",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vol-15-200": {
+            "typical": 2.5,
+            "maximum": null
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "output-low"
+        ]
+      }
+    },
+    {
+      "id": "ne555-14",
+      "kind": "query",
+      "question": "VOH",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-output-high",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "voh-5-100": {
+            "minimum": 2.75,
+            "typical": 3.3
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "output-high"
+        ]
+      }
+    },
+    {
+      "id": "ne555-15",
+      "kind": "query",
+      "question": "高电平输出电压",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-output-high",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "voh-5-100": {
+            "minimum": 2.75,
+            "typical": 3.3
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "output-high"
+        ]
+      }
+    },
+    {
+      "id": "ne555-16",
+      "kind": "query",
+      "question": "DISCH",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-discharge",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "discharge-on": {
+            "typical": 0.15,
+            "maximum": 0.4
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "discharge"
+        ]
+      }
+    },
+    {
+      "id": "ne555-17",
+      "kind": "query",
+      "question": "放电开关",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-discharge",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "discharge-on": {
+            "typical": 0.15,
+            "maximum": 0.4
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "discharge"
+        ]
+      }
+    },
+    {
+      "id": "ne555-18",
+      "kind": "query",
+      "question": "THRES电流",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-threshold-current",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "threshold-current": {
+            "typical": 30,
+            "maximum": 250,
+            "unit": "nA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "threshold-current"
+        ]
+      }
+    },
+    {
+      "id": "ne555-19",
+      "kind": "query",
+      "question": "单稳态",
+      "split": "dev",
+      "category": "mechanism",
+      "family": "query-monostable",
+      "expected": {
+        "status": "evidence_only",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "monostable"
+        ]
+      }
+    },
+    {
+      "id": "ne555-20",
+      "kind": "query",
+      "question": "无稳态",
+      "split": "dev",
+      "category": "mechanism",
+      "family": "query-astable",
+      "expected": {
+        "status": "evidence_only",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "astable"
+        ]
+      }
+    },
+    {
+      "id": "ne555-21",
+      "kind": "query",
+      "question": "TRIG",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-trigger",
+      "expected": {
+        "status": "answered",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "trigger"
+        ],
+        "applicability": {
+          "trigger-5": "applicable",
+          "trigger-15": "not_applicable"
+        }
+      },
+      "conditions": {
+        "vcc": "5 V",
+        "ambient_temperature": "25 °C"
+      }
+    },
+    {
+      "id": "ne555-22",
+      "kind": "query",
+      "question": "TRIG",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-trigger",
+      "expected": {
+        "status": "answered",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "trigger"
+        ],
+        "applicability": {
+          "trigger-15": "applicable",
+          "trigger-5": "not_applicable"
+        }
+      },
+      "conditions": {
+        "vcc": "15 V",
+        "ambient_temperature": "25 °C"
+      }
+    },
+    {
+      "id": "ne555-23",
+      "kind": "query",
+      "question": "TRIG",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-trigger",
+      "expected": {
+        "status": "answered",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "trigger"
+        ],
+        "applicability": {
+          "trigger-5": "applicable"
+        }
+      },
+      "conditions": {
+        "vcc": "5000 mV",
+        "ambient_temperature": "25 °C"
+      }
+    },
+    {
+      "id": "ne555-24",
+      "kind": "query",
+      "question": "TRIG",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-trigger",
+      "expected": {
+        "status": "answered",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "trigger"
+        ],
+        "applicability": {
+          "trigger-5": "needs_information"
+        }
+      },
+      "conditions": {
+        "vcc": "5 V",
+        "ambient_temperature": null
+      }
+    },
+    {
+      "id": "ne555-25",
+      "kind": "query",
+      "question": "TRIG",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-trigger",
+      "expected": {
+        "status": "answered",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "trigger"
+        ],
+        "applicability": {
+          "trigger-5": "not_applicable"
+        }
+      },
+      "conditions": {
+        "vcc": "5 V",
+        "ambient_temperature": "70 °C"
+      }
+    },
+    {
+      "id": "ne555-26",
+      "kind": "query",
+      "question": "TRIG",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-trigger",
+      "expected": {
+        "status": "invalid",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "trigger"
+        ],
+        "applicability": {
+          "trigger-5": "invalid"
+        }
+      },
+      "conditions": {
+        "vcc": "5",
+        "ambient_temperature": "25 °C"
+      }
+    },
+    {
+      "id": "ne555-27",
+      "kind": "query",
+      "question": "引脚",
+      "split": "dev",
+      "category": "mechanism",
+      "family": "query-pins",
+      "expected": {
+        "status": "evidence_only",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "pins"
+        ]
+      }
+    },
+    {
+      "id": "ne555-28",
+      "kind": "query",
+      "question": "接线",
+      "split": "dev",
+      "category": "mechanism",
+      "family": "query-pins",
+      "expected": {
+        "status": "evidence_only",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "pins"
+        ]
+      }
+    },
+    {
+      "id": "ne555-29",
+      "kind": "query",
+      "question": "qzxw987654",
+      "split": "dev",
+      "category": "unanswerable",
+      "family": "unknown-dev",
+      "expected": {
+        "status": "not_found",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "ne555-30",
+      "kind": "query",
+      "question": "做一盘番茄炒蛋",
+      "split": "dev",
+      "category": "unanswerable",
+      "family": "unknown-dev",
+      "expected": {
+        "status": "not_found",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "ne555-31",
+      "kind": "query",
+      "question": "推荐工作条件",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-recommended",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "rec-vcc": {
+            "minimum": 4.5,
+            "maximum": 16
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "ne555-32",
+      "kind": "query",
+      "question": "供电范围",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-recommended",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "rec-vcc": {
+            "minimum": 4.5,
+            "maximum": 16
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "ne555-33",
+      "kind": "query",
+      "question": "绝对最大额定值",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-abs",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "abs-vcc": {
+            "maximum": 18
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "abs"
+        ]
+      }
+    },
+    {
+      "id": "ne555-34",
+      "kind": "query",
+      "question": "极限电压",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-abs",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "abs-vcc": {
+            "maximum": 18
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "abs"
+        ]
+      }
+    },
+    {
+      "id": "ne555-35",
+      "kind": "query",
+      "question": "上升时间",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-switching",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "rise": {
+            "typical": 100,
+            "maximum": 300,
+            "unit": "ns"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "switching"
+        ]
+      }
+    },
+    {
+      "id": "ne555-36",
+      "kind": "query",
+      "question": "下降时间",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-switching",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "fall": {
+            "typical": 100,
+            "maximum": 300
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "switching"
+        ]
+      }
+    },
+    {
+      "id": "ne555-37",
+      "kind": "query",
+      "question": "定时温漂",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-switching",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "timing-temp-mono": {
+            "typical": 50,
+            "maximum": null
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "switching"
+        ]
+      }
+    },
+    {
+      "id": "ne555-38",
+      "kind": "query",
+      "question": "定时电源敏感度",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-switching",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "timing-supply-mono": {
+            "typical": 0.1,
+            "maximum": 0.5
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "switching"
+        ]
+      }
+    },
+    {
+      "id": "ne555-39",
+      "kind": "query",
+      "question": "触发输入电流",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-trigger-current",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "trigger-current": {
+            "typical": 0.5,
+            "maximum": 2,
+            "unit": "μA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "trigger-current"
+        ]
+      }
+    },
+    {
+      "id": "ne555-40",
+      "kind": "query",
+      "question": "输出高电平占空比",
+      "split": "holdout",
+      "category": "mechanism",
+      "family": "duty-definition",
+      "expected": {
+        "status": "evidence_only",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "astable"
+        ]
+      }
+    },
+    {
+      "id": "ne555-41",
+      "kind": "check",
+      "point": {
+        "vcc": "4.5 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-vcc",
+      "expected": {
+        "rule": "vcc",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "ne555-42",
+      "kind": "check",
+      "point": {
+        "vcc": "16 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-vcc",
+      "expected": {
+        "rule": "vcc",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "ne555-43",
+      "kind": "check",
+      "point": {
+        "vcc": "4.499 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-vcc",
+      "expected": {
+        "rule": "vcc",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "ne555-44",
+      "kind": "check",
+      "point": {
+        "vcc": "16.001 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-vcc",
+      "expected": {
+        "rule": "vcc",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "ne555-45",
+      "kind": "check",
+      "point": {
+        "ambient_temperature": "0 °C"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-ambient_temperature",
+      "expected": {
+        "rule": "ambient_temperature",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "ne555-46",
+      "kind": "check",
+      "point": {
+        "ambient_temperature": "70 °C"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-ambient_temperature",
+      "expected": {
+        "rule": "ambient_temperature",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "ne555-47",
+      "kind": "check",
+      "point": {
+        "ambient_temperature": "-1 °C"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-ambient_temperature",
+      "expected": {
+        "rule": "ambient_temperature",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "ne555-48",
+      "kind": "check",
+      "point": {
+        "ambient_temperature": "71 °C"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-ambient_temperature",
+      "expected": {
+        "rule": "ambient_temperature",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "ne555-49",
+      "kind": "check",
+      "point": {
+        "mode": "astable",
+        "ra": "10 kΩ",
+        "rb": "10 kΩ",
+        "capacitance": "10 nF"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-frequency",
+      "expected": {
+        "rule": "frequency",
+        "rule_status": "estimated",
+        "value": 4.81000481000481,
+        "evidence": [
+          "astable"
+        ]
+      }
+    },
+    {
+      "id": "ne555-50",
+      "kind": "check",
+      "point": {
+        "mode": "astable",
+        "ra": "10 kΩ",
+        "rb": "10 kΩ",
+        "capacitance": "10 nF"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-duty",
+      "expected": {
+        "rule": "duty",
+        "rule_status": "estimated",
+        "value": 66.66666666666667,
+        "evidence": [
+          "astable"
+        ]
+      }
+    },
+    {
+      "id": "ne555-51",
+      "kind": "check",
+      "point": {
+        "mode": "monostable",
+        "ra": "10 kΩ",
+        "capacitance": "10 nF"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-pulse_width",
+      "expected": {
+        "rule": "pulse_width",
+        "rule_status": "estimated",
+        "value": 0.11,
+        "evidence": [
+          "monostable"
+        ]
+      }
+    },
+    {
+      "id": "ne555-52",
+      "kind": "check",
+      "point": {
+        "mode": "astable",
+        "ra": "0 Ω",
+        "rb": "10 kΩ",
+        "capacitance": "10 nF"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-timing",
+      "expected": {
+        "rule": "timing",
+        "rule_status": "invalid",
+        "value": null,
+        "evidence": [
+          "astable"
+        ]
+      }
+    },
+    {
+      "id": "ne555-53",
+      "kind": "check",
+      "point": {
+        "mode": "astable",
+        "ra": "10 kΩ",
+        "rb": "10 kΩ",
+        "capacitance": "10 nF",
+        "ra_tolerance": "1%"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-timing_tolerance",
+      "expected": {
+        "rule": "timing_tolerance",
+        "rule_status": "needs_information",
+        "value": null,
+        "evidence": [
+          "astable"
+        ]
+      }
+    },
+    {
+      "id": "ne555-54",
+      "kind": "check",
+      "point": {
+        "mode": "astable",
+        "ra": "10 kΩ",
+        "rb": "10 kΩ",
+        "capacitance": "10 nF",
+        "ra_tolerance": "100%",
+        "rb_tolerance": "1%",
+        "capacitance_tolerance": "5%"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-timing_tolerance",
+      "expected": {
+        "rule": "timing_tolerance",
+        "rule_status": "invalid",
+        "value": null,
+        "evidence": [
+          "astable"
+        ]
+      }
+    },
+    {
+      "id": "ne555-55",
+      "kind": "query",
+      "question": "SE555 的供电范围",
+      "split": "holdout",
+      "category": "unsupported",
+      "family": "unsupported-holdout",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "ne555-56",
+      "kind": "query",
+      "question": "TLC555 的参数",
+      "split": "holdout",
+      "category": "unsupported",
+      "family": "unsupported-holdout",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "ne555-57",
+      "kind": "query",
+      "question": "从曲线读出精确值",
+      "split": "holdout",
+      "category": "unsupported",
+      "family": "unsupported-holdout",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "ne555-58",
+      "kind": "query",
+      "question": "生成完整电路BOM",
+      "split": "holdout",
+      "category": "unsupported",
+      "family": "unsupported-holdout",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "ne555-59",
+      "kind": "query",
+      "question": "供电5能工作吗",
+      "split": "holdout",
+      "category": "unanswerable",
+      "family": "missing-unit",
+      "expected": {
+        "status": "needs_information",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "ne555-60",
+      "kind": "query",
+      "question": "qzxw555000",
+      "split": "holdout",
+      "category": "unanswerable",
+      "family": "unknown-holdout",
+      "expected": {
+        "status": "not_found",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    }
+  ]
+}

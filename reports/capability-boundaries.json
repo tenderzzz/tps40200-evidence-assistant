@@ -1,0 +1,34 @@
+[
+  {
+    "question": "参考电压随温度的偏移能否估算？",
+    "status": "evidence_only",
+    "answer": "找到可能相关的原文，请核对右侧证据；当前未识别出可直接回答的参数。",
+    "evidence": [
+      "reference",
+      "recommended",
+      "ramp"
+    ]
+  },
+  {
+    "question": "帮我算下软启动时间",
+    "status": "evidence_only",
+    "answer": "SS 电容控制软启动过程，内部充电电阻形成上升参考。首版只提供机制证据，暂不自动计算软启动时间。",
+    "evidence": [
+      "softstart-mechanism"
+    ]
+  },
+  {
+    "question": "请读取图 21 的曲线数值",
+    "status": "unsupported",
+    "answer": "当前支持参数证据查询和有限条件检查；曲线读数、完整电路设计及整机性能保证需要进一步分析。",
+    "evidence": []
+  },
+  {
+    "question": "输入 4.3 能工作吗？",
+    "status": "needs_information",
+    "answer": "请确认数值对应的参数并补充单位，例如输入电压 4.3 V 或频率 100 kHz。",
+    "evidence": [
+      "recommended"
+    ]
+  }
+]

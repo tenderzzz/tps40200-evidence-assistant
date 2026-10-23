@@ -1,0 +1,533 @@
+[
+  {
+    "id": "abs",
+    "title": "绝对最大额定值",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      94,
+      558,
+      304
+    ],
+    "context_bboxes": [
+      [
+        54,
+        312,
+        558,
+        380
+      ]
+    ],
+    "text": "7.1 Absolute Maximum Ratings\nover operating free-air temperature range (unless otherwise noted)(1) (2)\nMIN MAX UNIT\nMaximum supply voltage (V ) 45 V\nIN\nSD/SS pin input voltage(3) 6 V\nDelay pin voltage(3) 1.5 V\nFlag pin voltage –0.3 45 V\nFeedback pin voltage –0.3 25 V\nOutput voltage to ground, steady-state –1 V\nPower dissipation Internally limited\nVapor phase (60 s) 215\nKTW package\nLead temperature Infrared (10 s) 245 °C\nNDZ package, soldering (10 s) 260\nMaximum junction temperature 150 °C\nStorage temperature, T –65 150 °C\nstg",
+    "context": "(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress\nratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under\nRecommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device\nreliability.\n(2) If Military/Aerospace specified devices are required, please contact the Texas Instruments Sales Office/ Distributors for availability and\nspecifications.\n(3) Voltage internally clamped. If clamp voltage is exceeded, limit current to a maximum of 1 mA.",
+    "aliases": [
+      "绝对最大额定值",
+      "absolute maximum",
+      "极限电压"
+    ],
+    "summary": "绝对最大额定值属于应力限制，不能作为正常工作范围。SD/SS、Delay、Flag 与本型号引脚表不一致，保留原文，暂不转录这些行。",
+    "curated": true
+  },
+  {
+    "id": "recommended",
+    "title": "推荐工作条件",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      459,
+      558,
+      519
+    ],
+    "context_bboxes": [],
+    "text": "7.3 Operating Conditions\nMIN MAX UNIT\nSupply voltage 4.5 40 V\nTemperature –40 125 °C",
+    "context": "",
+    "aliases": [
+      "推荐工作条件",
+      "推荐输入电压",
+      "供电范围",
+      "输入范围",
+      "工作温度",
+      "VIN",
+      "operating conditions"
+    ],
+    "summary": "LM2596-ADJ 工作供电范围为 4.5–40 V；45 V 是绝对最大值。工作温度行原表未明确温度类型。",
+    "curated": true
+  },
+  {
+    "id": "vfb",
+    "title": "反馈基准",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      589,
+      558,
+      695
+    ],
+    "context_bboxes": [
+      [
+        54,
+        703,
+        558,
+        733
+      ]
+    ],
+    "text": "7.8 Electrical Characteristics – Adjustable Voltage Version\nSpecifications are for T = 25°C (unless otherwise noted)\nJ\nPARAMETER TEST CONDITIONS MIN(1) TYP(2) MAX(1) UNIT\nSYSTEM PARAMETERS (3) (see Figure 9-13 for test circuit)\n4.5 V ≤ VIN ≤ 40 V, 0.2 A ≤ ILOAD ≤ 3 A 1.23\nVFB Feedback voltage VOUT programmed for 3 V TJ = 25°C 1.193 1.267 V\n(see Figure 9-13 for test circuit) –40°C ≤ TJ ≤ 125°C 1.18 1.28\nη Efficiency VIN = 12 V, VOUT = 3 V, ILOAD = 3 A 73%",
+    "context": "(1) All room temperature limits are 100% production tested. All limits at temperature extremes are specified via correlation using standard\nStatistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).\n(2) Typical numbers are at 25°C and represent the most likely norm.",
+    "aliases": [
+      "反馈基准",
+      "反馈参考电压",
+      "VFB",
+      "VREF",
+      "参考电压"
+    ],
+    "summary": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+    "curated": true
+  },
+  {
+    "id": "bias",
+    "title": "反馈偏置电流",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      169,
+      558,
+      195
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "text": "Adjustable version only, T J = 25°C 10 50\nI Feedback bias current nA\nb V FB = 1.3 V –40°C ≤ T J ≤ 125°C 100",
+    "context": "7.9 Electrical Characteristics – All Output Voltage Versions\nSpecifications are for T = 25°C, I = 500 mA, V = 12 V for the 3.3-V, 5-V, and adjustable version, and V = 24 V for the\nJ LOAD IN IN\n12-V version (unless otherwise noted).\nPARAMETER TEST CONDITIONS MIN(1) TYP(2) MAX(1) UNIT\n(1) All room temperature limits are 100% production tested. All limits at temperature extremes are specified via correlation using standard\nStatistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).\n(2) Typical numbers are at 25°C and represent the most likely norm.\n(3) The switching frequency is reduced when the second stage current limit is activated. The amount of reduction is determined by the\nseverity of current overload.\n(4) No diode, inductor, or capacitor connected to output pin.\n(5) Feedback pin removed from output and connected to 0 V to force the output transistor switch ON.\n(6) Feedback pin removed from output and connected to 12 V for the 3.3-V, 5-V, and the adjustable versions, and 15 V for the 12-V\nversion, to force the output transistor switch OFF.\n(7) V = 40 V.\nIN",
+    "aliases": [
+      "反馈偏置电流",
+      "Ib"
+    ],
+    "summary": "反馈偏置电流须按结温条件读取。",
+    "curated": true
+  },
+  {
+    "id": "oscillator",
+    "title": "振荡频率",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      197,
+      558,
+      223
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "text": "T = 25°C 127 150 173\nf Oscillator frequency(3) J kHz\nO\n–40°C ≤ T ≤ 125°C 110 173\nJ",
+    "context": "7.9 Electrical Characteristics – All Output Voltage Versions\nSpecifications are for T = 25°C, I = 500 mA, V = 12 V for the 3.3-V, 5-V, and adjustable version, and V = 24 V for the\nJ LOAD IN IN\n12-V version (unless otherwise noted).\nPARAMETER TEST CONDITIONS MIN(1) TYP(2) MAX(1) UNIT\n(1) All room temperature limits are 100% production tested. All limits at temperature extremes are specified via correlation using standard\nStatistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).\n(2) Typical numbers are at 25°C and represent the most likely norm.\n(3) The switching frequency is reduced when the second stage current limit is activated. The amount of reduction is determined by the\nseverity of current overload.\n(4) No diode, inductor, or capacitor connected to output pin.\n(5) Feedback pin removed from output and connected to 0 V to force the output transistor switch ON.\n(6) Feedback pin removed from output and connected to 12 V for the 3.3-V, 5-V, and the adjustable versions, and 15 V for the 12-V\nversion, to force the output transistor switch OFF.\n(7) V = 40 V.\nIN",
+    "aliases": [
+      "振荡频率",
+      "开关频率",
+      "fO",
+      "fOSC",
+      "频率范围"
+    ],
+    "summary": "内部振荡器固定为标称 150 kHz；上下限随结温条件分别给出，不能使用 TPS40200 的外部 RC 公式。",
+    "curated": true
+  },
+  {
+    "id": "saturation",
+    "title": "饱和电压",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      225,
+      558,
+      251
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "text": "T = 25°C 1.16 1.4\nV Saturation voltage(4) (5) I = 3 A J V\nSAT OUT\n–40°C ≤ T ≤ 125°C 1.5\nJ",
+    "context": "7.9 Electrical Characteristics – All Output Voltage Versions\nSpecifications are for T = 25°C, I = 500 mA, V = 12 V for the 3.3-V, 5-V, and adjustable version, and V = 24 V for the\nJ LOAD IN IN\n12-V version (unless otherwise noted).\nPARAMETER TEST CONDITIONS MIN(1) TYP(2) MAX(1) UNIT\n(1) All room temperature limits are 100% production tested. All limits at temperature extremes are specified via correlation using standard\nStatistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).\n(2) Typical numbers are at 25°C and represent the most likely norm.\n(3) The switching frequency is reduced when the second stage current limit is activated. The amount of reduction is determined by the\nseverity of current overload.\n(4) No diode, inductor, or capacitor connected to output pin.\n(5) Feedback pin removed from output and connected to 0 V to force the output transistor switch ON.\n(6) Feedback pin removed from output and connected to 12 V for the 3.3-V, 5-V, and the adjustable versions, and 15 V for the 12-V\nversion, to force the output transistor switch OFF.\n(7) V = 40 V.\nIN",
+    "aliases": [
+      "饱和电压",
+      "VSAT"
+    ],
+    "summary": "饱和电压测试采用手册脚注指定的强制导通设置。",
+    "curated": true
+  },
+  {
+    "id": "duty",
+    "title": "占空比",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      252,
+      558,
+      278
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "text": "Max duty cycle (ON)(5) 100%\nDC\nMin duty cycle (OFF)(6) 0%",
+    "context": "7.9 Electrical Characteristics – All Output Voltage Versions\nSpecifications are for T = 25°C, I = 500 mA, V = 12 V for the 3.3-V, 5-V, and adjustable version, and V = 24 V for the\nJ LOAD IN IN\n12-V version (unless otherwise noted).\nPARAMETER TEST CONDITIONS MIN(1) TYP(2) MAX(1) UNIT\n(1) All room temperature limits are 100% production tested. All limits at temperature extremes are specified via correlation using standard\nStatistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).\n(2) Typical numbers are at 25°C and represent the most likely norm.\n(3) The switching frequency is reduced when the second stage current limit is activated. The amount of reduction is determined by the\nseverity of current overload.\n(4) No diode, inductor, or capacitor connected to output pin.\n(5) Feedback pin removed from output and connected to 0 V to force the output transistor switch ON.\n(6) Feedback pin removed from output and connected to 12 V for the 3.3-V, 5-V, and the adjustable versions, and 15 V for the 12-V\nversion, to force the output transistor switch OFF.\n(7) V = 40 V.\nIN",
+    "aliases": [
+      "占空比",
+      "DC"
+    ],
+    "summary": "表中 ON/OFF 占空比数值按原列保留，不能据此保证任意降压比。",
+    "curated": true
+  },
+  {
+    "id": "current-limit",
+    "title": "限流",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      281,
+      558,
+      307
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "text": "T = 25°C 3.6 4.5 6.9\nI Current limit(4) (5) Peak current J A\nCL\n–40°C ≤ T ≤ 125°C 3.4 7.5\nJ",
+    "context": "7.9 Electrical Characteristics – All Output Voltage Versions\nSpecifications are for T = 25°C, I = 500 mA, V = 12 V for the 3.3-V, 5-V, and adjustable version, and V = 24 V for the\nJ LOAD IN IN\n12-V version (unless otherwise noted).\nPARAMETER TEST CONDITIONS MIN(1) TYP(2) MAX(1) UNIT\n(1) All room temperature limits are 100% production tested. All limits at temperature extremes are specified via correlation using standard\nStatistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).\n(2) Typical numbers are at 25°C and represent the most likely norm.\n(3) The switching frequency is reduced when the second stage current limit is activated. The amount of reduction is determined by the\nseverity of current overload.\n(4) No diode, inductor, or capacitor connected to output pin.\n(5) Feedback pin removed from output and connected to 0 V to force the output transistor switch ON.\n(6) Feedback pin removed from output and connected to 12 V for the 3.3-V, 5-V, and the adjustable versions, and 15 V for the 12-V\nversion, to force the output transistor switch OFF.\n(7) V = 40 V.\nIN",
+    "aliases": [
+      "限流",
+      "过流阈值",
+      "ICL",
+      "current limit"
+    ],
+    "summary": "ICL 是开关峰值限流参数，不是持续负载电流保证。",
+    "curated": true
+  },
+  {
+    "id": "leakage",
+    "title": "输出漏电流",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      309,
+      558,
+      334
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "text": "Output leakage current(4) Output = 0 V, V IN = 40 V 50 μA\nI\nL (6)\nOutput = –1 V 2 30 mA",
+    "context": "7.9 Electrical Characteristics – All Output Voltage Versions\nSpecifications are for T = 25°C, I = 500 mA, V = 12 V for the 3.3-V, 5-V, and adjustable version, and V = 24 V for the\nJ LOAD IN IN\n12-V version (unless otherwise noted).\nPARAMETER TEST CONDITIONS MIN(1) TYP(2) MAX(1) UNIT\n(1) All room temperature limits are 100% production tested. All limits at temperature extremes are specified via correlation using standard\nStatistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).\n(2) Typical numbers are at 25°C and represent the most likely norm.\n(3) The switching frequency is reduced when the second stage current limit is activated. The amount of reduction is determined by the\nseverity of current overload.\n(4) No diode, inductor, or capacitor connected to output pin.\n(5) Feedback pin removed from output and connected to 0 V to force the output transistor switch ON.\n(6) Feedback pin removed from output and connected to 12 V for the 3.3-V, 5-V, and the adjustable versions, and 15 V for the 12-V\nversion, to force the output transistor switch OFF.\n(7) V = 40 V.\nIN",
+    "aliases": [
+      "输出漏电流",
+      "漏电流",
+      "IL"
+    ],
+    "summary": "输出漏电流使用强制关断且无外接二极管、电感、电容的测试设置。",
+    "curated": true
+  },
+  {
+    "id": "quiescent",
+    "title": "静态电流",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      337,
+      558,
+      357
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "text": "Operating quiescent\nI See (6) 5 10 mA\nQ current(6)",
+    "context": "7.9 Electrical Characteristics – All Output Voltage Versions\nSpecifications are for T = 25°C, I = 500 mA, V = 12 V for the 3.3-V, 5-V, and adjustable version, and V = 24 V for the\nJ LOAD IN IN\n12-V version (unless otherwise noted).\nPARAMETER TEST CONDITIONS MIN(1) TYP(2) MAX(1) UNIT\n(1) All room temperature limits are 100% production tested. All limits at temperature extremes are specified via correlation using standard\nStatistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).\n(2) Typical numbers are at 25°C and represent the most likely norm.\n(3) The switching frequency is reduced when the second stage current limit is activated. The amount of reduction is determined by the\nseverity of current overload.\n(4) No diode, inductor, or capacitor connected to output pin.\n(5) Feedback pin removed from output and connected to 0 V to force the output transistor switch ON.\n(6) Feedback pin removed from output and connected to 12 V for the 3.3-V, 5-V, and the adjustable versions, and 15 V for the 12-V\nversion, to force the output transistor switch OFF.\n(7) V = 40 V.\nIN",
+    "aliases": [
+      "静态电流",
+      "工作电流",
+      "IQ"
+    ],
+    "summary": "工作静态电流典型 5 mA；须保留脚注中的强制关断测试。",
+    "curated": true
+  },
+  {
+    "id": "standby",
+    "title": "待机电流",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      360,
+      558,
+      386
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "text": "I Current standby ON/OFF pin = 5 V (OFF)(7) T J = 25°C 80 200 μA\nSTBY quiescent –40°C ≤ T ≤ 125°C 250 μA\nJ",
+    "context": "7.9 Electrical Characteristics – All Output Voltage Versions\nSpecifications are for T = 25°C, I = 500 mA, V = 12 V for the 3.3-V, 5-V, and adjustable version, and V = 24 V for the\nJ LOAD IN IN\n12-V version (unless otherwise noted).\nPARAMETER TEST CONDITIONS MIN(1) TYP(2) MAX(1) UNIT\n(1) All room temperature limits are 100% production tested. All limits at temperature extremes are specified via correlation using standard\nStatistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).\n(2) Typical numbers are at 25°C and represent the most likely norm.\n(3) The switching frequency is reduced when the second stage current limit is activated. The amount of reduction is determined by the\nseverity of current overload.\n(4) No diode, inductor, or capacitor connected to output pin.\n(5) Feedback pin removed from output and connected to 0 V to force the output transistor switch ON.\n(6) Feedback pin removed from output and connected to 12 V for the 3.3-V, 5-V, and the adjustable versions, and 15 V for the 12-V\nversion, to force the output transistor switch OFF.\n(7) V = 40 V.\nIN",
+    "aliases": [
+      "待机电流",
+      "ISTBY",
+      "standby"
+    ],
+    "summary": "待机电流的室温与全结温上限不同，VIN=40 V 且 ON/OFF=5 V。",
+    "curated": true
+  },
+  {
+    "id": "shutdown",
+    "title": "关闭控制",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      389,
+      558,
+      456
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "text": "SHUTDOWN/SOFT-START CONTROL (see Figure 9-13 for test circuit)\nT = 25°C 1.3\nJ\nV Low (regulator ON) V\nIH\nON/OFF pin logic input –40°C ≤ T J ≤ 125°C 0.6\nthreshold voltage T = 25°C 1.3\nJ\nV High (regulator OFF) V\nIL\n–40°C ≤ T ≤ 125°C 2\nJ",
+    "context": "7.9 Electrical Characteristics – All Output Voltage Versions\nSpecifications are for T = 25°C, I = 500 mA, V = 12 V for the 3.3-V, 5-V, and adjustable version, and V = 24 V for the\nJ LOAD IN IN\n12-V version (unless otherwise noted).\nPARAMETER TEST CONDITIONS MIN(1) TYP(2) MAX(1) UNIT\n(1) All room temperature limits are 100% production tested. All limits at temperature extremes are specified via correlation using standard\nStatistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).\n(2) Typical numbers are at 25°C and represent the most likely norm.\n(3) The switching frequency is reduced when the second stage current limit is activated. The amount of reduction is determined by the\nseverity of current overload.\n(4) No diode, inductor, or capacitor connected to output pin.\n(5) Feedback pin removed from output and connected to 0 V to force the output transistor switch ON.\n(6) Feedback pin removed from output and connected to 12 V for the 3.3-V, 5-V, and the adjustable versions, and 15 V for the 12-V\nversion, to force the output transistor switch OFF.\n(7) V = 40 V.\nIN",
+    "aliases": [
+      "关闭控制",
+      "关闭阈值",
+      "ON/OFF",
+      "VIH",
+      "VIL",
+      "如何关闭"
+    ],
+    "summary": "ON/OFF 低电平启用、高电平关闭。原表 VIH/VIL 名称照录，具体逻辑以 Low ON / High OFF 为准。",
+    "curated": true
+  },
+  {
+    "id": "logic-current",
+    "title": "ON/OFF输入电流",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      458,
+      558,
+      484
+    ],
+    "context_bboxes": [
+      [
+        54,
+        99,
+        558,
+        151
+      ],
+      [
+        54,
+        492,
+        558,
+        590
+      ]
+    ],
+    "text": "I V = 2.5 V (regulator OFF) 5 15 μA\nH LOGIC\nON/OFF pin input current\nI V = 0.5 V (regulator ON) 0.02 5 μA\nL LOGIC",
+    "context": "7.9 Electrical Characteristics – All Output Voltage Versions\nSpecifications are for T = 25°C, I = 500 mA, V = 12 V for the 3.3-V, 5-V, and adjustable version, and V = 24 V for the\nJ LOAD IN IN\n12-V version (unless otherwise noted).\nPARAMETER TEST CONDITIONS MIN(1) TYP(2) MAX(1) UNIT\n(1) All room temperature limits are 100% production tested. All limits at temperature extremes are specified via correlation using standard\nStatistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).\n(2) Typical numbers are at 25°C and represent the most likely norm.\n(3) The switching frequency is reduced when the second stage current limit is activated. The amount of reduction is determined by the\nseverity of current overload.\n(4) No diode, inductor, or capacitor connected to output pin.\n(5) Feedback pin removed from output and connected to 0 V to force the output transistor switch ON.\n(6) Feedback pin removed from output and connected to 12 V for the 3.3-V, 5-V, and the adjustable versions, and 15 V for the 12-V\nversion, to force the output transistor switch OFF.\n(7) V = 40 V.\nIN",
+    "aliases": [
+      "ON/OFF输入电流",
+      "IH",
+      "逻辑输入电流"
+    ],
+    "summary": "ON/OFF 输入电流分别对应 2.5 V 关闭和 0.5 V 启用。",
+    "curated": true
+  },
+  {
+    "id": "divider",
+    "title": "反馈分压",
+    "page": 28,
+    "printed_page": "28",
+    "bbox": [
+      54,
+      222,
+      558,
+      405
+    ],
+    "context_bboxes": [],
+    "text": "9.2.2.2.1 Programming Output Voltage\nSelect R and R , as shown in Table 9-6\n1 2\nUse Equation 5 to select the appropriate resistor values.\n(5)\nR2\nSelect a V O v U a T lu = e V f R o E r F R 1 + b R e1tw w ee h n er e 2 V 4 R 0 E F Ω = a 1 n .2 d 3 1 V .5 kΩ. The lower resistor values minimize noise pickup in the\n1\nsensitive feedback pin. (For the lowest temperature coefficient and the best stability with time, use 1% metal film\nresistors.). Calculate R with Equation 6.\n2\n(6)\nVOUT\nSelect R R2 to = b R e 1 1 V kRΩEF, 1 − % 1 . Solve for R in Equation 7.\n1 2",
+    "context": "",
+    "aliases": [
+      "反馈分压",
+      "分压电阻",
+      "输出电压计算",
+      "输出公式",
+      "R1",
+      "R2"
+    ],
+    "summary": "标称 VOUT≈1.23×(1+R2/R1)，R1 是 FB 到 GND 的下侧电阻，建议取 240 Ω–1.5 kΩ；R2 是输出到 FB 的上侧电阻。",
+    "curated": true
+  },
+  {
+    "id": "pins",
+    "title": "引脚",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      78,
+      558,
+      414
+    ],
+    "context_bboxes": [],
+    "text": "6 Pin Configuration and Functions\nFigure 6-2. 5-Pin TO-263 KTT Package Top View\nFigure 6-1. 5-Pin TO-220 NDH Package Top View\nTable 6-1. Pin Functions\nPIN\nI/O DESCRIPTION\nNO. NAME\nThis is the positive input supply for the IC switching regulator. A suitable input bypass\n1 V I capacitor must be present at this pin to minimize voltage transients and to supply the\nIN\nswitching currents required by the regulator.\nInternal switch. The voltage at this pin switches between approximately (+V − V ) and\nIN SAT\n2 Output O approximately −0.5 V, with a duty cycle of V / V . To minimize coupling to sensitive\nOUT IN\ncircuitry, the PCB copper area connected to this pin must be kept to a minimum.\n3 Ground — Circuit ground\n4 Feedback I Senses the regulated output voltage to complete the feedback loop.\nAllows the switching regulator circuit to be shut down using logic signals thus dropping\nthe total input supply current to approximately 80 µA. Pulling this pin below a threshold\nvoltage of approximately 1.3 V turns the regulator on, and pulling this pin above 1.3 V (up\n5 ON/OFF I\nto a maximum of 25 V) shuts the regulator down. If this shutdown feature is not required,\nthe ON/OFF pin can be wired to the ground pin or it can be left open. In either case, the\nregulator will be in the ON condition.",
+    "context": "",
+    "aliases": [
+      "引脚",
+      "接线",
+      "pinout",
+      "引脚功能"
+    ],
+    "summary": "5 引脚包括 VIN、开关 Output、GND、Feedback 和 ON/OFF。Output 是开关节点，不能当作滤波后的稳压输出。",
+    "curated": true
+  },
+  {
+    "id": "protection",
+    "title": "保护机制",
+    "page": 3,
+    "printed_page": "3",
+    "bbox": [
+      54,
+      123,
+      558,
+      179
+    ],
+    "context_bboxes": [],
+    "text": "Other features include a ±4% tolerance on output voltage under specified input voltage and output load\nconditions, and ±15% on the oscillator frequency. External shutdown is included, featuring typically 80 μA\nstandby current. Self-protection features include a two stage frequency reducing current limit for the output\nswitch and an overtemperature shutdown for complete protection under fault conditions.",
+    "context": "",
+    "aliases": [
+      "保护机制",
+      "过流后如何恢复",
+      "过流恢复",
+      "热关断"
+    ],
+    "summary": "手册说明有两级降频限流和过温关断保护；此段未给出完整恢复时序，不能据此承诺恢复时间。",
+    "curated": true
+  },
+  {
+    "id": "vfb-note",
+    "title": "系统参数外部元件脚注",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      71,
+      558,
+      93
+    ],
+    "context_bboxes": [],
+    "text": "(3) External components such as the catch diode, inductor, input and output capacitors can affect switching regulator system performance.\nWhen the LM2596 is used as shown in Figure 9-13, system performance is shown in the test conditions column.",
+    "context": "",
+    "aliases": [
+      "系统参数外部元件脚注"
+    ],
+    "summary": "系统参数受外部二极管、电感与电容影响；系统性能按 Figure 9-13 测试设置读取。",
+    "curated": true,
+    "context_only": true
+  }
+]

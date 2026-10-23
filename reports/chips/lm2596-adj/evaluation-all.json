@@ -1,0 +1,5903 @@
+{
+  "evaluated_at": "2026-10-23T01:14:52.183254+00:00",
+  "source": {
+    "doc_id": "lm2596-adj-snvs124g",
+    "chip_id": "lm2596-adj",
+    "manufacturer": "TI",
+    "model": "LM2596-ADJ",
+    "title": "LM2596 SIMPLE SWITCHER Power Converter 150-kHz 3-A Step-Down Voltage Regulator",
+    "revision": "SNVS124G (Rev. G)",
+    "revision_date": "2023-03",
+    "url": "https://www.ti.com/lit/ds/symlink/lm2596.pdf",
+    "downloaded_at": "2026-10-22T14:47:50.489164+00:00",
+    "sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+    "pages": 47,
+    "indexed_core_pages": 35,
+    "pdf_file": "lm2596.pdf",
+    "extraction": {
+      "tool": "pdfplumber",
+      "version": "0.11.10",
+      "x_tolerance": 1
+    },
+    "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+  },
+  "chip_id": "lm2596-adj",
+  "benchmark_corrections": [],
+  "methodology": "自建固定验证集，开发/留出各30题，同一问题的改写同组；期望数值来自固定PDF转录或独立有理数计算，未从被测引擎生成。增强检索包含人工别名、结构化表格与中文说明，不单独归因于分块。",
+  "limitations": [
+    "题目、参数整理和实现由同一开发过程完成，不是独立盲测。",
+    "证据命中按预标注区域评价；不等于任意问题的引用语义正确率。",
+    "留出集规模小，比例仅适用于本组案例，不代表通用芯片手册准确率。"
+  ],
+  "metrics": {
+    "cases": 60,
+    "passed": 60,
+    "query_retrieval_cases": 37,
+    "top3_recall": 1.0,
+    "plain_top3_recall": 0.2702702702702703,
+    "fact_cases": 32,
+    "fact_answered": 32,
+    "fact_accuracy": 1.0,
+    "fact_coverage": 1.0,
+    "unsupported_correct": 5,
+    "unsupported_cases": 5,
+    "by_category": {
+      "conditions": {
+        "total": 8,
+        "passed": 8
+      },
+      "mechanism": {
+        "total": 3,
+        "passed": 3
+      },
+      "parameter": {
+        "total": 26,
+        "passed": 26
+      },
+      "rule": {
+        "total": 14,
+        "passed": 14
+      },
+      "unanswerable": {
+        "total": 4,
+        "passed": 4
+      },
+      "unsupported": {
+        "total": 5,
+        "passed": 5
+      }
+    }
+  },
+  "splits": {
+    "dev": {
+      "cases": 30,
+      "passed": 30,
+      "query_retrieval_cases": 27,
+      "top3_recall": 1.0,
+      "plain_top3_recall": 0.3333333333333333,
+      "fact_cases": 22,
+      "fact_answered": 22,
+      "fact_accuracy": 1.0,
+      "fact_coverage": 1.0,
+      "unsupported_correct": 1,
+      "unsupported_cases": 1,
+      "by_category": {
+        "conditions": {
+          "total": 8,
+          "passed": 8
+        },
+        "mechanism": {
+          "total": 3,
+          "passed": 3
+        },
+        "parameter": {
+          "total": 16,
+          "passed": 16
+        },
+        "unanswerable": {
+          "total": 2,
+          "passed": 2
+        },
+        "unsupported": {
+          "total": 1,
+          "passed": 1
+        }
+      }
+    },
+    "holdout": {
+      "cases": 30,
+      "passed": 30,
+      "query_retrieval_cases": 10,
+      "top3_recall": 1.0,
+      "plain_top3_recall": 0.1,
+      "fact_cases": 10,
+      "fact_answered": 10,
+      "fact_accuracy": 1.0,
+      "fact_coverage": 1.0,
+      "unsupported_correct": 4,
+      "unsupported_cases": 4,
+      "by_category": {
+        "parameter": {
+          "total": 10,
+          "passed": 10
+        },
+        "rule": {
+          "total": 14,
+          "passed": 14
+        },
+        "unanswerable": {
+          "total": 2,
+          "passed": 2
+        },
+        "unsupported": {
+          "total": 4,
+          "passed": 4
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "lm2596-adj-01",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-vfb",
+      "kind": "query",
+      "question": "VFB",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vfb",
+        "abs"
+      ],
+      "expected_evidence": [
+        "vfb"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "VFB",
+        "answer": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V",
+            "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vfb-full",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.18,
+            "typical": null,
+            "maximum": 1.28,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "efficiency",
+            "symbol": "η",
+            "name": "效率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 73.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+            "notes": [
+              "典型效率不保证其他电路、负载或布局下的效率。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vfb",
+            "score": 106.14313
+          },
+          {
+            "evidence_id": "abs",
+            "score": 104.69665
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-02",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-vfb",
+      "kind": "query",
+      "question": "反馈参考电压是多少",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vfb",
+        "divider",
+        "bias"
+      ],
+      "expected_evidence": [
+        "vfb"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "反馈参考电压是多少",
+        "answer": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V",
+            "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vfb-full",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.18,
+            "typical": null,
+            "maximum": 1.28,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "efficiency",
+            "symbol": "η",
+            "name": "效率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 73.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+            "notes": [
+              "典型效率不保证其他电路、负载或布局下的效率。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vfb",
+            "score": 119.3697
+          },
+          {
+            "evidence_id": "divider",
+            "score": 3.04911
+          },
+          {
+            "evidence_id": "bias",
+            "score": 2.29137
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-03",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-vfb",
+      "kind": "query",
+      "question": "反馈基准的上下限",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vfb",
+        "divider",
+        "oscillator"
+      ],
+      "expected_evidence": [
+        "vfb"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "反馈基准的上下限",
+        "answer": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V",
+            "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vfb-full",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.18,
+            "typical": null,
+            "maximum": 1.28,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "efficiency",
+            "symbol": "η",
+            "name": "效率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 73.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+            "notes": [
+              "典型效率不保证其他电路、负载或布局下的效率。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vfb",
+            "score": 117.47469
+          },
+          {
+            "evidence_id": "divider",
+            "score": 4.76539
+          },
+          {
+            "evidence_id": "oscillator",
+            "score": 3.34207
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-04",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-recommended",
+      "kind": "query",
+      "question": "推荐输入电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended",
+        "logic-current",
+        "vfb"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "推荐输入电压",
+        "answer": "LM2596-ADJ 工作供电范围为 4.5–40 V；45 V 是绝对最大值。工作温度行原表未明确温度类型。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "rec-vin",
+            "symbol": "VIN",
+            "name": "工作输入电压",
+            "rating": "recommended",
+            "minimum": 4.5,
+            "typical": null,
+            "maximum": 40.0,
+            "unit": "V",
+            "conditions": "Operating Conditions",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rec-temperature",
+            "symbol": "Temperature",
+            "name": "工作温度",
+            "rating": "recommended",
+            "minimum": -40.0,
+            "typical": null,
+            "maximum": 125.0,
+            "unit": "°C",
+            "conditions": "原表 Temperature，未明确 TA/TJ",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 320.5461
+          },
+          {
+            "evidence_id": "logic-current",
+            "score": 5.69072
+          },
+          {
+            "evidence_id": "vfb",
+            "score": 2.73377
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-05",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-recommended",
+      "kind": "query",
+      "question": "工作温度",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended",
+        "quiescent",
+        "abs"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "工作温度",
+        "answer": "LM2596-ADJ 工作供电范围为 4.5–40 V；45 V 是绝对最大值。工作温度行原表未明确温度类型。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "rec-vin",
+            "symbol": "VIN",
+            "name": "工作输入电压",
+            "rating": "recommended",
+            "minimum": 4.5,
+            "typical": null,
+            "maximum": 40.0,
+            "unit": "V",
+            "conditions": "Operating Conditions",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rec-temperature",
+            "symbol": "Temperature",
+            "name": "工作温度",
+            "rating": "recommended",
+            "minimum": -40.0,
+            "typical": null,
+            "maximum": 125.0,
+            "unit": "°C",
+            "conditions": "原表 Temperature，未明确 TA/TJ",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 116.22465
+          },
+          {
+            "evidence_id": "quiescent",
+            "score": 1.96803
+          },
+          {
+            "evidence_id": "abs",
+            "score": 1.32175
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-06",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-current-limit",
+      "kind": "query",
+      "question": "ICL",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "current-limit"
+      ],
+      "expected_evidence": [
+        "current-limit"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "ICL",
+        "answer": "ICL 是开关峰值限流参数，不是持续负载电流保证。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "icl-25",
+            "symbol": "ICL",
+            "name": "峰值限流",
+            "rating": "electrical",
+            "minimum": 3.6,
+            "typical": 4.5,
+            "maximum": 6.9,
+            "unit": "A",
+            "conditions": "TJ=25°C；Peak current；脚注(4)(5)",
+            "notes": [],
+            "evidence_ids": [
+              "current-limit"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "icl-full",
+            "symbol": "ICL",
+            "name": "峰值限流",
+            "rating": "electrical",
+            "minimum": 3.4,
+            "typical": null,
+            "maximum": 7.5,
+            "unit": "A",
+            "conditions": "−40≤TJ≤125°C；Peak current；脚注(4)(5)",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "current-limit"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "current-limit"
+        ],
+        "hits": [
+          {
+            "evidence_id": "current-limit",
+            "score": 106.28263
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-07",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-current-limit",
+      "kind": "query",
+      "question": "峰值限流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "current-limit",
+        "protection"
+      ],
+      "expected_evidence": [
+        "current-limit"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "峰值限流",
+        "answer": "ICL 是开关峰值限流参数，不是持续负载电流保证。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "icl-25",
+            "symbol": "ICL",
+            "name": "峰值限流",
+            "rating": "electrical",
+            "minimum": 3.6,
+            "typical": 4.5,
+            "maximum": 6.9,
+            "unit": "A",
+            "conditions": "TJ=25°C；Peak current；脚注(4)(5)",
+            "notes": [],
+            "evidence_ids": [
+              "current-limit"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "icl-full",
+            "symbol": "ICL",
+            "name": "峰值限流",
+            "rating": "electrical",
+            "minimum": 3.4,
+            "typical": null,
+            "maximum": 7.5,
+            "unit": "A",
+            "conditions": "−40≤TJ≤125°C；Peak current；脚注(4)(5)",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "current-limit"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "current-limit"
+        ],
+        "hits": [
+          {
+            "evidence_id": "current-limit",
+            "score": 109.46153
+          },
+          {
+            "evidence_id": "protection",
+            "score": 2.34308
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-08",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-quiescent",
+      "kind": "query",
+      "question": "IQ",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "quiescent"
+      ],
+      "expected_evidence": [
+        "quiescent"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "IQ",
+        "answer": "工作静态电流典型 5 mA；须保留脚注中的强制关断测试。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "iq",
+            "symbol": "IQ",
+            "name": "工作静态电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 5.0,
+            "maximum": 10.0,
+            "unit": "mA",
+            "conditions": "TJ=25°C；VIN=12 V；ILOAD=500 mA；脚注(6)",
+            "notes": [],
+            "evidence_ids": [
+              "quiescent"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "quiescent"
+        ],
+        "hits": [
+          {
+            "evidence_id": "quiescent",
+            "score": 104.29578
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-09",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-quiescent",
+      "kind": "query",
+      "question": "工作静态电流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "quiescent",
+        "recommended",
+        "abs"
+      ],
+      "expected_evidence": [
+        "quiescent"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "工作静态电流",
+        "answer": "工作静态电流典型 5 mA；须保留脚注中的强制关断测试。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "iq",
+            "symbol": "IQ",
+            "name": "工作静态电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 5.0,
+            "maximum": 10.0,
+            "unit": "mA",
+            "conditions": "TJ=25°C；VIN=12 V；ILOAD=500 mA；脚注(6)",
+            "notes": [],
+            "evidence_ids": [
+              "quiescent"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "quiescent"
+        ],
+        "hits": [
+          {
+            "evidence_id": "quiescent",
+            "score": 117.08084
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 3.08666
+          },
+          {
+            "evidence_id": "abs",
+            "score": 1.32175
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-10",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-standby",
+      "kind": "query",
+      "question": "ISTBY",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "standby"
+      ],
+      "expected_evidence": [
+        "standby"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "ISTBY",
+        "answer": "待机电流的室温与全结温上限不同，VIN=40 V 且 ON/OFF=5 V。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "standby-25",
+            "symbol": "ISTBY",
+            "name": "待机电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 80.0,
+            "maximum": 200.0,
+            "unit": "μA",
+            "conditions": "TJ=25°C；VIN=40 V；ON/OFF=5 V",
+            "notes": [],
+            "evidence_ids": [
+              "standby"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "standby-full",
+            "symbol": "ISTBY",
+            "name": "待机电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 250.0,
+            "unit": "μA",
+            "conditions": "−40≤TJ≤125°C；VIN=40 V；ON/OFF=5 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "standby"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "standby"
+        ],
+        "hits": [
+          {
+            "evidence_id": "standby",
+            "score": 107.23408
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-11",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-standby",
+      "kind": "query",
+      "question": "待机电流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "standby",
+        "quiescent",
+        "leakage"
+      ],
+      "expected_evidence": [
+        "standby"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "待机电流",
+        "answer": "待机电流的室温与全结温上限不同，VIN=40 V 且 ON/OFF=5 V。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "standby-25",
+            "symbol": "ISTBY",
+            "name": "待机电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 80.0,
+            "maximum": 200.0,
+            "unit": "μA",
+            "conditions": "TJ=25°C；VIN=40 V；ON/OFF=5 V",
+            "notes": [],
+            "evidence_ids": [
+              "standby"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "standby-full",
+            "symbol": "ISTBY",
+            "name": "待机电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 250.0,
+            "unit": "μA",
+            "conditions": "−40≤TJ≤125°C；VIN=40 V；ON/OFF=5 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "standby"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "standby"
+        ],
+        "hits": [
+          {
+            "evidence_id": "standby",
+            "score": 112.59382
+          },
+          {
+            "evidence_id": "quiescent",
+            "score": 1.0168
+          },
+          {
+            "evidence_id": "leakage",
+            "score": 1.00299
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-12",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-bias",
+      "kind": "query",
+      "question": "Ib",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "bias"
+      ],
+      "expected_evidence": [
+        "bias"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "Ib",
+        "answer": "反馈偏置电流须按结温条件读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "ib-25",
+            "symbol": "Ib",
+            "name": "反馈偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 10.0,
+            "maximum": 50.0,
+            "unit": "nA",
+            "conditions": "VIN=12 V；ILOAD=500 mA；VFB=1.3 V；TJ=25 °C",
+            "notes": [],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ib-full",
+            "symbol": "Ib",
+            "name": "反馈偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 100.0,
+            "unit": "nA",
+            "conditions": "VIN=12 V；ILOAD=500 mA；VFB=1.3 V；-40≤TJ≤125 °C",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "bias"
+        ],
+        "hits": [
+          {
+            "evidence_id": "bias",
+            "score": 104.26012
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-13",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-bias",
+      "kind": "query",
+      "question": "反馈偏置电流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "bias",
+        "vfb",
+        "divider"
+      ],
+      "expected_evidence": [
+        "bias"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "反馈偏置电流",
+        "answer": "反馈偏置电流须按结温条件读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "ib-25",
+            "symbol": "Ib",
+            "name": "反馈偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 10.0,
+            "maximum": 50.0,
+            "unit": "nA",
+            "conditions": "VIN=12 V；ILOAD=500 mA；VFB=1.3 V；TJ=25 °C",
+            "notes": [],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ib-full",
+            "symbol": "Ib",
+            "name": "反馈偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 100.0,
+            "unit": "nA",
+            "conditions": "VIN=12 V；ILOAD=500 mA；VFB=1.3 V；-40≤TJ≤125 °C",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "bias"
+        ],
+        "hits": [
+          {
+            "evidence_id": "bias",
+            "score": 120.80786
+          },
+          {
+            "evidence_id": "vfb",
+            "score": 2.44861
+          },
+          {
+            "evidence_id": "divider",
+            "score": 2.15558
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-14",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-saturation",
+      "kind": "query",
+      "question": "VSAT",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "saturation"
+      ],
+      "expected_evidence": [
+        "saturation"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "VSAT",
+        "answer": "饱和电压测试采用手册脚注指定的强制导通设置。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vsat-25",
+            "symbol": "VSAT",
+            "name": "饱和电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 1.16,
+            "maximum": 1.4,
+            "unit": "V",
+            "conditions": "TJ=25°C；IOUT=3 A；脚注(4)(5)",
+            "notes": [],
+            "evidence_ids": [
+              "saturation"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vsat-full",
+            "symbol": "VSAT",
+            "name": "饱和电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 1.5,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；IOUT=3 A；脚注(4)(5)",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "saturation"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "saturation"
+        ],
+        "hits": [
+          {
+            "evidence_id": "saturation",
+            "score": 106.25573
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-15",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-saturation",
+      "kind": "query",
+      "question": "饱和电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "saturation",
+        "vfb",
+        "recommended"
+      ],
+      "expected_evidence": [
+        "saturation"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "饱和电压",
+        "answer": "饱和电压测试采用手册脚注指定的强制导通设置。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vsat-25",
+            "symbol": "VSAT",
+            "name": "饱和电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 1.16,
+            "maximum": 1.4,
+            "unit": "V",
+            "conditions": "TJ=25°C；IOUT=3 A；脚注(4)(5)",
+            "notes": [],
+            "evidence_ids": [
+              "saturation"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vsat-full",
+            "symbol": "VSAT",
+            "name": "饱和电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 1.5,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；IOUT=3 A；脚注(4)(5)",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "saturation"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "saturation"
+        ],
+        "hits": [
+          {
+            "evidence_id": "saturation",
+            "score": 113.04461
+          },
+          {
+            "evidence_id": "vfb",
+            "score": 1.22401
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 1.16871
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-16",
+      "category": "mechanism",
+      "split": "dev",
+      "family": "query-divider",
+      "kind": "query",
+      "question": "反馈分压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "divider",
+        "vfb",
+        "bias"
+      ],
+      "expected_evidence": [
+        "divider"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "evidence_only",
+        "question": "反馈分压",
+        "answer": "标称 VOUT≈1.23×(1+R2/R1)，R1 是 FB 到 GND 的下侧电阻，建议取 240 Ω–1.5 kΩ；R2 是输出到 FB 的上侧电阻。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "divider"
+        ],
+        "hits": [
+          {
+            "evidence_id": "divider",
+            "score": 113.97736
+          },
+          {
+            "evidence_id": "vfb",
+            "score": 2.44861
+          },
+          {
+            "evidence_id": "bias",
+            "score": 2.29137
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-17",
+      "category": "mechanism",
+      "split": "dev",
+      "family": "query-divider",
+      "kind": "query",
+      "question": "R1",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "divider"
+      ],
+      "expected_evidence": [
+        "divider"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "evidence_only",
+        "question": "R1",
+        "answer": "标称 VOUT≈1.23×(1+R2/R1)，R1 是 FB 到 GND 的下侧电阻，建议取 240 Ω–1.5 kΩ；R2 是输出到 FB 的上侧电阻。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "divider"
+        ],
+        "hits": [
+          {
+            "evidence_id": "divider",
+            "score": 106.1853
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-18",
+      "category": "mechanism",
+      "split": "dev",
+      "family": "query-pins",
+      "kind": "query",
+      "question": "引脚功能",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "pins",
+        "abs"
+      ],
+      "expected_evidence": [
+        "pins"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "evidence_only",
+        "question": "引脚功能",
+        "answer": "5 引脚包括 VIN、开关 Output、GND、Feedback 和 ON/OFF。Output 是开关节点，不能当作滤波后的稳压输出。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "pins"
+        ],
+        "hits": [
+          {
+            "evidence_id": "pins",
+            "score": 111.45618
+          },
+          {
+            "evidence_id": "abs",
+            "score": 1.69665
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-19",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vfb",
+      "kind": "query",
+      "question": "VFB",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vfb",
+        "abs"
+      ],
+      "expected_evidence": [
+        "vfb"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "VFB",
+        "answer": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V",
+            "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vfb-full",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.18,
+            "typical": null,
+            "maximum": 1.28,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "efficiency",
+            "symbol": "η",
+            "name": "效率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 73.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+            "notes": [
+              "典型效率不保证其他电路、负载或布局下的效率。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vfb",
+            "score": 106.14313
+          },
+          {
+            "evidence_id": "abs",
+            "score": 104.69665
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {
+          "vin": "12 V",
+          "tj": "25 °C",
+          "load_current": "0.5 A",
+          "output_voltage": "3 V"
+        },
+        "applicability": [
+          {
+            "parameter_id": "vfb-25",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "vfb-full",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "efficiency",
+            "status": "not_evaluated",
+            "reasons": [
+              "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-20",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vfb",
+      "kind": "query",
+      "question": "VFB",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vfb",
+        "abs"
+      ],
+      "expected_evidence": [
+        "vfb"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "VFB",
+        "answer": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V",
+            "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vfb-full",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.18,
+            "typical": null,
+            "maximum": 1.28,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "efficiency",
+            "symbol": "η",
+            "name": "效率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 73.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+            "notes": [
+              "典型效率不保证其他电路、负载或布局下的效率。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vfb",
+            "score": 106.14313
+          },
+          {
+            "evidence_id": "abs",
+            "score": 104.69665
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {
+          "vin": "12 V",
+          "tj": "100 °C",
+          "load_current": "0.5 A",
+          "output_voltage": "3 V"
+        },
+        "applicability": [
+          {
+            "parameter_id": "vfb-25",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 结温 TJ 的原表条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "vfb-full",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "efficiency",
+            "status": "not_evaluated",
+            "reasons": [
+              "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-21",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vfb",
+      "kind": "query",
+      "question": "VFB",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vfb",
+        "abs"
+      ],
+      "expected_evidence": [
+        "vfb"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "VFB",
+        "answer": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V",
+            "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vfb-full",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.18,
+            "typical": null,
+            "maximum": 1.28,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "efficiency",
+            "symbol": "η",
+            "name": "效率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 73.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+            "notes": [
+              "典型效率不保证其他电路、负载或布局下的效率。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vfb",
+            "score": 106.14313
+          },
+          {
+            "evidence_id": "abs",
+            "score": 104.69665
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {
+          "vin": "12 V",
+          "load_current": "0.5 A",
+          "output_voltage": "3 V"
+        },
+        "applicability": [
+          {
+            "parameter_id": "vfb-25",
+            "status": "needs_information",
+            "reasons": [
+              "待确认 结温 TJ。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "vfb-full",
+            "status": "needs_information",
+            "reasons": [
+              "待确认 结温 TJ。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "efficiency",
+            "status": "not_evaluated",
+            "reasons": [
+              "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-22",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vfb",
+      "kind": "query",
+      "question": "VFB",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vfb",
+        "abs"
+      ],
+      "expected_evidence": [
+        "vfb"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "VFB",
+        "answer": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V",
+            "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vfb-full",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.18,
+            "typical": null,
+            "maximum": 1.28,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "efficiency",
+            "symbol": "η",
+            "name": "效率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 73.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+            "notes": [
+              "典型效率不保证其他电路、负载或布局下的效率。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vfb",
+            "score": 106.14313
+          },
+          {
+            "evidence_id": "abs",
+            "score": 104.69665
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {
+          "vin": "12 V",
+          "tj": "25 °C",
+          "load_current": "100 mA",
+          "output_voltage": "3 V"
+        },
+        "applicability": [
+          {
+            "parameter_id": "vfb-25",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 负载电流 ILOAD 的原表条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "vfb-full",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 负载电流 ILOAD 的原表条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "efficiency",
+            "status": "not_evaluated",
+            "reasons": [
+              "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-23",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vfb",
+      "kind": "query",
+      "question": "VFB",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vfb",
+        "abs"
+      ],
+      "expected_evidence": [
+        "vfb"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "VFB",
+        "answer": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V",
+            "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vfb-full",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.18,
+            "typical": null,
+            "maximum": 1.28,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "efficiency",
+            "symbol": "η",
+            "name": "效率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 73.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+            "notes": [
+              "典型效率不保证其他电路、负载或布局下的效率。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vfb",
+            "score": 106.14313
+          },
+          {
+            "evidence_id": "abs",
+            "score": 104.69665
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {
+          "vin": "4.4 V",
+          "tj": "25 °C",
+          "load_current": "0.5 A",
+          "output_voltage": "3 V"
+        },
+        "applicability": [
+          {
+            "parameter_id": "vfb-25",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 输入电压 VIN 的原表条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "vfb-full",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 输入电压 VIN 的原表条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "efficiency",
+            "status": "not_evaluated",
+            "reasons": [
+              "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-24",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vfb",
+      "kind": "query",
+      "question": "VFB",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vfb",
+        "abs"
+      ],
+      "expected_evidence": [
+        "vfb"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "VFB",
+        "answer": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V",
+            "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vfb-full",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.18,
+            "typical": null,
+            "maximum": 1.28,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "efficiency",
+            "symbol": "η",
+            "name": "效率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 73.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+            "notes": [
+              "典型效率不保证其他电路、负载或布局下的效率。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vfb",
+            "score": 106.14313
+          },
+          {
+            "evidence_id": "abs",
+            "score": 104.69665
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {
+          "vin": "12 V",
+          "tj": "25 °C",
+          "load_current": "0.5 A",
+          "output_voltage": "5 V"
+        },
+        "applicability": [
+          {
+            "parameter_id": "vfb-25",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 稳压输出 VOUT（不是开关节点） 的原表条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "vfb-full",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 稳压输出 VOUT（不是开关节点） 的原表条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "efficiency",
+            "status": "not_evaluated",
+            "reasons": [
+              "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-25",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-vfb",
+      "kind": "query",
+      "question": "η",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vfb"
+      ],
+      "expected_evidence": [
+        "vfb"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "η",
+        "answer": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V",
+            "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vfb-full",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.18,
+            "typical": null,
+            "maximum": 1.28,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "efficiency",
+            "symbol": "η",
+            "name": "效率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 73.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+            "notes": [
+              "典型效率不保证其他电路、负载或布局下的效率。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vfb",
+            "score": 101.0
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-26",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vfb",
+      "kind": "query",
+      "question": "VFB",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vfb",
+        "abs"
+      ],
+      "expected_evidence": [
+        "vfb"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "VFB",
+        "answer": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V",
+            "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vfb-full",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.18,
+            "typical": null,
+            "maximum": 1.28,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "efficiency",
+            "symbol": "η",
+            "name": "效率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 73.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+            "notes": [
+              "典型效率不保证其他电路、负载或布局下的效率。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vfb",
+            "score": 106.14313
+          },
+          {
+            "evidence_id": "abs",
+            "score": 104.69665
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {
+          "vin": "12000 mV",
+          "tj": "25 °C",
+          "load_current": "500 mA",
+          "output_voltage": "3 V"
+        },
+        "applicability": [
+          {
+            "parameter_id": "vfb-25",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "vfb-full",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "efficiency",
+            "status": "not_evaluated",
+            "reasons": [
+              "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-27",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vfb",
+      "kind": "query",
+      "question": "VFB",
+      "passed": true,
+      "errors": [],
+      "actual_status": "invalid",
+      "top3": [
+        "vfb",
+        "abs"
+      ],
+      "expected_evidence": [
+        "vfb"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "invalid",
+        "question": "VFB",
+        "answer": "筛选条件需要修改；原始参数行保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vfb-25",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V",
+            "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vfb-full",
+            "symbol": "VFB",
+            "name": "反馈基准",
+            "rating": "electrical",
+            "minimum": 1.18,
+            "typical": null,
+            "maximum": 1.28,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "efficiency",
+            "symbol": "η",
+            "name": "效率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 73.0,
+            "maximum": null,
+            "unit": "%",
+            "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+            "notes": [
+              "典型效率不保证其他电路、负载或布局下的效率。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vfb",
+            "score": 106.14313
+          },
+          {
+            "evidence_id": "abs",
+            "score": 104.69665
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {
+          "vin": "12",
+          "tj": "25 °C",
+          "load_current": "0.5 A",
+          "output_voltage": "3 V"
+        },
+        "applicability": [
+          {
+            "parameter_id": "vfb-25",
+            "status": "invalid",
+            "reasons": [
+              "输入电压 VIN：请输入有限数值并明确单位，例如 12 V、100 kHz、200 kΩ、470 pF、25 °C。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "vfb-full",
+            "status": "invalid",
+            "reasons": [
+              "输入电压 VIN：请输入有限数值并明确单位，例如 12 V、100 kHz、200 kΩ、470 pF、25 °C。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          },
+          {
+            "parameter_id": "efficiency",
+            "status": "not_evaluated",
+            "reasons": [
+              "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+            ],
+            "evidence_ids": [
+              "vfb",
+              "vfb-note"
+            ]
+          }
+        ],
+        "condition_errors": {
+          "vin": "请输入有限数值并明确单位，例如 12 V、100 kHz、200 kΩ、470 pF、25 °C。"
+        }
+      }
+    },
+    {
+      "id": "lm2596-adj-28",
+      "category": "unanswerable",
+      "split": "dev",
+      "family": "unknown-dev",
+      "kind": "query",
+      "question": "qzxw987654",
+      "passed": true,
+      "errors": [],
+      "actual_status": "not_found",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "not_found",
+        "question": "qzxw987654",
+        "answer": "在当前型号的已整理证据中未找到匹配内容。请试用明确参数符号或中文参数名。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-29",
+      "category": "unanswerable",
+      "split": "dev",
+      "family": "unknown-dev",
+      "kind": "query",
+      "question": "做一盘番茄炒蛋",
+      "passed": true,
+      "errors": [],
+      "actual_status": "not_found",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "not_found",
+        "question": "做一盘番茄炒蛋",
+        "answer": "在当前型号的已整理证据中未找到匹配内容。请试用明确参数符号或中文参数名。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-30",
+      "category": "unsupported",
+      "split": "dev",
+      "family": "foreign-dev",
+      "kind": "query",
+      "question": "MP1584 的参考电压是多少",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "unsupported",
+        "question": "MP1584 的参考电压是多少",
+        "answer": "当前所选资料只覆盖 LM2596-ADJ（TI）。问题包含其他型号或后缀，请切换对应芯片；没有收录的型号不能沿用当前规格。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-31",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-oscillator",
+      "kind": "query",
+      "question": "fO",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "oscillator"
+      ],
+      "expected_evidence": [
+        "oscillator"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "fO",
+        "answer": "内部振荡器固定为标称 150 kHz；上下限随结温条件分别给出，不能使用 TPS40200 的外部 RC 公式。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "fosc-25",
+            "symbol": "fO",
+            "name": "振荡频率",
+            "rating": "electrical",
+            "minimum": 127.0,
+            "typical": 150.0,
+            "maximum": 173.0,
+            "unit": "kHz",
+            "conditions": "VIN=12 V；ILOAD=500 mA；TJ=25 °C",
+            "notes": [],
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "fosc-full",
+            "symbol": "fO",
+            "name": "振荡频率",
+            "rating": "electrical",
+            "minimum": 110.0,
+            "typical": null,
+            "maximum": 173.0,
+            "unit": "kHz",
+            "conditions": "VIN=12 V；ILOAD=500 mA；-40≤TJ≤125 °C",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "oscillator"
+        ],
+        "hits": [
+          {
+            "evidence_id": "oscillator",
+            "score": 104.19614
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-32",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-oscillator",
+      "kind": "query",
+      "question": "振荡频率",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "oscillator"
+      ],
+      "expected_evidence": [
+        "oscillator"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "振荡频率",
+        "answer": "内部振荡器固定为标称 150 kHz；上下限随结温条件分别给出，不能使用 TPS40200 的外部 RC 公式。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "fosc-25",
+            "symbol": "fO",
+            "name": "振荡频率",
+            "rating": "electrical",
+            "minimum": 127.0,
+            "typical": 150.0,
+            "maximum": 173.0,
+            "unit": "kHz",
+            "conditions": "VIN=12 V；ILOAD=500 mA；TJ=25 °C",
+            "notes": [],
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "fosc-full",
+            "symbol": "fO",
+            "name": "振荡频率",
+            "rating": "electrical",
+            "minimum": 110.0,
+            "typical": null,
+            "maximum": 173.0,
+            "unit": "kHz",
+            "conditions": "VIN=12 V；ILOAD=500 mA；-40≤TJ≤125 °C",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "oscillator"
+        ],
+        "hits": [
+          {
+            "evidence_id": "oscillator",
+            "score": 115.20211
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-33",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-oscillator",
+      "kind": "query",
+      "question": "开关频率上下限",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "oscillator",
+        "vfb",
+        "pins"
+      ],
+      "expected_evidence": [
+        "oscillator"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "开关频率上下限",
+        "answer": "内部振荡器固定为标称 150 kHz；上下限随结温条件分别给出，不能使用 TPS40200 的外部 RC 公式。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "fosc-25",
+            "symbol": "fO",
+            "name": "振荡频率",
+            "rating": "electrical",
+            "minimum": 127.0,
+            "typical": 150.0,
+            "maximum": 173.0,
+            "unit": "kHz",
+            "conditions": "VIN=12 V；ILOAD=500 mA；TJ=25 °C",
+            "notes": [],
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "fosc-full",
+            "symbol": "fO",
+            "name": "振荡频率",
+            "rating": "electrical",
+            "minimum": 110.0,
+            "typical": null,
+            "maximum": 173.0,
+            "unit": "kHz",
+            "conditions": "VIN=12 V；ILOAD=500 mA；-40≤TJ≤125 °C",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "oscillator"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "oscillator"
+        ],
+        "hits": [
+          {
+            "evidence_id": "oscillator",
+            "score": 115.02506
+          },
+          {
+            "evidence_id": "vfb",
+            "score": 3.87599
+          },
+          {
+            "evidence_id": "pins",
+            "score": 1.877
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-34",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-shutdown",
+      "kind": "query",
+      "question": "ON/OFF",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "shutdown",
+        "logic-current",
+        "pins"
+      ],
+      "expected_evidence": [
+        "shutdown"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "ON/OFF",
+        "answer": "ON/OFF 低电平启用、高电平关闭。原表 VIH/VIL 名称照录，具体逻辑以 Low ON / High OFF 为准。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "on-25",
+            "symbol": "VIH",
+            "name": "低电平启用阈值",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 1.3,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "TJ=25°C；Low (regulator ON)",
+            "notes": [],
+            "evidence_ids": [
+              "shutdown"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "on-full",
+            "symbol": "VIH",
+            "name": "低电平启用阈值",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 0.6,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；Low (regulator ON)",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "shutdown"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "off-25",
+            "symbol": "VIL",
+            "name": "高电平关闭阈值",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 1.3,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "TJ=25°C；High (regulator OFF)",
+            "notes": [],
+            "evidence_ids": [
+              "shutdown"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "off-full",
+            "symbol": "VIL",
+            "name": "高电平关闭阈值",
+            "rating": "electrical",
+            "minimum": 2.0,
+            "typical": null,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；High (regulator OFF)",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "shutdown"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "shutdown"
+        ],
+        "hits": [
+          {
+            "evidence_id": "shutdown",
+            "score": 107.71934
+          },
+          {
+            "evidence_id": "logic-current",
+            "score": 1.75958
+          },
+          {
+            "evidence_id": "pins",
+            "score": 1.54033
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-35",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-shutdown",
+      "kind": "query",
+      "question": "关闭控制阈值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "shutdown",
+        "current-limit",
+        "logic-current"
+      ],
+      "expected_evidence": [
+        "shutdown"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "关闭控制阈值",
+        "answer": "ON/OFF 低电平启用、高电平关闭。原表 VIH/VIL 名称照录，具体逻辑以 Low ON / High OFF 为准。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "on-25",
+            "symbol": "VIH",
+            "name": "低电平启用阈值",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 1.3,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "TJ=25°C；Low (regulator ON)",
+            "notes": [],
+            "evidence_ids": [
+              "shutdown"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "on-full",
+            "symbol": "VIH",
+            "name": "低电平启用阈值",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 0.6,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；Low (regulator ON)",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "shutdown"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "off-25",
+            "symbol": "VIL",
+            "name": "高电平关闭阈值",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 1.3,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "TJ=25°C；High (regulator OFF)",
+            "notes": [],
+            "evidence_ids": [
+              "shutdown"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "off-full",
+            "symbol": "VIL",
+            "name": "高电平关闭阈值",
+            "rating": "electrical",
+            "minimum": 2.0,
+            "typical": null,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "−40≤TJ≤125°C；High (regulator OFF)",
+            "notes": [
+              "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+            ],
+            "evidence_ids": [
+              "shutdown"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "shutdown"
+        ],
+        "hits": [
+          {
+            "evidence_id": "shutdown",
+            "score": 115.06792
+          },
+          {
+            "evidence_id": "current-limit",
+            "score": 1.71971
+          },
+          {
+            "evidence_id": "logic-current",
+            "score": 1.68695
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-36",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-logic-current",
+      "kind": "query",
+      "question": "逻辑输入电流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "logic-current",
+        "recommended",
+        "shutdown"
+      ],
+      "expected_evidence": [
+        "logic-current"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "逻辑输入电流",
+        "answer": "ON/OFF 输入电流分别对应 2.5 V 关闭和 0.5 V 启用。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "logic-off",
+            "symbol": "IH",
+            "name": "关闭输入电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 5.0,
+            "maximum": 15.0,
+            "unit": "μA",
+            "conditions": "VIN=12 V；ILOAD=500 mA；ON/OFF=2.5 V；TJ=25 °C",
+            "notes": [],
+            "evidence_ids": [
+              "logic-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "logic-on",
+            "symbol": "IL",
+            "name": "启用输入电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.02,
+            "maximum": 5.0,
+            "unit": "μA",
+            "conditions": "VIN=12 V；ILOAD=500 mA；ON/OFF=0.5 V；TJ=25 °C",
+            "notes": [],
+            "evidence_ids": [
+              "logic-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "logic-current"
+        ],
+        "hits": [
+          {
+            "evidence_id": "logic-current",
+            "score": 116.595
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 5.17592
+          },
+          {
+            "evidence_id": "shutdown",
+            "score": 1.58151
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-37",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-leakage",
+      "kind": "query",
+      "question": "输出漏电流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "leakage",
+        "divider",
+        "vfb"
+      ],
+      "expected_evidence": [
+        "leakage"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "输出漏电流",
+        "answer": "输出漏电流使用强制关断且无外接二极管、电感、电容的测试设置。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "leakage-zero",
+            "symbol": "IL",
+            "name": "输出漏电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 50.0,
+            "unit": "μA",
+            "conditions": "TJ=25°C；Output=0 V；VIN=40 V；脚注(4)(6)",
+            "notes": [],
+            "evidence_ids": [
+              "leakage"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "leakage-negative",
+            "symbol": "IL",
+            "name": "输出漏电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.0,
+            "maximum": 30.0,
+            "unit": "mA",
+            "conditions": "TJ=25°C；Output=−1 V；脚注(4)(6)",
+            "notes": [],
+            "evidence_ids": [
+              "leakage"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "leakage"
+        ],
+        "hits": [
+          {
+            "evidence_id": "leakage",
+            "score": 115.81162
+          },
+          {
+            "evidence_id": "divider",
+            "score": 1.91752
+          },
+          {
+            "evidence_id": "vfb",
+            "score": 1.16692
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-38",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-leakage",
+      "kind": "query",
+      "question": "漏电流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "leakage",
+        "quiescent",
+        "logic-current"
+      ],
+      "expected_evidence": [
+        "leakage"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "漏电流",
+        "answer": "输出漏电流使用强制关断且无外接二极管、电感、电容的测试设置。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "leakage-zero",
+            "symbol": "IL",
+            "name": "输出漏电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 50.0,
+            "unit": "μA",
+            "conditions": "TJ=25°C；Output=0 V；VIN=40 V；脚注(4)(6)",
+            "notes": [],
+            "evidence_ids": [
+              "leakage"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "leakage-negative",
+            "symbol": "IL",
+            "name": "输出漏电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.0,
+            "maximum": 30.0,
+            "unit": "mA",
+            "conditions": "TJ=25°C；Output=−1 V；脚注(4)(6)",
+            "notes": [],
+            "evidence_ids": [
+              "leakage"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "leakage"
+        ],
+        "hits": [
+          {
+            "evidence_id": "leakage",
+            "score": 108.21836
+          },
+          {
+            "evidence_id": "quiescent",
+            "score": 1.0168
+          },
+          {
+            "evidence_id": "logic-current",
+            "score": 1.00027
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-39",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-abs",
+      "kind": "query",
+      "question": "绝对最大额定值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "abs",
+        "recommended"
+      ],
+      "expected_evidence": [
+        "abs"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "绝对最大额定值",
+        "answer": "绝对最大额定值属于应力限制，不能作为正常工作范围。SD/SS、Delay、Flag 与本型号引脚表不一致，保留原文，暂不转录这些行。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "abs-vin",
+            "symbol": "VIN",
+            "name": "最大供电电压",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 45.0,
+            "unit": "V",
+            "conditions": "应力额定值",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-fb",
+            "symbol": "VFB",
+            "name": "反馈引脚应力电压",
+            "rating": "absolute_maximum",
+            "minimum": -0.3,
+            "typical": null,
+            "maximum": 25.0,
+            "unit": "V",
+            "conditions": "相对 GND",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-output",
+            "symbol": "VSW",
+            "name": "输出开关引脚稳态电压（原表列）",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": -1.0,
+            "unit": "V",
+            "conditions": "原表 MAX 列为−1 V，按原列保留，解释待核对；不用于自动电压约束",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-pd",
+            "symbol": "PD",
+            "name": "功耗",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": null,
+            "unit": "",
+            "conditions": "原表合并限制栏：Internally limited；不是任意散热条件下的可用功率",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-lead-vapor",
+            "symbol": "Tlead",
+            "name": "引线温度：汽相",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 215.0,
+            "unit": "°C",
+            "conditions": "KTW；汽相 60 s",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-lead-ir",
+            "symbol": "Tlead",
+            "name": "引线温度：红外",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 245.0,
+            "unit": "°C",
+            "conditions": "KTW；红外 10 s",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-lead-solder",
+            "symbol": "Tlead",
+            "name": "引线焊接温度",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 260.0,
+            "unit": "°C",
+            "conditions": "NDZ；焊接 10 s；封装旧代码照录",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-tj",
+            "symbol": "TJ",
+            "name": "最大结温",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "应力额定值",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-storage",
+            "symbol": "Tstg",
+            "name": "储存温度",
+            "rating": "absolute_maximum",
+            "minimum": -65.0,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "储存，不代表工作温度",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "abs"
+        ],
+        "hits": [
+          {
+            "evidence_id": "abs",
+            "score": 327.26359
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 7.79207
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-40",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-abs",
+      "kind": "query",
+      "question": "极限电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "abs",
+        "saturation",
+        "vfb"
+      ],
+      "expected_evidence": [
+        "abs"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "极限电压",
+        "answer": "绝对最大额定值属于应力限制，不能作为正常工作范围。SD/SS、Delay、Flag 与本型号引脚表不一致，保留原文，暂不转录这些行。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "abs-vin",
+            "symbol": "VIN",
+            "name": "最大供电电压",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 45.0,
+            "unit": "V",
+            "conditions": "应力额定值",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-fb",
+            "symbol": "VFB",
+            "name": "反馈引脚应力电压",
+            "rating": "absolute_maximum",
+            "minimum": -0.3,
+            "typical": null,
+            "maximum": 25.0,
+            "unit": "V",
+            "conditions": "相对 GND",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-output",
+            "symbol": "VSW",
+            "name": "输出开关引脚稳态电压（原表列）",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": -1.0,
+            "unit": "V",
+            "conditions": "原表 MAX 列为−1 V，按原列保留，解释待核对；不用于自动电压约束",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-pd",
+            "symbol": "PD",
+            "name": "功耗",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": null,
+            "unit": "",
+            "conditions": "原表合并限制栏：Internally limited；不是任意散热条件下的可用功率",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-lead-vapor",
+            "symbol": "Tlead",
+            "name": "引线温度：汽相",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 215.0,
+            "unit": "°C",
+            "conditions": "KTW；汽相 60 s",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-lead-ir",
+            "symbol": "Tlead",
+            "name": "引线温度：红外",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 245.0,
+            "unit": "°C",
+            "conditions": "KTW；红外 10 s",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-lead-solder",
+            "symbol": "Tlead",
+            "name": "引线焊接温度",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 260.0,
+            "unit": "°C",
+            "conditions": "NDZ；焊接 10 s；封装旧代码照录",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-tj",
+            "symbol": "TJ",
+            "name": "最大结温",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "应力额定值",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-storage",
+            "symbol": "Tstg",
+            "name": "储存温度",
+            "rating": "absolute_maximum",
+            "minimum": -65.0,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "储存，不代表工作温度",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "abs"
+        ],
+        "hits": [
+          {
+            "evidence_id": "abs",
+            "score": 109.22304
+          },
+          {
+            "evidence_id": "saturation",
+            "score": 1.32201
+          },
+          {
+            "evidence_id": "vfb",
+            "score": 1.22401
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-41",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-vin",
+      "kind": "check",
+      "question": "{'vin': '4.5 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "工作输入电压 VIN：满足该项。4.5 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+        "inputs": {
+          "vin": "4.5 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "satisfied",
+            "message": "4.5 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 4.5,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "needs_information",
+            "message": "请提供下侧电阻 R1（FB → GND）、上侧电阻 R2（VOUT → FB）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower",
+              "r_upper"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "needs_information",
+            "message": "请提供下侧电阻 R1（FB → GND）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-42",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-vin",
+      "kind": "check",
+      "question": "{'vin': '40 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "工作输入电压 VIN：满足该项。40 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+        "inputs": {
+          "vin": "40 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "satisfied",
+            "message": "40 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 40.0,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "needs_information",
+            "message": "请提供下侧电阻 R1（FB → GND）、上侧电阻 R2（VOUT → FB）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower",
+              "r_upper"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "needs_information",
+            "message": "请提供下侧电阻 R1（FB → GND）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-43",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-vin",
+      "kind": "check",
+      "question": "{'vin': '4.499 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "工作输入电压 VIN：不满足该项。4.499 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+        "inputs": {
+          "vin": "4.499 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "violated",
+            "message": "4.499 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 4.499,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "needs_information",
+            "message": "请提供下侧电阻 R1（FB → GND）、上侧电阻 R2（VOUT → FB）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower",
+              "r_upper"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "needs_information",
+            "message": "请提供下侧电阻 R1（FB → GND）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-44",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-vin",
+      "kind": "check",
+      "question": "{'vin': '40.001 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "工作输入电压 VIN：不满足该项。40.001 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+        "inputs": {
+          "vin": "40.001 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "violated",
+            "message": "40.001 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 40.001,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "needs_information",
+            "message": "请提供下侧电阻 R1（FB → GND）、上侧电阻 R2（VOUT → FB）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower",
+              "r_upper"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "needs_information",
+            "message": "请提供下侧电阻 R1（FB → GND）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-45",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-vin",
+      "kind": "check",
+      "question": "{'vin': '45 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "工作输入电压 VIN：不满足该项。45 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+        "inputs": {
+          "vin": "45 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "violated",
+            "message": "45 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 45.0,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "needs_information",
+            "message": "请提供下侧电阻 R1（FB → GND）、上侧电阻 R2（VOUT → FB）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower",
+              "r_upper"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "needs_information",
+            "message": "请提供下侧电阻 R1（FB → GND）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-46",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-vin",
+      "kind": "check",
+      "question": "{'vin': '4500 mV'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "工作输入电压 VIN：满足该项。4.500 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+        "inputs": {
+          "vin": "4500 mV"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "satisfied",
+            "message": "4.500 V；该项范围为 4.5–40 V（含边界）。45 V 是绝对最大值，不能代替工作范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 4.5,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "needs_information",
+            "message": "请提供下侧电阻 R1（FB → GND）、上侧电阻 R2（VOUT → FB）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower",
+              "r_upper"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "needs_information",
+            "message": "请提供下侧电阻 R1（FB → GND）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-47",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-divider_r1",
+      "kind": "check",
+      "question": "{'r_lower': '240 Ω'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "divider"
+      ],
+      "expected_evidence": [
+        "divider"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "应用建议：下侧电阻 R1：满足该项。240 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+        "inputs": {
+          "r_lower": "240 Ω"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "needs_information",
+            "message": "请提供输入电压 VIN；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vin"
+            ]
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "needs_information",
+            "message": "请提供上侧电阻 R2（VOUT → FB）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_upper"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "satisfied",
+            "message": "240 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": 240.0,
+            "unit": "Ω",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          }
+        ],
+        "evidence_ids": [
+          "divider"
+        ],
+        "hits": [
+          {
+            "evidence_id": "divider",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-48",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-divider_r1",
+      "kind": "check",
+      "question": "{'r_lower': '1.5 kΩ'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "divider"
+      ],
+      "expected_evidence": [
+        "divider"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "应用建议：下侧电阻 R1：满足该项。1500.0 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+        "inputs": {
+          "r_lower": "1.5 kΩ"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "needs_information",
+            "message": "请提供输入电压 VIN；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vin"
+            ]
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "needs_information",
+            "message": "请提供上侧电阻 R2（VOUT → FB）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_upper"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "satisfied",
+            "message": "1500.0 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": 1500.0,
+            "unit": "Ω",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          }
+        ],
+        "evidence_ids": [
+          "divider"
+        ],
+        "hits": [
+          {
+            "evidence_id": "divider",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-49",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-divider_r1",
+      "kind": "check",
+      "question": "{'r_lower': '239 Ω'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "divider"
+      ],
+      "expected_evidence": [
+        "divider"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "应用建议：下侧电阻 R1：不满足该项。239 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+        "inputs": {
+          "r_lower": "239 Ω"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "needs_information",
+            "message": "请提供输入电压 VIN；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vin"
+            ]
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "needs_information",
+            "message": "请提供上侧电阻 R2（VOUT → FB）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_upper"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "violated",
+            "message": "239 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": 239.0,
+            "unit": "Ω",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          }
+        ],
+        "evidence_ids": [
+          "divider"
+        ],
+        "hits": [
+          {
+            "evidence_id": "divider",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-50",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-divider_r1",
+      "kind": "check",
+      "question": "{'r_lower': '1501 Ω'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "divider"
+      ],
+      "expected_evidence": [
+        "divider"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "应用建议：下侧电阻 R1：不满足该项。1501 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+        "inputs": {
+          "r_lower": "1501 Ω"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "needs_information",
+            "message": "请提供输入电压 VIN；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vin"
+            ]
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "needs_information",
+            "message": "请提供上侧电阻 R2（VOUT → FB）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_upper"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "violated",
+            "message": "1501 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": 1501.0,
+            "unit": "Ω",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          }
+        ],
+        "evidence_ids": [
+          "divider"
+        ],
+        "hits": [
+          {
+            "evidence_id": "divider",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-51",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-divider_voltage",
+      "kind": "check",
+      "question": "{'r_lower': '0 Ω', 'r_upper': '3 kΩ'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "invalid",
+      "top3": [
+        "divider"
+      ],
+      "expected_evidence": [
+        "divider"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "invalid",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "反馈分压标称输出：输入需要修改。下侧电阻 R1（FB → GND）：电阻和电容必须大于零。\n应用建议：下侧电阻 R1：输入需要修改。下侧电阻 R1（FB → GND）：电阻和电容必须大于零。",
+        "inputs": {
+          "r_lower": "0 Ω",
+          "r_upper": "3 kΩ"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "needs_information",
+            "message": "请提供输入电压 VIN；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vin"
+            ]
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "invalid",
+            "message": "下侧电阻 R1（FB → GND）：电阻和电容必须大于零。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "invalid",
+            "message": "下侧电阻 R1（FB → GND）：电阻和电容必须大于零。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_lower"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "divider"
+        ],
+        "hits": [
+          {
+            "evidence_id": "divider",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-52",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-divider_voltage",
+      "kind": "check",
+      "question": "{'r_lower': '1 kΩ', 'r_upper': '-1 Ω'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "invalid",
+      "top3": [
+        "divider"
+      ],
+      "expected_evidence": [
+        "divider"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "invalid",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "反馈分压标称输出：输入需要修改。上侧电阻 R2（VOUT → FB）：电阻和电容必须大于零。\n应用建议：下侧电阻 R1：满足该项。1000 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+        "inputs": {
+          "r_lower": "1 kΩ",
+          "r_upper": "-1 Ω"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "needs_information",
+            "message": "请提供输入电压 VIN；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vin"
+            ]
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "invalid",
+            "message": "上侧电阻 R2（VOUT → FB）：电阻和电容必须大于零。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_upper"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "satisfied",
+            "message": "1000 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": 1000.0,
+            "unit": "Ω",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          }
+        ],
+        "evidence_ids": [
+          "divider"
+        ],
+        "hits": [
+          {
+            "evidence_id": "divider",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-53",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-divider_voltage",
+      "kind": "check",
+      "question": "{'r_lower': '1 kΩ'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "divider"
+      ],
+      "expected_evidence": [
+        "divider"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "应用建议：下侧电阻 R1：满足该项。1000 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+        "inputs": {
+          "r_lower": "1 kΩ"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "needs_information",
+            "message": "请提供输入电压 VIN；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vin"
+            ]
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "needs_information",
+            "message": "请提供上侧电阻 R2（VOUT → FB）；不使用隐含默认值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "r_upper"
+            ]
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "satisfied",
+            "message": "1000 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": 1000.0,
+            "unit": "Ω",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          }
+        ],
+        "evidence_ids": [
+          "divider"
+        ],
+        "hits": [
+          {
+            "evidence_id": "divider",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-54",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-divider_voltage",
+      "kind": "check",
+      "question": "{'r_lower': '1000 Ω', 'r_upper': '0.003 MΩ'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "divider"
+      ],
+      "expected_evidence": [
+        "divider"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "answered",
+        "question": "LM2596-ADJ 条件检查",
+        "answer": "反馈分压标称输出：标称估算。R1 为 FB→GND，R2 为 VOUT→FB；VOUT≈1.23×(1+R2/R1)=4.92 V。仅为标称估算，不含基准与电阻误差。\n应用建议：下侧电阻 R1：满足该项。1000 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+        "inputs": {
+          "r_lower": "1000 Ω",
+          "r_upper": "0.003 MΩ"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "vin",
+            "title": "工作输入电压 VIN",
+            "status": "needs_information",
+            "message": "请提供输入电压 VIN；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "vin"
+            ]
+          },
+          {
+            "rule": "divider_voltage",
+            "title": "反馈分压标称输出",
+            "status": "estimated",
+            "message": "R1 为 FB→GND，R2 为 VOUT→FB；VOUT≈1.23×(1+R2/R1)=4.92 V。仅为标称估算，不含基准与电阻误差。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": 4.92,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "divider_r1",
+            "title": "应用建议：下侧电阻 R1",
+            "status": "satisfied",
+            "message": "1000 Ω；该项范围为 240–1500 Ω（含边界）。这是分压网络的应用建议，不是绝对最大额定值。",
+            "evidence_ids": [
+              "divider"
+            ],
+            "value": 1000.0,
+            "unit": "Ω",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          }
+        ],
+        "evidence_ids": [
+          "divider"
+        ],
+        "hits": [
+          {
+            "evidence_id": "divider",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "标称输出公式不能保证压差、热、负载、补偿、磁性元件或布局满足要求。",
+          "工作温度原表未明确 TA/TJ；本页不把它转换成环境温度或结温规则。"
+        ],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-55",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unsupported-holdout",
+      "kind": "query",
+      "question": "LM2596-5 的电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "unsupported",
+        "question": "LM2596-5 的电压",
+        "answer": "当前所选资料只覆盖 LM2596-ADJ（TI）。问题包含其他型号或后缀，请切换对应芯片；没有收录的型号不能沿用当前规格。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-56",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unsupported-holdout",
+      "kind": "query",
+      "question": "LM358 参数",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "unsupported",
+        "question": "LM358 参数",
+        "answer": "当前所选资料只覆盖 LM2596-ADJ（TI）。问题包含其他型号或后缀，请切换对应芯片；没有收录的型号不能沿用当前规格。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-57",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unsupported-holdout",
+      "kind": "query",
+      "question": "从曲线读出精确值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "unsupported",
+        "question": "从曲线读出精确值",
+        "answer": "当前支持手册证据与有限检查；曲线自动读数和完整电路设计判断暂不支持。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-58",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unsupported-holdout",
+      "kind": "query",
+      "question": "生成完整电路BOM",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "unsupported",
+        "question": "生成完整电路BOM",
+        "answer": "当前支持手册证据与有限检查；曲线自动读数和完整电路设计判断暂不支持。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-59",
+      "category": "unanswerable",
+      "split": "holdout",
+      "family": "missing-unit",
+      "kind": "query",
+      "question": "输入4.3能工作吗",
+      "passed": true,
+      "errors": [],
+      "actual_status": "needs_information",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "needs_information",
+        "question": "输入4.3能工作吗",
+        "answer": "请在条件检查页确认输入量与单位，不自动从多个电压中选择供电。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm2596-adj-60",
+      "category": "unanswerable",
+      "split": "holdout",
+      "family": "unknown-holdout",
+      "kind": "query",
+      "question": "qzxw555000",
+      "passed": true,
+      "errors": [],
+      "actual_status": "not_found",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm2596-adj",
+        "status": "not_found",
+        "question": "qzxw555000",
+        "answer": "在当前型号的已整理证据中未找到匹配内容。请试用明确参数符号或中文参数名。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "source_revision": "SNVS124G (Rev. G)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    }
+  ]
+}

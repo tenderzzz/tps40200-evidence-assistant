@@ -1,0 +1,655 @@
+[
+  {
+    "id": "abs-vcc",
+    "symbol": "VCC",
+    "name": "供电应力电压",
+    "rating": "absolute_maximum",
+    "minimum": null,
+    "typical": null,
+    "maximum": 18,
+    "unit": "V",
+    "conditions": "相对 GND",
+    "notes": [],
+    "evidence_ids": [
+      "abs"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "abs-input",
+    "symbol": "VI",
+    "name": "输入应力电压",
+    "rating": "absolute_maximum",
+    "minimum": null,
+    "typical": null,
+    "maximum": "VCC",
+    "unit": "V",
+    "conditions": "CONT、RESET、THRES、TRIG；相对 GND",
+    "notes": [],
+    "evidence_ids": [
+      "abs"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "abs-current",
+    "symbol": "IO",
+    "name": "输出应力电流",
+    "rating": "absolute_maximum",
+    "minimum": null,
+    "typical": null,
+    "maximum": "±225",
+    "unit": "mA",
+    "conditions": "±225 mA 在原表MAX列；保留列位置与双向含义",
+    "notes": [],
+    "evidence_ids": [
+      "abs"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "abs-tj",
+    "symbol": "TJ",
+    "name": "虚结温",
+    "rating": "absolute_maximum",
+    "minimum": null,
+    "typical": null,
+    "maximum": 150,
+    "unit": "°C",
+    "conditions": "应力限制；不能替代 TA",
+    "notes": [],
+    "evidence_ids": [
+      "abs"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "abs-storage",
+    "symbol": "Tstg",
+    "name": "储存温度",
+    "rating": "absolute_maximum",
+    "minimum": -65,
+    "typical": null,
+    "maximum": 150,
+    "unit": "°C",
+    "conditions": "储存条件",
+    "notes": [],
+    "evidence_ids": [
+      "abs"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "rec-vcc",
+    "symbol": "VCC",
+    "name": "推荐供电",
+    "rating": "recommended",
+    "minimum": 4.5,
+    "typical": null,
+    "maximum": 16,
+    "unit": "V",
+    "conditions": "NE555；相对 GND",
+    "notes": [],
+    "evidence_ids": [
+      "recommended"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "rec-current",
+    "symbol": "IO",
+    "name": "推荐输出电流",
+    "rating": "recommended",
+    "minimum": null,
+    "typical": null,
+    "maximum": "±200",
+    "unit": "mA",
+    "conditions": "原文MAX列为±200 mA；还需按输出电压与散热核对",
+    "notes": [],
+    "evidence_ids": [
+      "recommended"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "rec-ta",
+    "symbol": "TA",
+    "name": "环境温度",
+    "rating": "recommended",
+    "minimum": 0,
+    "typical": null,
+    "maximum": 70,
+    "unit": "°C",
+    "conditions": "NE555；Operating free-air temperature",
+    "notes": [],
+    "evidence_ids": [
+      "recommended"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "threshold-15",
+    "symbol": "THRES",
+    "name": "阈值电压",
+    "rating": "electrical",
+    "minimum": 8.8,
+    "typical": 10,
+    "maximum": 11.2,
+    "unit": "V",
+    "conditions": "VCC=15 V；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "threshold"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "threshold-5",
+    "symbol": "THRES",
+    "name": "阈值电压",
+    "rating": "electrical",
+    "minimum": 2.4,
+    "typical": 3.3,
+    "maximum": 4.2,
+    "unit": "V",
+    "conditions": "VCC=5 V；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "threshold"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "threshold-current",
+    "symbol": "ITHRES",
+    "name": "阈值输入电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 30,
+    "maximum": 250,
+    "unit": "nA",
+    "conditions": "VCC=5–15 V；TA=25°C；见 p.6 脚注",
+    "notes": [],
+    "evidence_ids": [
+      "threshold-current",
+      "resistor-note"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "trigger-15",
+    "symbol": "TRIG",
+    "name": "触发阈值",
+    "rating": "electrical",
+    "minimum": 4.5,
+    "typical": 5,
+    "maximum": 5.6,
+    "unit": "V",
+    "conditions": "VCC=15 V；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "trigger"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "trigger-5",
+    "symbol": "TRIG",
+    "name": "触发阈值",
+    "rating": "electrical",
+    "minimum": 1.1,
+    "typical": 1.67,
+    "maximum": 2.2,
+    "unit": "V",
+    "conditions": "VCC=5 V；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "trigger"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "trigger-current",
+    "symbol": "ITRIG",
+    "name": "触发输入电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 0.5,
+    "maximum": 2,
+    "unit": "μA",
+    "conditions": "TRIG=0 V；VCC=5–15 V；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "trigger-current"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "reset-voltage",
+    "symbol": "RESET",
+    "name": "复位阈值",
+    "rating": "electrical",
+    "minimum": 0.3,
+    "typical": 0.7,
+    "maximum": 1,
+    "unit": "V",
+    "conditions": "VCC=5–15 V；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "reset"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "reset-high-current",
+    "symbol": "IRESET",
+    "name": "复位输入电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 0.1,
+    "maximum": 0.4,
+    "unit": "mA",
+    "conditions": "RESET=VCC；VCC=5–15 V；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "reset"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "reset-low-current",
+    "symbol": "IRESET",
+    "name": "复位输入电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": -0.4,
+    "maximum": -1.5,
+    "unit": "mA",
+    "conditions": "RESET=0 V；VCC=5–15 V；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "reset"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "discharge-off",
+    "symbol": "IDISCH",
+    "name": "放电关断漏电",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 20,
+    "maximum": 100,
+    "unit": "nA",
+    "conditions": "DISCH off；VCC=5–15 V；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "discharge"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "discharge-on",
+    "symbol": "VDISCH",
+    "name": "放电开关导通电压",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 0.15,
+    "maximum": 0.4,
+    "unit": "V",
+    "conditions": "VCC=5 V；IO=8 mA；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "discharge"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "control-15",
+    "symbol": "CONT",
+    "name": "开路控制电压",
+    "rating": "electrical",
+    "minimum": 9,
+    "typical": 10,
+    "maximum": 11,
+    "unit": "V",
+    "conditions": "CONT 开路；VCC=15 V；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "control"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "control-5",
+    "symbol": "CONT",
+    "name": "开路控制电压",
+    "rating": "electrical",
+    "minimum": 2.6,
+    "typical": 3.3,
+    "maximum": 4,
+    "unit": "V",
+    "conditions": "CONT 开路；VCC=5 V；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "control"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "vol-15-10",
+    "symbol": "VOL",
+    "name": "低电平输出电压",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 0.1,
+    "maximum": 0.25,
+    "unit": "V",
+    "conditions": "VCC=15 V；IOL=10 mA；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "output-low"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "vol-15-50",
+    "symbol": "VOL",
+    "name": "低电平输出电压",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 0.4,
+    "maximum": 0.75,
+    "unit": "V",
+    "conditions": "VCC=15 V；IOL=50 mA；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "output-low"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "vol-15-100",
+    "symbol": "VOL",
+    "name": "低电平输出电压",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 2,
+    "maximum": 2.5,
+    "unit": "V",
+    "conditions": "VCC=15 V；IOL=100 mA；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "output-low"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "vol-15-200",
+    "symbol": "VOL",
+    "name": "低电平输出电压",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 2.5,
+    "maximum": null,
+    "unit": "V",
+    "conditions": "VCC=15 V；IOL=200 mA；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "output-low"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "vol-5-5",
+    "symbol": "VOL",
+    "name": "低电平输出电压",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 0.1,
+    "maximum": 0.35,
+    "unit": "V",
+    "conditions": "VCC=5 V；IOL=5 mA；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "output-low"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "vol-5-8",
+    "symbol": "VOL",
+    "name": "低电平输出电压",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 0.15,
+    "maximum": 0.4,
+    "unit": "V",
+    "conditions": "VCC=5 V；IOL=8 mA；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "output-low"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "voh-15-100",
+    "symbol": "VOH",
+    "name": "高电平输出电压",
+    "rating": "electrical",
+    "minimum": 12.75,
+    "typical": 13.3,
+    "maximum": null,
+    "unit": "V",
+    "conditions": "VCC=15 V；IOH=-100 mA；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "output-high"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "voh-15-200",
+    "symbol": "VOH",
+    "name": "高电平输出电压",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 12.5,
+    "maximum": null,
+    "unit": "V",
+    "conditions": "VCC=15 V；IOH=-200 mA；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "output-high"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "voh-5-100",
+    "symbol": "VOH",
+    "name": "高电平输出电压",
+    "rating": "electrical",
+    "minimum": 2.75,
+    "typical": 3.3,
+    "maximum": null,
+    "unit": "V",
+    "conditions": "VCC=5 V；IOH=-100 mA；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "output-high"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "icc-15-low",
+    "symbol": "ICC",
+    "name": "零负载供电电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 10,
+    "maximum": 15,
+    "unit": "mA",
+    "conditions": "VCC=15 V；output low；no load；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "supply-current"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "icc-5-low",
+    "symbol": "ICC",
+    "name": "零负载供电电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 3,
+    "maximum": 6,
+    "unit": "mA",
+    "conditions": "VCC=5 V；output low；no load；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "supply-current"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "icc-15-high",
+    "symbol": "ICC",
+    "name": "零负载供电电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 9,
+    "maximum": 13,
+    "unit": "mA",
+    "conditions": "VCC=15 V；output high；no load；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "supply-current"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "icc-5-high",
+    "symbol": "ICC",
+    "name": "零负载供电电流",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 2,
+    "maximum": 5,
+    "unit": "mA",
+    "conditions": "VCC=5 V；output high；no load；TA=25°C",
+    "notes": [],
+    "evidence_ids": [
+      "supply-current"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "timing-temp-mono",
+    "symbol": "αt",
+    "name": "定时温度系数",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 50,
+    "maximum": null,
+    "unit": "ppm/°C",
+    "conditions": "单稳态；TA=MIN–MAX；RA=2–100 kΩ；C=0.1 μF；设计/表征，非生产测试",
+    "notes": [
+      "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+    ],
+    "evidence_ids": [
+      "switching"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "timing-temp-astable",
+    "symbol": "αt",
+    "name": "定时温度系数",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 150,
+    "maximum": null,
+    "unit": "ppm/°C",
+    "conditions": "无稳态；TA=MIN–MAX；RA=1–100 kΩ；C=0.1 μF；设计/表征，非生产测试",
+    "notes": [
+      "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+    ],
+    "evidence_ids": [
+      "switching"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "timing-supply-mono",
+    "symbol": "SVt",
+    "name": "定时电源敏感度",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 0.1,
+    "maximum": 0.5,
+    "unit": "%/V",
+    "conditions": "单稳态；RA=2–100 kΩ；C=0.1 μF；TA=25°C；设计/表征，非生产测试",
+    "notes": [
+      "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+    ],
+    "evidence_ids": [
+      "switching"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "timing-supply-astable",
+    "symbol": "SVt",
+    "name": "定时电源敏感度",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 0.3,
+    "maximum": null,
+    "unit": "%/V",
+    "conditions": "无稳态；RA=1–100 kΩ；C=0.1 μF；TA=25°C；设计/表征，非生产测试",
+    "notes": [
+      "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+    ],
+    "evidence_ids": [
+      "switching"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "rise",
+    "symbol": "tr",
+    "name": "输出上升时间",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 100,
+    "maximum": 300,
+    "unit": "ns",
+    "conditions": "CL=15 pF；TA=25°C；20%→80%；设计/表征，非生产测试",
+    "notes": [
+      "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+    ],
+    "evidence_ids": [
+      "switching"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  },
+  {
+    "id": "fall",
+    "symbol": "tf",
+    "name": "输出下降时间",
+    "rating": "electrical",
+    "minimum": null,
+    "typical": 100,
+    "maximum": 300,
+    "unit": "ns",
+    "conditions": "CL=15 pF；TA=25°C；80%→20%；设计/表征，非生产测试",
+    "notes": [
+      "VCC=5–15 V；此表按设计或表征给出，非生产测试。"
+    ],
+    "evidence_ids": [
+      "switching"
+    ],
+    "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+  }
+]

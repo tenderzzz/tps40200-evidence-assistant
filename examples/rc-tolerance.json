@@ -1,0 +1,293 @@
+{
+  "format_version": "1.0",
+  "result": {
+    "status": "answered",
+    "question": "条件检查",
+    "answer": "输入电压 VDD：满足该项。满足该项范围：12 V；允许 4.5–52 V（含边界）。\n结温 TJ：满足该项。满足该项范围：25 °C；允许 -40–125 °C（含边界）。\n振荡频率 fOSC：满足该项。满足该项范围：100 kHz；允许 35–500 kHz（含边界）。该频率范围仅由设计保证，未进行生产测试。\nRC 标称频率：标称估算。fSW=1/(RRC×CRC×0.105)≈101.317 kHz；这是标称估算，不保证实际频率精度。\nRC 估算频率范围：满足该项。估算频率在35–500 kHz 范围；实际频率仍受器件及 RC 容差影响。\n定时电阻电流：满足该项。VIN/RRC=60 μA；满足≤750 μA 的约束（含边界）。\nRC 元件容差频率区间：标称估算。仅由 RRC ±1.00%、CRC ±5.00% 得到约 95.5371–107.727 kHz；下界取 Rmax、Cmax，上界取 Rmin、Cmin。芯片自身误差未计入。\n容差区间与频率限制：满足该项。元件容差估算区间全部落入35–500 kHz；这项检查不包含芯片振荡器误差。\n电阻容差下最大电流：满足该项。固定 VDD=12 V，Rmin=198000.00 Ω 时 Imax≈60.6061 μA；满足≤750 μA。未计入供电变化；电容容差不影响此项。",
+    "inputs": {
+      "vdd": "12 V",
+      "tj": "25 °C",
+      "frequency": "100 kHz",
+      "resistance": "200 kΩ",
+      "capacitance": "470 pF",
+      "resistance_tolerance": "1%",
+      "capacitance_tolerance": "5%"
+    },
+    "parameters": [],
+    "checks": [
+      {
+        "rule": "vdd",
+        "title": "输入电压 VDD",
+        "status": "satisfied",
+        "message": "满足该项范围：12 V；允许 4.5–52 V（含边界）。",
+        "evidence_ids": [
+          "recommended"
+        ],
+        "value": 12.0,
+        "unit": "V",
+        "minimum": null,
+        "maximum": null,
+        "fields": []
+      },
+      {
+        "rule": "tj",
+        "title": "结温 TJ",
+        "status": "satisfied",
+        "message": "满足该项范围：25 °C；允许 -40–125 °C（含边界）。",
+        "evidence_ids": [
+          "recommended"
+        ],
+        "value": 25.0,
+        "unit": "°C",
+        "minimum": null,
+        "maximum": null,
+        "fields": []
+      },
+      {
+        "rule": "frequency",
+        "title": "振荡频率 fOSC",
+        "status": "satisfied",
+        "message": "满足该项范围：100 kHz；允许 35–500 kHz（含边界）。该频率范围仅由设计保证，未进行生产测试。",
+        "evidence_ids": [
+          "oscillator"
+        ],
+        "value": 100.0,
+        "unit": "kHz",
+        "minimum": null,
+        "maximum": null,
+        "fields": []
+      },
+      {
+        "rule": "rc_frequency",
+        "title": "RC 标称频率",
+        "status": "estimated",
+        "message": "fSW=1/(RRC×CRC×0.105)≈101.317 kHz；这是标称估算，不保证实际频率精度。",
+        "evidence_ids": [
+          "timing"
+        ],
+        "value": 101.31712259371834,
+        "unit": "kHz",
+        "minimum": null,
+        "maximum": null,
+        "fields": []
+      },
+      {
+        "rule": "rc_range",
+        "title": "RC 估算频率范围",
+        "status": "satisfied",
+        "message": "估算频率在35–500 kHz 范围；实际频率仍受器件及 RC 容差影响。",
+        "evidence_ids": [
+          "oscillator",
+          "timing"
+        ],
+        "value": 101.31712259371834,
+        "unit": "kHz",
+        "minimum": null,
+        "maximum": null,
+        "fields": []
+      },
+      {
+        "rule": "rc_current",
+        "title": "定时电阻电流",
+        "status": "satisfied",
+        "message": "VIN/RRC=60 μA；满足≤750 μA 的约束（含边界）。",
+        "evidence_ids": [
+          "timing"
+        ],
+        "value": 60.0,
+        "unit": "μA",
+        "minimum": null,
+        "maximum": null,
+        "fields": []
+      },
+      {
+        "rule": "rc_tolerance_frequency",
+        "title": "RC 元件容差频率区间",
+        "status": "estimated",
+        "message": "仅由 RRC ±1.00%、CRC ±5.00% 得到约 95.5371–107.727 kHz；下界取 Rmax、Cmax，上界取 Rmin、Cmin。芯片自身误差未计入。",
+        "evidence_ids": [
+          "timing"
+        ],
+        "value": null,
+        "unit": "kHz",
+        "minimum": 95.53712644386454,
+        "maximum": 107.72687144467659,
+        "fields": []
+      },
+      {
+        "rule": "rc_tolerance_range",
+        "title": "容差区间与频率限制",
+        "status": "satisfied",
+        "message": "元件容差估算区间全部落入35–500 kHz；这项检查不包含芯片振荡器误差。",
+        "evidence_ids": [
+          "oscillator",
+          "timing"
+        ],
+        "value": null,
+        "unit": "kHz",
+        "minimum": 95.53712644386454,
+        "maximum": 107.72687144467659,
+        "fields": []
+      },
+      {
+        "rule": "rc_worst_current",
+        "title": "电阻容差下最大电流",
+        "status": "satisfied",
+        "message": "固定 VDD=12 V，Rmin=198000.00 Ω 时 Imax≈60.6061 μA；满足≤750 μA。未计入供电变化；电容容差不影响此项。",
+        "evidence_ids": [
+          "timing"
+        ],
+        "value": 60.60606060606061,
+        "unit": "μA",
+        "minimum": 59.40594059405941,
+        "maximum": 60.60606060606061,
+        "fields": []
+      }
+    ],
+    "evidence_ids": [
+      "recommended",
+      "oscillator",
+      "timing"
+    ],
+    "hits": [
+      {
+        "evidence_id": "recommended",
+        "score": 1.0
+      },
+      {
+        "evidence_id": "oscillator",
+        "score": 1.0
+      },
+      {
+        "evidence_id": "timing",
+        "score": 1.0
+      }
+    ],
+    "notices": [
+      "每项结论仅核对该项限制，不表示完整电路设计已通过。",
+      "容差区间仅含所填电阻、电容的独立有界容差，按端点计算，不含芯片本身误差、温漂或电压漂移；电流使用填写的固定 VDD。"
+    ],
+    "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+    "source_revision": "SLUS659G (Rev. G)",
+    "condition_inputs": {},
+    "applicability": [],
+    "condition_errors": {}
+  },
+  "source": {
+    "doc_id": "tps40200-slus659g",
+    "title": "TPS40200 Wide Input Range Non-Synchronous Voltage Mode Controller",
+    "revision": "SLUS659G (Rev. G)",
+    "revision_date": "2014-11",
+    "url": "https://www.ti.com/lit/ds/symlink/tps40200.pdf",
+    "downloaded_at": "2026-10-21T13:03:03.278425+00:00",
+    "sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+    "pages": 52,
+    "indexed_core_pages": 40,
+    "pdf_file": "tps40200-rev-g.pdf",
+    "extraction": {
+      "tool": "pdfplumber",
+      "version": "0.11.10",
+      "x_tolerance": 1
+    },
+    "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+  },
+  "evidence": [
+    {
+      "id": "recommended",
+      "title": "6.3 推荐工作条件",
+      "page": 4,
+      "printed_page": "4",
+      "bbox": [
+        54.0,
+        395.0,
+        558.0,
+        462.0
+      ],
+      "context_bboxes": [],
+      "text": "6.3 Recommended Operating Conditions\nover operating free-air temperature range (unless otherwise noted)\nMIN MAX UNIT\nV Input voltage 4.5 52 V\nDD\nT Operating temperature range –40 125 °C\nJ",
+      "context": "",
+      "aliases": [
+        "输入电压",
+        "供电范围",
+        "VDD",
+        "VIN",
+        "工作温度",
+        "结温",
+        "TJ",
+        "recommended operating"
+      ],
+      "summary": "推荐 VDD 为 4.5–52 V，推荐结温 TJ 为 −40–125 °C。范围内只表示满足该项限制。",
+      "curated": true
+    },
+    {
+      "id": "oscillator",
+      "title": "6.5 振荡器频率",
+      "page": 5,
+      "printed_page": "5",
+      "bbox": [
+        54.0,
+        450.0,
+        558.0,
+        502.0
+      ],
+      "context_bboxes": [
+        [
+          54.0,
+          74.0,
+          558.0,
+          114.0
+        ],
+        [
+          54.0,
+          546.0,
+          558.0,
+          558.0
+        ]
+      ],
+      "text": "OSCILLATOR\nOscillator frequency range(1) 35 500\nf R = 200 kΩ, C = 470 pF 85 100 115 kHz\nOSC RC RC\nOscillator frequency\nR = 68.1 kΩ, C = 470 pF 255 300 345\nRC RC",
+      "context": "6.5 Electrical Characteristics\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n(1) Ensured by design. Not production tested.",
+      "aliases": [
+        "fosc",
+        "fsw",
+        "振荡频率",
+        "开关频率",
+        "频率范围",
+        "oscillator frequency",
+        "35kHz",
+        "500kHz"
+      ],
+      "summary": "振荡频率范围为 35–500 kHz，仅由设计保证、未进行生产测试；特定 RC 的频率上下限须另看对应行。",
+      "curated": true
+    },
+    {
+      "id": "timing",
+      "title": "7.3.3 RC 定时公式与电流约束",
+      "page": 12,
+      "printed_page": "12",
+      "bbox": [
+        54.0,
+        382.0,
+        558.0,
+        578.0
+      ],
+      "context_bboxes": [],
+      "text": "7.3.3 Selecting the Operating Frequency\nThe operating frequency of the controller is determined by an external resistor R that is connected from the RC\nRC\npin to VDD and a capacitor attached from the RC pin to ground. This connection and the two oscillator\ncomparators inside the device, are shown in Figure 24. The oscillator frequency can be calculated in Equation 1.\n1\nf =\nSW R ´ C ´ 0.105\nRC RC (1)\nwhere\nf is the clock frequency\nSW\nR is the timing resistor value in Ω\nRC\nC is the timing capacitor value in F\nRC\nR must be kept large enough that the current through it does not exceed 750 μA when the internal switch\nRC\n(shown in Figure 24) is discharging the timing capacitor. This condition may be expressed by Equation 2.\nV\nIN £ 750 mA\nR\nRC (2)",
+      "context": "",
+      "aliases": [
+        "RRC",
+        "CRC",
+        "定时电阻",
+        "定时电容",
+        "RC公式",
+        "频率计算",
+        "频率公式",
+        "750",
+        "timing",
+        "operating frequency",
+        "0.105"
+      ],
+      "summary": "标称频率估算 fSW=1/(RRC×CRC×0.105)，R 用 Ω、C 用 F；同时满足 VIN/RRC≤750 μA。公式未给出完整容差模型，不能保证实际频率精度。",
+      "curated": true
+    }
+  ]
+}

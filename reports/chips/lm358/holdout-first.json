@@ -1,0 +1,6524 @@
+{
+  "evaluated_at": "2026-10-22T15:25:13.249381+00:00",
+  "source": {
+    "doc_id": "lm358-slos068ab",
+    "chip_id": "lm358",
+    "manufacturer": "TI",
+    "model": "LM358",
+    "title": "LM358 / TI fixed datasheet",
+    "revision": "SLOS068AB (Rev. AB)",
+    "revision_date": "2024-10",
+    "url": "https://www.ti.com/lit/ds/symlink/lm358.pdf",
+    "downloaded_at": "2026-10-22T14:47:51.407960+00:00",
+    "sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+    "pages": 68,
+    "indexed_core_pages": 31,
+    "pdf_file": "lm358.pdf",
+    "extraction": {
+      "tool": "pdfplumber",
+      "version": "0.11.10",
+      "x_tolerance": 1
+    },
+    "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+  },
+  "chip_id": "lm358",
+  "benchmark_corrections": [],
+  "methodology": "自建固定验证集，开发/留出各30题，同一问题的改写同组；期望数值来自固定PDF转录或独立有理数计算，未从被测引擎生成。增强检索包含人工别名、结构化表格与中文说明，不单独归因于分块。",
+  "limitations": [
+    "题目、参数整理和实现由同一开发过程完成，不是独立盲测。",
+    "证据命中按预标注区域评价；不等于任意问题的引用语义正确率。",
+    "留出集规模小，比例仅适用于本组案例，不代表通用芯片手册准确率。"
+  ],
+  "metrics": {
+    "cases": 60,
+    "passed": 60,
+    "query_retrieval_cases": 38,
+    "top3_recall": 1.0,
+    "plain_top3_recall": 0.2631578947368421,
+    "fact_cases": 30,
+    "fact_answered": 30,
+    "fact_accuracy": 1.0,
+    "fact_coverage": 1.0,
+    "unsupported_correct": 4,
+    "unsupported_cases": 4,
+    "by_category": {
+      "conditions": {
+        "total": 6,
+        "passed": 6
+      },
+      "mechanism": {
+        "total": 2,
+        "passed": 2
+      },
+      "parameter": {
+        "total": 30,
+        "passed": 30
+      },
+      "rule": {
+        "total": 14,
+        "passed": 14
+      },
+      "unanswerable": {
+        "total": 4,
+        "passed": 4
+      },
+      "unsupported": {
+        "total": 4,
+        "passed": 4
+      }
+    }
+  },
+  "splits": {
+    "dev": {
+      "cases": 30,
+      "passed": 30,
+      "query_retrieval_cases": 28,
+      "top3_recall": 1.0,
+      "plain_top3_recall": 0.32142857142857145,
+      "fact_cases": 20,
+      "fact_answered": 20,
+      "fact_accuracy": 1.0,
+      "fact_coverage": 1.0,
+      "unsupported_correct": 0,
+      "unsupported_cases": 0,
+      "by_category": {
+        "conditions": {
+          "total": 6,
+          "passed": 6
+        },
+        "mechanism": {
+          "total": 2,
+          "passed": 2
+        },
+        "parameter": {
+          "total": 20,
+          "passed": 20
+        },
+        "unanswerable": {
+          "total": 2,
+          "passed": 2
+        }
+      }
+    },
+    "holdout": {
+      "cases": 30,
+      "passed": 30,
+      "query_retrieval_cases": 10,
+      "top3_recall": 1.0,
+      "plain_top3_recall": 0.1,
+      "fact_cases": 10,
+      "fact_answered": 10,
+      "fact_accuracy": 1.0,
+      "fact_coverage": 1.0,
+      "unsupported_correct": 4,
+      "unsupported_cases": 4,
+      "by_category": {
+        "parameter": {
+          "total": 10,
+          "passed": 10
+        },
+        "rule": {
+          "total": 14,
+          "passed": 14
+        },
+        "unanswerable": {
+          "total": 2,
+          "passed": 2
+        },
+        "unsupported": {
+          "total": 4,
+          "passed": 4
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "lm358-01",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-vos",
+      "kind": "query",
+      "question": "VOS",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vos"
+      ],
+      "expected_evidence": [
+        "vos"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "VOS",
+        "answer": "LM358 的失调电压典型 3 mV，25°C 最大 7 mV，全环境温度最大 9 mV；不混入 LM358A 或 B 版数值。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vos-25",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 3.0,
+            "maximum": 7.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；TA=25°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-full",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 9.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；0≤TA≤70°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-drift",
+            "symbol": "dVOS/dT",
+            "name": "失调电压漂移",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 7.0,
+            "maximum": null,
+            "unit": "μV/°C",
+            "conditions": "0≤TA≤70°C；VS=5 V；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vos"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vos",
+            "score": 105.97529
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-02",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-vos",
+      "kind": "query",
+      "question": "输入失调电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vos",
+        "bias",
+        "common-mode"
+      ],
+      "expected_evidence": [
+        "vos"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "输入失调电压",
+        "answer": "LM358 的失调电压典型 3 mV，25°C 最大 7 mV，全环境温度最大 9 mV；不混入 LM358A 或 B 版数值。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vos-25",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 3.0,
+            "maximum": 7.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；TA=25°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-full",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 9.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；0≤TA≤70°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-drift",
+            "symbol": "dVOS/dT",
+            "name": "失调电压漂移",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 7.0,
+            "maximum": null,
+            "unit": "μV/°C",
+            "conditions": "0≤TA≤70°C；VS=5 V；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vos"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vos",
+            "score": 115.62218
+          },
+          {
+            "evidence_id": "bias",
+            "score": 5.47794
+          },
+          {
+            "evidence_id": "common-mode",
+            "score": 1.94325
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-03",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-vos",
+      "kind": "query",
+      "question": "失调电压是多少",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vos",
+        "bias",
+        "recommended"
+      ],
+      "expected_evidence": [
+        "vos"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "失调电压是多少",
+        "answer": "LM358 的失调电压典型 3 mV，25°C 最大 7 mV，全环境温度最大 9 mV；不混入 LM358A 或 B 版数值。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vos-25",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 3.0,
+            "maximum": 7.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；TA=25°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-full",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 9.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；0≤TA≤70°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-drift",
+            "symbol": "dVOS/dT",
+            "name": "失调电压漂移",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 7.0,
+            "maximum": null,
+            "unit": "μV/°C",
+            "conditions": "0≤TA≤70°C；VS=5 V；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vos"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vos",
+            "score": 110.43218
+          },
+          {
+            "evidence_id": "bias",
+            "score": 2.85275
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 0.65426
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-04",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-recommended",
+      "kind": "query",
+      "question": "推荐工作条件",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended",
+        "abs",
+        "noise"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "推荐工作条件",
+        "answer": "LM358 推荐总供电压差为 3–30 V，环境温度为 0–70°C；推荐共模范围为 V− 到 V+−2 V。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "rec-vs",
+            "symbol": "VS",
+            "name": "总供电压差",
+            "rating": "recommended",
+            "minimum": 3.0,
+            "typical": null,
+            "maximum": 30.0,
+            "unit": "V",
+            "conditions": "VS = V+−V−；LM358",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rec-vcm",
+            "symbol": "VCM",
+            "name": "推荐输入共模电压",
+            "rating": "recommended",
+            "minimum": "V−",
+            "typical": null,
+            "maximum": "V+ − 2",
+            "unit": "V",
+            "conditions": "LM358；推荐工作条件",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rec-ta",
+            "symbol": "TA",
+            "name": "推荐环境温度",
+            "rating": "recommended",
+            "minimum": 0.0,
+            "typical": null,
+            "maximum": 70.0,
+            "unit": "°C",
+            "conditions": "LM358；不是结温 TJ",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 317.35558
+          },
+          {
+            "evidence_id": "abs",
+            "score": 3.47009
+          },
+          {
+            "evidence_id": "noise",
+            "score": 0.16849
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-05",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-recommended",
+      "kind": "query",
+      "question": "供电范围",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended",
+        "common-mode",
+        "gain"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "供电范围",
+        "answer": "LM358 推荐总供电压差为 3–30 V，环境温度为 0–70°C；推荐共模范围为 V− 到 V+−2 V。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "rec-vs",
+            "symbol": "VS",
+            "name": "总供电压差",
+            "rating": "recommended",
+            "minimum": 3.0,
+            "typical": null,
+            "maximum": 30.0,
+            "unit": "V",
+            "conditions": "VS = V+−V−；LM358",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rec-vcm",
+            "symbol": "VCM",
+            "name": "推荐输入共模电压",
+            "rating": "recommended",
+            "minimum": "V−",
+            "typical": null,
+            "maximum": "V+ − 2",
+            "unit": "V",
+            "conditions": "LM358；推荐工作条件",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "rec-ta",
+            "symbol": "TA",
+            "name": "推荐环境温度",
+            "rating": "recommended",
+            "minimum": 0.0,
+            "typical": null,
+            "maximum": 70.0,
+            "unit": "°C",
+            "conditions": "LM358；不是结温 TJ",
+            "notes": [],
+            "evidence_ids": [
+              "recommended"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 107.18039
+          },
+          {
+            "evidence_id": "common-mode",
+            "score": 0.7114
+          },
+          {
+            "evidence_id": "gain",
+            "score": 0.65667
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-06",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-bias",
+      "kind": "query",
+      "question": "IB",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "bias"
+      ],
+      "expected_evidence": [
+        "bias"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "IB",
+        "answer": "保留 LM358 偏置电流的负号和各温度行；负号表达电流方向，不把负数列当成通用幅值比较。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "ib-25",
+            "symbol": "IB",
+            "name": "输入偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": -20.0,
+            "maximum": -250.0,
+            "unit": "nA",
+            "conditions": "VS=5 V；VO=1.4 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+              "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ib-full",
+            "symbol": "IB",
+            "name": "输入偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": -500.0,
+            "unit": "nA",
+            "conditions": "VS=5 V；VO=1.4 V；0≤TA≤70°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+              "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ios-25",
+            "symbol": "IOS",
+            "name": "输入失调电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.0,
+            "maximum": 50.0,
+            "unit": "nA",
+            "conditions": "VS=5 V；VO=1.4 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ios-full",
+            "symbol": "IOS",
+            "name": "输入失调电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "nA",
+            "conditions": "VS=5 V；VO=1.4 V；0≤TA≤70°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ios-drift",
+            "symbol": "dIOS/dT",
+            "name": "失调电流漂移",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 10.0,
+            "maximum": null,
+            "unit": "pA/°C",
+            "conditions": "VS=5 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "bias"
+        ],
+        "hits": [
+          {
+            "evidence_id": "bias",
+            "score": 104.88494
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-07",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-bias",
+      "kind": "query",
+      "question": "输入偏置电流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "bias",
+        "output-current",
+        "quiescent"
+      ],
+      "expected_evidence": [
+        "bias"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "输入偏置电流",
+        "answer": "保留 LM358 偏置电流的负号和各温度行；负号表达电流方向，不把负数列当成通用幅值比较。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "ib-25",
+            "symbol": "IB",
+            "name": "输入偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": -20.0,
+            "maximum": -250.0,
+            "unit": "nA",
+            "conditions": "VS=5 V；VO=1.4 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+              "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ib-full",
+            "symbol": "IB",
+            "name": "输入偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": -500.0,
+            "unit": "nA",
+            "conditions": "VS=5 V；VO=1.4 V；0≤TA≤70°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+              "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ios-25",
+            "symbol": "IOS",
+            "name": "输入失调电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.0,
+            "maximum": 50.0,
+            "unit": "nA",
+            "conditions": "VS=5 V；VO=1.4 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ios-full",
+            "symbol": "IOS",
+            "name": "输入失调电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "nA",
+            "conditions": "VS=5 V；VO=1.4 V；0≤TA≤70°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ios-drift",
+            "symbol": "dIOS/dT",
+            "name": "失调电流漂移",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 10.0,
+            "maximum": null,
+            "unit": "pA/°C",
+            "conditions": "VS=5 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "bias"
+        ],
+        "hits": [
+          {
+            "evidence_id": "bias",
+            "score": 119.70364
+          },
+          {
+            "evidence_id": "output-current",
+            "score": 2.18648
+          },
+          {
+            "evidence_id": "quiescent",
+            "score": 2.09338
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-08",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-noise",
+      "kind": "query",
+      "question": "输入噪声",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "noise",
+        "common-mode",
+        "bias"
+      ],
+      "expected_evidence": [
+        "noise"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "输入噪声",
+        "answer": "输入噪声密度典型值在 1 kHz 条件给出，不是任意带宽的积分噪声。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "noise",
+            "symbol": "en",
+            "name": "输入电压噪声密度",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 40.0,
+            "maximum": null,
+            "unit": "nV/√Hz",
+            "conditions": "f=1 kHz；VS=5 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "noise"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "noise"
+        ],
+        "hits": [
+          {
+            "evidence_id": "noise",
+            "score": 113.54398
+          },
+          {
+            "evidence_id": "common-mode",
+            "score": 1.33685
+          },
+          {
+            "evidence_id": "bias",
+            "score": 1.19881
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-09",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-noise",
+      "kind": "query",
+      "question": "噪声密度",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "noise"
+      ],
+      "expected_evidence": [
+        "noise"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "噪声密度",
+        "answer": "输入噪声密度典型值在 1 kHz 条件给出，不是任意带宽的积分噪声。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "noise",
+            "symbol": "en",
+            "name": "输入电压噪声密度",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 40.0,
+            "maximum": null,
+            "unit": "nV/√Hz",
+            "conditions": "f=1 kHz；VS=5 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "noise"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "noise"
+        ],
+        "hits": [
+          {
+            "evidence_id": "noise",
+            "score": 115.11676
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-10",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-gain",
+      "kind": "query",
+      "question": "AOL",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "gain"
+      ],
+      "expected_evidence": [
+        "gain"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "AOL",
+        "answer": "开环增益的供电、输出范围、负载和温度条件须同时保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "aol-25",
+            "symbol": "AOL",
+            "name": "开环电压增益",
+            "rating": "electrical",
+            "minimum": 25.0,
+            "typical": 100.0,
+            "maximum": null,
+            "unit": "V/mV",
+            "conditions": "VS=15 V；VO=1–11 V；RL≥2 kΩ；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "gain"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "aol-full",
+            "symbol": "AOL",
+            "name": "开环电压增益",
+            "rating": "electrical",
+            "minimum": 15.0,
+            "typical": null,
+            "maximum": null,
+            "unit": "V/mV",
+            "conditions": "VS=15 V；VO=1–11 V；RL≥2 kΩ；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "gain"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "gain"
+        ],
+        "hits": [
+          {
+            "evidence_id": "gain",
+            "score": 106.31075
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-11",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-gain",
+      "kind": "query",
+      "question": "开环增益",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "gain",
+        "frequency"
+      ],
+      "expected_evidence": [
+        "gain"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "开环增益",
+        "answer": "开环增益的供电、输出范围、负载和温度条件须同时保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "aol-25",
+            "symbol": "AOL",
+            "name": "开环电压增益",
+            "rating": "electrical",
+            "minimum": 25.0,
+            "typical": 100.0,
+            "maximum": null,
+            "unit": "V/mV",
+            "conditions": "VS=15 V；VO=1–11 V；RL≥2 kΩ；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "gain"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "aol-full",
+            "symbol": "AOL",
+            "name": "开环电压增益",
+            "rating": "electrical",
+            "minimum": 15.0,
+            "typical": null,
+            "maximum": null,
+            "unit": "V/mV",
+            "conditions": "VS=15 V；VO=1–11 V；RL≥2 kΩ；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "gain"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "gain"
+        ],
+        "hits": [
+          {
+            "evidence_id": "gain",
+            "score": 114.29236
+          },
+          {
+            "evidence_id": "frequency",
+            "score": 2.38291
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-12",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-output-swing",
+      "kind": "query",
+      "question": "输出摆幅",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "output-swing",
+        "output-current",
+        "frequency"
+      ],
+      "expected_evidence": [
+        "output-swing"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "输出摆幅",
+        "answer": "输出离正负电源轨的余量与供电、负载和温度有关；不能合并成无条件轨到轨答案。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "swing-high-2k",
+            "symbol": "VO",
+            "name": "离正电源轨余量",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 4.0,
+            "unit": "V",
+            "conditions": "VS=30 V；RL=2 kΩ；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-swing"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "swing-high-10k",
+            "symbol": "VO",
+            "name": "离正电源轨余量",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.0,
+            "maximum": 3.0,
+            "unit": "V",
+            "conditions": "VS=30 V；RL≥10 kΩ；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-swing"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "swing-high-5v",
+            "symbol": "VO",
+            "name": "离正电源轨余量",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 1.5,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "VS=5 V；RL≥2 kΩ；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-swing"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "swing-low",
+            "symbol": "VO",
+            "name": "离负电源轨余量",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 5.0,
+            "maximum": 20.0,
+            "unit": "mV",
+            "conditions": "VS=5 V；RL≤10 kΩ；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-swing"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "output-swing"
+        ],
+        "hits": [
+          {
+            "evidence_id": "output-swing",
+            "score": 110.32594
+          },
+          {
+            "evidence_id": "output-current",
+            "score": 0.2023
+          },
+          {
+            "evidence_id": "frequency",
+            "score": 0.16246
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-13",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-output-swing",
+      "kind": "query",
+      "question": "输出电压范围",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "output-swing",
+        "output-current",
+        "common-mode"
+      ],
+      "expected_evidence": [
+        "output-swing"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "输出电压范围",
+        "answer": "输出离正负电源轨的余量与供电、负载和温度有关；不能合并成无条件轨到轨答案。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "swing-high-2k",
+            "symbol": "VO",
+            "name": "离正电源轨余量",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 4.0,
+            "unit": "V",
+            "conditions": "VS=30 V；RL=2 kΩ；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-swing"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "swing-high-10k",
+            "symbol": "VO",
+            "name": "离正电源轨余量",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.0,
+            "maximum": 3.0,
+            "unit": "V",
+            "conditions": "VS=30 V；RL≥10 kΩ；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-swing"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "swing-high-5v",
+            "symbol": "VO",
+            "name": "离正电源轨余量",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 1.5,
+            "maximum": null,
+            "unit": "V",
+            "conditions": "VS=5 V；RL≥2 kΩ；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-swing"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "swing-low",
+            "symbol": "VO",
+            "name": "离负电源轨余量",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 5.0,
+            "maximum": 20.0,
+            "unit": "mV",
+            "conditions": "VS=5 V；RL≤10 kΩ；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-swing"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "output-swing"
+        ],
+        "hits": [
+          {
+            "evidence_id": "output-swing",
+            "score": 110.78469
+          },
+          {
+            "evidence_id": "output-current",
+            "score": 2.35966
+          },
+          {
+            "evidence_id": "common-mode",
+            "score": 1.45596
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-14",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-quiescent",
+      "kind": "query",
+      "question": "IQ",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "quiescent"
+      ],
+      "expected_evidence": [
+        "quiescent"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "IQ",
+        "answer": "静态电流按每个放大器给出，且依赖供电、输出与零负载设置。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "iq-5v",
+            "symbol": "IQ",
+            "name": "每放大器静态电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 350.0,
+            "maximum": 600.0,
+            "unit": "μA",
+            "conditions": "VS=5 V；VO=2.5 V；IO=0 A；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "quiescent"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "iq-30v",
+            "symbol": "IQ",
+            "name": "每放大器静态电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 500.0,
+            "maximum": 1000.0,
+            "unit": "μA",
+            "conditions": "VS=30 V；VO=15 V；IO=0 A；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "quiescent"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "quiescent"
+        ],
+        "hits": [
+          {
+            "evidence_id": "quiescent",
+            "score": 105.26392
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-15",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-quiescent",
+      "kind": "query",
+      "question": "静态电流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "quiescent",
+        "output-current",
+        "bias"
+      ],
+      "expected_evidence": [
+        "quiescent"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "静态电流",
+        "answer": "静态电流按每个放大器给出，且依赖供电、输出与零负载设置。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "iq-5v",
+            "symbol": "IQ",
+            "name": "每放大器静态电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 350.0,
+            "maximum": 600.0,
+            "unit": "μA",
+            "conditions": "VS=5 V；VO=2.5 V；IO=0 A；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "quiescent"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "iq-30v",
+            "symbol": "IQ",
+            "name": "每放大器静态电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 500.0,
+            "maximum": 1000.0,
+            "unit": "μA",
+            "conditions": "VS=30 V；VO=15 V；IO=0 A；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "quiescent"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "quiescent"
+        ],
+        "hits": [
+          {
+            "evidence_id": "quiescent",
+            "score": 113.58012
+          },
+          {
+            "evidence_id": "output-current",
+            "score": 2.18648
+          },
+          {
+            "evidence_id": "bias",
+            "score": 2.14721
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-16",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-output-current",
+      "kind": "query",
+      "question": "IO",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "output-current",
+        "quiescent"
+      ],
+      "expected_evidence": [
+        "output-current"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "IO",
+        "answer": "源电流、灌电流和短路电流按方向与测试设置分别展示，不能直接当作持续负载保证。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "source-25",
+            "symbol": "IO",
+            "name": "源输出电流",
+            "rating": "electrical",
+            "minimum": -20.0,
+            "typical": -30.0,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VS=15 V；VO=0 V；VID=1 V；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+              "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+            ],
+            "evidence_ids": [
+              "output-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "source-full",
+            "symbol": "IO",
+            "name": "源输出电流",
+            "rating": "electrical",
+            "minimum": -10.0,
+            "typical": null,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VS=15 V；VO=0 V；VID=1 V；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+              "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+            ],
+            "evidence_ids": [
+              "output-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "sink-25",
+            "symbol": "IO",
+            "name": "灌输出电流",
+            "rating": "electrical",
+            "minimum": 10.0,
+            "typical": 20.0,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VS=15 V；VO=15 V；VID=−1 V；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "sink-full",
+            "symbol": "IO",
+            "name": "灌输出电流",
+            "rating": "electrical",
+            "minimum": 5.0,
+            "typical": null,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VS=15 V；VO=15 V；VID=−1 V；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "sink-low",
+            "symbol": "IO",
+            "name": "低输出电压灌电流",
+            "rating": "electrical",
+            "minimum": 12.0,
+            "typical": 30.0,
+            "maximum": null,
+            "unit": "μA",
+            "conditions": "VID=−1 V；VO=200 mV；VS=5 V；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "isc",
+            "symbol": "ISC",
+            "name": "短路电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": "±40",
+            "maximum": "±60",
+            "unit": "mA",
+            "conditions": "VS=10 V；VO=VS/2；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "output-current"
+        ],
+        "hits": [
+          {
+            "evidence_id": "output-current",
+            "score": 104.15736
+          },
+          {
+            "evidence_id": "quiescent",
+            "score": 2.3492
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-17",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-output-current",
+      "kind": "query",
+      "question": "输出电流",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "output-current",
+        "quiescent",
+        "bias"
+      ],
+      "expected_evidence": [
+        "output-current"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "输出电流",
+        "answer": "源电流、灌电流和短路电流按方向与测试设置分别展示，不能直接当作持续负载保证。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "source-25",
+            "symbol": "IO",
+            "name": "源输出电流",
+            "rating": "electrical",
+            "minimum": -20.0,
+            "typical": -30.0,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VS=15 V；VO=0 V；VID=1 V；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+              "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+            ],
+            "evidence_ids": [
+              "output-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "source-full",
+            "symbol": "IO",
+            "name": "源输出电流",
+            "rating": "electrical",
+            "minimum": -10.0,
+            "typical": null,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VS=15 V；VO=0 V；VID=1 V；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+              "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+            ],
+            "evidence_ids": [
+              "output-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "sink-25",
+            "symbol": "IO",
+            "name": "灌输出电流",
+            "rating": "electrical",
+            "minimum": 10.0,
+            "typical": 20.0,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VS=15 V；VO=15 V；VID=−1 V；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "sink-full",
+            "symbol": "IO",
+            "name": "灌输出电流",
+            "rating": "electrical",
+            "minimum": 5.0,
+            "typical": null,
+            "maximum": null,
+            "unit": "mA",
+            "conditions": "VS=15 V；VO=15 V；VID=−1 V；0≤TA≤70°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "sink-low",
+            "symbol": "IO",
+            "name": "低输出电压灌电流",
+            "rating": "electrical",
+            "minimum": 12.0,
+            "typical": 30.0,
+            "maximum": null,
+            "unit": "μA",
+            "conditions": "VID=−1 V；VO=200 mV；VS=5 V；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "isc",
+            "symbol": "ISC",
+            "name": "短路电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": "±40",
+            "maximum": "±60",
+            "unit": "mA",
+            "conditions": "VS=10 V；VO=VS/2；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "output-current"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "output-current"
+        ],
+        "hits": [
+          {
+            "evidence_id": "output-current",
+            "score": 108.54614
+          },
+          {
+            "evidence_id": "quiescent",
+            "score": 2.25252
+          },
+          {
+            "evidence_id": "bias",
+            "score": 2.14721
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-18",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-rejection",
+      "kind": "query",
+      "question": "PSRR",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "rejection"
+      ],
+      "expected_evidence": [
+        "rejection"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "PSRR",
+        "answer": "电源抑制和通道隔离需按供电、频率与表头测试条件分别读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "psrr",
+            "symbol": "PSRR",
+            "name": "电源抑制比",
+            "rating": "electrical",
+            "minimum": 65.0,
+            "typical": 100.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "VS=5–30 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "rejection"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "separation",
+            "symbol": "VO1/VO2",
+            "name": "通道隔离",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 120.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "f=1–20 kHz；VS=5 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "rejection"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "rejection"
+        ],
+        "hits": [
+          {
+            "evidence_id": "rejection",
+            "score": 107.23774
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-19",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-rejection",
+      "kind": "query",
+      "question": "电源抑制比",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "rejection",
+        "common-mode",
+        "output-swing"
+      ],
+      "expected_evidence": [
+        "rejection"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "电源抑制比",
+        "answer": "电源抑制和通道隔离需按供电、频率与表头测试条件分别读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "psrr",
+            "symbol": "PSRR",
+            "name": "电源抑制比",
+            "rating": "electrical",
+            "minimum": 65.0,
+            "typical": 100.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "VS=5–30 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "rejection"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "separation",
+            "symbol": "VO1/VO2",
+            "name": "通道隔离",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 120.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "f=1–20 kHz；VS=5 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "rejection"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "rejection"
+        ],
+        "hits": [
+          {
+            "evidence_id": "rejection",
+            "score": 115.03959
+          },
+          {
+            "evidence_id": "common-mode",
+            "score": 3.66819
+          },
+          {
+            "evidence_id": "output-swing",
+            "score": 0.74601
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-20",
+      "category": "parameter",
+      "split": "dev",
+      "family": "query-rejection",
+      "kind": "query",
+      "question": "通道隔离",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "rejection",
+        "pins"
+      ],
+      "expected_evidence": [
+        "rejection"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "通道隔离",
+        "answer": "电源抑制和通道隔离需按供电、频率与表头测试条件分别读取。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "psrr",
+            "symbol": "PSRR",
+            "name": "电源抑制比",
+            "rating": "electrical",
+            "minimum": 65.0,
+            "typical": 100.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "VS=5–30 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "rejection"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "separation",
+            "symbol": "VO1/VO2",
+            "name": "通道隔离",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 120.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "f=1–20 kHz；VS=5 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "rejection"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "rejection"
+        ],
+        "hits": [
+          {
+            "evidence_id": "rejection",
+            "score": 112.80584
+          },
+          {
+            "evidence_id": "pins",
+            "score": 1.29022
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-21",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vos",
+      "kind": "query",
+      "question": "VOS",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vos"
+      ],
+      "expected_evidence": [
+        "vos"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "VOS",
+        "answer": "LM358 的失调电压典型 3 mV，25°C 最大 7 mV，全环境温度最大 9 mV；不混入 LM358A 或 B 版数值。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vos-25",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 3.0,
+            "maximum": 7.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；TA=25°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-full",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 9.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；0≤TA≤70°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-drift",
+            "symbol": "dVOS/dT",
+            "name": "失调电压漂移",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 7.0,
+            "maximum": null,
+            "unit": "μV/°C",
+            "conditions": "0≤TA≤70°C；VS=5 V；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vos"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vos",
+            "score": 105.97529
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {
+          "supply_voltage": "5 V",
+          "ambient_temperature": "25 °C",
+          "common_mode_voltage": "0 V",
+          "output_voltage": "1.4 V",
+          "open_loop": true
+        },
+        "applicability": [
+          {
+            "parameter_id": "vos-25",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          },
+          {
+            "parameter_id": "vos-full",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          },
+          {
+            "parameter_id": "vos-drift",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-22",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vos",
+      "kind": "query",
+      "question": "VOS",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vos"
+      ],
+      "expected_evidence": [
+        "vos"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "VOS",
+        "answer": "LM358 的失调电压典型 3 mV，25°C 最大 7 mV，全环境温度最大 9 mV；不混入 LM358A 或 B 版数值。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vos-25",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 3.0,
+            "maximum": 7.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；TA=25°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-full",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 9.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；0≤TA≤70°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-drift",
+            "symbol": "dVOS/dT",
+            "name": "失调电压漂移",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 7.0,
+            "maximum": null,
+            "unit": "μV/°C",
+            "conditions": "0≤TA≤70°C；VS=5 V；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vos"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vos",
+            "score": 105.97529
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {
+          "supply_voltage": "5 V",
+          "ambient_temperature": "70 °C",
+          "common_mode_voltage": "0 V",
+          "output_voltage": "1.4 V",
+          "open_loop": true
+        },
+        "applicability": [
+          {
+            "parameter_id": "vos-25",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 环境温度 TA 的原表条件。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          },
+          {
+            "parameter_id": "vos-full",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          },
+          {
+            "parameter_id": "vos-drift",
+            "status": "applicable",
+            "reasons": [
+              "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-23",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vos",
+      "kind": "query",
+      "question": "VOS",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vos"
+      ],
+      "expected_evidence": [
+        "vos"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "VOS",
+        "answer": "LM358 的失调电压典型 3 mV，25°C 最大 7 mV，全环境温度最大 9 mV；不混入 LM358A 或 B 版数值。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vos-25",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 3.0,
+            "maximum": 7.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；TA=25°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-full",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 9.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；0≤TA≤70°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-drift",
+            "symbol": "dVOS/dT",
+            "name": "失调电压漂移",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 7.0,
+            "maximum": null,
+            "unit": "μV/°C",
+            "conditions": "0≤TA≤70°C；VS=5 V；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vos"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vos",
+            "score": 105.97529
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {
+          "supply_voltage": "5 V",
+          "ambient_temperature": "25 °C",
+          "common_mode_voltage": "0 V",
+          "output_voltage": "1.4 V"
+        },
+        "applicability": [
+          {
+            "parameter_id": "vos-25",
+            "status": "needs_information",
+            "reasons": [
+              "待确认 开环测试设置已确认？。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          },
+          {
+            "parameter_id": "vos-full",
+            "status": "needs_information",
+            "reasons": [
+              "待确认 开环测试设置已确认？。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          },
+          {
+            "parameter_id": "vos-drift",
+            "status": "needs_information",
+            "reasons": [
+              "待确认 开环测试设置已确认？。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-24",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vos",
+      "kind": "query",
+      "question": "VOS",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vos"
+      ],
+      "expected_evidence": [
+        "vos"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "VOS",
+        "answer": "LM358 的失调电压典型 3 mV，25°C 最大 7 mV，全环境温度最大 9 mV；不混入 LM358A 或 B 版数值。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vos-25",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 3.0,
+            "maximum": 7.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；TA=25°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-full",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 9.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；0≤TA≤70°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-drift",
+            "symbol": "dVOS/dT",
+            "name": "失调电压漂移",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 7.0,
+            "maximum": null,
+            "unit": "μV/°C",
+            "conditions": "0≤TA≤70°C；VS=5 V；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vos"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vos",
+            "score": 105.97529
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {
+          "supply_voltage": "5 V",
+          "common_mode_voltage": "0 V",
+          "output_voltage": "1.4 V",
+          "open_loop": true
+        },
+        "applicability": [
+          {
+            "parameter_id": "vos-25",
+            "status": "needs_information",
+            "reasons": [
+              "待确认 环境温度 TA。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          },
+          {
+            "parameter_id": "vos-full",
+            "status": "needs_information",
+            "reasons": [
+              "待确认 环境温度 TA。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          },
+          {
+            "parameter_id": "vos-drift",
+            "status": "needs_information",
+            "reasons": [
+              "待确认 环境温度 TA。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-25",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vos",
+      "kind": "query",
+      "question": "VOS",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "vos"
+      ],
+      "expected_evidence": [
+        "vos"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "VOS",
+        "answer": "LM358 的失调电压典型 3 mV，25°C 最大 7 mV，全环境温度最大 9 mV；不混入 LM358A 或 B 版数值。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vos-25",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 3.0,
+            "maximum": 7.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；TA=25°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-full",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 9.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；0≤TA≤70°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-drift",
+            "symbol": "dVOS/dT",
+            "name": "失调电压漂移",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 7.0,
+            "maximum": null,
+            "unit": "μV/°C",
+            "conditions": "0≤TA≤70°C；VS=5 V；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vos"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vos",
+            "score": 105.97529
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {
+          "supply_voltage": "35 V",
+          "ambient_temperature": "25 °C",
+          "common_mode_voltage": "0 V",
+          "output_voltage": "1.4 V",
+          "open_loop": true
+        },
+        "applicability": [
+          {
+            "parameter_id": "vos-25",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 总供电压差 VS 的原表条件。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          },
+          {
+            "parameter_id": "vos-full",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 总供电压差 VS 的原表条件。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          },
+          {
+            "parameter_id": "vos-drift",
+            "status": "not_applicable",
+            "reasons": [
+              "不符合 总供电压差 VS 的原表条件。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          }
+        ],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-26",
+      "category": "conditions",
+      "split": "dev",
+      "family": "query-vos",
+      "kind": "query",
+      "question": "VOS",
+      "passed": true,
+      "errors": [],
+      "actual_status": "invalid",
+      "top3": [
+        "vos"
+      ],
+      "expected_evidence": [
+        "vos"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": false,
+      "fact_answered": true,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "invalid",
+        "question": "VOS",
+        "answer": "筛选条件需要修改；原始参数行保留。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vos-25",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 3.0,
+            "maximum": 7.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；TA=25°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-full",
+            "symbol": "VOS",
+            "name": "输入失调电压",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 9.0,
+            "unit": "mV",
+            "conditions": "VS=5–30 V；0≤TA≤70°C；VCM=0 V；VO=1.4 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vos-drift",
+            "symbol": "dVOS/dT",
+            "name": "失调电压漂移",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 7.0,
+            "maximum": null,
+            "unit": "μV/°C",
+            "conditions": "0≤TA≤70°C；VS=5 V；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "vos"
+        ],
+        "hits": [
+          {
+            "evidence_id": "vos",
+            "score": 105.97529
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+          "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {
+          "supply_voltage": "5 V",
+          "ambient_temperature": "25 K",
+          "common_mode_voltage": "0 V",
+          "output_voltage": "1.4 V",
+          "open_loop": true
+        },
+        "applicability": [
+          {
+            "parameter_id": "vos-25",
+            "status": "invalid",
+            "reasons": [
+              "环境温度 TA：单位 K 不适用于此项；可用：°C、C。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          },
+          {
+            "parameter_id": "vos-full",
+            "status": "invalid",
+            "reasons": [
+              "环境温度 TA：单位 K 不适用于此项；可用：°C、C。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          },
+          {
+            "parameter_id": "vos-drift",
+            "status": "invalid",
+            "reasons": [
+              "环境温度 TA：单位 K 不适用于此项；可用：°C、C。"
+            ],
+            "evidence_ids": [
+              "vos"
+            ]
+          }
+        ],
+        "condition_errors": {
+          "ambient_temperature": "单位 K 不适用于此项；可用：°C、C。"
+        }
+      }
+    },
+    {
+      "id": "lm358-27",
+      "category": "mechanism",
+      "split": "dev",
+      "family": "query-pins",
+      "kind": "query",
+      "question": "引脚",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "pins"
+      ],
+      "expected_evidence": [
+        "pins"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "evidence_only",
+        "question": "引脚",
+        "answer": "LM358 有两个运放通道；引脚图按 SOIC（D）顶视图显示，电源用 V+ 与 V− 表示。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "pins"
+        ],
+        "hits": [
+          {
+            "evidence_id": "pins",
+            "score": 105.5593
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-28",
+      "category": "mechanism",
+      "split": "dev",
+      "family": "query-pins",
+      "kind": "query",
+      "question": "接线",
+      "passed": true,
+      "errors": [],
+      "actual_status": "evidence_only",
+      "top3": [
+        "pins"
+      ],
+      "expected_evidence": [
+        "pins"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "evidence_only",
+        "question": "接线",
+        "answer": "LM358 有两个运放通道；引脚图按 SOIC（D）顶视图显示，电源用 V+ 与 V− 表示。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "pins"
+        ],
+        "hits": [
+          {
+            "evidence_id": "pins",
+            "score": 103.7926
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-29",
+      "category": "unanswerable",
+      "split": "dev",
+      "family": "unknown-dev",
+      "kind": "query",
+      "question": "qzxw987654",
+      "passed": true,
+      "errors": [],
+      "actual_status": "not_found",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "not_found",
+        "question": "qzxw987654",
+        "answer": "在当前型号的已整理证据中未找到匹配内容。请试用明确参数符号或中文参数名。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-30",
+      "category": "unanswerable",
+      "split": "dev",
+      "family": "unknown-dev",
+      "kind": "query",
+      "question": "做一盘番茄炒蛋",
+      "passed": true,
+      "errors": [],
+      "actual_status": "not_found",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "not_found",
+        "question": "做一盘番茄炒蛋",
+        "answer": "在当前型号的已整理证据中未找到匹配内容。请试用明确参数符号或中文参数名。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-31",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-frequency",
+      "kind": "query",
+      "question": "GBW",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "frequency"
+      ],
+      "expected_evidence": [
+        "frequency"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": true,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "GBW",
+        "answer": "LM358 的 GBW 典型 0.7 MHz、压摆率典型 0.3 V/μs；它们不是保证的闭环带宽或输出能力。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "gbw",
+            "symbol": "GBW",
+            "name": "增益带宽积",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.7,
+            "maximum": null,
+            "unit": "MHz",
+            "conditions": "VS=5 V；TA=25°C；典型值，按表头",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "frequency"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "sr",
+            "symbol": "SR",
+            "name": "压摆率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.3,
+            "maximum": null,
+            "unit": "V/μs",
+            "conditions": "G=+1；VS=5 V；TA=25°C；典型值",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "frequency"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "frequency"
+        ],
+        "hits": [
+          {
+            "evidence_id": "frequency",
+            "score": 106.7843
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-32",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-frequency",
+      "kind": "query",
+      "question": "增益带宽积",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "frequency",
+        "gain",
+        "noise"
+      ],
+      "expected_evidence": [
+        "frequency"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "增益带宽积",
+        "answer": "LM358 的 GBW 典型 0.7 MHz、压摆率典型 0.3 V/μs；它们不是保证的闭环带宽或输出能力。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "gbw",
+            "symbol": "GBW",
+            "name": "增益带宽积",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.7,
+            "maximum": null,
+            "unit": "MHz",
+            "conditions": "VS=5 V；TA=25°C；典型值，按表头",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "frequency"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "sr",
+            "symbol": "SR",
+            "name": "压摆率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.3,
+            "maximum": null,
+            "unit": "V/μs",
+            "conditions": "G=+1；VS=5 V；TA=25°C；典型值",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "frequency"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "frequency"
+        ],
+        "hits": [
+          {
+            "evidence_id": "frequency",
+            "score": 116.93796
+          },
+          {
+            "evidence_id": "gain",
+            "score": 2.72375
+          },
+          {
+            "evidence_id": "noise",
+            "score": 1.79678
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-33",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-frequency",
+      "kind": "query",
+      "question": "SR",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "frequency"
+      ],
+      "expected_evidence": [
+        "frequency"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "SR",
+        "answer": "LM358 的 GBW 典型 0.7 MHz、压摆率典型 0.3 V/μs；它们不是保证的闭环带宽或输出能力。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "gbw",
+            "symbol": "GBW",
+            "name": "增益带宽积",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.7,
+            "maximum": null,
+            "unit": "MHz",
+            "conditions": "VS=5 V；TA=25°C；典型值，按表头",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "frequency"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "sr",
+            "symbol": "SR",
+            "name": "压摆率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.3,
+            "maximum": null,
+            "unit": "V/μs",
+            "conditions": "G=+1；VS=5 V；TA=25°C；典型值",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "frequency"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "frequency"
+        ],
+        "hits": [
+          {
+            "evidence_id": "frequency",
+            "score": 105.31075
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-34",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-frequency",
+      "kind": "query",
+      "question": "压摆率",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "frequency"
+      ],
+      "expected_evidence": [
+        "frequency"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "压摆率",
+        "answer": "LM358 的 GBW 典型 0.7 MHz、压摆率典型 0.3 V/μs；它们不是保证的闭环带宽或输出能力。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "gbw",
+            "symbol": "GBW",
+            "name": "增益带宽积",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.7,
+            "maximum": null,
+            "unit": "MHz",
+            "conditions": "VS=5 V；TA=25°C；典型值，按表头",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "frequency"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "sr",
+            "symbol": "SR",
+            "name": "压摆率",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 0.3,
+            "maximum": null,
+            "unit": "V/μs",
+            "conditions": "G=+1；VS=5 V；TA=25°C；典型值",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "frequency"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "frequency"
+        ],
+        "hits": [
+          {
+            "evidence_id": "frequency",
+            "score": 109.6215
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-35",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-common-mode",
+      "kind": "query",
+      "question": "VCM",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "common-mode",
+        "recommended"
+      ],
+      "expected_evidence": [
+        "common-mode"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "VCM",
+        "answer": "共模范围的 25°C 与全温条件分别列出；满足输入共模不等于输出可以到达同样电压。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vcm-25",
+            "symbol": "VCM",
+            "name": "输入共模范围",
+            "rating": "electrical",
+            "minimum": "V−",
+            "typical": null,
+            "maximum": "V+ − 1.5",
+            "unit": "V",
+            "conditions": "VS=5–30 V；TA=25°C；LM358",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vcm-full",
+            "symbol": "VCM",
+            "name": "输入共模范围",
+            "rating": "electrical",
+            "minimum": "V−",
+            "typical": null,
+            "maximum": "V+ − 2",
+            "unit": "V",
+            "conditions": "VS=5–30 V；0≤TA≤70°C；LM358",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "cmrr",
+            "symbol": "CMRR",
+            "name": "共模抑制比",
+            "rating": "electrical",
+            "minimum": 65.0,
+            "typical": 80.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "VS=5–30 V；VCM=0 V；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "common-mode"
+        ],
+        "hits": [
+          {
+            "evidence_id": "common-mode",
+            "score": 105.4939
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 104.63965
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-36",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-common-mode",
+      "kind": "query",
+      "question": "输入共模范围",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "common-mode",
+        "recommended",
+        "noise"
+      ],
+      "expected_evidence": [
+        "common-mode"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "输入共模范围",
+        "answer": "共模范围的 25°C 与全温条件分别列出；满足输入共模不等于输出可以到达同样电压。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "vcm-25",
+            "symbol": "VCM",
+            "name": "输入共模范围",
+            "rating": "electrical",
+            "minimum": "V−",
+            "typical": null,
+            "maximum": "V+ − 1.5",
+            "unit": "V",
+            "conditions": "VS=5–30 V；TA=25°C；LM358",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "vcm-full",
+            "symbol": "VCM",
+            "name": "输入共模范围",
+            "rating": "electrical",
+            "minimum": "V−",
+            "typical": null,
+            "maximum": "V+ − 2",
+            "unit": "V",
+            "conditions": "VS=5–30 V；0≤TA≤70°C；LM358",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "cmrr",
+            "symbol": "CMRR",
+            "name": "共模抑制比",
+            "rating": "electrical",
+            "minimum": 65.0,
+            "typical": 80.0,
+            "maximum": null,
+            "unit": "dB",
+            "conditions": "VS=5–30 V；VCM=0 V；TA=25°C",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "common-mode"
+        ],
+        "hits": [
+          {
+            "evidence_id": "common-mode",
+            "score": 117.02327
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 3.93355
+          },
+          {
+            "evidence_id": "noise",
+            "score": 1.35913
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-37",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-abs",
+      "kind": "query",
+      "question": "绝对最大额定值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "abs",
+        "vos"
+      ],
+      "expected_evidence": [
+        "abs"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "绝对最大额定值",
+        "answer": "LM358 的最大供电压差为 32 V，应力限制不能替代 3–30 V 推荐工作范围。仅整理 LM358 适用行。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "abs-vs",
+            "symbol": "VS",
+            "name": "供电压差",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 32.0,
+            "unit": "V",
+            "conditions": "总压差；原文 ±16 or 32 V",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-vid",
+            "symbol": "VID",
+            "name": "差分输入电压",
+            "rating": "absolute_maximum",
+            "minimum": -32.0,
+            "typical": null,
+            "maximum": 32.0,
+            "unit": "V",
+            "conditions": "IN+ 相对 IN−",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-vi",
+            "symbol": "VI",
+            "name": "单端输入应力电压",
+            "rating": "absolute_maximum",
+            "minimum": -0.3,
+            "typical": null,
+            "maximum": 32.0,
+            "unit": "V",
+            "conditions": "Either input；原表数值",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-short",
+            "symbol": "tSC",
+            "name": "输出对地短路持续时间",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": null,
+            "unit": "s",
+            "conditions": "原表合并限制栏：Unlimited；一个放大器；TA≤25°C；VS≤15 V；不适用于输出短接正电源",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-ta",
+            "symbol": "TA",
+            "name": "环境温度",
+            "rating": "absolute_maximum",
+            "minimum": 0.0,
+            "typical": null,
+            "maximum": 70.0,
+            "unit": "°C",
+            "conditions": "LM358；absolute maximum 表",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-tj",
+            "symbol": "TJ",
+            "name": "虚结温",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "应力额定值",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-storage",
+            "symbol": "Tstg",
+            "name": "储存温度",
+            "rating": "absolute_maximum",
+            "minimum": -65.0,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "储存条件",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "abs"
+        ],
+        "hits": [
+          {
+            "evidence_id": "abs",
+            "score": 321.49218
+          },
+          {
+            "evidence_id": "vos",
+            "score": 2.14146
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-38",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-abs",
+      "kind": "query",
+      "question": "极限电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "abs",
+        "vos",
+        "recommended"
+      ],
+      "expected_evidence": [
+        "abs"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "极限电压",
+        "answer": "LM358 的最大供电压差为 32 V，应力限制不能替代 3–30 V 推荐工作范围。仅整理 LM358 适用行。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "abs-vs",
+            "symbol": "VS",
+            "name": "供电压差",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 32.0,
+            "unit": "V",
+            "conditions": "总压差；原文 ±16 or 32 V",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-vid",
+            "symbol": "VID",
+            "name": "差分输入电压",
+            "rating": "absolute_maximum",
+            "minimum": -32.0,
+            "typical": null,
+            "maximum": 32.0,
+            "unit": "V",
+            "conditions": "IN+ 相对 IN−",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-vi",
+            "symbol": "VI",
+            "name": "单端输入应力电压",
+            "rating": "absolute_maximum",
+            "minimum": -0.3,
+            "typical": null,
+            "maximum": 32.0,
+            "unit": "V",
+            "conditions": "Either input；原表数值",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-short",
+            "symbol": "tSC",
+            "name": "输出对地短路持续时间",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": null,
+            "unit": "s",
+            "conditions": "原表合并限制栏：Unlimited；一个放大器；TA≤25°C；VS≤15 V；不适用于输出短接正电源",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-ta",
+            "symbol": "TA",
+            "name": "环境温度",
+            "rating": "absolute_maximum",
+            "minimum": 0.0,
+            "typical": null,
+            "maximum": 70.0,
+            "unit": "°C",
+            "conditions": "LM358；absolute maximum 表",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-tj",
+            "symbol": "TJ",
+            "name": "虚结温",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "应力额定值",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-storage",
+            "symbol": "Tstg",
+            "name": "储存温度",
+            "rating": "absolute_maximum",
+            "minimum": -65.0,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "储存条件",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "abs"
+        ],
+        "hits": [
+          {
+            "evidence_id": "abs",
+            "score": 107.72055
+          },
+          {
+            "evidence_id": "vos",
+            "score": 0.78251
+          },
+          {
+            "evidence_id": "recommended",
+            "score": 0.65426
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-39",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-abs",
+      "kind": "query",
+      "question": "absolute maximum",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "abs",
+        "noise",
+        "frequency"
+      ],
+      "expected_evidence": [
+        "abs"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "absolute maximum",
+        "answer": "LM358 的最大供电压差为 32 V，应力限制不能替代 3–30 V 推荐工作范围。仅整理 LM358 适用行。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "abs-vs",
+            "symbol": "VS",
+            "name": "供电压差",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 32.0,
+            "unit": "V",
+            "conditions": "总压差；原文 ±16 or 32 V",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-vid",
+            "symbol": "VID",
+            "name": "差分输入电压",
+            "rating": "absolute_maximum",
+            "minimum": -32.0,
+            "typical": null,
+            "maximum": 32.0,
+            "unit": "V",
+            "conditions": "IN+ 相对 IN−",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-vi",
+            "symbol": "VI",
+            "name": "单端输入应力电压",
+            "rating": "absolute_maximum",
+            "minimum": -0.3,
+            "typical": null,
+            "maximum": 32.0,
+            "unit": "V",
+            "conditions": "Either input；原表数值",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-short",
+            "symbol": "tSC",
+            "name": "输出对地短路持续时间",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": null,
+            "unit": "s",
+            "conditions": "原表合并限制栏：Unlimited；一个放大器；TA≤25°C；VS≤15 V；不适用于输出短接正电源",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-ta",
+            "symbol": "TA",
+            "name": "环境温度",
+            "rating": "absolute_maximum",
+            "minimum": 0.0,
+            "typical": null,
+            "maximum": 70.0,
+            "unit": "°C",
+            "conditions": "LM358；absolute maximum 表",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-tj",
+            "symbol": "TJ",
+            "name": "虚结温",
+            "rating": "absolute_maximum",
+            "minimum": null,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "应力额定值",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "abs-storage",
+            "symbol": "Tstg",
+            "name": "储存温度",
+            "rating": "absolute_maximum",
+            "minimum": -65.0,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "°C",
+            "conditions": "储存条件",
+            "notes": [],
+            "evidence_ids": [
+              "abs"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "abs"
+        ],
+        "hits": [
+          {
+            "evidence_id": "abs",
+            "score": 319.01052
+          },
+          {
+            "evidence_id": "noise",
+            "score": 0.47766
+          },
+          {
+            "evidence_id": "frequency",
+            "score": 0.46057
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-40",
+      "category": "parameter",
+      "split": "holdout",
+      "family": "query-ios-drift",
+      "kind": "query",
+      "question": "输入失调电流漂移",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "bias",
+        "vos",
+        "output-current"
+      ],
+      "expected_evidence": [
+        "bias"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": false,
+      "has_expected_facts": true,
+      "fact_answered": true,
+      "fact_correct": true,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "输入失调电流漂移",
+        "answer": "保留 LM358 偏置电流的负号和各温度行；负号表达电流方向，不把负数列当成通用幅值比较。",
+        "inputs": {},
+        "parameters": [
+          {
+            "id": "ib-25",
+            "symbol": "IB",
+            "name": "输入偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": -20.0,
+            "maximum": -250.0,
+            "unit": "nA",
+            "conditions": "VS=5 V；VO=1.4 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+              "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ib-full",
+            "symbol": "IB",
+            "name": "输入偏置电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": -500.0,
+            "unit": "nA",
+            "conditions": "VS=5 V；VO=1.4 V；0≤TA≤70°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。",
+              "负号表示原表电流方向，列名按原表保留，不将其重排为幅值上下界。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ios-25",
+            "symbol": "IOS",
+            "name": "输入失调电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 2.0,
+            "maximum": 50.0,
+            "unit": "nA",
+            "conditions": "VS=5 V；VO=1.4 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ios-full",
+            "symbol": "IOS",
+            "name": "输入失调电流",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": null,
+            "maximum": 150.0,
+            "unit": "nA",
+            "conditions": "VS=5 V；VO=1.4 V；0≤TA≤70°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          },
+          {
+            "id": "ios-drift",
+            "symbol": "dIOS/dT",
+            "name": "失调电流漂移",
+            "rating": "electrical",
+            "minimum": null,
+            "typical": 10.0,
+            "maximum": null,
+            "unit": "pA/°C",
+            "conditions": "VS=5 V；TA=25°C；开环，VCM=0 V",
+            "notes": [
+              "所有典型值只在 TA=25°C 给出；数值列按原表保留。"
+            ],
+            "evidence_ids": [
+              "bias"
+            ],
+            "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+          }
+        ],
+        "checks": [],
+        "evidence_ids": [
+          "bias"
+        ],
+        "hits": [
+          {
+            "evidence_id": "bias",
+            "score": 113.62515
+          },
+          {
+            "evidence_id": "vos",
+            "score": 8.83967
+          },
+          {
+            "evidence_id": "output-current",
+            "score": 2.18648
+          }
+        ],
+        "notices": [
+          "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+          "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-41",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-supply_voltage",
+      "kind": "check",
+      "question": "{'supply_positive': '3 V', 'supply_negative': '0 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "LM358 条件检查",
+        "answer": "推荐总供电压差：满足该项。VS=V+−V−=3 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+        "inputs": {
+          "supply_positive": "3 V",
+          "supply_negative": "0 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "satisfied",
+            "message": "VS=V+−V−=3 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 3.0,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-42",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-supply_voltage",
+      "kind": "check",
+      "question": "{'supply_positive': '15 V', 'supply_negative': '-15 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "LM358 条件检查",
+        "answer": "推荐总供电压差：满足该项。VS=V+−V−=30 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+        "inputs": {
+          "supply_positive": "15 V",
+          "supply_negative": "-15 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "satisfied",
+            "message": "VS=V+−V−=30 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 30.0,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-43",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-supply_voltage",
+      "kind": "check",
+      "question": "{'supply_positive': '30.001 V', 'supply_negative': '0 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "LM358 条件检查",
+        "answer": "推荐总供电压差：不满足该项。VS=V+−V−=30.001 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+        "inputs": {
+          "supply_positive": "30.001 V",
+          "supply_negative": "0 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "violated",
+            "message": "VS=V+−V−=30.001 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 30.001,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-44",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-supply_voltage",
+      "kind": "check",
+      "question": "{'supply_positive': '2.999 V', 'supply_negative': '0 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "LM358 条件检查",
+        "answer": "推荐总供电压差：不满足该项。VS=V+−V−=2.999 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+        "inputs": {
+          "supply_positive": "2.999 V",
+          "supply_negative": "0 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "violated",
+            "message": "VS=V+−V−=2.999 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 2.999,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-45",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-supply_voltage",
+      "kind": "check",
+      "question": "{'supply_positive': '0 V', 'supply_negative': '0 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "invalid",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "invalid",
+        "question": "LM358 条件检查",
+        "answer": "推荐总供电压差：输入需要修改。V+ 必须高于 V−；两条电源轨须使用同一参考点。",
+        "inputs": {
+          "supply_positive": "0 V",
+          "supply_negative": "0 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "invalid",
+            "message": "V+ 必须高于 V−；两条电源轨须使用同一参考点。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-46",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-supply_voltage",
+      "kind": "check",
+      "question": "{'supply_positive': '0 V', 'supply_negative': '5 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "invalid",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "invalid",
+        "question": "LM358 条件检查",
+        "answer": "推荐总供电压差：输入需要修改。V+ 必须高于 V−；两条电源轨须使用同一参考点。",
+        "inputs": {
+          "supply_positive": "0 V",
+          "supply_negative": "5 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "invalid",
+            "message": "V+ 必须高于 V−；两条电源轨须使用同一参考点。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-47",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-supply_voltage",
+      "kind": "check",
+      "question": "{'supply_positive': '5000 mV', 'supply_negative': '0 V'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "LM358 条件检查",
+        "answer": "推荐总供电压差：满足该项。VS=V+−V−=5.000 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+        "inputs": {
+          "supply_positive": "5000 mV",
+          "supply_negative": "0 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "satisfied",
+            "message": "VS=V+−V−=5.000 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 5.0,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature",
+              "common_mode_voltage"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-48",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-ambient_temperature",
+      "kind": "check",
+      "question": "{'ambient_temperature': '0 °C'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "LM358 条件检查",
+        "answer": "推荐环境温度 TA：满足该项。0 °C；该项范围为 0–70 °C（含边界）。TA 不是结温 TJ。",
+        "inputs": {
+          "ambient_temperature": "0 °C"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "needs_information",
+            "message": "请提供正电源 V+（相对同一参考点）、负电源 V−（相对同一参考点）；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "satisfied",
+            "message": "0 °C；该项范围为 0–70 °C（含边界）。TA 不是结温 TJ。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 0.0,
+            "unit": "°C",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "needs_information",
+            "message": "请提供正电源 V+（相对同一参考点）、负电源 V−（相对同一参考点）、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative",
+              "common_mode_voltage"
+            ]
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "needs_information",
+            "message": "请提供正电源 V+（相对同一参考点）、负电源 V−（相对同一参考点）、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative",
+              "common_mode_voltage"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-49",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-ambient_temperature",
+      "kind": "check",
+      "question": "{'ambient_temperature': '70 °C'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "LM358 条件检查",
+        "answer": "推荐环境温度 TA：满足该项。70 °C；该项范围为 0–70 °C（含边界）。TA 不是结温 TJ。",
+        "inputs": {
+          "ambient_temperature": "70 °C"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "needs_information",
+            "message": "请提供正电源 V+（相对同一参考点）、负电源 V−（相对同一参考点）；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "satisfied",
+            "message": "70 °C；该项范围为 0–70 °C（含边界）。TA 不是结温 TJ。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 70.0,
+            "unit": "°C",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "needs_information",
+            "message": "请提供正电源 V+（相对同一参考点）、负电源 V−（相对同一参考点）、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative",
+              "common_mode_voltage"
+            ]
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "needs_information",
+            "message": "请提供正电源 V+（相对同一参考点）、负电源 V−（相对同一参考点）、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative",
+              "common_mode_voltage"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-50",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-ambient_temperature",
+      "kind": "check",
+      "question": "{'ambient_temperature': '-0.01 °C'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "LM358 条件检查",
+        "answer": "推荐环境温度 TA：不满足该项。-0.01 °C；该项范围为 0–70 °C（含边界）。TA 不是结温 TJ。",
+        "inputs": {
+          "ambient_temperature": "-0.01 °C"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "needs_information",
+            "message": "请提供正电源 V+（相对同一参考点）、负电源 V−（相对同一参考点）；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "violated",
+            "message": "-0.01 °C；该项范围为 0–70 °C（含边界）。TA 不是结温 TJ。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": -0.01,
+            "unit": "°C",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "needs_information",
+            "message": "请提供正电源 V+（相对同一参考点）、负电源 V−（相对同一参考点）、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative",
+              "common_mode_voltage"
+            ]
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "needs_information",
+            "message": "请提供正电源 V+（相对同一参考点）、负电源 V−（相对同一参考点）、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative",
+              "common_mode_voltage"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-51",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-ambient_temperature",
+      "kind": "check",
+      "question": "{'ambient_temperature': '70.01 °C'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "recommended"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "LM358 条件检查",
+        "answer": "推荐环境温度 TA：不满足该项。70.01 °C；该项范围为 0–70 °C（含边界）。TA 不是结温 TJ。",
+        "inputs": {
+          "ambient_temperature": "70.01 °C"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "needs_information",
+            "message": "请提供正电源 V+（相对同一参考点）、负电源 V−（相对同一参考点）；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative"
+            ]
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "violated",
+            "message": "70.01 °C；该项范围为 0–70 °C（含边界）。TA 不是结温 TJ。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 70.01,
+            "unit": "°C",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "needs_information",
+            "message": "请提供正电源 V+（相对同一参考点）、负电源 V−（相对同一参考点）、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative",
+              "common_mode_voltage"
+            ]
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "needs_information",
+            "message": "请提供正电源 V+（相对同一参考点）、负电源 V−（相对同一参考点）、输入共模电压 VCM；不使用隐含默认值。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "supply_positive",
+              "supply_negative",
+              "common_mode_voltage"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-52",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-common_mode_electrical",
+      "kind": "check",
+      "question": "{'supply_positive': '5 V', 'supply_negative': '0 V', 'common_mode_voltage': '4.5 V', 'ambient_temperature': '25 °C'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended",
+        "common-mode"
+      ],
+      "expected_evidence": [
+        "common-mode"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "LM358 条件检查",
+        "answer": "推荐总供电压差：满足该项。VS=V+−V−=5 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。\n推荐环境温度 TA：满足该项。25 °C；该项范围为 0–70 °C（含边界）。TA 不是结温 TJ。\n推荐工作条件：共模范围：不满足该项。TA=25°C，VS=5 V：VCM=4.5 V；该条件下范围为 0–3 V。按推荐工作条件的 V− 至 V+−2 V 判断。\n条件化电气特性：共模范围：不满足该项。TA=25°C，VS=5 V：VCM=4.5 V；该条件下范围为 0–3.5 V。室温行与全温行分别判断。",
+        "inputs": {
+          "supply_positive": "5 V",
+          "supply_negative": "0 V",
+          "ambient_temperature": "25 °C",
+          "common_mode_voltage": "4.5 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "satisfied",
+            "message": "VS=V+−V−=5 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 5.0,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "satisfied",
+            "message": "25 °C；该项范围为 0–70 °C（含边界）。TA 不是结温 TJ。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 25.0,
+            "unit": "°C",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "violated",
+            "message": "TA=25°C，VS=5 V：VCM=4.5 V；该条件下范围为 0–3 V。按推荐工作条件的 V− 至 V+−2 V 判断。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 4.5,
+            "unit": "V",
+            "minimum": 0.0,
+            "maximum": 3.0,
+            "fields": []
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "violated",
+            "message": "TA=25°C，VS=5 V：VCM=4.5 V；该条件下范围为 0–3.5 V。室温行与全温行分别判断。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": 4.5,
+            "unit": "V",
+            "minimum": 0.0,
+            "maximum": 3.5,
+            "fields": []
+          }
+        ],
+        "evidence_ids": [
+          "recommended",
+          "common-mode"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          },
+          {
+            "evidence_id": "common-mode",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-53",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-common_mode_electrical",
+      "kind": "check",
+      "question": "{'supply_positive': '5 V', 'supply_negative': '0 V', 'common_mode_voltage': '3.5 V', 'ambient_temperature': '25 °C'}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended",
+        "common-mode"
+      ],
+      "expected_evidence": [
+        "common-mode"
+      ],
+      "retrieval_hit": true,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "LM358 条件检查",
+        "answer": "推荐总供电压差：满足该项。VS=V+−V−=5 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。\n推荐环境温度 TA：满足该项。25 °C；该项范围为 0–70 °C（含边界）。TA 不是结温 TJ。\n推荐工作条件：共模范围：不满足该项。TA=25°C，VS=5 V：VCM=3.5 V；该条件下范围为 0–3 V。按推荐工作条件的 V− 至 V+−2 V 判断。\n条件化电气特性：共模范围：满足该项。TA=25°C，VS=5 V：VCM=3.5 V；该条件下范围为 0–3.5 V。室温行与全温行分别判断。",
+        "inputs": {
+          "supply_positive": "5 V",
+          "supply_negative": "0 V",
+          "ambient_temperature": "25 °C",
+          "common_mode_voltage": "3.5 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "satisfied",
+            "message": "VS=V+−V−=5 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 5.0,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "satisfied",
+            "message": "25 °C；该项范围为 0–70 °C（含边界）。TA 不是结温 TJ。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 25.0,
+            "unit": "°C",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "violated",
+            "message": "TA=25°C，VS=5 V：VCM=3.5 V；该条件下范围为 0–3 V。按推荐工作条件的 V− 至 V+−2 V 判断。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 3.5,
+            "unit": "V",
+            "minimum": 0.0,
+            "maximum": 3.0,
+            "fields": []
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "satisfied",
+            "message": "TA=25°C，VS=5 V：VCM=3.5 V；该条件下范围为 0–3.5 V。室温行与全温行分别判断。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": 3.5,
+            "unit": "V",
+            "minimum": 0.0,
+            "maximum": 3.5,
+            "fields": []
+          }
+        ],
+        "evidence_ids": [
+          "recommended",
+          "common-mode"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          },
+          {
+            "evidence_id": "common-mode",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-54",
+      "category": "rule",
+      "split": "holdout",
+      "family": "rule-common_mode_electrical",
+      "kind": "check",
+      "question": "{'supply_positive': '5 V', 'supply_negative': '0 V', 'common_mode_voltage': '3 V', 'ambient_temperature': None}",
+      "passed": true,
+      "errors": [],
+      "actual_status": "answered",
+      "top3": [
+        "recommended"
+      ],
+      "expected_evidence": [
+        "common-mode"
+      ],
+      "retrieval_hit": false,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "answered",
+        "question": "LM358 条件检查",
+        "answer": "推荐总供电压差：满足该项。VS=V+−V−=5 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+        "inputs": {
+          "supply_positive": "5 V",
+          "supply_negative": "0 V",
+          "common_mode_voltage": "3 V"
+        },
+        "parameters": [],
+        "checks": [
+          {
+            "rule": "supply_voltage",
+            "title": "推荐总供电压差",
+            "status": "satisfied",
+            "message": "VS=V+−V−=5 V；推荐范围为3–30 V。不能使用 LM358B 的36 V范围。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": 5.0,
+            "unit": "V",
+            "minimum": null,
+            "maximum": null,
+            "fields": []
+          },
+          {
+            "rule": "ambient_temperature",
+            "title": "推荐环境温度 TA",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "common_mode_recommended",
+            "title": "推荐工作条件：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "recommended"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          },
+          {
+            "rule": "common_mode_electrical",
+            "title": "条件化电气特性：共模范围",
+            "status": "needs_information",
+            "message": "请提供环境温度 TA；不使用隐含默认值。",
+            "evidence_ids": [
+              "common-mode"
+            ],
+            "value": null,
+            "unit": null,
+            "minimum": null,
+            "maximum": null,
+            "fields": [
+              "ambient_temperature"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [
+          {
+            "evidence_id": "recommended",
+            "score": 1.0
+          }
+        ],
+        "notices": [
+          "每项仅核对该项限制，不代表完整电路设计通过。",
+          "推荐条件与电气特性测试范围分开报告；TA 未提供时不默认25°C。",
+          "输入共模满足不等于输出摆幅、带宽、稳定性或负载能力满足。"
+        ],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-55",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unsupported-holdout",
+      "kind": "query",
+      "question": "LM358B 的供电",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "unsupported",
+        "question": "LM358B 的供电",
+        "answer": "当前所选资料只覆盖 LM358（TI）。问题包含其他型号或后缀，请切换对应芯片；没有收录的型号不能沿用当前规格。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-56",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unsupported-holdout",
+      "kind": "query",
+      "question": "LM358A 的失调电压",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "unsupported",
+        "question": "LM358A 的失调电压",
+        "answer": "当前所选资料只覆盖 LM358（TI）。问题包含其他型号或后缀，请切换对应芯片；没有收录的型号不能沿用当前规格。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-57",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unsupported-holdout",
+      "kind": "query",
+      "question": "从曲线读出精确值",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "unsupported",
+        "question": "从曲线读出精确值",
+        "answer": "当前支持手册证据与有限检查；曲线自动读数和完整电路设计判断暂不支持。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-58",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unsupported-holdout",
+      "kind": "query",
+      "question": "生成完整电路BOM",
+      "passed": true,
+      "errors": [],
+      "actual_status": "unsupported",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "unsupported",
+        "question": "生成完整电路BOM",
+        "answer": "当前支持手册证据与有限检查；曲线自动读数和完整电路设计判断暂不支持。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-59",
+      "category": "unanswerable",
+      "split": "holdout",
+      "family": "missing-unit",
+      "kind": "query",
+      "question": "5能工作吗",
+      "passed": true,
+      "errors": [],
+      "actual_status": "needs_information",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "needs_information",
+        "question": "5能工作吗",
+        "answer": "请在条件检查页分别填写 V+、V−，不能把单个电压默认当成总压差或共模输入。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [
+          "recommended"
+        ],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    },
+    {
+      "id": "lm358-60",
+      "category": "unanswerable",
+      "split": "holdout",
+      "family": "unknown-holdout",
+      "kind": "query",
+      "question": "qzxw555000",
+      "passed": true,
+      "errors": [],
+      "actual_status": "not_found",
+      "top3": [],
+      "expected_evidence": [],
+      "retrieval_hit": null,
+      "baseline_hit": null,
+      "has_expected_facts": false,
+      "fact_answered": false,
+      "fact_correct": false,
+      "output": {
+        "chip_id": "lm358",
+        "status": "not_found",
+        "question": "qzxw555000",
+        "answer": "在当前型号的已整理证据中未找到匹配内容。请试用明确参数符号或中文参数名。",
+        "inputs": {},
+        "parameters": [],
+        "checks": [],
+        "evidence_ids": [],
+        "hits": [],
+        "notices": [],
+        "source_sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "source_revision": "SLOS068AB (Rev. AB)",
+        "condition_inputs": {},
+        "applicability": [],
+        "condition_errors": {}
+      }
+    }
+  ],
+  "initial_holdout_metrics": {
+    "cases": 30,
+    "passed": 30,
+    "query_retrieval_cases": 10,
+    "top3_recall": 1.0,
+    "plain_top3_recall": 0.1,
+    "fact_cases": 10,
+    "fact_answered": 10,
+    "fact_accuracy": 1.0,
+    "fact_coverage": 1.0,
+    "unsupported_correct": 4,
+    "unsupported_cases": 4,
+    "by_category": {
+      "parameter": {
+        "total": 10,
+        "passed": 10
+      },
+      "rule": {
+        "total": 14,
+        "passed": 14
+      },
+      "unanswerable": {
+        "total": 2,
+        "passed": 2
+      },
+      "unsupported": {
+        "total": 4,
+        "passed": 4
+      }
+    }
+  }
+}

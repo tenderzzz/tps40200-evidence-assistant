@@ -1,0 +1,1233 @@
+{
+  "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+  "provenance": "固定PDF对照转录与有理数计算期望；未从被测实现生成。自建开发/留出分组，不是独立盲测。",
+  "cases": [
+    {
+      "id": "lm2596-adj-01",
+      "kind": "query",
+      "question": "VFB",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-vfb",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vfb-25": {
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vfb"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-02",
+      "kind": "query",
+      "question": "反馈参考电压是多少",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-vfb",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vfb-25": {
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vfb"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-03",
+      "kind": "query",
+      "question": "反馈基准的上下限",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-vfb",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vfb-25": {
+            "minimum": 1.193,
+            "typical": 1.23,
+            "maximum": 1.267,
+            "unit": "V"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vfb"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-04",
+      "kind": "query",
+      "question": "推荐输入电压",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-recommended",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "rec-vin": {
+            "minimum": 4.5,
+            "maximum": 40
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-05",
+      "kind": "query",
+      "question": "工作温度",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-recommended",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "rec-vin": {
+            "minimum": 4.5,
+            "maximum": 40
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-06",
+      "kind": "query",
+      "question": "ICL",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-current-limit",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "icl-25": {
+            "minimum": 3.6,
+            "typical": 4.5,
+            "maximum": 6.9
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "current-limit"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-07",
+      "kind": "query",
+      "question": "峰值限流",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-current-limit",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "icl-25": {
+            "minimum": 3.6,
+            "typical": 4.5,
+            "maximum": 6.9
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "current-limit"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-08",
+      "kind": "query",
+      "question": "IQ",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-quiescent",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "iq": {
+            "typical": 5,
+            "maximum": 10,
+            "unit": "mA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "quiescent"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-09",
+      "kind": "query",
+      "question": "工作静态电流",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-quiescent",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "iq": {
+            "typical": 5,
+            "maximum": 10,
+            "unit": "mA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "quiescent"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-10",
+      "kind": "query",
+      "question": "ISTBY",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-standby",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "standby-full": {
+            "typical": null,
+            "maximum": 250,
+            "unit": "μA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "standby"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-11",
+      "kind": "query",
+      "question": "待机电流",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-standby",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "standby-full": {
+            "typical": null,
+            "maximum": 250,
+            "unit": "μA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "standby"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-12",
+      "kind": "query",
+      "question": "Ib",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-bias",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "ib-25": {
+            "typical": 10,
+            "maximum": 50,
+            "unit": "nA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "bias"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-13",
+      "kind": "query",
+      "question": "反馈偏置电流",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-bias",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "ib-25": {
+            "typical": 10,
+            "maximum": 50,
+            "unit": "nA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "bias"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-14",
+      "kind": "query",
+      "question": "VSAT",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-saturation",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vsat-full": {
+            "typical": null,
+            "maximum": 1.5
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "saturation"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-15",
+      "kind": "query",
+      "question": "饱和电压",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-saturation",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vsat-full": {
+            "typical": null,
+            "maximum": 1.5
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "saturation"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-16",
+      "kind": "query",
+      "question": "反馈分压",
+      "split": "dev",
+      "category": "mechanism",
+      "family": "query-divider",
+      "expected": {
+        "status": "evidence_only",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "divider"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-17",
+      "kind": "query",
+      "question": "R1",
+      "split": "dev",
+      "category": "mechanism",
+      "family": "query-divider",
+      "expected": {
+        "status": "evidence_only",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "divider"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-18",
+      "kind": "query",
+      "question": "引脚功能",
+      "split": "dev",
+      "category": "mechanism",
+      "family": "query-pins",
+      "expected": {
+        "status": "evidence_only",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "pins"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-19",
+      "kind": "query",
+      "question": "VFB",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vfb",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vfb-full": {
+            "minimum": 1.18,
+            "maximum": 1.28
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vfb"
+        ],
+        "applicability": {
+          "vfb-25": "applicable",
+          "vfb-full": "applicable"
+        }
+      },
+      "conditions": {
+        "vin": "12 V",
+        "tj": "25 °C",
+        "load_current": "0.5 A",
+        "output_voltage": "3 V"
+      }
+    },
+    {
+      "id": "lm2596-adj-20",
+      "kind": "query",
+      "question": "VFB",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vfb",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vfb-full": {
+            "minimum": 1.18,
+            "maximum": 1.28
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vfb"
+        ],
+        "applicability": {
+          "vfb-25": "not_applicable",
+          "vfb-full": "applicable"
+        }
+      },
+      "conditions": {
+        "vin": "12 V",
+        "tj": "100 °C",
+        "load_current": "0.5 A",
+        "output_voltage": "3 V"
+      }
+    },
+    {
+      "id": "lm2596-adj-21",
+      "kind": "query",
+      "question": "VFB",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vfb",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vfb-full": {
+            "minimum": 1.18,
+            "maximum": 1.28
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vfb"
+        ],
+        "applicability": {
+          "vfb-25": "needs_information"
+        }
+      },
+      "conditions": {
+        "vin": "12 V",
+        "tj": null,
+        "load_current": "0.5 A",
+        "output_voltage": "3 V"
+      }
+    },
+    {
+      "id": "lm2596-adj-22",
+      "kind": "query",
+      "question": "VFB",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vfb",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vfb-full": {
+            "minimum": 1.18,
+            "maximum": 1.28
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vfb"
+        ],
+        "applicability": {
+          "vfb-25": "not_applicable"
+        }
+      },
+      "conditions": {
+        "vin": "12 V",
+        "tj": "25 °C",
+        "load_current": "100 mA",
+        "output_voltage": "3 V"
+      }
+    },
+    {
+      "id": "lm2596-adj-23",
+      "kind": "query",
+      "question": "VFB",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vfb",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vfb-full": {
+            "minimum": 1.18,
+            "maximum": 1.28
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vfb"
+        ],
+        "applicability": {
+          "vfb-full": "not_applicable"
+        }
+      },
+      "conditions": {
+        "vin": "4.4 V",
+        "tj": "25 °C",
+        "load_current": "0.5 A",
+        "output_voltage": "3 V"
+      }
+    },
+    {
+      "id": "lm2596-adj-24",
+      "kind": "query",
+      "question": "VFB",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vfb",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "vfb-full": {
+            "minimum": 1.18,
+            "maximum": 1.28
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vfb"
+        ],
+        "applicability": {
+          "vfb-25": "not_applicable"
+        }
+      },
+      "conditions": {
+        "vin": "12 V",
+        "tj": "25 °C",
+        "load_current": "0.5 A",
+        "output_voltage": "5 V"
+      }
+    },
+    {
+      "id": "lm2596-adj-25",
+      "kind": "query",
+      "question": "η",
+      "split": "dev",
+      "category": "parameter",
+      "family": "query-vfb",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "efficiency": {
+            "typical": 73,
+            "maximum": null,
+            "unit": "%"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "vfb"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-26",
+      "kind": "query",
+      "question": "VFB",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vfb",
+      "expected": {
+        "status": "answered",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "vfb"
+        ],
+        "applicability": {
+          "vfb-25": "applicable"
+        }
+      },
+      "conditions": {
+        "vin": "12000 mV",
+        "tj": "25 °C",
+        "load_current": "500 mA",
+        "output_voltage": "3 V"
+      }
+    },
+    {
+      "id": "lm2596-adj-27",
+      "kind": "query",
+      "question": "VFB",
+      "split": "dev",
+      "category": "conditions",
+      "family": "query-vfb",
+      "expected": {
+        "status": "invalid",
+        "facts": {},
+        "contains": [],
+        "evidence": [
+          "vfb"
+        ],
+        "applicability": {
+          "vfb-25": "invalid"
+        }
+      },
+      "conditions": {
+        "vin": "12",
+        "tj": "25 °C",
+        "load_current": "0.5 A",
+        "output_voltage": "3 V"
+      }
+    },
+    {
+      "id": "lm2596-adj-28",
+      "kind": "query",
+      "question": "qzxw987654",
+      "split": "dev",
+      "category": "unanswerable",
+      "family": "unknown-dev",
+      "expected": {
+        "status": "not_found",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm2596-adj-29",
+      "kind": "query",
+      "question": "做一盘番茄炒蛋",
+      "split": "dev",
+      "category": "unanswerable",
+      "family": "unknown-dev",
+      "expected": {
+        "status": "not_found",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm2596-adj-30",
+      "kind": "query",
+      "question": "MP1584 的参考电压是多少",
+      "split": "dev",
+      "category": "unsupported",
+      "family": "foreign-dev",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm2596-adj-31",
+      "kind": "query",
+      "question": "fO",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-oscillator",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "fosc-full": {
+            "minimum": 110,
+            "typical": null,
+            "maximum": 173,
+            "unit": "kHz"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "oscillator"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-32",
+      "kind": "query",
+      "question": "振荡频率",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-oscillator",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "fosc-full": {
+            "minimum": 110,
+            "typical": null,
+            "maximum": 173,
+            "unit": "kHz"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "oscillator"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-33",
+      "kind": "query",
+      "question": "开关频率上下限",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-oscillator",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "fosc-full": {
+            "minimum": 110,
+            "typical": null,
+            "maximum": 173,
+            "unit": "kHz"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "oscillator"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-34",
+      "kind": "query",
+      "question": "ON/OFF",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-shutdown",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "on-full": {
+            "maximum": 0.6
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "shutdown"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-35",
+      "kind": "query",
+      "question": "关闭控制阈值",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-shutdown",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "on-full": {
+            "maximum": 0.6
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "shutdown"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-36",
+      "kind": "query",
+      "question": "逻辑输入电流",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-logic-current",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "logic-off": {
+            "typical": 5,
+            "maximum": 15,
+            "unit": "μA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "logic-current"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-37",
+      "kind": "query",
+      "question": "输出漏电流",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-leakage",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "leakage-negative": {
+            "typical": 2,
+            "maximum": 30,
+            "unit": "mA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "leakage"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-38",
+      "kind": "query",
+      "question": "漏电流",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-leakage",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "leakage-negative": {
+            "typical": 2,
+            "maximum": 30,
+            "unit": "mA"
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "leakage"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-39",
+      "kind": "query",
+      "question": "绝对最大额定值",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-abs",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "abs-vin": {
+            "maximum": 45
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "abs"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-40",
+      "kind": "query",
+      "question": "极限电压",
+      "split": "holdout",
+      "category": "parameter",
+      "family": "query-abs",
+      "expected": {
+        "status": "answered",
+        "facts": {
+          "abs-vin": {
+            "maximum": 45
+          }
+        },
+        "contains": [],
+        "evidence": [
+          "abs"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-41",
+      "kind": "check",
+      "point": {
+        "vin": "4.5 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-vin",
+      "expected": {
+        "rule": "vin",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-42",
+      "kind": "check",
+      "point": {
+        "vin": "40 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-vin",
+      "expected": {
+        "rule": "vin",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-43",
+      "kind": "check",
+      "point": {
+        "vin": "4.499 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-vin",
+      "expected": {
+        "rule": "vin",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-44",
+      "kind": "check",
+      "point": {
+        "vin": "40.001 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-vin",
+      "expected": {
+        "rule": "vin",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-45",
+      "kind": "check",
+      "point": {
+        "vin": "45 V"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-vin",
+      "expected": {
+        "rule": "vin",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-46",
+      "kind": "check",
+      "point": {
+        "vin": "4500 mV"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-vin",
+      "expected": {
+        "rule": "vin",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "recommended"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-47",
+      "kind": "check",
+      "point": {
+        "r_lower": "240 Ω"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-divider_r1",
+      "expected": {
+        "rule": "divider_r1",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "divider"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-48",
+      "kind": "check",
+      "point": {
+        "r_lower": "1.5 kΩ"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-divider_r1",
+      "expected": {
+        "rule": "divider_r1",
+        "rule_status": "satisfied",
+        "value": null,
+        "evidence": [
+          "divider"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-49",
+      "kind": "check",
+      "point": {
+        "r_lower": "239 Ω"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-divider_r1",
+      "expected": {
+        "rule": "divider_r1",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "divider"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-50",
+      "kind": "check",
+      "point": {
+        "r_lower": "1501 Ω"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-divider_r1",
+      "expected": {
+        "rule": "divider_r1",
+        "rule_status": "violated",
+        "value": null,
+        "evidence": [
+          "divider"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-51",
+      "kind": "check",
+      "point": {
+        "r_lower": "0 Ω",
+        "r_upper": "3 kΩ"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-divider_voltage",
+      "expected": {
+        "rule": "divider_voltage",
+        "rule_status": "invalid",
+        "value": null,
+        "evidence": [
+          "divider"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-52",
+      "kind": "check",
+      "point": {
+        "r_lower": "1 kΩ",
+        "r_upper": "-1 Ω"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-divider_voltage",
+      "expected": {
+        "rule": "divider_voltage",
+        "rule_status": "invalid",
+        "value": null,
+        "evidence": [
+          "divider"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-53",
+      "kind": "check",
+      "point": {
+        "r_lower": "1 kΩ"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-divider_voltage",
+      "expected": {
+        "rule": "divider_voltage",
+        "rule_status": "needs_information",
+        "value": null,
+        "evidence": [
+          "divider"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-54",
+      "kind": "check",
+      "point": {
+        "r_lower": "1000 Ω",
+        "r_upper": "0.003 MΩ"
+      },
+      "split": "holdout",
+      "category": "rule",
+      "family": "rule-divider_voltage",
+      "expected": {
+        "rule": "divider_voltage",
+        "rule_status": "estimated",
+        "value": 4.92,
+        "evidence": [
+          "divider"
+        ]
+      }
+    },
+    {
+      "id": "lm2596-adj-55",
+      "kind": "query",
+      "question": "LM2596-5 的电压",
+      "split": "holdout",
+      "category": "unsupported",
+      "family": "unsupported-holdout",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm2596-adj-56",
+      "kind": "query",
+      "question": "LM358 参数",
+      "split": "holdout",
+      "category": "unsupported",
+      "family": "unsupported-holdout",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm2596-adj-57",
+      "kind": "query",
+      "question": "从曲线读出精确值",
+      "split": "holdout",
+      "category": "unsupported",
+      "family": "unsupported-holdout",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm2596-adj-58",
+      "kind": "query",
+      "question": "生成完整电路BOM",
+      "split": "holdout",
+      "category": "unsupported",
+      "family": "unsupported-holdout",
+      "expected": {
+        "status": "unsupported",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm2596-adj-59",
+      "kind": "query",
+      "question": "输入4.3能工作吗",
+      "split": "holdout",
+      "category": "unanswerable",
+      "family": "missing-unit",
+      "expected": {
+        "status": "needs_information",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    },
+    {
+      "id": "lm2596-adj-60",
+      "kind": "query",
+      "question": "qzxw555000",
+      "split": "holdout",
+      "category": "unanswerable",
+      "family": "unknown-holdout",
+      "expected": {
+        "status": "not_found",
+        "facts": {},
+        "contains": [],
+        "evidence": []
+      }
+    }
+  ]
+}

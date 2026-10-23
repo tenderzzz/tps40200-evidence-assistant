@@ -1,0 +1,71 @@
+{
+  "scenario": "12 concurrent cold page requests across four chips",
+  "pages": [
+    {
+      "chip_id": "tps40200",
+      "page": 1,
+      "png_bytes": 91694
+    },
+    {
+      "chip_id": "tps40200",
+      "page": 4,
+      "png_bytes": 76392
+    },
+    {
+      "chip_id": "tps40200",
+      "page": 5,
+      "png_bytes": 64847
+    },
+    {
+      "chip_id": "lm2596-adj",
+      "page": 1,
+      "png_bytes": 52001
+    },
+    {
+      "chip_id": "lm2596-adj",
+      "page": 4,
+      "png_bytes": 27371
+    },
+    {
+      "chip_id": "lm2596-adj",
+      "page": 5,
+      "png_bytes": 41688
+    },
+    {
+      "chip_id": "lm358",
+      "page": 1,
+      "png_bytes": 59009
+    },
+    {
+      "chip_id": "lm358",
+      "page": 4,
+      "png_bytes": 42524
+    },
+    {
+      "chip_id": "lm358",
+      "page": 5,
+      "png_bytes": 32971
+    },
+    {
+      "chip_id": "ne555",
+      "page": 1,
+      "png_bytes": 48514
+    },
+    {
+      "chip_id": "ne555",
+      "page": 4,
+      "png_bytes": 32550
+    },
+    {
+      "chip_id": "ne555",
+      "page": 5,
+      "png_bytes": 38321
+    }
+  ],
+  "health_after": {
+    "app": "tps40200-workbench",
+    "version": "0.4.0"
+  },
+  "elapsed_seconds": 0.438,
+  "passed": true
+}

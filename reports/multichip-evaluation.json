@@ -1,0 +1,559 @@
+{
+  "version": "0.4.0",
+  "generated_at": "2026-10-23T01:15:42.794099+00:00",
+  "chips": [
+    {
+      "chip_id": "tps40200",
+      "name": "TPS40200",
+      "source": {
+        "doc_id": "tps40200-slus659g",
+        "title": "TPS40200 Wide Input Range Non-Synchronous Voltage Mode Controller",
+        "revision": "SLUS659G (Rev. G)",
+        "revision_date": "2014-11",
+        "url": "https://www.ti.com/lit/ds/symlink/tps40200.pdf",
+        "downloaded_at": "2026-10-21T13:03:03.278425+00:00",
+        "sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+        "pages": 52,
+        "indexed_core_pages": 40,
+        "pdf_file": "tps40200-rev-g.pdf",
+        "extraction": {
+          "tool": "pdfplumber",
+          "version": "0.11.10",
+          "x_tolerance": 1
+        },
+        "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+      },
+      "parameter_rows": 43,
+      "metrics": {
+        "cases": 60,
+        "passed": 60,
+        "query_retrieval_cases": 40,
+        "top3_recall": 1.0,
+        "plain_top3_recall": 0.375,
+        "fact_cases": 29,
+        "fact_answered": 29,
+        "fact_accuracy": 1.0,
+        "fact_coverage": 1.0,
+        "unsupported_correct": 10,
+        "unsupported_cases": 10,
+        "by_category": {
+          "citations": {
+            "total": 10,
+            "passed": 10
+          },
+          "conditions": {
+            "total": 10,
+            "passed": 10
+          },
+          "parameters": {
+            "total": 10,
+            "passed": 10
+          },
+          "rules": {
+            "total": 10,
+            "passed": 10
+          },
+          "traps": {
+            "total": 10,
+            "passed": 10
+          },
+          "unsupported": {
+            "total": 10,
+            "passed": 10
+          }
+        }
+      },
+      "splits": {
+        "dev": {
+          "cases": 30,
+          "passed": 30,
+          "query_retrieval_cases": 20,
+          "top3_recall": 1.0,
+          "plain_top3_recall": 0.35,
+          "fact_cases": 13,
+          "fact_answered": 13,
+          "fact_accuracy": 1.0,
+          "fact_coverage": 1.0,
+          "unsupported_correct": 5,
+          "unsupported_cases": 5,
+          "by_category": {
+            "citations": {
+              "total": 5,
+              "passed": 5
+            },
+            "conditions": {
+              "total": 5,
+              "passed": 5
+            },
+            "parameters": {
+              "total": 5,
+              "passed": 5
+            },
+            "rules": {
+              "total": 5,
+              "passed": 5
+            },
+            "traps": {
+              "total": 5,
+              "passed": 5
+            },
+            "unsupported": {
+              "total": 5,
+              "passed": 5
+            }
+          }
+        },
+        "holdout": {
+          "cases": 30,
+          "passed": 30,
+          "query_retrieval_cases": 20,
+          "top3_recall": 1.0,
+          "plain_top3_recall": 0.4,
+          "fact_cases": 16,
+          "fact_answered": 16,
+          "fact_accuracy": 1.0,
+          "fact_coverage": 1.0,
+          "unsupported_correct": 5,
+          "unsupported_cases": 5,
+          "by_category": {
+            "citations": {
+              "total": 5,
+              "passed": 5
+            },
+            "conditions": {
+              "total": 5,
+              "passed": 5
+            },
+            "parameters": {
+              "total": 5,
+              "passed": 5
+            },
+            "rules": {
+              "total": 5,
+              "passed": 5
+            },
+            "traps": {
+              "total": 5,
+              "passed": 5
+            },
+            "unsupported": {
+              "total": 5,
+              "passed": 5
+            }
+          }
+        }
+      },
+      "report": "reports/evaluation.md"
+    },
+    {
+      "chip_id": "lm2596-adj",
+      "name": "LM2596-ADJ",
+      "source": {
+        "doc_id": "lm2596-adj-snvs124g",
+        "chip_id": "lm2596-adj",
+        "manufacturer": "TI",
+        "model": "LM2596-ADJ",
+        "title": "LM2596 SIMPLE SWITCHER Power Converter 150-kHz 3-A Step-Down Voltage Regulator",
+        "revision": "SNVS124G (Rev. G)",
+        "revision_date": "2023-03",
+        "url": "https://www.ti.com/lit/ds/symlink/lm2596.pdf",
+        "downloaded_at": "2026-10-22T14:47:50.489164+00:00",
+        "sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+        "pages": 47,
+        "indexed_core_pages": 35,
+        "pdf_file": "lm2596.pdf",
+        "extraction": {
+          "tool": "pdfplumber",
+          "version": "0.11.10",
+          "x_tolerance": 1
+        },
+        "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+      },
+      "parameter_rows": 35,
+      "metrics": {
+        "cases": 60,
+        "passed": 60,
+        "query_retrieval_cases": 37,
+        "top3_recall": 1.0,
+        "plain_top3_recall": 0.2702702702702703,
+        "fact_cases": 32,
+        "fact_answered": 32,
+        "fact_accuracy": 1.0,
+        "fact_coverage": 1.0,
+        "unsupported_correct": 5,
+        "unsupported_cases": 5,
+        "by_category": {
+          "conditions": {
+            "total": 8,
+            "passed": 8
+          },
+          "mechanism": {
+            "total": 3,
+            "passed": 3
+          },
+          "parameter": {
+            "total": 26,
+            "passed": 26
+          },
+          "rule": {
+            "total": 14,
+            "passed": 14
+          },
+          "unanswerable": {
+            "total": 4,
+            "passed": 4
+          },
+          "unsupported": {
+            "total": 5,
+            "passed": 5
+          }
+        }
+      },
+      "splits": {
+        "dev": {
+          "cases": 30,
+          "passed": 30,
+          "query_retrieval_cases": 27,
+          "top3_recall": 1.0,
+          "plain_top3_recall": 0.3333333333333333,
+          "fact_cases": 22,
+          "fact_answered": 22,
+          "fact_accuracy": 1.0,
+          "fact_coverage": 1.0,
+          "unsupported_correct": 1,
+          "unsupported_cases": 1,
+          "by_category": {
+            "conditions": {
+              "total": 8,
+              "passed": 8
+            },
+            "mechanism": {
+              "total": 3,
+              "passed": 3
+            },
+            "parameter": {
+              "total": 16,
+              "passed": 16
+            },
+            "unanswerable": {
+              "total": 2,
+              "passed": 2
+            },
+            "unsupported": {
+              "total": 1,
+              "passed": 1
+            }
+          }
+        },
+        "holdout": {
+          "cases": 30,
+          "passed": 30,
+          "query_retrieval_cases": 10,
+          "top3_recall": 1.0,
+          "plain_top3_recall": 0.1,
+          "fact_cases": 10,
+          "fact_answered": 10,
+          "fact_accuracy": 1.0,
+          "fact_coverage": 1.0,
+          "unsupported_correct": 4,
+          "unsupported_cases": 4,
+          "by_category": {
+            "parameter": {
+              "total": 10,
+              "passed": 10
+            },
+            "rule": {
+              "total": 14,
+              "passed": 14
+            },
+            "unanswerable": {
+              "total": 2,
+              "passed": 2
+            },
+            "unsupported": {
+              "total": 4,
+              "passed": 4
+            }
+          }
+        }
+      },
+      "report": "reports/chips/lm2596-adj/evaluation.md"
+    },
+    {
+      "chip_id": "lm358",
+      "name": "LM358",
+      "source": {
+        "doc_id": "lm358-slos068ab",
+        "chip_id": "lm358",
+        "manufacturer": "TI",
+        "model": "LM358",
+        "title": "Industry-Standard Dual Operational Amplifiers",
+        "revision": "SLOS068AB (Rev. AB)",
+        "revision_date": "2024-10",
+        "url": "https://www.ti.com/lit/ds/symlink/lm358.pdf",
+        "downloaded_at": "2026-10-22T14:47:51.407960+00:00",
+        "sha256": "8277dff7b89138c63b3582d37f378065a1dea3cae5ed1e2926ddc2779eb7e3a2",
+        "pages": 68,
+        "indexed_core_pages": 31,
+        "pdf_file": "lm358.pdf",
+        "extraction": {
+          "tool": "pdfplumber",
+          "version": "0.11.10",
+          "x_tolerance": 1
+        },
+        "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+      },
+      "parameter_rows": 40,
+      "metrics": {
+        "cases": 60,
+        "passed": 60,
+        "query_retrieval_cases": 38,
+        "top3_recall": 1.0,
+        "plain_top3_recall": 0.2631578947368421,
+        "fact_cases": 30,
+        "fact_answered": 30,
+        "fact_accuracy": 1.0,
+        "fact_coverage": 1.0,
+        "unsupported_correct": 4,
+        "unsupported_cases": 4,
+        "by_category": {
+          "conditions": {
+            "total": 6,
+            "passed": 6
+          },
+          "mechanism": {
+            "total": 2,
+            "passed": 2
+          },
+          "parameter": {
+            "total": 30,
+            "passed": 30
+          },
+          "rule": {
+            "total": 14,
+            "passed": 14
+          },
+          "unanswerable": {
+            "total": 4,
+            "passed": 4
+          },
+          "unsupported": {
+            "total": 4,
+            "passed": 4
+          }
+        }
+      },
+      "splits": {
+        "dev": {
+          "cases": 30,
+          "passed": 30,
+          "query_retrieval_cases": 28,
+          "top3_recall": 1.0,
+          "plain_top3_recall": 0.32142857142857145,
+          "fact_cases": 20,
+          "fact_answered": 20,
+          "fact_accuracy": 1.0,
+          "fact_coverage": 1.0,
+          "unsupported_correct": 0,
+          "unsupported_cases": 0,
+          "by_category": {
+            "conditions": {
+              "total": 6,
+              "passed": 6
+            },
+            "mechanism": {
+              "total": 2,
+              "passed": 2
+            },
+            "parameter": {
+              "total": 20,
+              "passed": 20
+            },
+            "unanswerable": {
+              "total": 2,
+              "passed": 2
+            }
+          }
+        },
+        "holdout": {
+          "cases": 30,
+          "passed": 30,
+          "query_retrieval_cases": 10,
+          "top3_recall": 1.0,
+          "plain_top3_recall": 0.1,
+          "fact_cases": 10,
+          "fact_answered": 10,
+          "fact_accuracy": 1.0,
+          "fact_coverage": 1.0,
+          "unsupported_correct": 4,
+          "unsupported_cases": 4,
+          "by_category": {
+            "parameter": {
+              "total": 10,
+              "passed": 10
+            },
+            "rule": {
+              "total": 14,
+              "passed": 14
+            },
+            "unanswerable": {
+              "total": 2,
+              "passed": 2
+            },
+            "unsupported": {
+              "total": 4,
+              "passed": 4
+            }
+          }
+        }
+      },
+      "report": "reports/chips/lm358/evaluation.md"
+    },
+    {
+      "chip_id": "ne555",
+      "name": "NE555",
+      "source": {
+        "doc_id": "ne555-slfs022k",
+        "chip_id": "ne555",
+        "manufacturer": "TI",
+        "model": "NE555",
+        "title": "xx555 Precision Timers",
+        "revision": "SLFS022K (Rev. K)",
+        "revision_date": "2026-03",
+        "url": "https://www.ti.com/lit/ds/symlink/ne555.pdf",
+        "downloaded_at": "2026-10-22T14:47:52.086531+00:00",
+        "sha256": "a3756e59fd06d0ba736edf9ffe71d99d2aae33fb7e49fedc86165a241179f4a6",
+        "pages": 39,
+        "indexed_core_pages": 20,
+        "pdf_file": "ne555.pdf",
+        "extraction": {
+          "tool": "pdfplumber",
+          "version": "0.11.10",
+          "x_tolerance": 1
+        },
+        "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+      },
+      "parameter_rows": 40,
+      "metrics": {
+        "cases": 60,
+        "passed": 60,
+        "query_retrieval_cases": 38,
+        "top3_recall": 1.0,
+        "plain_top3_recall": 0.0,
+        "fact_cases": 27,
+        "fact_answered": 27,
+        "fact_accuracy": 1.0,
+        "fact_coverage": 1.0,
+        "unsupported_correct": 4,
+        "unsupported_cases": 4,
+        "by_category": {
+          "conditions": {
+            "total": 6,
+            "passed": 6
+          },
+          "mechanism": {
+            "total": 5,
+            "passed": 5
+          },
+          "parameter": {
+            "total": 27,
+            "passed": 27
+          },
+          "rule": {
+            "total": 14,
+            "passed": 14
+          },
+          "unanswerable": {
+            "total": 4,
+            "passed": 4
+          },
+          "unsupported": {
+            "total": 4,
+            "passed": 4
+          }
+        }
+      },
+      "splits": {
+        "dev": {
+          "cases": 30,
+          "passed": 30,
+          "query_retrieval_cases": 28,
+          "top3_recall": 1.0,
+          "plain_top3_recall": 0.0,
+          "fact_cases": 18,
+          "fact_answered": 18,
+          "fact_accuracy": 1.0,
+          "fact_coverage": 1.0,
+          "unsupported_correct": 0,
+          "unsupported_cases": 0,
+          "by_category": {
+            "conditions": {
+              "total": 6,
+              "passed": 6
+            },
+            "mechanism": {
+              "total": 4,
+              "passed": 4
+            },
+            "parameter": {
+              "total": 18,
+              "passed": 18
+            },
+            "unanswerable": {
+              "total": 2,
+              "passed": 2
+            }
+          }
+        },
+        "holdout": {
+          "cases": 30,
+          "passed": 30,
+          "query_retrieval_cases": 10,
+          "top3_recall": 1.0,
+          "plain_top3_recall": 0.0,
+          "fact_cases": 9,
+          "fact_answered": 9,
+          "fact_accuracy": 1.0,
+          "fact_coverage": 1.0,
+          "unsupported_correct": 4,
+          "unsupported_cases": 4,
+          "by_category": {
+            "mechanism": {
+              "total": 1,
+              "passed": 1
+            },
+            "parameter": {
+              "total": 9,
+              "passed": 9
+            },
+            "rule": {
+              "total": 14,
+              "passed": 14
+            },
+            "unanswerable": {
+              "total": 2,
+              "passed": 2
+            },
+            "unsupported": {
+              "total": 4,
+              "passed": 4
+            }
+          }
+        }
+      },
+      "report": "reports/chips/ne555/evaluation.md"
+    }
+  ],
+  "total_cases": 240,
+  "passed_cases": 240,
+  "tests": {
+    "total": 134,
+    "failures": 0,
+    "report": "reports/pytest-v04.xml"
+  },
+  "limitations": [
+    "自建固定案例，不是独立盲测或任意问题准确率。",
+    "增强检索包含人工别名、表格条件和中文说明，不能把差异单独归因于分块。",
+    "数值事实评分只覆盖预标注的参数行与列；引用命中不等于全面语义审计。"
+  ]
+}

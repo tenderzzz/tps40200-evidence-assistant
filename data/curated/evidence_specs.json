@@ -1,0 +1,611 @@
+[
+  {
+    "id": "abs",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      98,
+      558,
+      264
+    ],
+    "title": "6.1 绝对最大额定值",
+    "aliases": [
+      "绝对最大",
+      "absolute maximum",
+      "stress ratings",
+      "引脚极限"
+    ],
+    "summary": "绝对最大额定值描述应力限制，不代表在这些条件下保证功能正常。",
+    "context_bboxes": [],
+    "curated": true
+  },
+  {
+    "id": "recommended",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      395,
+      558,
+      462
+    ],
+    "title": "6.3 推荐工作条件",
+    "aliases": [
+      "输入电压",
+      "供电范围",
+      "VDD",
+      "VIN",
+      "工作温度",
+      "结温",
+      "TJ",
+      "recommended operating"
+    ],
+    "summary": "推荐 VDD 为 4.5–52 V，推荐结温 TJ 为 −40–125 °C。范围内只表示满足该项限制。",
+    "context_bboxes": [],
+    "curated": true
+  },
+  {
+    "id": "reference",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      114,
+      558,
+      181
+    ],
+    "title": "6.5 反馈参考电压 VFB",
+    "aliases": [
+      "VFB",
+      "反馈电压",
+      "反馈参考",
+      "基准电压",
+      "reference",
+      "Feedback voltage",
+      "温漂"
+    ],
+    "summary": "VFB 的典型值是 696 mV；上下限取决于测试条件，必须逐行读取。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true
+  },
+  {
+    "id": "gate",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      181,
+      558,
+      233
+    ],
+    "title": "6.5 栅极驱动",
+    "aliases": [
+      "GDRV",
+      "VGATE",
+      "Isrc",
+      "Isnk",
+      "栅极",
+      "驱动电流",
+      "gate driver",
+      "拉电流",
+      "灌电流"
+    ],
+    "summary": "驱动输出面向外部 P 沟道 MOSFET；拉高和拉低电流的最小值不同，表格未给最大值。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true
+  },
+  {
+    "id": "quiescent",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      233,
+      558,
+      260
+    ],
+    "title": "6.5 静态电流 Iqq",
+    "aliases": [
+      "Iqq",
+      "静态电流",
+      "静态功耗",
+      "quiescent",
+      "待机电流"
+    ],
+    "summary": "Iqq 的 1.5 mA 典型值、3.0 mA 最大值适用于驱动不切换等指定测试条件。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true
+  },
+  {
+    "id": "uvlo",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      260,
+      558,
+      313
+    ],
+    "title": "6.5 欠压锁定 UVLO",
+    "aliases": [
+      "UVLO",
+      "欠压",
+      "启动阈值",
+      "关断阈值",
+      "迟滞",
+      "turn-on",
+      "turn-off",
+      "hysteresis"
+    ],
+    "summary": "启动阈值典型为 4.25 V；推荐输入下限仍为 4.5 V。关断阈值只列典型值 4.05 V。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true
+  },
+  {
+    "id": "softstart-values",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      313,
+      558,
+      384
+    ],
+    "title": "6.5 软启动参数",
+    "aliases": [
+      "RSS",
+      "RSS(chg)",
+      "RSS(dchg)",
+      "VSSRST",
+      "软启动电阻",
+      "复位阈值",
+      "soft start resistance"
+    ],
+    "summary": "充电电阻典型为 105 kΩ，放电电阻典型为 305 kΩ；这些是内部参数，具有表内上下限。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true
+  },
+  {
+    "id": "current-limit",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      384,
+      558,
+      450
+    ],
+    "title": "6.5 过流保护阈值",
+    "aliases": [
+      "VILIM",
+      "ILIM",
+      "过流阈值",
+      "过流门限",
+      "电流限制",
+      "current limit",
+      "OCDF",
+      "过流占空比"
+    ],
+    "summary": "VILIM 是采样压降阈值而不是输出电流额定值；低温行下限为 55 mV。OCDF 的 2% 在 MAX 列，且仅由设计保证。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ],
+      [
+        54,
+        546,
+        558,
+        558
+      ]
+    ],
+    "curated": true
+  },
+  {
+    "id": "oscillator",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      450,
+      558,
+      502
+    ],
+    "title": "6.5 振荡器频率",
+    "aliases": [
+      "fosc",
+      "fsw",
+      "振荡频率",
+      "开关频率",
+      "频率范围",
+      "oscillator frequency",
+      "35kHz",
+      "500kHz"
+    ],
+    "summary": "振荡频率范围为 35–500 kHz，仅由设计保证、未进行生产测试；特定 RC 的频率上下限须另看对应行。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ],
+      [
+        54,
+        546,
+        558,
+        558
+      ]
+    ],
+    "curated": true
+  },
+  {
+    "id": "line-regulation",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      502,
+      558,
+      529
+    ],
+    "title": "6.5 频率线性调整率",
+    "aliases": [
+      "频率线性调整",
+      "频率线调整",
+      "频率电源调整",
+      "line regulation",
+      "频率随电压"
+    ],
+    "summary": "两行频率线性调整率分别对应 12–52 V 和 4.5–12 V 供电条件，典型值栏为空。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true
+  },
+  {
+    "id": "ramp",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      529,
+      558,
+      542
+    ],
+    "title": "6.5 斜坡幅度 VRMP",
+    "aliases": [
+      "VRMP",
+      "斜坡",
+      "ramp amplitude",
+      "ramp"
+    ],
+    "summary": "斜坡幅度的典型表达式为 VDD/10，不能当成有上下限的数值保证。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true
+  },
+  {
+    "id": "pwm",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      119,
+      558,
+      207
+    ],
+    "title": "6.5 PWM 脉宽、占空比与增益",
+    "aliases": [
+      "tMIN",
+      "最小脉宽",
+      "最小导通",
+      "DMAX",
+      "最大占空比",
+      "KPWM",
+      "调制器增益",
+      "minimum pulse",
+      "duty cycle",
+      "PWM"
+    ],
+    "summary": "最小脉宽列出典型值和最大值；最大占空比列出最小值和典型值，并依赖频率与负载条件。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        119
+      ],
+      [
+        54,
+        290,
+        558,
+        304
+      ]
+    ],
+    "curated": true
+  },
+  {
+    "id": "amplifier",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      207,
+      558,
+      287
+    ],
+    "title": "6.5 误差放大器",
+    "aliases": [
+      "AOL",
+      "GBWP",
+      "IIB",
+      "ICOMP",
+      "误差放大器",
+      "开环增益",
+      "带宽",
+      "偏置电流",
+      "error amplifier",
+      "gain bandwidth"
+    ],
+    "summary": "误差放大器的开环增益和单位增益带宽仅由设计保证；输出源、灌电流依赖 FB 和 COMP 测试电压。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        119
+      ],
+      [
+        54,
+        290,
+        558,
+        304
+      ]
+    ],
+    "curated": true
+  },
+  {
+    "id": "pins",
+    "page": 3,
+    "printed_page": "3",
+    "bbox": [
+      54,
+      275,
+      558,
+      484
+    ],
+    "title": "5 引脚功能",
+    "aliases": [
+      "引脚",
+      "pin",
+      "COMP",
+      "FB",
+      "GND",
+      "RC",
+      "SS",
+      "ISNS",
+      "接线",
+      "管脚"
+    ],
+    "summary": "RC 接定时网络，SS 接软启动电容，ISNS 与 VDD 间接电流采样电阻；GDRV 驱动外部 P 沟道 MOSFET。",
+    "context_bboxes": [],
+    "curated": true
+  },
+  {
+    "id": "uvlo-mechanism",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      305,
+      558,
+      370
+    ],
+    "title": "7.3.2 欠压锁定机制",
+    "aliases": [
+      "欠压工作原理",
+      "启动迟滞",
+      "UVLO mechanism",
+      "4.3",
+      "4.1"
+    ],
+    "summary": "本节用约 4.3 V 启动、约 4.1 V 关断描述典型机制；精确的电气特性应看第 5 页，推荐工作条件看第 4 页。",
+    "context_bboxes": [],
+    "curated": true
+  },
+  {
+    "id": "timing",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      382,
+      558,
+      578
+    ],
+    "title": "7.3.3 RC 定时公式与电流约束",
+    "aliases": [
+      "RRC",
+      "CRC",
+      "定时电阻",
+      "定时电容",
+      "RC公式",
+      "频率计算",
+      "频率公式",
+      "750",
+      "timing",
+      "operating frequency",
+      "0.105"
+    ],
+    "summary": "标称频率估算 fSW=1/(RRC×CRC×0.105)，R 用 Ω、C 用 F；同时满足 VIN/RRC≤750 μA。公式未给出完整容差模型，不能保证实际频率精度。",
+    "context_bboxes": [],
+    "curated": true
+  },
+  {
+    "id": "sync",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      587,
+      558,
+      674
+    ],
+    "title": "7.3.4 外部时钟同步",
+    "aliases": [
+      "同步",
+      "外部时钟",
+      "synchronizing",
+      "synchronization",
+      "150mV",
+      "20ns"
+    ],
+    "summary": "同步需要将 RC 拉至 150 mV 以下至少 20 ns，外部时钟高于自由振荡频率；拉低时间还受到上限约束，须完整阅读本节。",
+    "context_bboxes": [],
+    "curated": true
+  },
+  {
+    "id": "overcurrent-recovery",
+    "page": 14,
+    "printed_page": "14",
+    "bbox": [
+      54,
+      93,
+      558,
+      264
+    ],
+    "title": "7.3.5 过流后的关断与重启",
+    "aliases": [
+      "过流恢复",
+      "过流后",
+      "打嗝",
+      "重启",
+      "过流原理",
+      "故障恢复",
+      "current limit recovery",
+      "hiccup",
+      "overcurrent"
+    ],
+    "summary": "过流触发后关断 MOSFET 并放电软启动电容；软启动电压降至复位阈值以下后重试。持续故障会重复此过程；正文约 100 mV、150 mV 为机制描述，保证界限需查第 5 页。",
+    "context_bboxes": [],
+    "curated": true
+  },
+  {
+    "id": "softstart-mechanism",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      93,
+      558,
+      282
+    ],
+    "title": "7.3.6 软启动机制",
+    "aliases": [
+      "软启动原理",
+      "软启动过程",
+      "延迟启动",
+      "soft-start",
+      "CSS",
+      "软启动时间"
+    ],
+    "summary": "SS 电容控制软启动过程，内部充电电阻形成上升参考。首版只提供机制证据，暂不自动计算软启动时间。",
+    "context_bboxes": [],
+    "curated": true
+  },
+  {
+    "id": "application-boundary",
+    "page": 19,
+    "printed_page": "19",
+    "bbox": [
+      54,
+      75,
+      558,
+      145
+    ],
+    "title": "8 应用信息的适用范围",
+    "aliases": [
+      "输出电流额定",
+      "额定电流",
+      "最大输出电流",
+      "2.5A",
+      "应用示例",
+      "design example",
+      "output current"
+    ],
+    "summary": "TPS40200 是控制器，应用示例中的负载电流不等于芯片保证的输出电流能力；实际能力取决于外部功率器件等设计。",
+    "context_bboxes": [],
+    "curated": true
+  },
+  {
+    "id": "design-note",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      546,
+      558,
+      558
+    ],
+    "title": "6.5 脚注 (1)：设计保证",
+    "aliases": [
+      "设计保证",
+      "生产测试",
+      "production tested",
+      "ensured by design"
+    ],
+    "summary": "脚注 (1) 表示仅由设计保证，未进行生产测试。",
+    "context_bboxes": [],
+    "curated": true
+  }
+]

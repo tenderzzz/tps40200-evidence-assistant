@@ -1,0 +1,1189 @@
+{
+  "description": "自建小型验证集，预先定义期望；不是独立第三方基准。",
+  "source_revision": "SLUS659G",
+  "source_sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+  "methodology": "数值独立抄自 PDF；每类 5 个开发案例、5 个留出案例；不同改写不跨组。",
+  "corrections": [
+    {
+      "case": "rules-holdout-48",
+      "old_value": 297.5580817,
+      "new_value": 297.55395769080275,
+      "reason": "首轮留出发现预期值算术错误。独立用 1/(68100×470e-12×0.105)/1000 验算并用 Fraction 精确有理数复核；未修改计算引擎。首轮结果保存在 reports/holdout-first.json。"
+    }
+  ],
+  "cases": [
+    {
+      "id": "parameters-dev-01",
+      "category": "parameters",
+      "split": "dev",
+      "family": "feedback-overview",
+      "kind": "query",
+      "question": "反馈参考电压 VFB 是多少？",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "reference"
+        ],
+        "facts": {
+          "vfb-25": {
+            "minimum": 686,
+            "typical": 696,
+            "maximum": 703,
+            "unit": "mV"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "parameters-dev-02",
+      "category": "parameters",
+      "split": "dev",
+      "family": "uvlo-on-values",
+      "kind": "query",
+      "question": "欠压启动阈值的范围是什么？",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "uvlo"
+        ],
+        "facts": {
+          "uvlo-on": {
+            "minimum": 3.8,
+            "typical": 4.25,
+            "maximum": 4.5,
+            "unit": "V"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "parameters-dev-03",
+      "category": "parameters",
+      "split": "dev",
+      "family": "oscillator-range",
+      "kind": "query",
+      "question": "开关频率允许的范围？",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "oscillator"
+        ],
+        "facts": {
+          "fosc-range": {
+            "minimum": 35,
+            "typical": null,
+            "maximum": 500,
+            "unit": "kHz"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "parameters-dev-04",
+      "category": "parameters",
+      "split": "dev",
+      "family": "min-pulse-12",
+      "kind": "query",
+      "question": "tMIN 在 12 V 时的值",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "pwm"
+        ],
+        "facts": {
+          "tmin-12": {
+            "minimum": null,
+            "typical": 200,
+            "maximum": 400,
+            "unit": "ns"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "parameters-dev-05",
+      "category": "parameters",
+      "split": "dev",
+      "family": "recommended-voltage",
+      "kind": "query",
+      "question": "推荐输入电压上下限",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "recommended"
+        ],
+        "facts": {
+          "rec-vdd": {
+            "minimum": 4.5,
+            "maximum": 52,
+            "unit": "V"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "parameters-holdout-06",
+      "category": "parameters",
+      "split": "holdout",
+      "family": "gate-source-values",
+      "kind": "query",
+      "question": "Isrc 栅极拉高电流的数据",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "gate"
+        ],
+        "facts": {
+          "gate-source": {
+            "minimum": 125,
+            "typical": 300,
+            "maximum": null,
+            "unit": "mA"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "parameters-holdout-07",
+      "category": "parameters",
+      "split": "holdout",
+      "family": "quiescent-values",
+      "kind": "query",
+      "question": "Iqq 静态电流的典型值与最大值",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "quiescent"
+        ],
+        "facts": {
+          "iqq": {
+            "minimum": null,
+            "typical": 1.5,
+            "maximum": 3,
+            "unit": "mA"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "parameters-holdout-08",
+      "category": "parameters",
+      "split": "holdout",
+      "family": "amplifier-bandwidth",
+      "kind": "query",
+      "question": "GBWP 单位增益带宽",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "amplifier"
+        ],
+        "facts": {
+          "gbwp": {
+            "minimum": 1.5,
+            "typical": 3,
+            "maximum": null,
+            "unit": "MHz"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "parameters-holdout-09",
+      "category": "parameters",
+      "split": "holdout",
+      "family": "overcurrent-duty-column",
+      "kind": "query",
+      "question": "OCDF 过流占空比 2% 位于哪一列",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "current-limit"
+        ],
+        "facts": {
+          "ocdf": {
+            "minimum": null,
+            "typical": null,
+            "maximum": 2,
+            "unit": "%"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "parameters-holdout-10",
+      "category": "parameters",
+      "split": "holdout",
+      "family": "gate-sink-values",
+      "kind": "query",
+      "question": "Isnk 栅极拉低电流参数",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "gate"
+        ],
+        "facts": {
+          "gate-sink": {
+            "minimum": 200,
+            "typical": 300,
+            "maximum": null,
+            "unit": "mA"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "conditions-dev-11",
+      "category": "conditions",
+      "split": "dev",
+      "family": "reference-full-temp",
+      "kind": "query",
+      "question": "VFB 在 -40 到 125 度的上下限",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "reference"
+        ],
+        "facts": {
+          "vfb-125": {
+            "minimum": 679,
+            "maximum": 710,
+            "conditions": "4.5 V < VDD < 52 V；−40 °C < TA < 125 °C"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "conditions-dev-12",
+      "category": "conditions",
+      "split": "dev",
+      "family": "ilim-cold-range",
+      "kind": "query",
+      "question": "低温时 VILIM 最小值是多少？",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "current-limit"
+        ],
+        "facts": {
+          "ilim-40": {
+            "minimum": 55,
+            "maximum": 140
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "conditions-dev-13",
+      "category": "conditions",
+      "split": "dev",
+      "family": "duty-100-condition",
+      "kind": "query",
+      "question": "100 kHz 下最大占空比 DMAX",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "pwm"
+        ],
+        "facts": {
+          "dmax-100": {
+            "minimum": 93,
+            "typical": 95,
+            "maximum": null
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "conditions-dev-14",
+      "category": "conditions",
+      "split": "dev",
+      "family": "pulse-30-condition",
+      "kind": "query",
+      "question": "30 V 供电下的最小脉宽 tMIN",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "pwm"
+        ],
+        "facts": {
+          "tmin-30": {
+            "typical": 100,
+            "maximum": 200
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "conditions-dev-15",
+      "category": "conditions",
+      "split": "dev",
+      "family": "frequency-line-high",
+      "kind": "query",
+      "question": "12 V 以上的频率线性调整率",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "line-regulation"
+        ],
+        "facts": {
+          "line-high": {
+            "minimum": -9,
+            "typical": null,
+            "maximum": 0
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "conditions-holdout-16",
+      "category": "conditions",
+      "split": "holdout",
+      "family": "gate-voltage-condition",
+      "kind": "query",
+      "question": "VGATE 的测试条件是什么",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "gate"
+        ],
+        "facts": {
+          "gate-voltage": {
+            "conditions": "VGATE=VDD−VGDRV；12 V < VDD < 52 V",
+            "minimum": 6,
+            "maximum": 10
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "conditions-holdout-17",
+      "category": "conditions",
+      "split": "holdout",
+      "family": "reference-comp-condition",
+      "kind": "query",
+      "question": "COMP=FB 的 VFB 那一行",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "reference"
+        ],
+        "facts": {
+          "vfb-comp": {
+            "minimum": 689,
+            "maximum": 702,
+            "conditions": "COMP=FB；TA=25 °C；其余默认条件见表头"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "conditions-holdout-18",
+      "category": "conditions",
+      "split": "holdout",
+      "family": "comp-source-condition",
+      "kind": "query",
+      "question": "ICOMP(src) 输出源电流适用条件",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "amplifier"
+        ],
+        "facts": {
+          "comp-source": {
+            "minimum": 100,
+            "typical": 250,
+            "conditions": "VFB=0.6 V；COMP=1 V"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "conditions-holdout-19",
+      "category": "conditions",
+      "split": "holdout",
+      "family": "comp-sink-condition",
+      "kind": "query",
+      "question": "ICOMP(snk) 输出灌电流的条件",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "amplifier"
+        ],
+        "facts": {
+          "comp-sink": {
+            "minimum": 1,
+            "typical": 2.5,
+            "conditions": "VFB=1.2 V；COMP=1 V"
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "conditions-holdout-20",
+      "category": "conditions",
+      "split": "holdout",
+      "family": "frequency-line-low",
+      "kind": "query",
+      "question": "低于 12 V 的 Frequency line regulation",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "line-regulation"
+        ],
+        "facts": {
+          "line-low": {
+            "minimum": -20,
+            "typical": null,
+            "maximum": 0
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "traps-dev-21",
+      "category": "traps",
+      "split": "dev",
+      "family": "low-input-uvlo",
+      "kind": "query",
+      "question": "4.3 V 能正常工作吗？",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "recommended"
+        ],
+        "facts": {},
+        "contains": [
+          "不满足"
+        ]
+      }
+    },
+    {
+      "id": "traps-dev-22",
+      "category": "traps",
+      "split": "dev",
+      "family": "typical-is-not-limit",
+      "kind": "query",
+      "question": "VFB 的 696 mV 是否是保证值？",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "reference"
+        ],
+        "facts": {
+          "vfb-85": {
+            "typical": 696,
+            "minimum": 679,
+            "maximum": 708
+          }
+        },
+        "contains": [
+          "典型值"
+        ]
+      }
+    },
+    {
+      "id": "traps-dev-23",
+      "category": "traps",
+      "split": "dev",
+      "family": "negative-abs-input",
+      "kind": "query",
+      "question": "VDD 绝对最大额定值是否允许 -0.3 V",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "abs"
+        ],
+        "facts": {
+          "abs-vdd": {
+            "minimum": -0.3,
+            "maximum": 52
+          }
+        },
+        "contains": [
+          "应力"
+        ]
+      }
+    },
+    {
+      "id": "traps-dev-24",
+      "category": "traps",
+      "split": "dev",
+      "family": "output-current-controller",
+      "kind": "query",
+      "question": "最大输出电流是否保证 2.5 A",
+      "expected": {
+        "status": "evidence_only",
+        "evidence": [
+          "application-boundary"
+        ],
+        "facts": {},
+        "contains": [
+          "控制器"
+        ]
+      }
+    },
+    {
+      "id": "traps-dev-25",
+      "category": "traps",
+      "split": "dev",
+      "family": "uvlo-off-missing-limits",
+      "kind": "query",
+      "question": "VUVLO(off) 的最小最大值有给出吗",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "uvlo"
+        ],
+        "facts": {
+          "uvlo-off": {
+            "minimum": null,
+            "typical": 4.05,
+            "maximum": null
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "traps-holdout-26",
+      "category": "traps",
+      "split": "holdout",
+      "family": "min-pulse-typ-column",
+      "kind": "query",
+      "question": "最小脉宽的 200 ns 是最小值吗",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "pwm"
+        ],
+        "facts": {
+          "tmin-12": {
+            "minimum": null,
+            "typical": 200,
+            "maximum": 400
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "traps-holdout-27",
+      "category": "traps",
+      "split": "holdout",
+      "family": "duty-typ-column",
+      "kind": "query",
+      "question": "最大占空比 95% 能当保证下限吗",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "pwm"
+        ],
+        "facts": {
+          "dmax-100": {
+            "minimum": 93,
+            "typical": 95,
+            "maximum": null
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "traps-holdout-28",
+      "category": "traps",
+      "split": "holdout",
+      "family": "junction-not-ambient",
+      "kind": "query",
+      "question": "环境温度 25 °C 能直接作为结温检查吗",
+      "expected": {
+        "status": "needs_information",
+        "evidence": [
+          "recommended"
+        ],
+        "facts": {},
+        "contains": [
+          "环境温度",
+          "结温"
+        ]
+      }
+    },
+    {
+      "id": "traps-holdout-29",
+      "category": "traps",
+      "split": "holdout",
+      "family": "gbwp-max-absent",
+      "kind": "query",
+      "question": "GBWP 的 3 MHz 是最大值吗",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "amplifier"
+        ],
+        "facts": {
+          "gbwp": {
+            "minimum": 1.5,
+            "typical": 3,
+            "maximum": null
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "traps-holdout-30",
+      "category": "traps",
+      "split": "holdout",
+      "family": "design-not-production",
+      "kind": "query",
+      "question": "仅由设计保证是生产测试过了吗",
+      "expected": {
+        "status": "evidence_only",
+        "evidence": [
+          "design-note"
+        ],
+        "facts": {},
+        "contains": [
+          "未进行生产测试"
+        ]
+      }
+    },
+    {
+      "id": "citations-dev-31",
+      "category": "citations",
+      "split": "dev",
+      "family": "overcurrent-restart-mechanism",
+      "kind": "query",
+      "question": "过流后如何恢复",
+      "expected": {
+        "status": "evidence_only",
+        "evidence": [
+          "overcurrent-recovery"
+        ],
+        "facts": {},
+        "contains": [
+          "软启动"
+        ]
+      }
+    },
+    {
+      "id": "citations-dev-32",
+      "category": "citations",
+      "split": "dev",
+      "family": "timing-equations-location",
+      "kind": "query",
+      "question": "RC 频率公式在哪里",
+      "expected": {
+        "status": "evidence_only",
+        "evidence": [
+          "timing"
+        ],
+        "facts": {},
+        "contains": [
+          "0.105"
+        ]
+      }
+    },
+    {
+      "id": "citations-dev-33",
+      "category": "citations",
+      "split": "dev",
+      "family": "sync-requirements",
+      "kind": "query",
+      "question": "外部时钟同步有什么要求",
+      "expected": {
+        "status": "evidence_only",
+        "evidence": [
+          "sync"
+        ],
+        "facts": {},
+        "contains": [
+          "20 ns"
+        ]
+      }
+    },
+    {
+      "id": "citations-dev-34",
+      "category": "citations",
+      "split": "dev",
+      "family": "softstart-process",
+      "kind": "query",
+      "question": "软启动原理是什么",
+      "expected": {
+        "status": "evidence_only",
+        "evidence": [
+          "softstart-mechanism"
+        ],
+        "facts": {},
+        "contains": [
+          "电容"
+        ]
+      }
+    },
+    {
+      "id": "citations-dev-35",
+      "category": "citations",
+      "split": "dev",
+      "family": "pin-rc-wiring",
+      "kind": "query",
+      "question": "RC 引脚应该怎么接线",
+      "expected": {
+        "status": "evidence_only",
+        "evidence": [
+          "pins"
+        ],
+        "facts": {},
+        "contains": [
+          "定时"
+        ]
+      }
+    },
+    {
+      "id": "citations-holdout-36",
+      "category": "citations",
+      "split": "holdout",
+      "family": "uvlo-mechanism-hysteresis",
+      "kind": "query",
+      "question": "欠压工作原理中为什么有迟滞",
+      "expected": {
+        "status": "evidence_only",
+        "evidence": [
+          "uvlo-mechanism"
+        ],
+        "facts": {},
+        "contains": [
+          "4.3"
+        ]
+      }
+    },
+    {
+      "id": "citations-holdout-37",
+      "category": "citations",
+      "split": "holdout",
+      "family": "ramp-source-location",
+      "kind": "query",
+      "question": "VRMP 斜坡幅度的原文",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "ramp"
+        ],
+        "facts": {
+          "ramp": {
+            "typical": "VDD / 10",
+            "minimum": null,
+            "maximum": null
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "citations-holdout-38",
+      "category": "citations",
+      "split": "holdout",
+      "family": "softstart-internal-resistors",
+      "kind": "query",
+      "question": "RSS(chg) 内部充电电阻在哪页",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "softstart-values"
+        ],
+        "facts": {
+          "rss-charge": {
+            "minimum": 65,
+            "typical": 105,
+            "maximum": 170
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "citations-holdout-39",
+      "category": "citations",
+      "split": "holdout",
+      "family": "error-input-bias-location",
+      "kind": "query",
+      "question": "IIB 输入偏置电流的表格",
+      "expected": {
+        "status": "answered",
+        "evidence": [
+          "amplifier"
+        ],
+        "facts": {
+          "iib": {
+            "minimum": null,
+            "typical": 100,
+            "maximum": 250
+          }
+        },
+        "contains": []
+      }
+    },
+    {
+      "id": "citations-holdout-40",
+      "category": "citations",
+      "split": "holdout",
+      "family": "sense-pin-role",
+      "kind": "query",
+      "question": "ISNS 管脚作用和采样电阻接线",
+      "expected": {
+        "status": "evidence_only",
+        "evidence": [
+          "pins"
+        ],
+        "facts": {},
+        "contains": [
+          "采样电阻"
+        ]
+      }
+    },
+    {
+      "id": "rules-dev-41",
+      "category": "rules",
+      "split": "dev",
+      "family": "vdd-too-low",
+      "kind": "check",
+      "point": {
+        "vdd": "4.3 V"
+      },
+      "expected": {
+        "rule": "vdd",
+        "rule_status": "violated",
+        "evidence": [
+          "recommended"
+        ],
+        "value": null
+      }
+    },
+    {
+      "id": "rules-dev-42",
+      "category": "rules",
+      "split": "dev",
+      "family": "timing-current-valid",
+      "kind": "check",
+      "point": {
+        "vdd": "12 V",
+        "resistance": "200 kΩ",
+        "capacitance": "470 pF"
+      },
+      "expected": {
+        "rule": "rc_current",
+        "rule_status": "satisfied",
+        "evidence": [
+          "timing"
+        ],
+        "value": 60
+      }
+    },
+    {
+      "id": "rules-dev-43",
+      "category": "rules",
+      "split": "dev",
+      "family": "frequency-too-high",
+      "kind": "check",
+      "point": {
+        "frequency": "600 kHz"
+      },
+      "expected": {
+        "rule": "frequency",
+        "rule_status": "violated",
+        "evidence": [
+          "oscillator"
+        ],
+        "value": null
+      }
+    },
+    {
+      "id": "rules-dev-44",
+      "category": "rules",
+      "split": "dev",
+      "family": "millivolt-conversion",
+      "kind": "check",
+      "point": {
+        "vdd": "3000 mV"
+      },
+      "expected": {
+        "rule": "vdd",
+        "rule_status": "violated",
+        "evidence": [
+          "recommended"
+        ],
+        "value": 3
+      }
+    },
+    {
+      "id": "rules-dev-45",
+      "category": "rules",
+      "split": "dev",
+      "family": "ambient-only-input",
+      "kind": "check",
+      "point": {
+        "ambient_temperature": "25 °C"
+      },
+      "expected": {
+        "rule": "tj",
+        "rule_status": "needs_information",
+        "evidence": [
+          "recommended"
+        ],
+        "value": null
+      }
+    },
+    {
+      "id": "rules-holdout-46",
+      "category": "rules",
+      "split": "holdout",
+      "family": "junction-too-high",
+      "kind": "check",
+      "point": {
+        "tj": "126 °C"
+      },
+      "expected": {
+        "rule": "tj",
+        "rule_status": "violated",
+        "evidence": [
+          "recommended"
+        ],
+        "value": 126
+      }
+    },
+    {
+      "id": "rules-holdout-47",
+      "category": "rules",
+      "split": "holdout",
+      "family": "timing-current-exact-boundary",
+      "kind": "check",
+      "point": {
+        "vdd": "48 V",
+        "resistance": "64 kΩ"
+      },
+      "expected": {
+        "rule": "rc_current",
+        "rule_status": "satisfied",
+        "evidence": [
+          "timing"
+        ],
+        "value": 750
+      }
+    },
+    {
+      "id": "rules-holdout-48",
+      "category": "rules",
+      "split": "holdout",
+      "family": "nominal-frequency-estimate",
+      "kind": "check",
+      "point": {
+        "resistance": "68.1 kΩ",
+        "capacitance": "470 pF"
+      },
+      "expected": {
+        "rule": "rc_frequency",
+        "rule_status": "estimated",
+        "evidence": [
+          "timing"
+        ],
+        "value": 297.55395769080275
+      }
+    },
+    {
+      "id": "rules-holdout-49",
+      "category": "rules",
+      "split": "holdout",
+      "family": "resistance-missing-unit",
+      "kind": "check",
+      "point": {
+        "vdd": "12 V",
+        "resistance": "200"
+      },
+      "expected": {
+        "rule": "rc_current",
+        "rule_status": "invalid",
+        "evidence": [
+          "timing"
+        ],
+        "value": null
+      }
+    },
+    {
+      "id": "rules-holdout-50",
+      "category": "rules",
+      "split": "holdout",
+      "family": "negative-capacitance",
+      "kind": "check",
+      "point": {
+        "resistance": "200 kΩ",
+        "capacitance": "-1 nF"
+      },
+      "expected": {
+        "rule": "rc_frequency",
+        "rule_status": "invalid",
+        "evidence": [
+          "timing"
+        ],
+        "value": null
+      }
+    },
+    {
+      "id": "unsupported-dev-51",
+      "category": "unsupported",
+      "split": "dev",
+      "family": "other-buck",
+      "kind": "query",
+      "question": "LM2596 的输入范围？",
+      "expected": {
+        "status": "unsupported",
+        "evidence": [],
+        "facts": {},
+        "contains": []
+      }
+    },
+    {
+      "id": "unsupported-dev-52",
+      "category": "unsupported",
+      "split": "dev",
+      "family": "curve-read",
+      "kind": "query",
+      "question": "请读取图 21 的曲线数值",
+      "expected": {
+        "status": "unsupported",
+        "evidence": [],
+        "facts": {},
+        "contains": []
+      }
+    },
+    {
+      "id": "unsupported-dev-53",
+      "category": "unsupported",
+      "split": "dev",
+      "family": "complete-design",
+      "kind": "query",
+      "question": "帮我设计完整电路",
+      "expected": {
+        "status": "unsupported",
+        "evidence": [],
+        "facts": {},
+        "contains": []
+      }
+    },
+    {
+      "id": "unsupported-dev-54",
+      "category": "unsupported",
+      "split": "dev",
+      "family": "pcb-guarantee",
+      "kind": "query",
+      "question": "确认整个 PCB 一定稳定",
+      "expected": {
+        "status": "unsupported",
+        "evidence": [],
+        "facts": {},
+        "contains": []
+      }
+    },
+    {
+      "id": "unsupported-dev-55",
+      "category": "unsupported",
+      "split": "dev",
+      "family": "unrelated-weather",
+      "kind": "query",
+      "question": "今天北京天气怎么样",
+      "expected": {
+        "status": "not_found",
+        "evidence": [],
+        "facts": {},
+        "contains": []
+      }
+    },
+    {
+      "id": "unsupported-holdout-56",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "other-mcu",
+      "kind": "query",
+      "question": "STM32F103 的参考电压",
+      "expected": {
+        "status": "unsupported",
+        "evidence": [],
+        "facts": {},
+        "contains": []
+      }
+    },
+    {
+      "id": "unsupported-holdout-57",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "curve-interpolation",
+      "kind": "query",
+      "question": "根据曲线插值 150 kHz 的最小导通时间",
+      "expected": {
+        "status": "unsupported",
+        "evidence": [],
+        "facts": {},
+        "contains": []
+      }
+    },
+    {
+      "id": "unsupported-holdout-58",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "generate-bom",
+      "kind": "query",
+      "question": "生成完整 BOM 和原理图",
+      "expected": {
+        "status": "unsupported",
+        "evidence": [],
+        "facts": {},
+        "contains": []
+      }
+    },
+    {
+      "id": "unsupported-holdout-59",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "thermal-curve-digitize",
+      "kind": "query",
+      "question": "从温度曲线读取精确值",
+      "expected": {
+        "status": "unsupported",
+        "evidence": [],
+        "facts": {},
+        "contains": []
+      }
+    },
+    {
+      "id": "unsupported-holdout-60",
+      "category": "unsupported",
+      "split": "holdout",
+      "family": "unrelated-recipe",
+      "kind": "query",
+      "question": "教我做红烧茄子",
+      "expected": {
+        "status": "not_found",
+        "evidence": [],
+        "facts": {},
+        "contains": []
+      }
+    }
+  ]
+}

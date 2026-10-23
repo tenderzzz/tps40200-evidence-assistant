@@ -1,0 +1,5665 @@
+[
+  {
+    "id": "auto-p1-0",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      460.38481255549544,
+      558,
+      473.9119297764666
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "V IN 100",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-1",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      489.8223243,
+      558,
+      510.76807968299545
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "90\nTPS40200",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-2",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      509.6420033824955,
+      558,
+      527.7885543
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "1 RC VDD 8\n80",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-3",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      539.3556613864955,
+      558,
+      554.8061543
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "2 SS ISNS 7\n70",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-4",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      561.2432421934955,
+      558,
+      581.7635543
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "3 COMP GDRV 6 V\nOUT\n60",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-5",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      590.7358763884955,
+      558,
+      631.1856543
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "4 FB GND 5\n50\n0 0.5 1.0 1.5 2.0 2.5\nLoad Current (A)",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-6",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      78.36000000000001,
+      558,
+      660.8419246171977
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "UDG-11201\n)%(ycneiciffE\nTPS40200 Wide Input Range Non-Synchronous Voltage Mode Controller",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-7",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      102.91999999999996,
+      558,
+      219.70000000000005
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "1 Features 3 Description\n• Input Voltage Range 4.5 V to 52 V The TPS40200 is a flexible, non-synchronous\n1 controller with a built-in 200-mA driver for P-channel\n• Output Voltage (700 mV to 90% V )\nIN FETs. The circuit operates with inputs up to 52 V with\n• 200-mA Internal P-channel FET Driver a power-saving feature that turns off driver current\n• Voltage Feed-Forward Compensation once the external FET has been fully turned on. This\nfeature extends the flexibility of the device, allowing it\n• Undervoltage Lockout\nto operate with an input voltage up to 52 V without\n• Programmable Fixed-Frequency (between 35 kHz dissipating excessive power. The circuit operates with\nand 500 kHz) Operation voltage-mode feedback and has feed-forward input",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-8",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      216.70000000000005,
+      558,
+      318.70000000000005
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "• Programmable Short-Circuit Protection voltage compensation that responds instantly to input\nvoltage change. The integral 700-mV reference is\n• Hiccup Overcurrent Fault Recovery\ntrimmed to 2%, providing the means to accurately\n• Programmable Closed-Loop Soft-Start\ncontrol low voltages. The TPS40200 is available in an\n• 700 mV 1% Reference Voltage 8-pin SOIC and an 8-pin VSON package and\n• External Synchronization supports many of the features of more complex\ncontrollers. Clock frequency, soft-start, and\n• Small 8-Pin SOIC (D) and VSON (DRB) Packages\novercurrent limits are each easily programmed by a\nsingle, external component. The part has",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-9",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      311.21999999999997,
+      558,
+      437.38
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "2 Applications\nundervoltage lockout, and can be easily synchronized\n• Industrial Control to other controllers or a system clock to satisfy\nsequencing and/or noise-reduction requirements.\n• Distributed Power Systems\n• DSL/Cable Modems Device Information(1)\n• Scanners PART NUMBER PACKAGE BODY SIZE (NOM)\n• Telecom VSON (8) 3.00 mm x 3.00 mm\nTPS40200\nSOIC (8) 4.90 mm x 3.90 mm\n(1) For all available packages, see the orderable addendum at\nthe end of the datasheet.",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-10",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      445.8,
+      558,
+      459.8
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "Simplified Schematic Efficiency vs Output Current",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-11",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      472.4500243,
+      558,
+      486.2402856
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "V = 5 V\nOUT",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-12",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      554.4603243,
+      558,
+      594.6432943
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "V (V)\nIN\n16\n12\n8",
+    "curated": false
+  },
+  {
+    "id": "auto-p1-13",
+    "page": 1,
+    "printed_page": "1",
+    "bbox": [
+      54,
+      729.21,
+      558,
+      734.21
+    ],
+    "title": "手册第 1 页 / 原文段落",
+    "text": "1",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-0",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      74,
+      558,
+      88.51999999999998
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "Table of Contents",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-1",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      93.67999999999995,
+      558,
+      106.88999999999999
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "1 Features .................................................................. 1 7.4 Device Functional Modes........................................ 18",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-2",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      105.09000000000003,
+      558,
+      119.09000000000003
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "2 Applications ........................................................... 1 8 Application and Implementation ........................ 19",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-3",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      117.07999999999993,
+      558,
+      131.28999999999996
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "3 Description ............................................................. 1 8.1 Application Information............................................ 19",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-4",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      128.27999999999997,
+      558,
+      143.49
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "4 Revision History..................................................... 2 8.2 Typical Application .................................................. 19",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-5",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      139.68999999999994,
+      558,
+      155.68999999999994
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "5 Pin Configuration and Functions ......................... 3 9 Power Supply Recommendations...................... 37",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-6",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      151.89,
+      558,
+      167.89
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "6 Specifications......................................................... 4 10 Layout................................................................... 37",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-7",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      163.88,
+      558,
+      178.88
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "6.1 Absolute Maximum Ratings ...................................... 4 10.1 Layout Guidelines ................................................. 37",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-8",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      175.07999999999993,
+      558,
+      190.07999999999993
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "6.2 Handling Ratings ...................................................... 4 10.2 Layout Example .................................................... 38",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-9",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      186.49,
+      558,
+      201.27999999999997
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "6.3 Recommended Operating Conditions....................... 4 11 Device and Documentation Support ................. 39",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-10",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      198.4799999999999,
+      558,
+      212.4799999999999
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "6.4 Thermal Information.................................................. 4 11.1 Device Support .................................................... 39",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-11",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      209.67999999999995,
+      558,
+      223.67999999999995
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "6.5 Electrical Characteristics........................................... 5 11.2 Documentation Support ....................................... 39",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-12",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      220.88,
+      558,
+      234.88
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "6.6 Typical Characteristics.............................................. 7 11.3 Trademarks ........................................................... 39",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-13",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      232.07999999999993,
+      558,
+      247.28999999999996
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "7 Detailed Description ............................................ 11 11.4 Electrostatic Discharge Caution............................ 39",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-14",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      243.27999999999997,
+      558,
+      258.28
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "7.1 Overview ................................................................. 11 11.5 Glossary ................................................................ 39",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-15",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      254.68999999999994,
+      558,
+      277.68999999999994
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "7.2 Functional Block Diagram ....................................... 11 12 Mechanical, Packaging, and Orderable\nInformation ........................................................... 39",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-16",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      268.67999999999995,
+      558,
+      280.67999999999995
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "7.3 Feature Description................................................. 11",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-17",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      303.21999999999997,
+      558,
+      319.21999999999997
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "4 Revision History",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-18",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      328.59,
+      558,
+      341.59
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "Changes from Revision F (September 2014) to Revision G Page",
+    "curated": false
+  },
+  {
+    "id": "auto-p2-19",
+    "page": 2,
+    "printed_page": "2",
+    "bbox": [
+      54,
+      348.563,
+      558,
+      383.59
+    ],
+    "title": "手册第 2 页 / 原文段落",
+    "text": "• Changed Added Handling Rating table, Feature Description section, Device Functional Modes, Application and\nImplementation section, Power Supply Recommendations section, Layout section, Device and Documentation\nSupport section, and Mechanical, Packaging, and Orderable Information section. .............................................................. 1",
+    "curated": false
+  },
+  {
+    "id": "auto-p3-0",
+    "page": 3,
+    "printed_page": "3",
+    "bbox": [
+      54,
+      74,
+      558,
+      88.51999999999998
+    ],
+    "title": "手册第 3 页 / 原文段落",
+    "text": "5 Pin Configuration and Functions",
+    "curated": false
+  },
+  {
+    "id": "auto-p3-1",
+    "page": 3,
+    "printed_page": "3",
+    "bbox": [
+      54,
+      97.57999999999993,
+      558,
+      123.57999999999993
+    ],
+    "title": "手册第 3 页 / 原文段落",
+    "text": "8 PINS 8 PINS\nVSON (DRB) PACKAGE SOIC (D) PACKAGE\n(BOTTOM VIEW) (TOP VIEW)",
+    "curated": false
+  },
+  {
+    "id": "auto-p3-2",
+    "page": 3,
+    "printed_page": "3",
+    "bbox": [
+      54,
+      128.86015289,
+      558,
+      195.14720553999996
+    ],
+    "title": "手册第 3 页 / 原文段落",
+    "text": "RC SS COMP FB\nRC 1 8 VDD\n1 2 3 4\nSS 2 7 ISNS\nCOMP 3 6 GDRV\nFB 4 5 GND",
+    "curated": false
+  },
+  {
+    "id": "auto-p3-3",
+    "page": 3,
+    "printed_page": "3",
+    "bbox": [
+      54,
+      235.22795288999998,
+      558,
+      262.5449128900001
+    ],
+    "title": "手册第 3 页 / 原文段落",
+    "text": "8 7 6 5\nVDD ISNS GDRV GND",
+    "curated": false
+  },
+  {
+    "id": "auto-p4-0",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      74,
+      558,
+      88.51999999999998
+    ],
+    "title": "手册第 4 页 / 原文段落",
+    "text": "6 Specifications",
+    "curated": false
+  },
+  {
+    "id": "auto-p4-3",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      273.90999999999997,
+      558,
+      384.68
+    ],
+    "title": "手册第 4 页 / 原文段落",
+    "text": "6.2 Handling Ratings\nMIN MAX UNIT\nT Storage temperature range –55 150 °C\nstg\nHuman body model (HBM), per ANSI/ESDA/JEDEC JS-001, all\npins(1) –1500 1500\nV Electrostatic discharge V\n(ESD)\nCharged device model (CDM), per JEDEC specification\nJESD22-C101, all pins(2) –1500 1500\n(1) JEDEC document JEP155 states that 500 V HBM allows safe manufacturing with a standard ESD control process.\n(2) JEDEC document JEP157 states that 250 V CDM allows safe manufacturing with a standard ESD control process.",
+    "curated": false
+  },
+  {
+    "id": "auto-p4-5",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      473.91,
+      558,
+      580.6800000000001
+    ],
+    "title": "手册第 4 页 / 原文段落",
+    "text": "6.4 Thermal Information\nD DRB\nTHERMAL METRIC(1) SOIC VSON UNIT\n(8 PINS) (8 PINS)\nR Junction-to-ambient thermal resistance 109.6 44.2\nθJA\nR Junction-to-case (top) thermal resistance 54.0 53.6\nθJC(top)\nR Junction-to-board thermal resistance 49.6 19.8\nθJB\n°C/W\nψ Junction-to-top characterization parameter 11.2 1.1",
+    "curated": false
+  },
+  {
+    "id": "auto-p4-6",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      571.86,
+      558,
+      623.6800000000001
+    ],
+    "title": "手册第 4 页 / 原文段落",
+    "text": "JT\nψ Junction-to-board characterization parameter 49.1 19.9\nJB\nR Junction-to-case (bottom) thermal resistance N/A 7.9\nθJC(bot)\n(1) For more information about traditional and new thermal metrics, see the IC Package Thermal Metrics application report, SPRA953.",
+    "curated": false
+  },
+  {
+    "id": "auto-p6-0",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      74,
+      558,
+      87.30999999999995
+    ],
+    "title": "手册第 6 页 / 原文段落",
+    "text": "Electrical Characteristics (continued)",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-0",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      74,
+      558,
+      87.30999999999995
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "6.6 Typical Characteristics",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-1",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      100.04777651754887,
+      558,
+      207.08037666314874
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "1.66 3\n1.65\n2.5\n1.64\n1.63\n2\n1.62\nA A\nI - m D D 1. 1 6 . 1 6 I - m D D 1.5\n1\n1.59",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-2",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      209.91669125354883,
+      558,
+      267.57737816494716
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "1.58 V DD = 12 V 0.5\n1.57\n1.56 0\n-50 -25 0 25 50 75 100 125 5 10 15 20 25 30 35 40 45 50 55\nV - V\nTemp - °C DD",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-3",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      285.48,
+      558,
+      309.75347452272314
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "Figure 1. Quiescent Current vs Temperature Figure 2. Quiescent Current vs Input Voltage\n156.5 4.3",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-4",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      321.04299213797435,
+      558,
+      333.08874762277435
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "156 4.25 Turn On",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-5",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      339.34177699017835,
+      558,
+      393.32043454502497
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "V\nm 155.5 V 4.2\nd\n-\nn\n-\nol O\ne s h 155 ur n 4.15\nT\nhr\nO\nT",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-6",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      389.32019256215705,
+      558,
+      413.11491854845457
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "et 154.5 V L 4.1\ne s U\nR",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-7",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      411.2020449019744,
+      558,
+      424.39352929773395
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "154 V DD = 12 V 4.05 Turn Off",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-8",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      434.8833927899744,
+      558,
+      464.8792508594208
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "153.5 4\n-50 -25 0 25 50 75 100 125 -50 -25 0 25 50 75 100 125\nTemp - °C Temp - °C",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-9",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      480.38,
+      558,
+      560.2818549390017
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "Figure 3. Soft-Start Threshold vs Temperature Figure 4. UVLO Turn-On and Turn-Off vs Temperature\n98 103\n96 102.5\nV = 4.5 V\nDD\n94\n102\nz) 92 R C = = 2 4 0 7 2 0 k p W F m V",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-10",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      554.368058614009,
+      558,
+      595.3333779497067
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "q u e n c\ny\n(\nk\nH",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-11",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      554.0902620535488,
+      558,
+      599.1369303986623
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "8 8\n9\n6 8\n0\nV DD = 12 V hr e s h\nol\nd\n-\n10",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-12",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      554.0902620535488,
+      558,
+      584.3024279751488
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "1\n1",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-13",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      554.0902620535488,
+      558,
+      584.3024279751488
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "0\n.5",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-14",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      573.4443431175488,
+      558,
+      606.0045579881323
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "1 V DD = 12 V\nFr e",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-15",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      591.3401427778191,
+      558,
+      614.2619753986623
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "84 I\nt\nLI\nM 100.5",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-16",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      612.1521133415488,
+      558,
+      623.0101981991488
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "100",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-17",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      616.0026243810623,
+      558,
+      663.7097772369473
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "82 V DD = 52 V\n80 99.5\n-50 -25 0 25 50 75 100 125 -50 -25 0 25 50 75 100 125\nTemp (°C) Temp - °C",
+    "curated": false
+  },
+  {
+    "id": "auto-p7-18",
+    "page": 7,
+    "printed_page": "7",
+    "bbox": [
+      54,
+      681.38,
+      558,
+      693.38
+    ],
+    "title": "手册第 7 页 / 原文段落",
+    "text": "Figure 5. Oscillator Frequency vs Temperature Figure 6. Current Limit Threshold vs Temperature",
+    "curated": false
+  },
+  {
+    "id": "auto-p8-0",
+    "page": 8,
+    "printed_page": "8",
+    "bbox": [
+      54,
+      74,
+      558,
+      101.6502499885728
+    ],
+    "title": "手册第 8 页 / 原文段落",
+    "text": "Typical Characteristics (continued)\n275 21.00",
+    "curated": false
+  },
+  {
+    "id": "auto-p8-1",
+    "page": 8,
+    "printed_page": "8",
+    "bbox": [
+      54,
+      101.2044956044,
+      558,
+      204.21466062655452
+    ],
+    "title": "手册第 8 页 / 原文段落",
+    "text": "270 R = 68.1 kW T J = 25°C\nC = 470 pF\nk H z) 2 2 6 6 0 5 T J = 25°C 20.50\nc y\n(\n255\nn\nu e 250 d B\nFr e q 245 ai n - 20.00\nor 240 G\nat\ncill 235 19.50",
+    "curated": false
+  },
+  {
+    "id": "auto-p8-2",
+    "page": 8,
+    "printed_page": "8",
+    "bbox": [
+      54,
+      198.45724153749927,
+      558,
+      256.405617318434
+    ],
+    "title": "手册第 8 页 / 原文段落",
+    "text": "s\nO 230\n225\n220 19.00\n5 10 15 20 25 30 35 40 45 50 55 5 10 15 20 25 30 35 40 45 50 55\nV DD (V) V DD - V",
+    "curated": false
+  },
+  {
+    "id": "auto-p8-3",
+    "page": 8,
+    "printed_page": "8",
+    "bbox": [
+      54,
+      272.5799999999999,
+      558,
+      295.42475745589763
+    ],
+    "title": "手册第 8 页 / 原文段落",
+    "text": "Figure 7. Oscillator Frequency vs VDD Figure 8. Power Stage Gain vs VDD\n20.50 20.50",
+    "curated": false
+  },
+  {
+    "id": "auto-p8-4",
+    "page": 8,
+    "printed_page": "8",
+    "bbox": [
+      54,
+      302.56252674869756,
+      558,
+      331.802565443312
+    ],
+    "title": "手册第 8 页 / 原文段落",
+    "text": "V = 24 V\nDD\n20.30 20.45\nV = 4.5 V\nDD",
+    "curated": false
+  },
+  {
+    "id": "auto-p8-5",
+    "page": 8,
+    "printed_page": "8",
+    "bbox": [
+      54,
+      339.5205999646976,
+      558,
+      388.074520163312
+    ],
+    "title": "手册第 8 页 / 原文段落",
+    "text": "20.10 20.40\nB B\nd d\nai n - 19.90 V DD = 12 V ai n - 20.35\nG G V = 52 V\nDD",
+    "curated": false
+  },
+  {
+    "id": "auto-p8-6",
+    "page": 8,
+    "printed_page": "8",
+    "bbox": [
+      54,
+      394.5703096286976,
+      558,
+      405.50213758389765
+    ],
+    "title": "手册第 8 页 / 原文段落",
+    "text": "19.70 20.30",
+    "curated": false
+  },
+  {
+    "id": "auto-p8-7",
+    "page": 8,
+    "printed_page": "8",
+    "bbox": [
+      54,
+      422.07111724469763,
+      558,
+      452.1648598962944
+    ],
+    "title": "手册第 8 页 / 原文段落",
+    "text": "19.50 20.25\n-50 -25 0 25 50 75 100 125 -50 -25 0 25 50 75 100 125\nTemp - °C Temp °C",
+    "curated": false
+  },
+  {
+    "id": "auto-p8-8",
+    "page": 8,
+    "printed_page": "8",
+    "bbox": [
+      54,
+      469.38,
+      558,
+      519.7319319518976
+    ],
+    "title": "手册第 8 页 / 原文段落",
+    "text": "Figure 9. Power Stage Gain vs Temperature Figure 10. Power Stage Gain vs Temperature\n3 6\n5.8\n2.8\n5.6\n2.6 5.4",
+    "curated": false
+  },
+  {
+    "id": "auto-p8-9",
+    "page": 8,
+    "printed_page": "8",
+    "bbox": [
+      54,
+      515.8713568286976,
+      558,
+      593.3548590718976
+    ],
+    "title": "手册第 8 页 / 原文段落",
+    "text": "2.4 V DD = 24 V 5. 5 2 V DD = 52 V\n2.2 4.8\nV V 4.6\n- mp 2 - mp 4.4\nVra 1.8 Vra 4.2\n4\n1.6\n3.8",
+    "curated": false
+  },
+  {
+    "id": "auto-p8-10",
+    "page": 8,
+    "printed_page": "8",
+    "bbox": [
+      54,
+      589.2988207326975,
+      558,
+      648.9006033842944
+    ],
+    "title": "手册第 8 页 / 原文段落",
+    "text": "1.4 V = 12 V 3.6 V DD = 36 V\nDD 3.4\n1.2\n3.2\n1 3\n-50 -25 0 25 50 75 100 125 -50 -25 0 25 50 75 100 125\nTemp - °C Temp - °C",
+    "curated": false
+  },
+  {
+    "id": "auto-p8-11",
+    "page": 8,
+    "printed_page": "8",
+    "bbox": [
+      54,
+      666.1800000000001,
+      558,
+      678.1800000000001
+    ],
+    "title": "手册第 8 页 / 原文段落",
+    "text": "Figure 11. Modulator Ramp Amplitude vs Temperature Figure 12. Modulator Ramp Amplitude vs Temperature",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-0",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      74,
+      558,
+      169.33739125077443
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "Typical Characteristics (continued)\n6 160\nT = 25°C\nJ\n140\n5\n120\n4\n100\nV\n- A\nP 3 n 80",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-1",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      162.12146813720892,
+      558,
+      220.28870905098245
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "V R A M I - I B 60\n2\n40\n1\n20",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-2",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      226.5317847757824,
+      558,
+      257.01733519229447
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "0 0\n5 10 15 20 25 30 35 40 45 50 55 -50 -25 0 25 50 75 100 125\nV - V\nDD Temp - °C",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-3",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      272.5799999999999,
+      558,
+      307.3754965918976
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "Figure 13. Modulator Ramp Amplitude vs VDD Figure 14. Feedback Amplifier Input Bias Current vs\nTemperature\n300 3.5",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-4",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      315.9764728606976,
+      558,
+      330.2878407198976
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "3\n250",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-5",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      335.5572735646976,
+      558,
+      390.4050143220639
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "A A 2.5\nm 200 m\nnt - nt - 2\nurr e 150 urr e\nC C 1.5\nut ut",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-6",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      385.70941769635124,
+      558,
+      406.4010032612316
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "O\nut p 100\nO\nut p\n1",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-7",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      411.0732700126976,
+      558,
+      424.7298287518976
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "50 0.5",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-8",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      433.45236345269757,
+      558,
+      463.9612266802944
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "0 0\n-50 -25 0 25 50 75 100 125 -50 -25 0 25 50 75 100 125\nTemp - °C Temp - °C",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-9",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      481.28000000000003,
+      558,
+      505.71579906240004
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "Figure 15. Comp Source Current vs Temperature Figure 16. Comp Sink Current vs Temperature\n8 8.4",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-10",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      510.4226618624,
+      558,
+      613.3804710624
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "7.8 V DD = 12 V 8.2 V J = 25°C\n7.6\n8\nV 7.4\n- 7.8\nE\nAT 7.2\nG\nV 7.6\n7\n7.4\n6.8",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-11",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      616.8548399864001,
+      558,
+      631.3245150624
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "7.2\n6.6",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-12",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      637.4605049864,
+      558,
+      669.1677957744
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "6.4 7\n-50 -25 0 25 50 75 100 125 5 10 15 20 25 30 35 40 45 50 55\nV - V\nTemp - °C DD",
+    "curated": false
+  },
+  {
+    "id": "auto-p9-13",
+    "page": 9,
+    "printed_page": "9",
+    "bbox": [
+      54,
+      684.38,
+      558,
+      698.78
+    ],
+    "title": "手册第 9 页 / 原文段落",
+    "text": "Figure 17. Gate Drive Voltage vs Temperature Figure 18. Gate Drive Voltage vs VIN",
+    "curated": false
+  },
+  {
+    "id": "auto-p10-0",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      286.6049172190976,
+      558,
+      297.46132213429763
+    ],
+    "title": "手册第 10 页 / 原文段落",
+    "text": "700",
+    "curated": false
+  },
+  {
+    "id": "auto-p10-1",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      305.86590464309756,
+      558,
+      319.9437375086368
+    ],
+    "title": "手册第 10 页 / 原文段落",
+    "text": "600 V = 4.5 V\nDD",
+    "curated": false
+  },
+  {
+    "id": "auto-p10-2",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      325.8320485150976,
+      558,
+      396.3721742622976
+    ],
+    "title": "手册第 10 页 / 原文段落",
+    "text": "500\ns n\nh\n- 400\ndt\nWi\n300\ne\nul s V DD = 24 V V DD = 12 V\nP 200",
+    "curated": false
+  },
+  {
+    "id": "auto-p10-3",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      402.86869404799995,
+      558,
+      428.897119328
+    ],
+    "title": "手册第 10 页 / 原文段落",
+    "text": "100 V DD = 36 V\nV = 52 V",
+    "curated": false
+  },
+  {
+    "id": "auto-p10-4",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      74,
+      558,
+      453.7590700515072
+    ],
+    "title": "手册第 10 页 / 原文段落",
+    "text": "0 DD\n0 100 200 300 400 500 0 10 20 30 40 50\nFrequency - kHz Input Voltage (V)\n)%(elcyCytuDmumixaM\nTypical Characteristics (continued)\n720 720\n718 718\n716 716\n714 714\n712 712\nV V = 24 V V\n-",
+    "curated": false
+  },
+  {
+    "id": "auto-p10-5",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      154.586444612288,
+      558,
+      183.19938015498235
+    ],
+    "title": "手册第 10 页 / 原文段落",
+    "text": "m 710 DD\n-\nm 710\nB B V = 4.5 V\nVF 708 VF 708 DD",
+    "curated": false
+  },
+  {
+    "id": "auto-p10-6",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      186.19515117578237,
+      558,
+      257.52247365629444
+    ],
+    "title": "手册第 10 页 / 原文段落",
+    "text": "706 V = 50 V 706\nDD\n704 704 V = 12 V\nDD\n702 702\n700 700\n-50 -25 0 25 50 75 100 125 -50 -25 0 25 50 75 100 125\nTemp - °C Temp - °C",
+    "curated": false
+  },
+  {
+    "id": "auto-p10-7",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      274.48,
+      558,
+      314.97966112025597
+    ],
+    "title": "手册第 10 页 / 原文段落",
+    "text": "Figure 19. Reference Voltage vs Temperature Figure 20. Reference Voltage vs Temperature\n100\n95",
+    "curated": false
+  },
+  {
+    "id": "auto-p10-8",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      321.36798007065596,
+      558,
+      348.07979686425597
+    ],
+    "title": "手册第 10 页 / 原文段落",
+    "text": "90\n85",
+    "curated": false
+  },
+  {
+    "id": "auto-p10-9",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      354.409246662656,
+      558,
+      365.275368416256
+    ],
+    "title": "手册第 10 页 / 原文段落",
+    "text": "80",
+    "curated": false
+  },
+  {
+    "id": "auto-p10-10",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      371.546242918656,
+      558,
+      433.881928736256
+    ],
+    "title": "手册第 10 页 / 原文段落",
+    "text": "75\nf (kHz) OSC\n70 500\n200\n100 65 50\n60",
+    "curated": false
+  },
+  {
+    "id": "auto-p10-11",
+    "page": 10,
+    "printed_page": "10",
+    "bbox": [
+      54,
+      471.28000000000003,
+      558,
+      483.28000000000003
+    ],
+    "title": "手册第 10 页 / 原文段落",
+    "text": "Figure 21. Minimum Controllable Pulse Width vs Frequency Figure 22. Maximum Duty Cycle vs Input Voltage",
+    "curated": false
+  },
+  {
+    "id": "auto-p11-0",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      74,
+      558,
+      88.51999999999998
+    ],
+    "title": "手册第 11 页 / 原文段落",
+    "text": "7 Detailed Description",
+    "curated": false
+  },
+  {
+    "id": "auto-p11-1",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      99.30999999999995,
+      558,
+      258.70000000000005
+    ],
+    "title": "手册第 11 页 / 原文段落",
+    "text": "7.1 Overview\nThe TPS40200 is a non-synchronous controller with a built in 200-mA driver designed to drive high speed P-\nchannel FETs up to 500 kHz. Small size combined with complete functionality makes the part both versatile and\neasy to use.\nThe controller uses a low-value current-sensing resistor in series with the input voltage and the power FETs\nsource connection to detect switching current. When the voltage drop across this resistor exceeds 100 mV, the\npart enters an hiccup fault mode at about 2% of the operating frequency.\nThe device uses voltage feedback to an error amplifier that is biased by a precision 700-mV reference. Feed-\nforward compensation from the input keeps the PWM gain constant over the full input voltage range, eliminating\nthe need to change frequency compensation for different input voltages.\nThe TPS40200 also incorporates a soft-start feature where the output follows a slowly rising soft-start voltage,\npreventing output-voltage overshoot.",
+    "curated": false
+  },
+  {
+    "id": "auto-p11-2",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      266.80999999999995,
+      558,
+      281.80999999999995
+    ],
+    "title": "手册第 11 页 / 原文段落",
+    "text": "7.2 Functional Block Diagram",
+    "curated": false
+  },
+  {
+    "id": "auto-p11-3",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      305.9970752559999,
+      558,
+      328.748011256
+    ],
+    "title": "手册第 11 页 / 原文段落",
+    "text": "TPS40200\nCOMP 3",
+    "curated": false
+  },
+  {
+    "id": "auto-p11-4",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      338.4029152559999,
+      558,
+      350.384091256
+    ],
+    "title": "手册第 11 页 / 原文段落",
+    "text": "FB 4",
+    "curated": false
+  },
+  {
+    "id": "auto-p11-5",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      358.8855552559999,
+      558,
+      458.565611256
+    ],
+    "title": "手册第 11 页 / 原文段落",
+    "text": "E/A and SS\nReference\nSS 2\n+\n700 mV\nSoft-Start + 8 VDD\nand\nOvercurrent PWM\nEnable E/A Logic GDRV voltage swing\nISNS 7 limited to (V –8V)\nIN\nDriver 6 GDRV",
+    "curated": false
+  },
+  {
+    "id": "auto-p11-6",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      468.220115256,
+      558,
+      480.201211256
+    ],
+    "title": "手册第 11 页 / 原文段落",
+    "text": "RC 1 OSC",
+    "curated": false
+  },
+  {
+    "id": "auto-p11-7",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      497.06851525599996,
+      558,
+      516.261531256
+    ],
+    "title": "手册第 11 页 / 原文段落",
+    "text": "5 GND\nUVLO",
+    "curated": false
+  },
+  {
+    "id": "auto-p11-8",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      534.670618496,
+      558,
+      543.478554496
+    ],
+    "title": "手册第 11 页 / 原文段落",
+    "text": "UDG-05069",
+    "curated": false
+  },
+  {
+    "id": "auto-p11-9",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      560.91,
+      558,
+      575.91
+    ],
+    "title": "手册第 11 页 / 原文段落",
+    "text": "7.3 Feature Description",
+    "curated": false
+  },
+  {
+    "id": "auto-p11-10",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      583.6,
+      558,
+      658.5
+    ],
+    "title": "手册第 11 页 / 原文段落",
+    "text": "7.3.1 MOSFET Gate Drive\nThe output driver sinking current is approximately 200 mA and is designed to drive P-channel power FETs. When\nthe driver pulls the gate charge of the FET it is controlling to 8 V, the drive current folds back to a low level so\nthat high-power dissipation only occurs during the turn-on period of the FET. This feature is particularly valuable\nwhen turning on a FET at high input voltages where leaving the gate drive current on would otherwise cause\nunacceptable power dissipation.",
+    "curated": false
+  },
+  {
+    "id": "auto-p11-11",
+    "page": 11,
+    "printed_page": "11",
+    "bbox": [
+      54,
+      666.4,
+      558,
+      719.3
+    ],
+    "title": "手册第 11 页 / 原文段落",
+    "text": "7.3.2 Undervoltage Lockout Protection\nUndervoltage lockout (UVLO) protection ensures proper startup of the device only when the input voltage has\nexceeded minimum operating voltage. Undervoltage protection incorporates hysteresis which eliminates hiccup\nstarting in cases where input supply impedance is high.",
+    "curated": false
+  },
+  {
+    "id": "auto-p12-0",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      74,
+      558,
+      87.30999999999995
+    ],
+    "title": "手册第 12 页 / 原文段落",
+    "text": "Feature Description (continued)",
+    "curated": false
+  },
+  {
+    "id": "auto-p12-1",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      106.64707520000002,
+      558,
+      172.0321247999999
+    ],
+    "title": "手册第 12 页 / 原文段落",
+    "text": "TPS40200\n545 kW\nVDD 8\nRun\n+\n200 kW\n+",
+    "curated": false
+  },
+  {
+    "id": "auto-p12-2",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      171.47987519999992,
+      558,
+      183.47027519999983
+    ],
+    "title": "手册第 12 页 / 原文段落",
+    "text": "1.3 V",
+    "curated": false
+  },
+  {
+    "id": "auto-p12-3",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      203.77087999999992,
+      558,
+      215.8651551999999
+    ],
+    "title": "手册第 12 页 / 原文段落",
+    "text": "36 kW",
+    "curated": false
+  },
+  {
+    "id": "auto-p12-4",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      232.6413152,
+      558,
+      244.63171519999992
+    ],
+    "title": "手册第 12 页 / 原文段落",
+    "text": "GND 5",
+    "curated": false
+  },
+  {
+    "id": "auto-p12-5",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      263.6554982639999,
+      558,
+      291.40000000000003
+    ],
+    "title": "手册第 12 页 / 原文段落",
+    "text": "UDG-05082\nFigure 23. Undervoltage Lockout",
+    "curated": false
+  },
+  {
+    "id": "auto-p13-0",
+    "page": 13,
+    "printed_page": "13",
+    "bbox": [
+      54,
+      74,
+      558,
+      161.10000000000002
+    ],
+    "title": "手册第 13 页 / 原文段落",
+    "text": "Feature Description (continued)\nUnder circumstances where the input voltage is high and the duty cycle is less than 50%, a Schottky diode\nconnected from the RC pin to an external clock may be used to synchronize the oscillator. The cathode of the\ndiode is connected to the RC pin. The trip point of the oscillator is set by an internal voltage divider to be 1/10 of\nthe input voltage. The clock signal must have an amplitude higher than this trip point. When the clock goes low, it\nallows the reset current to restart the RC ramp, synchronizing the oscillator to the external clock. This provides a\nsimple, single-component method for clock synchronization.",
+    "curated": false
+  },
+  {
+    "id": "auto-p13-1",
+    "page": 13,
+    "printed_page": "13",
+    "bbox": [
+      54,
+      176.28275951504395,
+      558,
+      297.14574935144395
+    ],
+    "title": "手册第 13 页 / 原文段落",
+    "text": "TPS40200\nVDD\nV 8\nIN\n+ CLK\nS Q\nR\nRC\nR Q\nExternal Frequency RC\nSynchronization +\n(optional) 1",
+    "curated": false
+  },
+  {
+    "id": "auto-p13-2",
+    "page": 13,
+    "printed_page": "13",
+    "bbox": [
+      54,
+      302.046678767044,
+      558,
+      321.201694584076
+    ],
+    "title": "手册第 13 页 / 原文段落",
+    "text": "+\nC 150 mV\nRC",
+    "curated": false
+  },
+  {
+    "id": "auto-p13-3",
+    "page": 13,
+    "printed_page": "13",
+    "bbox": [
+      54,
+      331.363091351044,
+      558,
+      361.41049536744396
+    ],
+    "title": "手册第 13 页 / 原文段落",
+    "text": "GND\n5",
+    "curated": false
+  },
+  {
+    "id": "auto-p13-4",
+    "page": 13,
+    "printed_page": "13",
+    "bbox": [
+      54,
+      383.481145330648,
+      558,
+      411.8
+    ],
+    "title": "手册第 13 页 / 原文段落",
+    "text": "UDG-05070\nFigure 24. Oscillator Functional Diagram",
+    "curated": false
+  },
+  {
+    "id": "auto-p13-5",
+    "page": 13,
+    "printed_page": "13",
+    "bbox": [
+      54,
+      435.481261870616,
+      558,
+      509.455671060216
+    ],
+    "title": "手册第 13 页 / 原文段落",
+    "text": "TPS40200\nVDD\nV 8\nIN\n+ CLK\nS Q\nAmplitude > V IN R RC RC",
+    "curated": false
+  },
+  {
+    "id": "auto-p13-6",
+    "page": 13,
+    "printed_page": "13",
+    "bbox": [
+      54,
+      502.681352869016,
+      558,
+      548.0059395002161
+    ],
+    "title": "手册第 13 页 / 原文段落",
+    "text": "10 R Q\nRC\n+\n1",
+    "curated": false
+  },
+  {
+    "id": "auto-p13-7",
+    "page": 13,
+    "printed_page": "13",
+    "bbox": [
+      54,
+      555.102720238616,
+      558,
+      573.517656677064
+    ],
+    "title": "手册第 13 页 / 原文段落",
+    "text": "Frequency > Controller Frequency +\nC 150 mV\nRC",
+    "curated": false
+  },
+  {
+    "id": "auto-p13-8",
+    "page": 13,
+    "printed_page": "13",
+    "bbox": [
+      54,
+      582.987496414616,
+      558,
+      611.762902644216
+    ],
+    "title": "手册第 13 页 / 原文段落",
+    "text": "GND\n5",
+    "curated": false
+  },
+  {
+    "id": "auto-p13-9",
+    "page": 13,
+    "printed_page": "13",
+    "bbox": [
+      54,
+      632.5613307890719,
+      558,
+      660.6
+    ],
+    "title": "手册第 13 页 / 原文段落",
+    "text": "UDG-10076\nFigure 25. Diode-Connected Synchronization",
+    "curated": false
+  },
+  {
+    "id": "auto-p14-1",
+    "page": 14,
+    "printed_page": "14",
+    "bbox": [
+      54,
+      292.91705079999997,
+      558,
+      315.15695678
+    ],
+    "title": "手册第 14 页 / 原文段落",
+    "text": "8\n+",
+    "curated": false
+  },
+  {
+    "id": "auto-p14-2",
+    "page": 14,
+    "printed_page": "14",
+    "bbox": [
+      54,
+      324.6483508,
+      558,
+      337.6375508
+    ],
+    "title": "手册第 14 页 / 原文段落",
+    "text": "S Q",
+    "curated": false
+  },
+  {
+    "id": "auto-p14-3",
+    "page": 14,
+    "printed_page": "14",
+    "bbox": [
+      54,
+      350.98532079999995,
+      558,
+      387.55925678
+    ],
+    "title": "手册第 14 页 / 原文段落",
+    "text": "R Q\n2\n+ Reset Fault",
+    "curated": false
+  },
+  {
+    "id": "auto-p14-4",
+    "page": 14,
+    "printed_page": "14",
+    "bbox": [
+      54,
+      398.2166908,
+      558,
+      427.3869008
+    ],
+    "title": "手册第 14 页 / 原文段落",
+    "text": "150 mV\n5",
+    "curated": false
+  },
+  {
+    "id": "auto-p14-5",
+    "page": 14,
+    "printed_page": "14",
+    "bbox": [
+      54,
+      276.73595079999996,
+      558,
+      482.309267681
+    ],
+    "title": "手册第 14 页 / 原文段落",
+    "text": "UDG-10077\n+\n100 mV\nVDD\nFault Latched 100 kW\nFault\nISNS 7",
+    "curated": false
+  },
+  {
+    "id": "auto-p14-6",
+    "page": 14,
+    "printed_page": "14",
+    "bbox": [
+      54,
+      343.8025,
+      558,
+      380.15526079999995
+    ],
+    "title": "手册第 14 页 / 原文段落",
+    "text": "300 kW\nSS Enable\nError Amplifier",
+    "curated": false
+  },
+  {
+    "id": "auto-p14-9",
+    "page": 14,
+    "printed_page": "14",
+    "bbox": [
+      54,
+      309.14738079999995,
+      558,
+      322.13658079999993
+    ],
+    "title": "手册第 14 页 / 原文段落",
+    "text": "300 mV",
+    "curated": false
+  },
+  {
+    "id": "auto-p14-10",
+    "page": 14,
+    "printed_page": "14",
+    "bbox": [
+      54,
+      336.11615079999996,
+      558,
+      359.89266079999993
+    ],
+    "title": "手册第 14 页 / 原文段落",
+    "text": "SS Reference\nError Amplifier",
+    "curated": false
+  },
+  {
+    "id": "auto-p14-11",
+    "page": 14,
+    "printed_page": "14",
+    "bbox": [
+      54,
+      386.06840079999995,
+      558,
+      399.05760079999993
+    ],
+    "title": "手册第 14 页 / 原文段落",
+    "text": "+",
+    "curated": false
+  },
+  {
+    "id": "auto-p14-12",
+    "page": 14,
+    "printed_page": "14",
+    "bbox": [
+      54,
+      486.3,
+      558,
+      500.3
+    ],
+    "title": "手册第 14 页 / 原文段落",
+    "text": "Figure 26. Current Limit Reset",
+    "curated": false
+  },
+  {
+    "id": "auto-p15-0",
+    "page": 15,
+    "printed_page": "15",
+    "bbox": [
+      54,
+      74,
+      558,
+      87.30999999999995
+    ],
+    "title": "手册第 15 页 / 原文段落",
+    "text": "Feature Description (continued)",
+    "curated": false
+  },
+  {
+    "id": "auto-p15-1",
+    "page": 15,
+    "printed_page": "15",
+    "bbox": [
+      54,
+      315.6,
+      558,
+      330.97
+    ],
+    "title": "手册第 15 页 / 原文段落",
+    "text": "Figure 27. Typical Soft-Start Capacitor and V During Overcurrent\nOUT",
+    "curated": false
+  },
+  {
+    "id": "auto-p15-2",
+    "page": 15,
+    "printed_page": "15",
+    "bbox": [
+      54,
+      341.5,
+      558,
+      461.90000000000003
+    ],
+    "title": "手册第 15 页 / 原文段落",
+    "text": "If necessary, a small RC filter can be added to the current sensing network to reduce nuisance tripping due to\nnoise pickup. This filter can also be used to trim the overcurrent trip point to a higher level with the addition of a\nsingle resistor. See Figure 28. The nominal overcurrent trip point using the circuit of Figure 28 is described in\nEquation 3.\nV R + R\nI = ILIM ´ F1 F2\nOC R R\nILIM F2 (3)\nWhere\nI is the overcurrent trip point, peak current in the inductor\nOC\nV is the overcurrent threshold voltage for the TPS40200, typically 100 mV",
+    "curated": false
+  },
+  {
+    "id": "auto-p15-3",
+    "page": 15,
+    "printed_page": "15",
+    "bbox": [
+      54,
+      452.27000000000004,
+      558,
+      551.91276364
+    ],
+    "title": "手册第 15 页 / 原文段落",
+    "text": "ILIM\nR is the value of the current sense resistor in Ω\nILIM\nR and R are the values of the scaling resistors in Ω\nF1 F2\nThe value of the capacitor is determined by the nominal pulse width of the converter and the values of the\nscaling resistors R and R . It is best not to have the time constant of the filter longer than the nominal pulse\nF1 F2\nwidth of the converter, otherwise a substantial increase in the overcurrent trip point occurs. Using this constraint,\nthe capacitor value may be bounded by Equation 4.\næ V ö\nOUT",
+    "curated": false
+  },
+  {
+    "id": "auto-p15-4",
+    "page": 15,
+    "printed_page": "15",
+    "bbox": [
+      54,
+      545.57151352,
+      558,
+      668.97
+    ],
+    "title": "手册第 15 页 / 原文段落",
+    "text": "ç ÷\nC F £ è (R V I F N 1 ´ ´ R f S F W 2 ) ø\n(R F1 + R F2 ) (4)\nWhere\nC is the value of the current limit filter capacitor in F\nF\nV is the output voltage of the converter\nOUT\nV is the input voltage to the converter\nIN\nf is the converter switching frequency\nSW",
+    "curated": false
+  },
+  {
+    "id": "auto-p15-5",
+    "page": 15,
+    "printed_page": "15",
+    "bbox": [
+      54,
+      665.7,
+      558,
+      681.0699999999999
+    ],
+    "title": "手册第 15 页 / 原文段落",
+    "text": "R and R are the values of the scaling resistors in Ω\nF1 F2",
+    "curated": false
+  },
+  {
+    "id": "auto-p16-0",
+    "page": 16,
+    "printed_page": "16",
+    "bbox": [
+      54,
+      74,
+      558,
+      87.30999999999995
+    ],
+    "title": "手册第 16 页 / 原文段落",
+    "text": "Feature Description (continued)",
+    "curated": false
+  },
+  {
+    "id": "auto-p16-1",
+    "page": 16,
+    "printed_page": "16",
+    "bbox": [
+      54,
+      98.13220716799992,
+      558,
+      111.4389758719999
+    ],
+    "title": "手册第 16 页 / 原文段落",
+    "text": "V\nIN",
+    "curated": false
+  },
+  {
+    "id": "auto-p16-2",
+    "page": 16,
+    "printed_page": "16",
+    "bbox": [
+      54,
+      128.27620716799993,
+      558,
+      183.45267116800005
+    ],
+    "title": "手册第 16 页 / 原文段落",
+    "text": "VDD 8\nC\nF R\nF2 R\nILIM\nR\nF1\nISNS 7",
+    "curated": false
+  },
+  {
+    "id": "auto-p16-3",
+    "page": 16,
+    "printed_page": "16",
+    "bbox": [
+      54,
+      200.22500716799993,
+      558,
+      212.21427116799998
+    ],
+    "title": "手册第 16 页 / 原文段落",
+    "text": "GDRV 6",
+    "curated": false
+  },
+  {
+    "id": "auto-p16-4",
+    "page": 16,
+    "printed_page": "16",
+    "bbox": [
+      54,
+      239.82748716799995,
+      558,
+      251.816751168
+    ],
+    "title": "手册第 16 页 / 原文段落",
+    "text": "TPS40200",
+    "curated": false
+  },
+  {
+    "id": "auto-p16-5",
+    "page": 16,
+    "printed_page": "16",
+    "bbox": [
+      54,
+      278.00844908799996,
+      558,
+      305.8
+    ],
+    "title": "手册第 16 页 / 原文段落",
+    "text": "UDG-05071\nFigure 28. Current Limit Adjustment",
+    "curated": false
+  },
+  {
+    "id": "auto-p16-6",
+    "page": 16,
+    "printed_page": "16",
+    "bbox": [
+      54,
+      317.8,
+      558,
+      364.8
+    ],
+    "title": "手册第 16 页 / 原文段落",
+    "text": "NOTE\nThe current limit resistor and its associated circuitry can be eliminated and the ISNS pin\n(pin 7) and the VDD pin (pin 8) are shorted. The result of this however, may result in\ndamage to the device or PC board during an overcurrent event.",
+    "curated": false
+  },
+  {
+    "id": "auto-p17-1",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      297.677032,
+      558,
+      329.31233527999996
+    ],
+    "title": "手册第 17 页 / 原文段落",
+    "text": "105 kW SS\n2",
+    "curated": false
+  },
+  {
+    "id": "auto-p17-2",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      341.81176727999997,
+      558,
+      386.92921527999994
+    ],
+    "title": "手册第 17 页 / 原文段落",
+    "text": "CSS +\nFB\n4",
+    "curated": false
+  },
+  {
+    "id": "auto-p17-3",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      396.53464728,
+      558,
+      422.90729527999997
+    ],
+    "title": "手册第 17 页 / 原文段落",
+    "text": "COMP\n3",
+    "curated": false
+  },
+  {
+    "id": "auto-p17-4",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      505.42037543999993,
+      558,
+      522.14599772
+    ],
+    "title": "手册第 17 页 / 原文段落",
+    "text": "t ³ 2p ´ L ´ C\nS OUT OUT",
+    "curated": false
+  },
+  {
+    "id": "auto-p17-5",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      323.416544768,
+      558,
+      614.8790242
+    ],
+    "title": "手册第 17 页 / 原文段落",
+    "text": "æ V ö\nt SS = R C ´ C SS ´ ln´ ç SST ÷\nV - 1.4\nè SST ø\n+",
+    "curated": false
+  },
+  {
+    "id": "auto-p17-9",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      289.98216728,
+      558,
+      316.13894328
+    ],
+    "title": "手册第 17 页 / 原文段落",
+    "text": "700 mV\nIdeal\nVSST(offset) Diodes",
+    "curated": false
+  },
+  {
+    "id": "auto-p17-10",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      331.74776727999995,
+      558,
+      343.73793527999993
+    ],
+    "title": "手册第 17 页 / 原文段落",
+    "text": "Error Amplifier",
+    "curated": false
+  },
+  {
+    "id": "auto-p17-11",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      364.14120728,
+      558,
+      376.13137528
+    ],
+    "title": "手册第 17 页 / 原文段落",
+    "text": "700 mV",
+    "curated": false
+  },
+  {
+    "id": "auto-p17-12",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      441.30006584,
+      558,
+      468.1
+    ],
+    "title": "手册第 17 页 / 原文段落",
+    "text": "UDG-05083\nFigure 29. Soft-Start Circuit",
+    "curated": false
+  },
+  {
+    "id": "auto-p17-13",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      480.0,
+      558,
+      505.0
+    ],
+    "title": "手册第 17 页 / 原文段落",
+    "text": "The slow-start time should be longer (slower) than the time constant of the output LC filter. This time constraint\nmay be expressed as described in Equation 5.",
+    "curated": false
+  },
+  {
+    "id": "auto-p17-14",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      513.79,
+      558,
+      582.8
+    ],
+    "title": "手册第 17 页 / 原文段落",
+    "text": "(5)\nThe calculation of the soft-start interval is simply the time it takes the RC network to exponentially charge from 0\nV to 1.4 V. An internal 105 kΩ charging resistor is connected from the SS pin to V . For applications where the\nSST\nvoltage is above 8 V, an internal regulator clamps the maximum charging voltage to 8 V.\nThe result of this is a formula for the start-up time, as shown in Equation 6.",
+    "curated": false
+  },
+  {
+    "id": "auto-p17-15",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      604.5899999999999,
+      558,
+      685.77
+    ],
+    "title": "手册第 17 页 / 原文段落",
+    "text": "(6)\nWhere\nt is the required soft-start time in seconds\nSS\nC is the soft-start capacitor value in F\nSS\nR is the internal soft-start charging resistor (105 kΩ nominal)\nc\nV is the input voltage up to a maximum of 8 V\nSST",
+    "curated": false
+  },
+  {
+    "id": "auto-p18-0",
+    "page": 18,
+    "printed_page": "18",
+    "bbox": [
+      54,
+      74,
+      558,
+      87.30999999999995
+    ],
+    "title": "手册第 18 页 / 原文段落",
+    "text": "Feature Description (continued)",
+    "curated": false
+  },
+  {
+    "id": "auto-p18-1",
+    "page": 18,
+    "printed_page": "18",
+    "bbox": [
+      54,
+      91.10000000000002,
+      558,
+      211.20403999999996
+    ],
+    "title": "手册第 18 页 / 原文段落",
+    "text": "7.3.7 Voltage Setting and Modulator Gain\nSince the input current to the error amplifier is negligible, the feedback impedance can be selected over a wide\nrange. Knowing that the reference voltage is 696 mV, choose a convenient value for R1 and then calculate the\nvalue of R2 from Equation 7.\næ R2 ö\nV = 0.696´ 1+\nOUT ç ÷\nè R1 ø\n(7)\nV\ng\nL",
+    "curated": false
+  },
+  {
+    "id": "auto-p18-2",
+    "page": 18,
+    "printed_page": "18",
+    "bbox": [
+      54,
+      205.04724,
+      558,
+      257.64088208
+    ],
+    "title": "手册第 18 页 / 原文段落",
+    "text": "V\nd OUT\nK\nPWM\nC R\nOUT LOAD\nV\nC",
+    "curated": false
+  },
+  {
+    "id": "auto-p18-3",
+    "page": 18,
+    "printed_page": "18",
+    "bbox": [
+      54,
+      285.61716,
+      558,
+      297.62116
+    ],
+    "title": "手册第 18 页 / 原文段落",
+    "text": "R2",
+    "curated": false
+  },
+  {
+    "id": "auto-p18-4",
+    "page": 18,
+    "printed_page": "18",
+    "bbox": [
+      54,
+      309.6266728,
+      558,
+      326.13924
+    ],
+    "title": "手册第 18 页 / 原文段落",
+    "text": "+ V\nREF R1",
+    "curated": false
+  },
+  {
+    "id": "auto-p18-5",
+    "page": 18,
+    "printed_page": "18",
+    "bbox": [
+      54,
+      351.75622024000006,
+      558,
+      378.90000000000003
+    ],
+    "title": "手册第 18 页 / 原文段落",
+    "text": "UDG-10220\nFigure 30. System Gain Elements",
+    "curated": false
+  },
+  {
+    "id": "auto-p18-6",
+    "page": 18,
+    "printed_page": "18",
+    "bbox": [
+      54,
+      390.8,
+      558,
+      459.8
+    ],
+    "title": "手册第 18 页 / 原文段落",
+    "text": "The error amplifier has a DC open loop gain of at least 60 dB with a minimum of a 1.5-MHz gain bandwidth\nproduct which gives the user flexibility with respect to the type of feedback compensation he uses for his\nparticular application. The gain selected by the user at the crossover frequency is set to provide an over all unity\ngain for the system. The crossover frequency should be selected so that the error amplifier open-loop gain is\nhigh with respect to the required closed-loop gain, ensuring that the amplifier response is determined by the\npassive feedback elements.",
+    "curated": false
+  },
+  {
+    "id": "auto-p18-7",
+    "page": 18,
+    "printed_page": "18",
+    "bbox": [
+      54,
+      467.91,
+      558,
+      482.91
+    ],
+    "title": "手册第 18 页 / 原文段落",
+    "text": "7.4 Device Functional Modes",
+    "curated": false
+  },
+  {
+    "id": "auto-p18-8",
+    "page": 18,
+    "printed_page": "18",
+    "bbox": [
+      54,
+      490.6,
+      558,
+      565.5
+    ],
+    "title": "手册第 18 页 / 原文段落",
+    "text": "7.4.1 Operation Near Minimum Input Voltage\nThe TPS40200 is designed to operate with input voltages above 4.5 V. The typical VDD UVLO threshold is 4.25\nV and the device may operate at input voltages down to the UVLO voltage. At input voltages below the actual\nUVLO voltage, the device will not switch. When V passes the UVLO threshold the device will become active.\nVDD\nSwitching is enabled and the soft start sequence is initiated. The TPS40200 will ramp up the output voltage at\nthe rate determined by the external capacitor at the soft-start pin.",
+    "curated": false
+  },
+  {
+    "id": "auto-p18-9",
+    "page": 18,
+    "printed_page": "18",
+    "bbox": [
+      54,
+      573.4,
+      558,
+      648.3
+    ],
+    "title": "手册第 18 页 / 原文段落",
+    "text": "7.4.2 Operation With SS Pin\nThe SS pin has a 150 mV threshold which can be used to disable the TPS40200. With SS forced below this\nthreshold voltage the device is disabled and switching is inhibited even if V is above its UVLO threshold. If the\nVDD\nSS voltage is allowed to increase above the threshold while V is above its UVLO threshold, the device\nVDD\nbecomes active. Switching is enabled and the soft start sequence is initiated. The TPS40200 will ramp up the\noutput voltage at the rate determined by the external capacitor at the soft-start pin.",
+    "curated": false
+  },
+  {
+    "id": "auto-p19-2",
+    "page": 19,
+    "printed_page": "19",
+    "bbox": [
+      54,
+      175.20999999999992,
+      558,
+      261.9
+    ],
+    "title": "手册第 19 页 / 原文段落",
+    "text": "8.1 Application Information\nThe TPS40200 is a 4.5-V to 52-V buck controller with an integrated gate driver for a high-side p-channel\nMOSFET. This device is typically used to convert a higher DC voltage to a lower DC voltage with a maximum\noutput current set by an external current sense resistor. In higher current applications, the maximum output\ncurrent can also be limited by the thermal performance of the external MOSFET and rectifying diode switch. Use\nthe following design procedure to select external components for the TPS40200. The design procedure illustrates\nthe design of a typical buck regulator with the TPS40200.",
+    "curated": false
+  },
+  {
+    "id": "auto-p19-3",
+    "page": 19,
+    "printed_page": "19",
+    "bbox": [
+      54,
+      270.01,
+      558,
+      285.01
+    ],
+    "title": "手册第 19 页 / 原文段落",
+    "text": "8.2 Typical Application",
+    "curated": false
+  },
+  {
+    "id": "auto-p19-4",
+    "page": 19,
+    "printed_page": "19",
+    "bbox": [
+      54,
+      292.70000000000005,
+      558,
+      323.6
+    ],
+    "title": "手册第 19 页 / 原文段落",
+    "text": "8.2.1 Buck Regulator, 8 V to 12 V Input, 3.3 V to 5.0 V at 2.5-A Output\nThe buck regulator design shown in Figure 31 shows the use of the TPS40200. It delivers 2.5 A at either 3.3 V or",
+    "curated": false
+  },
+  {
+    "id": "auto-p19-5",
+    "page": 19,
+    "printed_page": "19",
+    "bbox": [
+      54,
+      320.6,
+      558,
+      384.5
+    ],
+    "title": "手册第 19 页 / 原文段落",
+    "text": "5.0 V as selected by a single feedback resistor. It achieves approximately 90% efficiency at 3.3 V and 94% at 5.0\nV. A discussion of design tradeoffs and methodology is included to serve as a guide to the successful design of\nbuck converters using the TPS40200.\nThe Bill of Materials for this application is given in Table 2. The efficiency and load regulation from boards built\nfrom this design are shown in Figure 42 and Figure 43.",
+    "curated": false
+  },
+  {
+    "id": "auto-p19-6",
+    "page": 19,
+    "printed_page": "19",
+    "bbox": [
+      54,
+      409.48644857,
+      558,
+      416.77231857
+    ],
+    "title": "手册第 19 页 / 原文段落",
+    "text": "+",
+    "curated": false
+  },
+  {
+    "id": "auto-p19-7",
+    "page": 19,
+    "printed_page": "19",
+    "bbox": [
+      54,
+      503.08544857,
+      558,
+      510.37131856999997
+    ],
+    "title": "手册第 19 页 / 原文段落",
+    "text": "+",
+    "curated": false
+  },
+  {
+    "id": "auto-p19-8",
+    "page": 19,
+    "printed_page": "19",
+    "bbox": [
+      54,
+      550.04724857,
+      558,
+      568.02421857
+    ],
+    "title": "手册第 19 页 / 原文段落",
+    "text": "Notes\nD3 : Do not populate. SOT 23 Common Cathode Dual Schottky\nR6 =26.7k for 3.3 Vout, R6 = 16.2k for 5.0 Vout",
+    "curated": false
+  },
+  {
+    "id": "auto-p19-9",
+    "page": 19,
+    "printed_page": "19",
+    "bbox": [
+      54,
+      618.0,
+      558,
+      633.37
+    ],
+    "title": "手册第 19 页 / 原文段落",
+    "text": "Figure 31. 8 V to 16 V Step-Down Buck Converter\nIN",
+    "curated": false
+  },
+  {
+    "id": "auto-p20-0",
+    "page": 20,
+    "printed_page": "20",
+    "bbox": [
+      54,
+      74,
+      558,
+      87.30999999999995
+    ],
+    "title": "手册第 20 页 / 原文段落",
+    "text": "Typical Application (continued)",
+    "curated": false
+  },
+  {
+    "id": "auto-p20-1",
+    "page": 20,
+    "printed_page": "20",
+    "bbox": [
+      54,
+      91.10000000000002,
+      558,
+      105.10000000000002
+    ],
+    "title": "手册第 20 页 / 原文段落",
+    "text": "8.2.1.1 Design Requirements",
+    "curated": false
+  },
+  {
+    "id": "auto-p20-2",
+    "page": 20,
+    "printed_page": "20",
+    "bbox": [
+      54,
+      113.0,
+      558,
+      209.36
+    ],
+    "title": "手册第 20 页 / 原文段落",
+    "text": "Table 1. Design Parameters\nPARAMETER TEST CONDITION MIN NOM MAX UNIT\nV Input Voltage 8 12 16 V\nIN\nV Output Voltage I = 2.5 A 3.2 3.3 3.4(1) V\nOUT OUT\nLine Regulation ± 0.2 % V 3.293 3.300 3.307 V\nOUT\nLoad Regulation ± 0.2% V 3.293 3.300 3.307 V\nOUT\nV Output Voltage I at 2.5 A 4.85 5.0 5.150(1) V\nOUT OUT",
+    "curated": false
+  },
+  {
+    "id": "auto-p20-3",
+    "page": 20,
+    "printed_page": "20",
+    "bbox": [
+      54,
+      209.38,
+      558,
+      288.56
+    ],
+    "title": "手册第 20 页 / 原文段落",
+    "text": "Line Regulation ± 0.2% × V 4.99 5.00 5.01 V\nOUT\nLoad Regulation ± 0.2% × V 4.99 5.00 5.01 V\nOUT\nV Output ripple voltage At maximum output current 60 mV\nRIPPLE\nV Output overshoot For 2.5 A load transient from 2.5 A to 0.25 A 100 mV\nOVER\nV Output undershoot For 2.5 A load transient from 0.25 A to 2.5 A 60 mV\nUNDER\nI Output Current 0.125 2.500 A\nOUT",
+    "curated": false
+  },
+  {
+    "id": "auto-p20-4",
+    "page": 20,
+    "printed_page": "20",
+    "bbox": [
+      54,
+      288.58,
+      558,
+      361.58
+    ],
+    "title": "手册第 20 页 / 原文段落",
+    "text": "I Short circuit current trip point 3.75 5.00 A\nSCP\nEfficiency At nominal input voltage and maximum output 90%\ncurrent\nF Switching frequency 300 kHz\nS\n(1) Set point accuracy is dependent on external resistor tolerance and the device reference voltage. Line and Load regulation values are\nreferenced to the nominal design output voltage.",
+    "curated": false
+  },
+  {
+    "id": "auto-p20-5",
+    "page": 20,
+    "printed_page": "20",
+    "bbox": [
+      54,
+      369.90000000000003,
+      558,
+      383.90000000000003
+    ],
+    "title": "手册第 20 页 / 原文段落",
+    "text": "8.2.1.2 Detailed Design Procedure",
+    "curated": false
+  },
+  {
+    "id": "auto-p20-6",
+    "page": 20,
+    "printed_page": "20",
+    "bbox": [
+      54,
+      391.59,
+      558,
+      499.97
+    ],
+    "title": "手册第 20 页 / 原文段落",
+    "text": "8.2.1.2.1 FET Selection Criteria\n• The maximum input voltage for this application is 16 V. Switching the inductor causes overshoot voltages that\ncan equal the input voltage. Since the R of the FET rises with breakdown voltage, select a FET with as\nDS(on)\nlow a breakdown voltage as possible. In this case, a 30-V FET was selected.\n• The selection of a power FET size requires knowing both the switching losses and DC losses in the\napplication. AC losses are all frequency dependent and directly related to device capacitances and device\nsize. On the other hand, DC losses are inversely related to device size. The result is an optimum where the\ntwo types of losses are equal. Since device size is proportional to R , begin by selecting a device with an\nDS(on)\nR that results in a small loss of power relative to package thermal capability and overall efficiency\nDS(on)",
+    "curated": false
+  },
+  {
+    "id": "auto-p20-7",
+    "page": 20,
+    "printed_page": "20",
+    "bbox": [
+      54,
+      495.6,
+      558,
+      577.13159384
+    ],
+    "title": "手册第 20 页 / 原文段落",
+    "text": "objectives.\n• In this application, the efficiency target is 90% and the output power 8.25 W. This gives a total power-loss\nbudget of 0.916 W. Total FET losses must be small relative to this number.\nThe DC conduction loss in the FET is given by: P = I 2 × R\nDC rms DS(on)\nThe RMS current is given by:\n1",
+    "curated": false
+  },
+  {
+    "id": "auto-p20-8",
+    "page": 20,
+    "printed_page": "20",
+    "bbox": [
+      54,
+      575.35017384,
+      558,
+      603.75034184
+    ],
+    "title": "手册第 20 页 / 原文段落",
+    "text": "I RMS = ç\næ\nD´ ç\næ\nI OUT 2 +\n(DI\nP-P\n) 2 ö\n÷\nö\n÷\n2",
+    "curated": false
+  },
+  {
+    "id": "auto-p20-9",
+    "page": 20,
+    "printed_page": "20",
+    "bbox": [
+      54,
+      594.8781376,
+      558,
+      682.37
+    ],
+    "title": "手册第 20 页 / 原文段落",
+    "text": "ç ç 12 ÷ ÷\nç ÷\nè è ø ø\n(8)\nWhere\nt\nDI = DV ´ D ´ S\nP-P\nL\nI\nΔV = V – V –(DCR + R ) × I\nIN OUT DS(on) OUT",
+    "curated": false
+  },
+  {
+    "id": "auto-p20-10",
+    "page": 20,
+    "printed_page": "20",
+    "bbox": [
+      54,
+      679.1,
+      558,
+      730.77
+    ],
+    "title": "手册第 20 页 / 原文段落",
+    "text": "R is the FET on-state resistance\nDS(on)\nDCR is the inductor DC resistance\nD is the duty cycle\nt = the reciprocal of the switching frequency\nS",
+    "curated": false
+  },
+  {
+    "id": "auto-p21-0",
+    "page": 21,
+    "printed_page": "21",
+    "bbox": [
+      54,
+      74,
+      558,
+      179.5
+    ],
+    "title": "手册第 21 页 / 原文段落",
+    "text": "Using the values in this example, the DC power loss is 129 mW. The remaining FET losses are as follows:\n• P is the power dissipated while switching the FET on and off\nSW\n• P is the power dissipated driving the FET gate capacitance\nGATE\n• P is the power switching the FET output capacitance\nCOSS\nThe total power dissipated by the FET is the sum of these contributions.\nP = P + P + P + P\nFET SW GATE COSS RDS(on) (9)\nThe P-channel FET used in this application is a FDC654P with the following characteristics:",
+    "curated": false
+  },
+  {
+    "id": "auto-p21-1",
+    "page": 21,
+    "printed_page": "21",
+    "bbox": [
+      54,
+      188.37,
+      558,
+      253.97000000000003
+    ],
+    "title": "手册第 21 页 / 原文段落",
+    "text": "t = 13 × 10–9 C = 83 × 10–12\nRISE OSS\nt = 6 × 10–9 Q = 9 nC\nFALL G\nR = 0.1 Ω V = 1.9 V\nDS(on) GATE\nQ = 1.2 × 10–9 Q = 1.0 × 10–9\nGD GS",
+    "curated": false
+  },
+  {
+    "id": "auto-p21-2",
+    "page": 21,
+    "printed_page": "21",
+    "bbox": [
+      54,
+      259.1,
+      558,
+      307.89
+    ],
+    "title": "手册第 21 页 / 原文段落",
+    "text": "Using these device characteristics and Equation 10:\nf æ ö f ( )\nP = S ´ ç V ´ I ´ t ÷ + S V ´ I ´ t = 10 mW\nSW 2 ç IN pk CHON ÷ 2 IN pk CHOFF\nè ø (10)",
+    "curated": false
+  },
+  {
+    "id": "auto-p21-3",
+    "page": 21,
+    "printed_page": "21",
+    "bbox": [
+      54,
+      316.994544,
+      558,
+      422.17
+    ],
+    "title": "手册第 21 页 / 原文段落",
+    "text": "Q ´ R Q ´ R\nwhere t CH(on) = V GD - V G and t CH(off ) = GD V G are the switching times for the power FET.\nIN TH IN\nspacer\nP = Q × V × f = 22 mW (11)\nGATE G GATE S\nC ´ V 2 ´ f\nP = OSS IN_MAX S = 2 mW\nCROSS\n2 (12)\nThe gate current, I = Q × f = 2.7 mA\nG G S",
+    "curated": false
+  },
+  {
+    "id": "auto-p21-4",
+    "page": 21,
+    "printed_page": "21",
+    "bbox": [
+      54,
+      423.70000000000005,
+      558,
+      459.70000000000005
+    ],
+    "title": "手册第 21 页 / 原文段落",
+    "text": "The sum of the switching losses is 34 mW, and is comparable to the 129-mW DC losses. At added expense, a\nslightly larger FET is better because the DC loss drops and the AC losses increase, with both moving toward the\noptimum point of equal losses.",
+    "curated": false
+  },
+  {
+    "id": "auto-p21-5",
+    "page": 21,
+    "printed_page": "21",
+    "bbox": [
+      54,
+      467.39,
+      558,
+      626.2
+    ],
+    "title": "手册第 21 页 / 原文段落",
+    "text": "8.2.1.2.2 Rectifier Selection Criteria\n1. Rectifier Breakdown Voltage\nThe rectifier has to withstand the maximum input voltage which in this case is 16 V. To allow for switching\ntransients which can approach the switching voltage a 30-V rectifier was selected.\n2. Diode Size\nThe importance of power losses from the Schottky rectifier D2 is determined by the duty cycle. For a low\nduty cycle application, the rectifier is conducting most of the time, and the current that flows through it times\nits forward drop can be the largest component of loss in the entire controller. In this application, the duty\ncycle ranges from 20% to 40%, which in the worst case means that the diode is conducting 80% of the time.\nWhere efficiency is of paramount importance, choose a diode with a minimum of forward drop. In more cost\nsensitive applications, size may be reduced to the point of the thermal limitations of the diode package.\nThe device in this application is large relative to the current required by the application. In a more cost",
+    "curated": false
+  },
+  {
+    "id": "auto-p21-6",
+    "page": 21,
+    "printed_page": "21",
+    "bbox": [
+      54,
+      623.2,
+      558,
+      708.4
+    ],
+    "title": "手册第 21 页 / 原文段落",
+    "text": "sensitive application, a smaller diode in a less-expensive package will provide a less-efficient but appropriate\nsolution\nThe device used has the following characteristics:\n• V = 0.3 V at 3 A\nf\n• C = 300 pF (C = the effective reverse voltage capacitance of the synchronous rectifier, D2).\nt t\nThe two components of the losses from the diode D2 are:",
+    "curated": false
+  },
+  {
+    "id": "auto-p22-0",
+    "page": 22,
+    "printed_page": "22",
+    "bbox": [
+      54,
+      74,
+      558,
+      173.07000000000005
+    ],
+    "title": "手册第 22 页 / 原文段落",
+    "text": "æ I ö\nP = V ´ çI + RIPPLE ÷ ´ (1- D) = 653 mW\nCON f OUT\nè 4 ø (13)\nWhere\nD = the duty cycle\nI is the ripple current\nRIPPLE\nI is the output current\nOUT\nV is the forward voltage\nF",
+    "curated": false
+  },
+  {
+    "id": "auto-p22-1",
+    "page": 22,
+    "printed_page": "22",
+    "bbox": [
+      54,
+      169.80000000000007,
+      558,
+      318.19714948000006
+    ],
+    "title": "手册第 22 页 / 原文段落",
+    "text": "P is the conduction power loss\nCOND\nThe switching capacitance of this diode adds an AC loss, given by:\nP = 1 éC ´ (V + V ) 2 ´ f ù = 6.8 mW\nSW 2 êë IN f úû (14)\nThis additional loss raises the total loss to: 660 mW.\nAt an output voltage of 3.3 V, the application runs at a nominal duty cycle of 27%, and the diode is conducting\n72.5% of the time. As the output voltage is moved up to 5 V, the on-time increases to 46% and the diode is\nconducting only 54% of the time during each clock cycle. This change in duty cycle proportionately reduces the\nconduction power losses in the diode. This reduction may be expressed as\næ 0.54 ö\n660ç ÷ = 491 mW",
+    "curated": false
+  },
+  {
+    "id": "auto-p22-2",
+    "page": 22,
+    "printed_page": "22",
+    "bbox": [
+      54,
+      310.63465096,
+      558,
+      379.3
+    ],
+    "title": "手册第 22 页 / 原文段落",
+    "text": "è0.725ø\nfor a savings in power of 660 – 491 = 169 mW.\nTo illustrate the relevance of this power savings we measured the full load module Efficiency for this application\nat 3.3 V and 5 V. The 5-V output efficiency is 92% vs. 89% for the 3.3 V design. This difference in efficiency\nrepresents a 456 mW reduction in losses between the two conditions. This 169 mW power-loss reduction in the\nrectifier represents 37% of the difference.",
+    "curated": false
+  },
+  {
+    "id": "auto-p22-3",
+    "page": 22,
+    "printed_page": "22",
+    "bbox": [
+      54,
+      386.99,
+      558,
+      533.0
+    ],
+    "title": "手册第 22 页 / 原文段落",
+    "text": "8.2.1.2.3 Inductor Selection Criteria\nThe P-channel FET driver facilitates switching the power FET at a high frequency. This, in turn, enables the use\nof smaller, less-expensive inductors as illustrated in this 300 kHz application. Ferrite, with its good high frequency\nproperties, is the material of choice. Several manufacturers provide catalogs with inductor saturation currents,\ninductance values, and LSRs (internal resistance) for their various-sized ferrites.\nIn this application, the device must deliver a maximum current of 2.5 A. This requires that the output inductor’s\nsaturation current be above 2.5 A plus ½ the ripple current caused during inductor switching. The value of the\ninductor determines this ripple current. A low value of inductance has a higher ripple current that contributes to\nripple voltage across the resistance of the output capacitors. The advantages of a low inductance are a higher\ntransient response, lower DCR, a higher saturation current, and a smaller, less expensive part. Too low an\ninductor however, leads to higher peak currents which ultimately are bounded by the overcurrent limit set to\nprotect the output FET or by output ripple voltage. Fortunately, with low ESR Ceramic capacitors on the output,",
+    "curated": false
+  },
+  {
+    "id": "auto-p22-4",
+    "page": 22,
+    "printed_page": "22",
+    "bbox": [
+      54,
+      530.0,
+      558,
+      675.980559445
+    ],
+    "title": "手册第 22 页 / 原文段落",
+    "text": "the resulting ripple voltage for relatively high ripple currents can be small.\nFor example, a single 1-μF, 1206 size, 6.3-V, ceramic capacitor has an internal resistance of 2 Ω at 1 MHz. For\nthis 2.5-A application, a 10% ripple current of 0.25 A produces a 50-mV ripple voltage. This ripple voltage may be\nfurther reduced by additional parallel capacitors.\nThe other bound on inductance is the minimum current at which the controller enters discontinuous conduction.\nAt this point, Inductor current is zero. The minimum output current for this application is specified at 0.125 A. This\naverage current is 1/2 the peak current that must develop during a minimum on time. The conditions for minimum\non time are high line and low load.\nUsing:\nV - V\nL = IN OUT ´ t = 32 mH\nMIN I on",
+    "curated": false
+  },
+  {
+    "id": "auto-p22-5",
+    "page": 22,
+    "printed_page": "22",
+    "bbox": [
+      54,
+      667.1204124376,
+      558,
+      735
+    ],
+    "title": "手册第 22 页 / 原文段落",
+    "text": "PEAK (15)\nWhere\nV = 16 V\nIN\nV = 3.3 V\nOUT\nI = 0.25 A\nPEAK",
+    "curated": false
+  },
+  {
+    "id": "auto-p23-0",
+    "page": 23,
+    "printed_page": "23",
+    "bbox": [
+      54,
+      74,
+      558,
+      157.0
+    ],
+    "title": "手册第 23 页 / 原文段落",
+    "text": "t = 0.686 μs\nON\n1 3.3 V\nt is given by ´\nON 300 kHz 16 V\nspacer\nThe inductor used in the circuit is the closest standard value of 33 μH. This is the minimum inductance that can\nbe used in the converter to deliver the minimum current while maintaining continuous conduction.",
+    "curated": false
+  },
+  {
+    "id": "auto-p23-1",
+    "page": 23,
+    "printed_page": "23",
+    "bbox": [
+      54,
+      164.68999999999994,
+      558,
+      276.89413360000003
+    ],
+    "title": "手册第 23 页 / 原文段落",
+    "text": "8.2.1.2.4 Output Capacitance\nIn order to satisfy the output voltage over and under shoot specifications there must be enough output\ncapacitance to keep the output voltage within the specified voltage limits during load current steps.\nIn a situation where a full load of 2.5 A within the specified voltage limits is suddenly removed, the output\ncapacitor must absorb energy stored in the output inductor. This condition may be described by realizing that the\nenergy in the stored in the inductor must be suddenly absorbed by the output capacitance. This energy\nrelationship is written as:\n1 1 [ ( )]\n´ L I 2 £ ´ C V 2 - V 2",
+    "curated": false
+  },
+  {
+    "id": "auto-p23-2",
+    "page": 23,
+    "printed_page": "23",
+    "bbox": [
+      54,
+      264.20405508,
+      558,
+      362.77000000000004
+    ],
+    "title": "手册第 23 页 / 原文段落",
+    "text": "2 O O 2 O OS O (16)\nWhere\nV is the allowed over-shoot voltage above the output voltage\nOS\nL is the inductance\nO\nI is the output current\nO\nC is the output capacitance\nO\nV is the output voltage\nO",
+    "curated": false
+  },
+  {
+    "id": "auto-p23-3",
+    "page": 23,
+    "printed_page": "23",
+    "bbox": [
+      54,
+      364.3,
+      558,
+      485.1
+    ],
+    "title": "手册第 23 页 / 原文段落",
+    "text": "In this application, the worst case load step is 2.25 A and the allowed overshoot is 100 mV. With a 33 μH output\ninductor, this implies an output capacitance of 249 μF for a 3.3 V output and 165 μF for a 5 V output..\nWhen the load increases from minimum to full load the output capacitor must deliver current to the load. The\nworst case is for a minimum on time that occurs at 16 V in and 3.3 V and minimum load. This corresponds to\nOUT\nan off time of (1 – 0.2 ) times the period 3.3 μs and is the worst case time before the inductor can start supplying\ncurrent. This situation may be represented by:\nt\nDV < DI ´ OFFMAX\nO O C\nO (17)\nWhere",
+    "curated": false
+  },
+  {
+    "id": "auto-p23-4",
+    "page": 23,
+    "printed_page": "23",
+    "bbox": [
+      54,
+      484.5,
+      558,
+      578.5
+    ],
+    "title": "手册第 23 页 / 原文段落",
+    "text": "ΔV is the undershoot specification of 60 mV\nO\nΔI is the load current step\nO\nt is the maximum off time\nOFF(max)\nThis condition produces a requirement of 100 μF for the output capacitance. The larger of these two\nrequirements becomes the minimum value of output capacitance.\nThe ripple current develops a voltage across the ESR of the output capacitance, so another requirement on this\ncomponent is it ESR be small relative to the ripple voltage specification.",
+    "curated": false
+  },
+  {
+    "id": "auto-p23-5",
+    "page": 23,
+    "printed_page": "23",
+    "bbox": [
+      54,
+      586.19,
+      558,
+      723.1
+    ],
+    "title": "手册第 23 页 / 原文段落",
+    "text": "8.2.1.2.5 Switching Frequency\nThe TPS40200 has a built-in, 8-V, 200-mA, P-channel FET driver output that facilitates using P-channel\nswitching FETs A clock frequency of 300 kHz is chosen as a switching frequency that represents a compromise\nbetween a high-frequency that allows the use of smaller capacitors and inductors but one that is not so high as\nto cause excessive transistor switching losses. As previously discussed, an optimum frequency can be selected\nby picking a value where the DC and switching losses are equal.\nThe frequency is set by using the design formula given in the FET Selection Criteria section.\n1\nR ´ C =\nRC RC 0.105 ´ f\nSW (18)\nWhere",
+    "curated": false
+  },
+  {
+    "id": "auto-p24-0",
+    "page": 24,
+    "printed_page": "24",
+    "bbox": [
+      54,
+      74,
+      558,
+      164.5
+    ],
+    "title": "手册第 24 页 / 原文段落",
+    "text": "R is the timing resistor value in Ω\nRC\nR = 68.1 kΩ\nRC\nC is the timing capacitor value in F\nRC\nC5 = 470 pF\nf is the desired switching frequency in Hz\nSW\nf = 297 kHz.\nSW\nAt a worst case of 16 V, the timing resistor draws about 250 μA which is well below the 750 μA maximum which",
+    "curated": false
+  },
+  {
+    "id": "auto-p24-1",
+    "page": 24,
+    "printed_page": "24",
+    "bbox": [
+      54,
+      161.5,
+      558,
+      175.5
+    ],
+    "title": "手册第 24 页 / 原文段落",
+    "text": "the circuit can pull down.",
+    "curated": false
+  },
+  {
+    "id": "auto-p24-2",
+    "page": 24,
+    "printed_page": "24",
+    "bbox": [
+      54,
+      183.18999999999994,
+      558,
+      313.1
+    ],
+    "title": "手册第 24 页 / 原文段落",
+    "text": "8.2.1.2.6 Calculating the Overcurrent Threshold Level\nThe current limit in the TSP40200 is triggered by a comparator with a 100-mV offset whose inputs are connected\nacross a current-sense resistor between V and the source of the high-side switching FET. When current in this\nIN\nresistor develops more than 100 mV, the comparator trips and terminates the output gate drive.\nIn this application, the current-limit resistor is set by the peak output stage current which consists of the\nmaximum load current plus ½ the ripple current. In this case, we have 2.5 + 0.125 = 2.625 A. To accommodate\ntolerances a 25% margin is added giving a 3.25 A peak current. Using the equation below then yields a value for\nR of 0.03 Ω.\nILIM\nCurrent sensing in a switching environment requires attention to both circuit board traces and noise pick up. In\nthe design shown a small RC filter has been added to the circuit to prevent switching noise from tripping the",
+    "curated": false
+  },
+  {
+    "id": "auto-p24-3",
+    "page": 24,
+    "printed_page": "24",
+    "bbox": [
+      54,
+      310.1,
+      558,
+      361.80825600000003
+    ],
+    "title": "手册第 24 页 / 原文段落",
+    "text": "current sense comparator. The requirements of this filter are board-dependent, but with the layout used in this\napplication, no unreasonable overcurrent is observed.\nV\nIN\nTPS40200",
+    "curated": false
+  },
+  {
+    "id": "auto-p24-4",
+    "page": 24,
+    "printed_page": "24",
+    "bbox": [
+      54,
+      370.334856,
+      558,
+      429.297056
+    ],
+    "title": "手册第 24 页 / 原文段落",
+    "text": "VDD 8\nC\nF R\nF2\nR\nILIM\nR\nF1\nISNS 7",
+    "curated": false
+  },
+  {
+    "id": "auto-p24-5",
+    "page": 24,
+    "printed_page": "24",
+    "bbox": [
+      54,
+      442.30385600000005,
+      558,
+      456.29215600000003
+    ],
+    "title": "手册第 24 页 / 原文段落",
+    "text": "GDRV 6",
+    "curated": false
+  },
+  {
+    "id": "auto-p24-6",
+    "page": 24,
+    "printed_page": "24",
+    "bbox": [
+      54,
+      502.61194600000005,
+      558,
+      532.01442352
+    ],
+    "title": "手册第 24 页 / 原文段落",
+    "text": "0.1\nI =\nILIM R\nILIM",
+    "curated": false
+  },
+  {
+    "id": "auto-p24-7",
+    "page": 24,
+    "printed_page": "24",
+    "bbox": [
+      54,
+      548.56365656,
+      558,
+      558.55628656
+    ],
+    "title": "手册第 24 页 / 原文段落",
+    "text": "UDG-11200",
+    "curated": false
+  },
+  {
+    "id": "auto-p24-8",
+    "page": 24,
+    "printed_page": "24",
+    "bbox": [
+      54,
+      563.6,
+      558,
+      578.97
+    ],
+    "title": "手册第 24 页 / 原文段落",
+    "text": "Figure 32. Overcurrent Trip Circuit for R Open\nF2",
+    "curated": false
+  },
+  {
+    "id": "auto-p25-0",
+    "page": 25,
+    "printed_page": "25",
+    "bbox": [
+      54,
+      88.0,
+      558,
+      203.5
+    ],
+    "title": "手册第 25 页 / 原文段落",
+    "text": "The soft-start interval is given (in pF) by the following equation:\nt\nC = SS ´ 103\nSS\næ V ö\nR ´ ln ç SST ÷\nç è V SST - 1.4 ÷ ø (19)\nWhere\nR is an internal 105-kΩ charging resistor\nV is the input voltage up to 8 V where the charging voltage is internally clamped to 8 V maximum\nIN\nV = 700 mV, and because the input voltage is 12 V, V = 8 V.",
+    "curated": false
+  },
+  {
+    "id": "auto-p25-1",
+    "page": 25,
+    "printed_page": "25",
+    "bbox": [
+      54,
+      193.87,
+      558,
+      264.4
+    ],
+    "title": "手册第 25 页 / 原文段落",
+    "text": "OS SST\nThe oscilloscope picture below shows the expected delay at the output (middle trace) until the soft-start node\n(bottom trace) reaches 700 mV. At this point, the output rises following the exponential rise of the soft-start\ncapacitor voltage until the soft-start capacitor reaches 1.4 V and the internal 700-mV reference takes over. This\ntotal time is approximately 1 ms, which agrees with the calculated value of 0.95 ms where the soft-start\ncapacitance is 0.047 μF.",
+    "curated": false
+  },
+  {
+    "id": "auto-p25-2",
+    "page": 25,
+    "printed_page": "25",
+    "bbox": [
+      54,
+      477.68,
+      558,
+      519.7
+    ],
+    "title": "手册第 25 页 / 原文段落",
+    "text": "A. Channel 1 is the output voltage (V ) rising to 3.3 V\nOUT\nB. Channel 2 is the soft start pin (SS)\nFigure 33. Soft-Start Showing Output Delay and Controlled Rise to Programmed Output Voltage",
+    "curated": false
+  },
+  {
+    "id": "auto-p26-0",
+    "page": 26,
+    "printed_page": "26",
+    "bbox": [
+      54,
+      94.0,
+      558,
+      230.00706480000008
+    ],
+    "title": "手册第 26 页 / 原文段落",
+    "text": "The four elements that determine the system overall response are discussed below The gain of the error\namplifier (K ) is the first of there elements. Its output develops a control voltage which is the input to the PWM.\nEA\nThe TPS40200 has a unique modulator that scales the peak to peak amplitude of the PWM ramp to be 0.1 times\nthe value of the input voltage. Since modulator gain is given by V divided by V , the modulator gain is 10\nIN RAMP\nand is constant at 10 (20 dB) over the entire specified input voltage range.\nThe last two elements that affect system gain are the transfer characteristic of the output LC filter and the\nfeedback network from the output to the input to the error amplifier.\nThese four elements maybe expressed by the following expression that represents the system transfer function\nas shown in Figure 34.\n( )",
+    "curated": false
+  },
+  {
+    "id": "auto-p26-1",
+    "page": 26,
+    "printed_page": "26",
+    "bbox": [
+      54,
+      215.38494646000004,
+      558,
+      323.39656486499996
+    ],
+    "title": "手册第 26 页 / 原文段落",
+    "text": "T V(S) = K FB ´ K EA S ´ K PWM ´ X LC (S) (20)\nWhere\nK is the output voltage setting divider\nFB\nK is the error amplifier feedback\nEA\nK is the modulator gain\nPWM\nX is the filter transfer function\nLC\nv\ng",
+    "curated": false
+  },
+  {
+    "id": "auto-p26-2",
+    "page": 26,
+    "printed_page": "26",
+    "bbox": [
+      54,
+      329.11984986499994,
+      558,
+      370.627118865
+    ],
+    "title": "手册第 26 页 / 原文段落",
+    "text": "v v\n+ c d o\nV K K X\nref EA PWM LC\n-",
+    "curated": false
+  },
+  {
+    "id": "auto-p26-3",
+    "page": 26,
+    "printed_page": "26",
+    "bbox": [
+      54,
+      378.24252486499995,
+      558,
+      394.242239865
+    ],
+    "title": "手册第 26 页 / 原文段落",
+    "text": "Tv(s)",
+    "curated": false
+  },
+  {
+    "id": "auto-p26-4",
+    "page": 26,
+    "printed_page": "26",
+    "bbox": [
+      54,
+      412.89609486499995,
+      558,
+      431.404610505
+    ],
+    "title": "手册第 26 页 / 原文段落",
+    "text": "K\nFB",
+    "curated": false
+  },
+  {
+    "id": "auto-p26-5",
+    "page": 26,
+    "printed_page": "26",
+    "bbox": [
+      54,
+      440.8,
+      558,
+      454.8
+    ],
+    "title": "手册第 26 页 / 原文段落",
+    "text": "Figure 34. Control Loop",
+    "curated": false
+  },
+  {
+    "id": "auto-p27-0",
+    "page": 27,
+    "printed_page": "27",
+    "bbox": [
+      54,
+      358.3044372,
+      558,
+      388.0003372
+    ],
+    "title": "手册第 27 页 / 原文段落",
+    "text": "P1\nSlope = –1",
+    "curated": false
+  },
+  {
+    "id": "auto-p27-1",
+    "page": 27,
+    "printed_page": "27",
+    "bbox": [
+      54,
+      401.0587072,
+      558,
+      414.7821323
+    ],
+    "title": "手册第 27 页 / 原文段落",
+    "text": "Z1 P2",
+    "curated": false
+  },
+  {
+    "id": "auto-p27-2",
+    "page": 27,
+    "printed_page": "27",
+    "bbox": [
+      54,
+      74,
+      558,
+      497.4354002
+    ],
+    "title": "手册第 27 页 / 原文段落",
+    "text": "f1 f2\nFrequency\n)Bd(niaG\nFigure 35 shows the feedback network used in this application. This is a Type II compensation network which\ngives a combination of good transient response and phase boost for good stability. This type of compensation\nhas a pole at the origin causing a –20dB/decade (–1) slope followed by a zero that causes a region of flat gain\nfollowed by a final pole that returns the gain slope to –1. The bode plot in Figure 36 shows the effect of these\npoles and zeros.\nThe procedure for setting up the compensation network is as follows:\n1. Determine the break frequency of the output capacitor.\n2. Select a zero frequency well below this break frequency.\n3. From the gain bandwidth of the error amplifier select a crossover frequency where the amplifier gain is large",
+    "curated": false
+  },
+  {
+    "id": "auto-p27-3",
+    "page": 27,
+    "printed_page": "27",
+    "bbox": [
+      54,
+      187.0,
+      558,
+      336.90000000000003
+    ],
+    "title": "手册第 27 页 / 原文段落",
+    "text": "relative to expected closed loop gain\n4. Select a second zero well above the crossover frequency, that returns the gain slope to a –1 slope.\n5. Calculate the required gain for the amplifier at crossover.\nBe prepared to iterate this procedure to optimize the pole and zero locations as needed.\nThe frequency response of this converter is largely determined by two poles that arise from the LC output filter\nand a higher frequency zero caused by the ESR of the output capacitance. The poles from the output filter cause\na –40 dB/decade roll off with a phase shift approaching 180 degrees followed by the output capacitor zero that\nreduced the roll off to –20 dB and gives a phase boost back toward 90 degrees. In other nomenclature, this is a\n–2 slope followed by a –1 slope. The two zeros in the compensation network act to cancel the double pole from\nthe output filter The compensation network’s two poles produce a region where the error amplifier is flat and can\nbe set to a gain such that the overall gain of the system is zero dB. This region is set so that it brackets the\nsystem crossover frequency.",
+    "curated": false
+  },
+  {
+    "id": "auto-p27-4",
+    "page": 27,
+    "printed_page": "27",
+    "bbox": [
+      54,
+      350.92938772,
+      558,
+      365.09919964
+    ],
+    "title": "手册第 27 页 / 原文段落",
+    "text": "C\n7",
+    "curated": false
+  },
+  {
+    "id": "auto-p27-5",
+    "page": 27,
+    "printed_page": "27",
+    "bbox": [
+      54,
+      385.02108771999997,
+      558,
+      402.96439964
+    ],
+    "title": "手册第 27 页 / 原文段落",
+    "text": "C\nR 8\n8",
+    "curated": false
+  },
+  {
+    "id": "auto-p27-6",
+    "page": 27,
+    "printed_page": "27",
+    "bbox": [
+      54,
+      428.13048772,
+      558,
+      468.32419963999996
+    ],
+    "title": "手册第 27 页 / 原文段落",
+    "text": "R\n10 +\nR\n6\nV\nREF",
+    "curated": false
+  },
+  {
+    "id": "auto-p27-7",
+    "page": 27,
+    "printed_page": "27",
+    "bbox": [
+      54,
+      501.1,
+      558,
+      515.1
+    ],
+    "title": "手册第 27 页 / 原文段落",
+    "text": "Figure 35. Error Amplifier Feedback Elements Figure 36. Error Amplifier Bode Plot",
+    "curated": false
+  },
+  {
+    "id": "auto-p28-0",
+    "page": 28,
+    "printed_page": "28",
+    "bbox": [
+      54,
+      74,
+      558,
+      87.10000000000002
+    ],
+    "title": "手册第 28 页 / 原文段落",
+    "text": "In order to properly compensate this system, it is necessary to know the frequencies of its poles and zeros.",
+    "curated": false
+  },
+  {
+    "id": "auto-p28-1",
+    "page": 28,
+    "printed_page": "28",
+    "bbox": [
+      54,
+      94.78999999999996,
+      558,
+      199.67000000000007
+    ],
+    "title": "手册第 28 页 / 原文段落",
+    "text": "8.2.1.2.8.1 Step 1\nThe break frequency of the output capacitor is given by:\n1\nf =\nESR\n2p ´ R ´ C\nESR OUT (21)\nWhere\nC = the output capacitor, 220 μF\nOUT\nR = the ESR of the capacitors\nESR",
+    "curated": false
+  },
+  {
+    "id": "auto-p28-2",
+    "page": 28,
+    "printed_page": "28",
+    "bbox": [
+      54,
+      201.20000000000005,
+      558,
+      237.20000000000005
+    ],
+    "title": "手册第 28 页 / 原文段落",
+    "text": "Because of the ESR of the output capacitor, the output LC filter has a single-pole response above the 1.8-kHz\nbreak frequency of the output capacitor and its ESR. This simplifies compensation since the system becomes\nessentially a single pole system.",
+    "curated": false
+  },
+  {
+    "id": "auto-p28-3",
+    "page": 28,
+    "printed_page": "28",
+    "bbox": [
+      54,
+      244.89,
+      558,
+      359.40000000000003
+    ],
+    "title": "手册第 28 页 / 原文段落",
+    "text": "8.2.1.2.8.2 Step 2\nThe first zero is place well below the 1.8-kHz break frequency of the output capacitor and its ESR. The phase\nboost from this zero is shown in Figure 38.\n1\nf =\nZ1\n2p ´ R ´ C\n8 8 (22)\nWhere\nR = 300 kΩ\n8\nC = 1500 pF",
+    "curated": false
+  },
+  {
+    "id": "auto-p28-4",
+    "page": 28,
+    "printed_page": "28",
+    "bbox": [
+      54,
+      349.77000000000004,
+      558,
+      372.87
+    ],
+    "title": "手册第 28 页 / 原文段落",
+    "text": "8\nf = 354 Hz\nZ1",
+    "curated": false
+  },
+  {
+    "id": "auto-p28-5",
+    "page": 28,
+    "printed_page": "28",
+    "bbox": [
+      54,
+      379.19,
+      558,
+      442.3
+    ],
+    "title": "手册第 28 页 / 原文段落",
+    "text": "8.2.1.2.8.3 Step 3\nFrom its minimum gain bandwidth product of 1.5 MHz, and knowing it has a 20 dB/decade roll off, the open-loop\ngain of the error amplifier is 33 dB at 35 kHz. This approximate frequency is chosen for a crossover frequency to\nkeep the amplifier gain contribution to the overall system gain small, as well as following the convention of\nplacing the crossover frequency between 1/6 to 1/10 the 300 kHz switching frequency.",
+    "curated": false
+  },
+  {
+    "id": "auto-p28-6",
+    "page": 28,
+    "printed_page": "28",
+    "bbox": [
+      54,
+      449.99,
+      558,
+      563.6
+    ],
+    "title": "手册第 28 页 / 原文段落",
+    "text": "8.2.1.2.8.4 Step 4\nThe second pole is placed well above the 35 kHz crossover frequency.\n1\nf = ´ (C + C )\nP2 2p ´ C ´ C ´ R 7 8\n7 8 8 (23)\nWhere\nR = 300 kΩ\n8\nC = 10 pF\n7\nC = 1500 pF",
+    "curated": false
+  },
+  {
+    "id": "auto-p28-7",
+    "page": 28,
+    "printed_page": "28",
+    "bbox": [
+      54,
+      553.97,
+      558,
+      577.0699999999999
+    ],
+    "title": "手册第 28 页 / 原文段落",
+    "text": "8\nf = 53 kHz\nP2",
+    "curated": false
+  },
+  {
+    "id": "auto-p29-0",
+    "page": 29,
+    "printed_page": "29",
+    "bbox": [
+      54,
+      88.0,
+      558,
+      209.67000000000007
+    ],
+    "title": "手册第 29 页 / 原文段落",
+    "text": "Calculate the gain elements in the system to determine the gain required by the error amplifier to make the over\nall gain 0 dB at 35 kHz.\nThe total gain around the voltage feedback loop is:\n( )\nT V(S) = K FB ´ K EA S ´ K PWM ´ X LC (S) (24)\nWhere\nK is the output voltage setting divider\nFB\nK is the error amplifier feedback\nEA\nK is the modulator gain\nPWM",
+    "curated": false
+  },
+  {
+    "id": "auto-p29-1",
+    "page": 29,
+    "printed_page": "29",
+    "bbox": [
+      54,
+      206.39999999999998,
+      558,
+      317.46098692
+    ],
+    "title": "手册第 29 页 / 原文段落",
+    "text": "X is the filter transfer function\nLC\nWith reference to the graphic below, the output filter's transfer characteristic XLC (S) can be estimated by the\nfollowing:\nR L\nSW\nV IN D V sw V\nOUT\n1-D\nR\nSR\nC",
+    "curated": false
+  },
+  {
+    "id": "auto-p29-2",
+    "page": 29,
+    "printed_page": "29",
+    "bbox": [
+      54,
+      310.12800627999997,
+      558,
+      330.06009628
+    ],
+    "title": "手册第 29 页 / 原文段落",
+    "text": "OUT\nR\nLOAD",
+    "curated": false
+  },
+  {
+    "id": "auto-p29-3",
+    "page": 29,
+    "printed_page": "29",
+    "bbox": [
+      54,
+      382.8,
+      558,
+      488.3
+    ],
+    "title": "手册第 29 页 / 原文段落",
+    "text": "Figure 37. Output Filter Analysis\nZ (S)\nX (S) = OUT\nLC ( )\nZ (S) + Z (S) + R ´ D + R ´ 1 - D\nOUT L SW SR (25)\nWhere\nZ is the parallel combination of output capacitor(s) and the load\nOUT\nR is the R of the switching FET plus the current-sense resistor\nSW DS(on)\nR is the resistance of the synchronous rectifier",
+    "curated": false
+  },
+  {
+    "id": "auto-p29-4",
+    "page": 29,
+    "printed_page": "29",
+    "bbox": [
+      54,
+      478.67,
+      558,
+      571.47
+    ],
+    "title": "手册第 29 页 / 原文段落",
+    "text": "SR\nD is the duty cycle estimated as 3.3 / 12 = 0.27\nTo evaluate X (S) at 35 kHz use the following:\nLC\n• Z (s) at 35 kHz, which is dominated by the output capacitor's ESR; estimated to be 400 mΩ\nOUT\n• Z (s) at 35 kHz is 7.25 Ω\nL\n• R = 0.95 mΩ, including the R resistance\nSW LIM\n• R = 100 mΩ\nSR",
+    "curated": false
+  },
+  {
+    "id": "auto-p29-5",
+    "page": 29,
+    "printed_page": "29",
+    "bbox": [
+      54,
+      573.0,
+      558,
+      683.47
+    ],
+    "title": "手册第 29 页 / 原文段落",
+    "text": "Using these numbers, X (S) = 0.04 or –27.9 dB.\nLC\nThe feedback network has a gain to the error amplifier given by:\nR\nK = 10\nfb R\n6 (26)\nWhere\nfor 3.3 V , R6 = 26.7 kΩ\nOUT\nUsing the values in this application, K = 11.4 dB.\nfb",
+    "curated": false
+  },
+  {
+    "id": "auto-p29-6",
+    "page": 29,
+    "printed_page": "29",
+    "bbox": [
+      54,
+      685.0,
+      558,
+      734.27
+    ],
+    "title": "手册第 29 页 / 原文段落",
+    "text": "The modulator has a gain of 10 that is flat to well beyond 35 kHz, so K = 20 dB.\nPWM\nTo achieve 0 db overall gain, the amplifier and feedback gain must be set to –7.9 dB (20 dB – 27.9dB).\nThe amplifier gain, including the feedback gain, K , can be approximated by this expression:\nfb",
+    "curated": false
+  },
+  {
+    "id": "auto-p30-0",
+    "page": 30,
+    "printed_page": "30",
+    "bbox": [
+      54,
+      202.9451517,
+      558,
+      213.96192169999995
+    ],
+    "title": "手册第 30 页 / 原文段落",
+    "text": "50",
+    "curated": false
+  },
+  {
+    "id": "auto-p30-1",
+    "page": 30,
+    "printed_page": "30",
+    "bbox": [
+      54,
+      229.9338517000001,
+      558,
+      281.4341217
+    ],
+    "title": "手册第 30 页 / 原文段落",
+    "text": "30\n20\n10\n0",
+    "curated": false
+  },
+  {
+    "id": "auto-p30-2",
+    "page": 30,
+    "printed_page": "30",
+    "bbox": [
+      54,
+      74,
+      558,
+      366.9353717
+    ],
+    "title": "手册第 30 页 / 原文段落",
+    "text": "–20\n–30\n–40\n–50\n0.1 1 10 100 1000\nCrossover Frequency (kHz)\n)Bd(niaG )°(esahP\nV A\nOUT (S) = VOL\nV R R\nIN 1+ 10 + 10 ´ (1+ A )\nR Z VOL",
+    "curated": false
+  },
+  {
+    "id": "auto-p30-3",
+    "page": 30,
+    "printed_page": "30",
+    "bbox": [
+      54,
+      102.88999999999999,
+      558,
+      197.39999999999998
+    ],
+    "title": "手册第 30 页 / 原文段落",
+    "text": "8 FS (27)\nWhere\nZ is the parallel combination of C in parallel with the sum of R and the impedance of C .\nfs 7 8 8\nA is the open-loop gain of the error amplifier at 35 kHz, which is 44.6 dB or 33 dB.\nVOL\nFigure 38 shows the result of the compensation. The crossover frequency is 35 kHz and the phase margin is 45°.\nThe response of the system is dominated by the ESR of the output capacitor and is exploited to produce an\nessentially single-pole system with simple compensation.",
+    "curated": false
+  },
+  {
+    "id": "auto-p30-4",
+    "page": 30,
+    "printed_page": "30",
+    "bbox": [
+      54,
+      202.51285170000006,
+      558,
+      213.5296217
+    ],
+    "title": "手册第 30 页 / 原文段落",
+    "text": "180",
+    "curated": false
+  },
+  {
+    "id": "auto-p30-5",
+    "page": 30,
+    "printed_page": "30",
+    "bbox": [
+      54,
+      214.0637517,
+      558,
+      272.3117217
+    ],
+    "title": "手册第 30 页 / 原文段落",
+    "text": "40 Gain 160\nPhase\n140\n120\n100",
+    "curated": false
+  },
+  {
+    "id": "auto-p30-6",
+    "page": 30,
+    "printed_page": "30",
+    "bbox": [
+      54,
+      277.54225170000007,
+      558,
+      333.14502170000003
+    ],
+    "title": "手册第 30 页 / 原文段落",
+    "text": "80\n–10\n60\n40\n20",
+    "curated": false
+  },
+  {
+    "id": "auto-p30-7",
+    "page": 30,
+    "printed_page": "30",
+    "bbox": [
+      54,
+      338.3755517,
+      558,
+      349.3923217
+    ],
+    "title": "手册第 30 页 / 原文段落",
+    "text": "0",
+    "curated": false
+  },
+  {
+    "id": "auto-p30-8",
+    "page": 30,
+    "printed_page": "30",
+    "bbox": [
+      54,
+      372.90000000000003,
+      558,
+      386.90000000000003
+    ],
+    "title": "手册第 30 页 / 原文段落",
+    "text": "Figure 38. Overall System Gain and Phase Response",
+    "curated": false
+  },
+  {
+    "id": "auto-p30-9",
+    "page": 30,
+    "printed_page": "30",
+    "bbox": [
+      54,
+      398.8,
+      558,
+      451.70000000000005
+    ],
+    "title": "手册第 30 页 / 原文段落",
+    "text": "Figure 38 also shows the phase boost that gives the system a crossover phase margin of 47°.\nThe bill of materials for this application is shown below. The efficiency and load regulation from boards built from\nthis design are shown in the following two figures. Gerber PCB layout files and additional application information\nare available from the factory.",
+    "curated": false
+  },
+  {
+    "id": "auto-p31-0",
+    "page": 31,
+    "printed_page": "31",
+    "bbox": [
+      54,
+      74,
+      558,
+      223.26999999999998
+    ],
+    "title": "手册第 31 页 / 原文段落",
+    "text": "Table 2. Bill of Materials, Buck Regulator, 12 V to 3.3 V and 5.0 V\nREF. DES. VALUE DESCRIPTION SIZE MFR. PART NUMBER\nC1 100 μF Capacitor, Aluminum, SM, 25V, 0.3 Ω 8 x 10 mm Sanyo 20SVP100M\nC12 220 μF Capacitor, Aluminum, SM, 6.3V, 0.4 Ω 8 x 6.2 mm Panasonic EEVFC0J221P\nC13 100 pF Capacitor, Ceramic, 50V, [COG], [20%] 603 muRata Std.\nC3 0.1 pF Capacitor, Ceramic, 50V, [X7R], [20%] 603 muRata Std.\nC2, C11 1 μF Capacitor, Ceramic, 50V, [X7R], [20%] 603 muRata Std.\nC4, C5 470 pF Capacitor, Ceramic, 50V, [X7R], [20%] 603 muRata Std.\nC6 0.047 μF Capacitor, Ceramic, 50V, [X7R], [20%] 603 muRata Std.\nC7 10 pF Capacitor, Ceramic, 50V, [COG], [20%] 603 muRata Std.\nC8 1500 pF Capacitor, Ceramic, 50V, [X7R], [20%] 603 muRata Std.\nD1 12 V Diode, Zener, 12-V, 350mW SOT23 Diodes, Inc. BZX84C12T",
+    "curated": false
+  },
+  {
+    "id": "auto-p31-1",
+    "page": 31,
+    "printed_page": "31",
+    "bbox": [
+      54,
+      224.47000000000003,
+      558,
+      369.67
+    ],
+    "title": "手册第 31 页 / 原文段落",
+    "text": "D2 Diode, Schottky, 30A, 30V SMC On Semi MBRS330T3\nD3 12 V Diode Zener 12V 5mA VMD2 Rohm VDZT2R12B\nJ1,J3 Terminal Block 4-Pin 15A 5.1 mm 0.8 x 0.35 OST ED2227\nJ2 Header, 2-pin, 100 mil spacing, (36-pin strip) 0.100 x 2 Sullins PTC36SAAN\nL1 33 μH Inductor, SMT, 3.2A, .039 Ω 12.5 x 12.5 mm TDK SLF12575T330M3R2PF\nPCB 2 Layer PCB 2 Ounce Cu 1.4 x 2.12 x 0.062 HPA164\nQ1 Trans, N-Chan Enhancement Switching, 50mA SOT-143B Phillips BSS83\nQ2 MOSFET, P-ch, 30V, 3.6A, 75mΩ SuperSOT-6 Fairchild FDC654P\nU1 IC, Low Cost Non-Sync Buck Controller SO-8 TI TPS40200D\nR1 10 Ω Resistor, Chip, 1/16W, 1% 603 Std. Std.\nR10 100 kΩ Resistor, Chip, , 1/16W, 1% 603 Std. Std.\nR11 10 kΩ Resistor, Chip, 1/16W, 1% 603 Std. Std.",
+    "curated": false
+  },
+  {
+    "id": "auto-p31-2",
+    "page": 31,
+    "printed_page": "31",
+    "bbox": [
+      54,
+      370.87,
+      558,
+      479.47
+    ],
+    "title": "手册第 31 页 / 原文段落",
+    "text": "R12 1 MΩ Resistor, Chip, 1/16W, 1% 603 Std. Std.\nR13 49.9 Ω Resistor, Chip, 1/16W, 1% 603 Std. Std.\nR2 0.02 Ω Resistor, Chip, ½ W, 5% 2010 Std. Std.\nR3 68.1 kΩ Resistor, Chip, 1/16W, 1% 603 Std. Std.\nR4 2.0 kΩ Resistor, Chip, 1/16W, 1% 603 Std. Std.\nR5 0 Ω Resistor, Chip, 1/16W, 1% 603 Std. Std.\nR6 26.7 kΩ Resistor, Chip, 1/16W, 1% 603 Std. Std.\nR7 1.0 kΩ Resistor, Chip, 1/16W, 1% 603 Std. Std.\nR8 300 kΩ Resistor, Chip, 1/16W, 1% 603 Std. Std.",
+    "curated": false
+  },
+  {
+    "id": "auto-p31-3",
+    "page": 31,
+    "printed_page": "31",
+    "bbox": [
+      54,
+      491.39,
+      558,
+      565.5
+    ],
+    "title": "手册第 31 页 / 原文段落",
+    "text": "8.2.1.2.9 Printed Circuit Board Plots\nThe following figures Figure 39 through Figure 41 show the design of the TPS40200EVM-001 printed circuit\nboard. The design uses 2-layer, 2-oz copper and is 1.4” x 2.3” in size. All components are mounted on the top\nside to allow the user to easily view, probe, and evaluate the TPS40200 control IC in a practical application.\nMoving components to both sides of the printed circuit board (PCB) or using additional internal layers can offer\nadditional size reduction for space constrained applications.",
+    "curated": false
+  },
+  {
+    "id": "auto-p32-0",
+    "page": 32,
+    "printed_page": "32",
+    "bbox": [
+      54,
+      261.6,
+      558,
+      275.6
+    ],
+    "title": "手册第 32 页 / 原文段落",
+    "text": "Figure 39. TPS40200EVM-001 Component Placement (Viewed from Top)",
+    "curated": false
+  },
+  {
+    "id": "auto-p32-1",
+    "page": 32,
+    "printed_page": "32",
+    "bbox": [
+      54,
+      464.1,
+      558,
+      478.1
+    ],
+    "title": "手册第 32 页 / 原文段落",
+    "text": "Figure 40. TPS40200EVM-001 Top Copper (Viewed from Top)",
+    "curated": false
+  },
+  {
+    "id": "auto-p32-2",
+    "page": 32,
+    "printed_page": "32",
+    "bbox": [
+      54,
+      668.6,
+      558,
+      682.6
+    ],
+    "title": "手册第 32 页 / 原文段落",
+    "text": "Figure 41. TPS40200EVM-001 Bottom Copper (X-Ray View from Top)",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-0",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      100.15303465033605,
+      558,
+      111.01832381193606
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "100",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-1",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      126.55834709833607,
+      558,
+      137.42363625993607
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "90",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-2",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      152.9636595463361,
+      558,
+      163.8289487079361
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "80",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-3",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      179.42793909833608,
+      558,
+      190.2932282599361
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "70",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-4",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      205.8332515463361,
+      558,
+      216.6985407079361
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "60",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-5",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      232.2390145735361,
+      558,
+      265.10847609993607
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "50\n0 0.5 1.0 1.5 2.0 2.5\nLoad Current (A)",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-6",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      384.63809000000003,
+      558,
+      393.805
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "+",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-7",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      99.7289079756481,
+      558,
+      544.614
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "+\n)%(ycneiciffE\n100\nV = 5 V\nOUT\n90",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-8",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      152.61182144764803,
+      558,
+      163.486278916448
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "80",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-9",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      148.2430214262206,
+      558,
+      264.86209312444805
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "70\nV (V)\nIN\n16\n60\n12\n8\n50\n0 0.5 1.0 1.5 2.0 2.5\nLoad Current (A)\n)%(ycneiciffE",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-10",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      74,
+      558,
+      86.10000000000002
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "8.2.1.3 Application Curves",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-11",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      113.53103043964802,
+      558,
+      125.37754690460815
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "VOUT = 3.3 V",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-12",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      189.57675130364805,
+      558,
+      229.008066286048
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "VIN (V)\n16\n12\n8",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-13",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      283.08,
+      558,
+      296.26
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "Figure 42. Full-Load Efficiency at 5.0 V Figure 43. Full-Load Efficiency at 3.3 V\nOUT OUT",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-14",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      312.0,
+      558,
+      353.90000000000003
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "8.2.2 18 V - 50 V Input, 16 V at 1-A Output\nThis is an example of using the TPS40200 in a higher voltage application. The output voltage is 16 V at 1 A with\nan 18 V to 50 V input. Some of the test results are shown below.",
+    "curated": false
+  },
+  {
+    "id": "auto-p33-15",
+    "page": 33,
+    "printed_page": "33",
+    "bbox": [
+      54,
+      669.4,
+      558,
+      684.77
+    ],
+    "title": "手册第 33 页 / 原文段落",
+    "text": "Figure 44. Buck Converter. V = 18 V to 50 V; V = 16 V @ 1 A\nIN OUT",
+    "curated": false
+  },
+  {
+    "id": "auto-p34-0",
+    "page": 34,
+    "printed_page": "34",
+    "bbox": [
+      54,
+      278.86170018950406,
+      558,
+      443.908408415104
+    ],
+    "title": "手册第 34 页 / 原文段落",
+    "text": "Load Current (A)\n)%(ycneiciffE\n100 16.50",
+    "curated": false
+  },
+  {
+    "id": "auto-p34-1",
+    "page": 34,
+    "printed_page": "34",
+    "bbox": [
+      54,
+      295.83531250950404,
+      558,
+      338.224484035904
+    ],
+    "title": "手册第 34 页 / 原文段落",
+    "text": "16.45\n95\n16.40\n90\n16.35",
+    "curated": false
+  },
+  {
+    "id": "auto-p34-2",
+    "page": 34,
+    "printed_page": "34",
+    "bbox": [
+      54,
+      344.324197213504,
+      558,
+      355.826571080704
+    ],
+    "title": "手册第 34 页 / 原文段落",
+    "text": "85 16.30",
+    "curated": false
+  },
+  {
+    "id": "auto-p34-3",
+    "page": 34,
+    "printed_page": "34",
+    "bbox": [
+      54,
+      319.59853259366616,
+      558,
+      443.662955395904
+    ],
+    "title": "手册第 34 页 / 原文段落",
+    "text": "16.25\n80\nV (V) 16.20\nIN\n75 24\n16.15\n48\n70 16.10\n0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0\nLoad Current (A)\n)V(egatloVtuptuO",
+    "curated": false
+  },
+  {
+    "id": "auto-p34-4",
+    "page": 34,
+    "printed_page": "34",
+    "bbox": [
+      54,
+      74,
+      558,
+      86.10000000000002
+    ],
+    "title": "手册第 34 页 / 原文段落",
+    "text": "8.2.2.1 Design Requirements",
+    "curated": false
+  },
+  {
+    "id": "auto-p34-5",
+    "page": 34,
+    "printed_page": "34",
+    "bbox": [
+      54,
+      94.0,
+      558,
+      177.15999999999997
+    ],
+    "title": "手册第 34 页 / 原文段落",
+    "text": "Table 3. Design Parameters\nPARAMETER MIN NOM MAX UNIT\nV Input Voltage 18 50\nIN\nV\nV Output Voltage 16\nOUT\nI Output Current 1\nOUT\nA\nI Short circuit current trip point 2\nSCP",
+    "curated": false
+  },
+  {
+    "id": "auto-p34-6",
+    "page": 34,
+    "printed_page": "34",
+    "bbox": [
+      54,
+      177.17999999999995,
+      558,
+      190.36
+    ],
+    "title": "手册第 34 页 / 原文段落",
+    "text": "F Switching Frequency 200 kHz\nS",
+    "curated": false
+  },
+  {
+    "id": "auto-p34-7",
+    "page": 34,
+    "printed_page": "34",
+    "bbox": [
+      54,
+      201.10000000000002,
+      558,
+      243.0
+    ],
+    "title": "手册第 34 页 / 原文段落",
+    "text": "8.2.2.2 Detailed Design Procedures\nUsing the design parameters stated in Table 3, follow the detailed design procedures listed under Detailed\nDesign Procedure.",
+    "curated": false
+  },
+  {
+    "id": "auto-p34-8",
+    "page": 34,
+    "printed_page": "34",
+    "bbox": [
+      54,
+      250.89999999999998,
+      558,
+      264.9
+    ],
+    "title": "手册第 34 页 / 原文段落",
+    "text": "8.2.2.3 Application Curves",
+    "curated": false
+  },
+  {
+    "id": "auto-p34-9",
+    "page": 34,
+    "printed_page": "34",
+    "bbox": [
+      54,
+      379.64666793350403,
+      558,
+      408.128986717504
+    ],
+    "title": "手册第 34 页 / 原文段落",
+    "text": "VIN (V)\n24\n48",
+    "curated": false
+  },
+  {
+    "id": "auto-p34-10",
+    "page": 34,
+    "printed_page": "34",
+    "bbox": [
+      54,
+      461.88,
+      558,
+      483.88
+    ],
+    "title": "手册第 34 页 / 原文段落",
+    "text": "Figure 45. Efficiency vs. Load Figure 46. 17604 Load Regulation, Two Input Voltage\nExtremes",
+    "curated": false
+  },
+  {
+    "id": "auto-p35-0",
+    "page": 35,
+    "printed_page": "35",
+    "bbox": [
+      54,
+      74,
+      558,
+      147.0
+    ],
+    "title": "手册第 35 页 / 原文段落",
+    "text": "8.2.3 Wide Input Voltage Led Constant Current Driver\nThis application uses the TPS40200 as a buck controller that drives a string of LED diodes. The feedback point\nfor this circuit is a sense resistor in series with this string. The low 0.7 V reference minimizes power wasted in\nthis resistor, and maintains the LED current at a value given by 0.7/R . As the input voltage is varied, the\nSENSE\nduty cycle changes to maintain the LED current at a constant value so that the light intensity does not change\nwith large input voltage variations.",
+    "curated": false
+  },
+  {
+    "id": "auto-p35-1",
+    "page": 35,
+    "printed_page": "35",
+    "bbox": [
+      54,
+      199.44320000000005,
+      558,
+      206.72000000000003
+    ],
+    "title": "手册第 35 页 / 原文段落",
+    "text": "+",
+    "curated": false
+  },
+  {
+    "id": "auto-p35-2",
+    "page": 35,
+    "printed_page": "35",
+    "bbox": [
+      54,
+      286.6082,
+      558,
+      293.885
+    ],
+    "title": "手册第 35 页 / 原文段落",
+    "text": "+",
+    "curated": false
+  },
+  {
+    "id": "auto-p35-3",
+    "page": 35,
+    "printed_page": "35",
+    "bbox": [
+      54,
+      414.5,
+      558,
+      428.5
+    ],
+    "title": "手册第 35 页 / 原文段落",
+    "text": "Figure 47. Wide-Input Voltage Range LED Driver",
+    "curated": false
+  },
+  {
+    "id": "auto-p35-4",
+    "page": 35,
+    "printed_page": "35",
+    "bbox": [
+      54,
+      439.40000000000003,
+      558,
+      453.40000000000003
+    ],
+    "title": "手册第 35 页 / 原文段落",
+    "text": "8.2.3.1 Design Requirements",
+    "curated": false
+  },
+  {
+    "id": "auto-p35-5",
+    "page": 35,
+    "printed_page": "35",
+    "bbox": [
+      54,
+      461.3,
+      558,
+      544.46
+    ],
+    "title": "手册第 35 页 / 原文段落",
+    "text": "Table 4. Design Parameters\nPARAMETER MIN NOM MAX UNIT\nV Input Voltage 12 30 V\nIN\nI Output Voltage 0.25 AA\nLED\nI Short circuit current trip point 3.3 A\nSCP\nF Switching Frequency 300 kHz\nS",
+    "curated": false
+  },
+  {
+    "id": "auto-p36-0",
+    "page": 36,
+    "printed_page": "36",
+    "bbox": [
+      54,
+      149.703574,
+      558,
+      160.71297400000003
+    ],
+    "title": "手册第 36 页 / 原文段落",
+    "text": "100",
+    "curated": false
+  },
+  {
+    "id": "auto-p36-1",
+    "page": 36,
+    "printed_page": "36",
+    "bbox": [
+      54,
+      176.6633740000001,
+      558,
+      187.67277400000012
+    ],
+    "title": "手册第 36 页 / 原文段落",
+    "text": "90",
+    "curated": false
+  },
+  {
+    "id": "auto-p36-2",
+    "page": 36,
+    "printed_page": "36",
+    "bbox": [
+      54,
+      203.62317400000006,
+      558,
+      214.6325740000001
+    ],
+    "title": "手册第 36 页 / 原文段落",
+    "text": "80",
+    "curated": false
+  },
+  {
+    "id": "auto-p36-3",
+    "page": 36,
+    "printed_page": "36",
+    "bbox": [
+      54,
+      230.58297400000004,
+      558,
+      241.59237400000006
+    ],
+    "title": "手册第 36 页 / 原文段落",
+    "text": "70",
+    "curated": false
+  },
+  {
+    "id": "auto-p36-4",
+    "page": 36,
+    "printed_page": "36",
+    "bbox": [
+      54,
+      257.542774,
+      558,
+      268.55217400000004
+    ],
+    "title": "手册第 36 页 / 原文段落",
+    "text": "60",
+    "curated": false
+  },
+  {
+    "id": "auto-p36-5",
+    "page": 36,
+    "printed_page": "36",
+    "bbox": [
+      54,
+      199.09388317487605,
+      558,
+      304.498694
+    ],
+    "title": "手册第 36 页 / 原文段落",
+    "text": "50\n10 15 20 25 30\n)%(ycneiciffE",
+    "curated": false
+  },
+  {
+    "id": "auto-p36-6",
+    "page": 36,
+    "printed_page": "36",
+    "bbox": [
+      54,
+      84.0,
+      558,
+      125.89999999999998
+    ],
+    "title": "手册第 36 页 / 原文段落",
+    "text": "8.2.3.2 Detailed Design Procedures\nUsing the design parameters stated in Table 4, follow the detailed design procedures listed under Detailed\nDesign Procedure.",
+    "curated": false
+  },
+  {
+    "id": "auto-p36-7",
+    "page": 36,
+    "printed_page": "36",
+    "bbox": [
+      54,
+      133.80000000000007,
+      558,
+      147.80000000000007
+    ],
+    "title": "手册第 36 页 / 原文段落",
+    "text": "8.2.3.3 Application Curve",
+    "curated": false
+  },
+  {
+    "id": "auto-p36-8",
+    "page": 36,
+    "printed_page": "36",
+    "bbox": [
+      54,
+      302.475854,
+      558,
+      326.70000000000005
+    ],
+    "title": "手册第 36 页 / 原文段落",
+    "text": "Input Voltage (V)\nFigure 48. Efficiency vs Input Voltage",
+    "curated": false
+  },
+  {
+    "id": "auto-p37-0",
+    "page": 37,
+    "printed_page": "37",
+    "bbox": [
+      54,
+      74,
+      558,
+      88.51999999999998
+    ],
+    "title": "手册第 37 页 / 原文段落",
+    "text": "9 Power Supply Recommendations",
+    "curated": false
+  },
+  {
+    "id": "auto-p37-1",
+    "page": 37,
+    "printed_page": "37",
+    "bbox": [
+      54,
+      94.10000000000002,
+      558,
+      141.10000000000002
+    ],
+    "title": "手册第 37 页 / 原文段落",
+    "text": "The TPS40200 is designed to operate from an input voltage supply range between 4.5 V and 52 V. This input\nsupply should be well regulated. If the input supply is located more than a few inches from the buck power stage\ncontrolled by the TPS40200, additional bulk capacitance may be required in addition to the ceramic-bypass\ncapacitors. An electrolytic capacitor with a value of 100 uF is a typical choice.",
+    "curated": false
+  },
+  {
+    "id": "auto-p37-2",
+    "page": 37,
+    "printed_page": "37",
+    "bbox": [
+      54,
+      155.31999999999994,
+      558,
+      171.31999999999994
+    ],
+    "title": "手册第 37 页 / 原文段落",
+    "text": "10 Layout",
+    "curated": false
+  },
+  {
+    "id": "auto-p37-3",
+    "page": 37,
+    "printed_page": "37",
+    "bbox": [
+      54,
+      179.01,
+      558,
+      311.8
+    ],
+    "title": "手册第 37 页 / 原文段落",
+    "text": "10.1 Layout Guidelines\n• Keep the AC current loops as short as possible. For the maximum effectiveness from C3, place it near the\nVDD pin of the controller and design the input AC loop consisting of C1-R -Q1-D1 to be as short as\nSENSE\npossible. Excessive high frequency noise on VDD during switching degrades overall regulation as the load\nincreases.\n• Keep the output loop A (D1-L1-C2) as small as possible. A larger loop can degrade the application output\nnoise performance.\n• Traces carrying large AC currents should NOT be connected through a ground plane. Instead, use PCB\ntraces on the top layer to conduct the AC current and use the ground plane as a noise shield. Split the ground\nplane as necessary to keep noise away from the TPS40200 and noise sensitive areas such as feedback\nresistors R6, and R10.",
+    "curated": false
+  },
+  {
+    "id": "auto-p37-4",
+    "page": 37,
+    "printed_page": "37",
+    "bbox": [
+      54,
+      311.0,
+      558,
+      386.6
+    ],
+    "title": "手册第 37 页 / 原文段落",
+    "text": "• Keep the SW node as physically small as possible to minimize parasitic capacitance and to minimize radiated\nemissions.\n• For good output voltage regulation, Kelvin connections should be brought from the load to R6 and R10.\n• The trace from the R6-R10 junction to the TPS40200 should be short and kept away from any noise source\n(such as the SW node).\n• The gate drive trace should be as close as possible to the power FET gate.",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-0",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      100.22926987999995,
+      558,
+      153.10819787999992
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "R3 R1 Input\nC5\nC3\nC6 TPS40200 RSENSE C1",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-1",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      155.49466987999995,
+      558,
+      187.1272978799999
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "1 RC VDD 8\nC4\nQ1\nR5 L1",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-2",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      183.21628987999998,
+      558,
+      223.14259787999993
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "2 SS ISNS 7 Output\nR4\nC2",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-3",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      214.66336988,
+      558,
+      248.73589787999992
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "3 COMP GDRV 6\nD1\nC7\nC8 Ground",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-4",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      244.24816987999998,
+      558,
+      256.4533978799999
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "4 FB GND 5",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-5",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      262.87726988,
+      558,
+      289.85239787999996
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "R8\nR9",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-6",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      303.3727698799999,
+      558,
+      326.84329787999997
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "C9\nR6 R10",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-7",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      364.1136806899999,
+      558,
+      470.63989788
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "UDG-07045\nInput\nC5 R3\nC6 RC VDD C4 R4\nSS ISEN R SENSE C1\nR5\nCOMP GDRV\nFB GND\nQ1\nL1\nOutput",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-8",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      488.41834987999994,
+      558,
+      521.15968788
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "D1 C2\nGround",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-9",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      444.8650446388424,
+      558,
+      565.51356888
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "Kelvin Voltage Sense\n8C 7C",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-10",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      471.78553987999993,
+      558,
+      485.85367788
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "R8 R6",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-11",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      491.16829987999995,
+      558,
+      521.6982
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "R9\nR10 9C",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-12",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      74,
+      558,
+      87.30999999999995
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "10.2 Layout Example",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-13",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      379.35076988,
+      558,
+      407.74546788
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "C3 R1\nTPS40200",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-14",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      424.14916988,
+      558,
+      461.99053788
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "High current\nPower stage components\nSwitch node",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-15",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      494.18428988,
+      558,
+      516.2360578800001
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "Low current Control\nComponents",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-16",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      524.56702988,
+      558,
+      536.77225788
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "Kelvin Ground",
+    "curated": false
+  },
+  {
+    "id": "auto-p38-17",
+    "page": 38,
+    "printed_page": "38",
+    "bbox": [
+      54,
+      571.3,
+      558,
+      585.3
+    ],
+    "title": "手册第 38 页 / 原文段落",
+    "text": "Figure 49. PC Board Layout Recommendations",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-0",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      74,
+      558,
+      88.51999999999998
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "11 Device and Documentation Support",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-1",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      99.30999999999995,
+      558,
+      114.30999999999995
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "11.1 Device Support",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-2",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      122.0,
+      558,
+      136.0
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "11.1.1 Related Products",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-3",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      145.07999999999993,
+      558,
+      249.4799999999999
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "DEVICE NUMBER DESCRIPTION\nTPS4007\nLow Input Synchronous Buck Controller\nTPS4009\nTL5001 Wide Input Range Controller\nTPS40057 Wide input (8V to 40V) Synchronous Buck Controller\nTPS40190 Low Pin Count Synchronous Buck Controller\nTPS40192\n– 4.5 V to 18 V Low Pin Count Synchronous Buck Controller\nTPS40193",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-4",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      261.4,
+      558,
+      325.3
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "11.1.2 Third-Party Products Disclaimer\nTI'S PUBLICATION OF INFORMATION REGARDING THIRD-PARTY PRODUCTS OR SERVICES DOES NOT\nCONSTITUTE AN ENDORSEMENT REGARDING THE SUITABILITY OF SUCH PRODUCTS OR SERVICES\nOR A WARRANTY, REPRESENTATION OR ENDORSEMENT OF SUCH PRODUCTS OR SERVICES, EITHER\nALONE OR IN COMBINATION WITH ANY TI PRODUCT OR SERVICE.",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-5",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      333.41,
+      558,
+      348.41
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "11.2 Documentation Support",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-6",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      356.1,
+      558,
+      448.5
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "11.2.1 Related Documentation\n• Under the Hood of Low Voltage DC/DC Converters – SEM1500 Topic 5 – 2002 Seminar Series\n• Understanding Buck Power Stages in Switchmode Power Supplies – SLVA057\n• Design and Application Guide for High Speed MOSFET Gate Drive Circuits- SEM 1400 – 2001 Seminar\nSeries\n• Designing Stable Control Loops - SEM 1400 – 2001 Seminar Series\n• http://power.ti.com",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-7",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      457.51,
+      558,
+      486.90000000000003
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "11.3 Trademarks\nAll trademarks are the property of their respective owners.",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-8",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      489.01,
+      558,
+      504.01
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "11.4 Electrostatic Discharge Caution",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-9",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      509.48,
+      558,
+      530.48
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "These devices have limited built-in ESD protection. The leads should be shorted together or the device placed in conductive foam\nduring storage or handling to prevent electrostatic damage to the MOS gates.",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-10",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      544.51,
+      558,
+      589.6
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "11.5 Glossary\nSLYZ022 — TI Glossary.\nThis glossary lists and explains terms, acronyms, and definitions.",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-11",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      603.82,
+      558,
+      619.82
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "12 Mechanical, Packaging, and Orderable Information",
+    "curated": false
+  },
+  {
+    "id": "auto-p39-12",
+    "page": 39,
+    "printed_page": "39",
+    "bbox": [
+      54,
+      625.4,
+      558,
+      661.4
+    ],
+    "title": "手册第 39 页 / 原文段落",
+    "text": "The following pages include mechanical, packaging, and orderable information. This information is the most\ncurrent data available for the designated devices. This data is subject to change without notice and revision of\nthis document. For browser-based versions of this data sheet, refer to the left-hand navigation.",
+    "curated": false
+  },
+  {
+    "id": "auto-p40-0",
+    "page": 40,
+    "printed_page": "40",
+    "bbox": [
+      54,
+      97.89899985,
+      558,
+      112.89899985
+    ],
+    "title": "手册第 40 页 / 原文段落",
+    "text": "PACKAGING INFORMATION",
+    "curated": false
+  },
+  {
+    "id": "auto-p40-1",
+    "page": 40,
+    "printed_page": "40",
+    "bbox": [
+      54,
+      122.91499985999997,
+      558,
+      276.01499967
+    ],
+    "title": "手册第 40 页 / 原文段落",
+    "text": "Orderable part number Status Material type Package | Pins Package qty | Carrier RoHS Lead finish/ MSL rating/ Op temp (°C) Part marking\n(1) (2) (3) Ball material Peak reflow (6)\n(4) (5)\nTPS40200D Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-1-260C-UNLIM -40 to 85 40200\nTPS40200D.A Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-1-260C-UNLIM -40 to 85 40200\nTPS40200DG4 Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-1-260C-UNLIM -40 to 85 40200\nTPS40200DR Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 40200\nTPS40200DR.A Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 40200\nTPS40200DRBR Active Production SON (DRB) | 8 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 4200\nTPS40200DRBR.A Active Production SON (DRB) | 8 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 4200\nTPS40200DRBT Active Production SON (DRB) | 8 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 4200\nTPS40200DRBT.A Active Production SON (DRB) | 8 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 4200",
+    "curated": false
+  },
+  {
+    "id": "auto-p40-2",
+    "page": 40,
+    "printed_page": "40",
+    "bbox": [
+      54,
+      277.51499967,
+      558,
+      316.51499967
+    ],
+    "title": "手册第 40 页 / 原文段落",
+    "text": "TPS40200DRG4 Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 40200\nTPS40200GDR Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 40200\nTPS40200GDR.A Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 40200",
+    "curated": false
+  },
+  {
+    "id": "auto-p40-3",
+    "page": 40,
+    "printed_page": "40",
+    "bbox": [
+      54,
+      323.57799999,
+      558,
+      338.17600001
+    ],
+    "title": "手册第 40 页 / 原文段落",
+    "text": "(1) Status: For more details on status, see our product life cycle.",
+    "curated": false
+  },
+  {
+    "id": "auto-p40-4",
+    "page": 40,
+    "printed_page": "40",
+    "bbox": [
+      54,
+      350.32599999,
+      558,
+      384.12399982
+    ],
+    "title": "手册第 40 页 / 原文段落",
+    "text": "(2) Material type: When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,\nreliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional\nwaiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.",
+    "curated": false
+  },
+  {
+    "id": "auto-p40-5",
+    "page": 40,
+    "printed_page": "40",
+    "bbox": [
+      54,
+      396.27399999,
+      558,
+      410.87200000999997
+    ],
+    "title": "手册第 40 页 / 原文段落",
+    "text": "(3) RoHS values: Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.",
+    "curated": false
+  },
+  {
+    "id": "auto-p40-6",
+    "page": 40,
+    "printed_page": "40",
+    "bbox": [
+      54,
+      423.02199999000004,
+      558,
+      447.21999944000004
+    ],
+    "title": "手册第 40 页 / 原文段落",
+    "text": "(4) Lead finish/Ball material: Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum\ncolumn width.",
+    "curated": false
+  },
+  {
+    "id": "auto-p40-7",
+    "page": 40,
+    "printed_page": "40",
+    "bbox": [
+      54,
+      459.36999999,
+      558,
+      483.56799944
+    ],
+    "title": "手册第 40 页 / 原文段落",
+    "text": "(5) MSL rating/Peak reflow: The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.\nRefer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.",
+    "curated": false
+  },
+  {
+    "id": "auto-p40-8",
+    "page": 40,
+    "printed_page": "40",
+    "bbox": [
+      54,
+      495.71799999,
+      558,
+      510.31600001
+    ],
+    "title": "手册第 40 页 / 原文段落",
+    "text": "(6) Part marking: There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.",
+    "curated": false
+  },
+  {
+    "id": "auto-p40-9",
+    "page": 40,
+    "printed_page": "40",
+    "bbox": [
+      54,
+      522.3159998599999,
+      558,
+      543.91600024
+    ],
+    "title": "手册第 40 页 / 原文段落",
+    "text": "Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a \"~\" will appear on a part. If a line is indented then it is a continuation of the previous line and the two\ncombined represent the entire part marking for that device.",
+    "curated": false
+  },
+  {
+    "id": "auto-p40-10",
+    "page": 40,
+    "printed_page": "40",
+    "bbox": [
+      54,
+      565.65599948,
+      558,
+      577.65599948
+    ],
+    "title": "手册第 40 页 / 原文段落",
+    "text": "Addendum-Page 1",
+    "curated": false
+  },
+  {
+    "id": "abs",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      98,
+      558,
+      264
+    ],
+    "title": "6.1 绝对最大额定值",
+    "aliases": [
+      "绝对最大",
+      "absolute maximum",
+      "stress ratings",
+      "引脚极限"
+    ],
+    "summary": "绝对最大额定值描述应力限制，不代表在这些条件下保证功能正常。",
+    "context_bboxes": [],
+    "curated": true,
+    "text": "6.1 Absolute Maximum Ratings\nover operating free-air temperature range (unless otherwise noted) (1)\nMIN MAX UNIT\nV , ISNS –0.3 52\nDD\nInput voltage range RC, FB –0.3 5.5 V\nSS –0.3 9.0\nCOMP –0.3 9.0\nOutput voltage range V\nGDRV V –10 V\nIN IN\nT Operating Junction Temperature –40 125\nJ\n°C\nLead temperature 1,6 mm (1/16 inch) from case for 10 seconds 260\n(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings\nonly, which do not imply functional operation of the device at these or any other conditions beyond those indicated under Recommended\nOperating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.",
+    "context": ""
+  },
+  {
+    "id": "recommended",
+    "page": 4,
+    "printed_page": "4",
+    "bbox": [
+      54,
+      395,
+      558,
+      462
+    ],
+    "title": "6.3 推荐工作条件",
+    "aliases": [
+      "输入电压",
+      "供电范围",
+      "VDD",
+      "VIN",
+      "工作温度",
+      "结温",
+      "TJ",
+      "recommended operating"
+    ],
+    "summary": "推荐 VDD 为 4.5–52 V，推荐结温 TJ 为 −40–125 °C。范围内只表示满足该项限制。",
+    "context_bboxes": [],
+    "curated": true,
+    "text": "6.3 Recommended Operating Conditions\nover operating free-air temperature range (unless otherwise noted)\nMIN MAX UNIT\nV Input voltage 4.5 52 V\nDD\nT Operating temperature range –40 125 °C\nJ",
+    "context": ""
+  },
+  {
+    "id": "reference",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      114,
+      558,
+      181
+    ],
+    "title": "6.5 反馈参考电压 VFB",
+    "aliases": [
+      "VFB",
+      "反馈电压",
+      "反馈参考",
+      "基准电压",
+      "reference",
+      "Feedback voltage",
+      "温漂"
+    ],
+    "summary": "VFB 的典型值是 696 mV；上下限取决于测试条件，必须逐行读取。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true,
+    "text": "VOLTAGE REFERENCE\nCOMP = FB, T = 25°C 689 696 702\nA\nT = 25°C 686 696 703\nA\nV Feedback voltage mV\nFB\n4.5 < V < 52 –40°C < T < 85°C 679 696 708\nDD A\n–40°C < T < 125°C 679 696 710\nA",
+    "context": "6.5 Electrical Characteristics\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT"
+  },
+  {
+    "id": "gate",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      181,
+      558,
+      233
+    ],
+    "title": "6.5 栅极驱动",
+    "aliases": [
+      "GDRV",
+      "VGATE",
+      "Isrc",
+      "Isnk",
+      "栅极",
+      "驱动电流",
+      "gate driver",
+      "拉电流",
+      "灌电流"
+    ],
+    "summary": "驱动输出面向外部 P 沟道 MOSFET；拉高和拉低电流的最小值不同，表格未给最大值。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true,
+    "text": "GATE DRIVER\nI Gate driver pull-up current 125 300 mA\nsrc\nI Gate driver pull-down current 200 300 mA\nsnk\nV Gate driver output voltage V = (V – V ), for 12 < V < 52 6 8 10 V\nGATE GATE DD GDRV DD",
+    "context": "6.5 Electrical Characteristics\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT"
+  },
+  {
+    "id": "quiescent",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      233,
+      558,
+      260
+    ],
+    "title": "6.5 静态电流 Iqq",
+    "aliases": [
+      "Iqq",
+      "静态电流",
+      "静态功耗",
+      "quiescent",
+      "待机电流"
+    ],
+    "summary": "Iqq 的 1.5 mA 典型值、3.0 mA 最大值适用于驱动不切换等指定测试条件。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true,
+    "text": "QUIESCENT CURRENT\nI Device quiescent current f = 300 kHz, Driver not switching, 4.5 < V < 52 1.5 3.0 mA\nqq OSC DD",
+    "context": "6.5 Electrical Characteristics\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT"
+  },
+  {
+    "id": "uvlo",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      260,
+      558,
+      313
+    ],
+    "title": "6.5 欠压锁定 UVLO",
+    "aliases": [
+      "UVLO",
+      "欠压",
+      "启动阈值",
+      "关断阈值",
+      "迟滞",
+      "turn-on",
+      "turn-off",
+      "hysteresis"
+    ],
+    "summary": "启动阈值典型为 4.25 V；推荐输入下限仍为 4.5 V。关断阈值只列典型值 4.05 V。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true,
+    "text": "UNDERVOLTAGE LOCKOUT (UVLO)\nV Turn-on threshold –40°C < T < 125°C 3.8 4.25 4.5\nUVLO(on) A\nV\nV Turn-off threshold 4.05\nUVLO(off)\nV Hysteresis 110 200 275 mV\nUVLO(HYST)",
+    "context": "6.5 Electrical Characteristics\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT"
+  },
+  {
+    "id": "softstart-values",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      313,
+      558,
+      384
+    ],
+    "title": "6.5 软启动参数",
+    "aliases": [
+      "RSS",
+      "RSS(chg)",
+      "RSS(dchg)",
+      "VSSRST",
+      "软启动电阻",
+      "复位阈值",
+      "soft start resistance"
+    ],
+    "summary": "充电电阻典型为 105 kΩ，放电电阻典型为 305 kΩ；这些是内部参数，具有表内上下限。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true,
+    "text": "SOFT-START\nInternal soft-start pull-up 65 105 170\nR\nSS(chg) resistance\nkΩ\nInternal soft-start pull-down 190 305 485\nR\nSS(dchg) resistance\nV Soft-start reset threshold 100 150 200 mV\nSSRST",
+    "context": "6.5 Electrical Characteristics\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT"
+  },
+  {
+    "id": "current-limit",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      384,
+      558,
+      450
+    ],
+    "title": "6.5 过流保护阈值",
+    "aliases": [
+      "VILIM",
+      "ILIM",
+      "过流阈值",
+      "过流门限",
+      "电流限制",
+      "current limit",
+      "OCDF",
+      "过流占空比"
+    ],
+    "summary": "VILIM 是采样压降阈值而不是输出电流额定值；低温行下限为 55 mV。OCDF 的 2% 在 MAX 列，且仅由设计保证。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ],
+      [
+        54,
+        546,
+        558,
+        558
+      ]
+    ],
+    "curated": true,
+    "text": "OVERCURRENT PROTECTION\n0°C < T < 125°C 65 100 140\nA\nV Overcurrent threshold 4.5 < V < 52 mV\nILIM DD\n–40°C < T < 125°C 55 100 140\nA\nOC Overcurrent duty cycle(1) 2%\nDF\nV Overcurrent reset threshold 100 150 200 mV\nILIM(rst)",
+    "context": "6.5 Electrical Characteristics\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n(1) Ensured by design. Not production tested."
+  },
+  {
+    "id": "oscillator",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      450,
+      558,
+      502
+    ],
+    "title": "6.5 振荡器频率",
+    "aliases": [
+      "fosc",
+      "fsw",
+      "振荡频率",
+      "开关频率",
+      "频率范围",
+      "oscillator frequency",
+      "35kHz",
+      "500kHz"
+    ],
+    "summary": "振荡频率范围为 35–500 kHz，仅由设计保证、未进行生产测试；特定 RC 的频率上下限须另看对应行。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ],
+      [
+        54,
+        546,
+        558,
+        558
+      ]
+    ],
+    "curated": true,
+    "text": "OSCILLATOR\nOscillator frequency range(1) 35 500\nf R = 200 kΩ, C = 470 pF 85 100 115 kHz\nOSC RC RC\nOscillator frequency\nR = 68.1 kΩ, C = 470 pF 255 300 345\nRC RC",
+    "context": "6.5 Electrical Characteristics\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n(1) Ensured by design. Not production tested."
+  },
+  {
+    "id": "line-regulation",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      502,
+      558,
+      529
+    ],
+    "title": "6.5 频率线性调整率",
+    "aliases": [
+      "频率线性调整",
+      "频率线调整",
+      "频率电源调整",
+      "line regulation",
+      "频率随电压"
+    ],
+    "summary": "两行频率线性调整率分别对应 12–52 V 和 4.5–12 V 供电条件，典型值栏为空。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true,
+    "text": "12 V < V < 52 V -9% 0%\nDD\nFrequency line regulation\n4.5 V < V < 12 V –20% 0%\nDD",
+    "context": "6.5 Electrical Characteristics\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT"
+  },
+  {
+    "id": "ramp",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      529,
+      558,
+      542
+    ],
+    "title": "6.5 斜坡幅度 VRMP",
+    "aliases": [
+      "VRMP",
+      "斜坡",
+      "ramp amplitude",
+      "ramp"
+    ],
+    "summary": "斜坡幅度的典型表达式为 VDD/10，不能当成有上下限的数值保证。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        114
+      ]
+    ],
+    "curated": true,
+    "text": "V Ramp amplitude 4.5 V < V < 52 V V ÷10 V\nRMP DD DD",
+    "context": "6.5 Electrical Characteristics\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT"
+  },
+  {
+    "id": "pwm",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      119,
+      558,
+      207
+    ],
+    "title": "6.5 PWM 脉宽、占空比与增益",
+    "aliases": [
+      "tMIN",
+      "最小脉宽",
+      "最小导通",
+      "DMAX",
+      "最大占空比",
+      "KPWM",
+      "调制器增益",
+      "minimum pulse",
+      "duty cycle",
+      "PWM"
+    ],
+    "summary": "最小脉宽列出典型值和最大值；最大占空比列出最小值和典型值，并依赖频率与负载条件。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        119
+      ],
+      [
+        54,
+        290,
+        558,
+        304
+      ]
+    ],
+    "curated": true,
+    "text": "PULSE WIDTH MODULATOR\nMinimum controllable pulse V DD = 12 V 200 400\nt MIN width(2)\nV = 30 V 100 200\nns\nDD\nf = 100 kHz, C = 470 pF 93% 95%\nosc L\nD Maximum duty cycle\nMAX\nf = 300 kHz, C = 470 pF 90% 93%\nosc L\nK Modulator and power stage 8 10 12\nPWM V/V\nDC gain",
+    "context": "Electrical Characteristics (continued)\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n(2) See Figure 21 for for t vs f at various input voltages.\nMIN OSC"
+  },
+  {
+    "id": "amplifier",
+    "page": 6,
+    "printed_page": "6",
+    "bbox": [
+      54,
+      207,
+      558,
+      287
+    ],
+    "title": "6.5 误差放大器",
+    "aliases": [
+      "AOL",
+      "GBWP",
+      "IIB",
+      "ICOMP",
+      "误差放大器",
+      "开环增益",
+      "带宽",
+      "偏置电流",
+      "error amplifier",
+      "gain bandwidth"
+    ],
+    "summary": "误差放大器的开环增益和单位增益带宽仅由设计保证；输出源、灌电流依赖 FB 和 COMP 测试电压。",
+    "context_bboxes": [
+      [
+        54,
+        74,
+        558,
+        119
+      ],
+      [
+        54,
+        290,
+        558,
+        304
+      ]
+    ],
+    "curated": true,
+    "text": "ERROR AMPLIFIER\nI Input bias current 100 250 nA\nIB\nAOL Open loop gain(1) 60 80 dB\nGBWP Unity gain bandwidth(1) 1.5 3 MHz\nI Output source current V = 0.6 V, COMP = 1 V 100 250 μA\nCOMP(src) FB\nI Output sink current V = 1.2 V, COMP = 1 V 1.0 2.5 mA\nCOMP(snk) FB",
+    "context": "Electrical Characteristics (continued)\n–40°C < T = T < 85°C, V = 12 V, f = 100 kHz (unless otherwise noted)\nA J DD OSC\nPARAMETER TEST CONDITIONS MIN TYP MAX UNIT\n(2) See Figure 21 for for t vs f at various input voltages.\nMIN OSC"
+  },
+  {
+    "id": "pins",
+    "page": 3,
+    "printed_page": "3",
+    "bbox": [
+      54,
+      275,
+      558,
+      484
+    ],
+    "title": "5 引脚功能",
+    "aliases": [
+      "引脚",
+      "pin",
+      "COMP",
+      "FB",
+      "GND",
+      "RC",
+      "SS",
+      "ISNS",
+      "接线",
+      "管脚"
+    ],
+    "summary": "RC 接定时网络，SS 接软启动电容，ISNS 与 VDD 间接电流采样电阻；GDRV 驱动外部 P 沟道 MOSFET。",
+    "context_bboxes": [],
+    "curated": true,
+    "text": "Pin Functions\nPIN\nI/O DESCRIPTION\nNAME NO.\nCOMP 3 O Error amplifier output. Connect control loop compensation network from COMP to FB.\nFB 4 I Error amplifier inverting input. Connect feedback resistor network center tap to this pin.\nGND 5 Device ground.\nGDRV 6 O Driver output for external P-channel MOSFET\nCurrent-sense comparator input. Connect a current sense resistor between ISNS and VDD in order to set\nISNS 7 I\ndesired overcurrent threshold.\nSwitching frequency setting RC network. Connect a capacitor from the RC pin to the GND pin and connect a\nresistor from the VDD pin to the RC pin. The device may be synchronized to an external clock by connecting\nRC 1 I\nan open drain output to this pin and pulling it to GND. For mor info on pulse width for synchronization,\nplease refer to the Synchronizing the Oscillator section.\nSoft-start programming pin. Connect capacitor from SS to GND to program soft start time. Pulling this pin\nSS 2 I below 150 mV causes the output switching to stop, placing the device in a shutdown state. The pin also\nfunctions as a restart timer for overcurrent events.\nVDD 8 I System input voltage. Connect local bypass capacitor from VDD to GND.",
+    "context": ""
+  },
+  {
+    "id": "uvlo-mechanism",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      305,
+      558,
+      370
+    ],
+    "title": "7.3.2 欠压锁定机制",
+    "aliases": [
+      "欠压工作原理",
+      "启动迟滞",
+      "UVLO mechanism",
+      "4.3",
+      "4.1"
+    ],
+    "summary": "本节用约 4.3 V 启动、约 4.1 V 关断描述典型机制；精确的电气特性应看第 5 页，推荐工作条件看第 4 页。",
+    "context_bboxes": [],
+    "curated": true,
+    "text": "Undervoltage protection ensures proper startup of the device only when the input voltage has exceeded\nminimum operating voltage. The UVLO level is measured at the VDD pin with respect to GND. Startup voltage is\ntypically 4.3 V with approximately 200 mV of hysteresis. The device shuts off at a nominal 4.1 V. As shown in\nFigure 23, when the input V voltage rises to 4.3 V , the 1.3-V comparator’s threshold voltage is exceeded and\nDD\na RUN signal occurs. Feedback from the output closes the switch, and shunts the 200-kΩ resistor so that an\napproximately 200 mV lower voltage, or 4.1 V, is required before the part shuts down.",
+    "context": ""
+  },
+  {
+    "id": "timing",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      382,
+      558,
+      578
+    ],
+    "title": "7.3.3 RC 定时公式与电流约束",
+    "aliases": [
+      "RRC",
+      "CRC",
+      "定时电阻",
+      "定时电容",
+      "RC公式",
+      "频率计算",
+      "频率公式",
+      "750",
+      "timing",
+      "operating frequency",
+      "0.105"
+    ],
+    "summary": "标称频率估算 fSW=1/(RRC×CRC×0.105)，R 用 Ω、C 用 F；同时满足 VIN/RRC≤750 μA。公式未给出完整容差模型，不能保证实际频率精度。",
+    "context_bboxes": [],
+    "curated": true,
+    "text": "7.3.3 Selecting the Operating Frequency\nThe operating frequency of the controller is determined by an external resistor R that is connected from the RC\nRC\npin to VDD and a capacitor attached from the RC pin to ground. This connection and the two oscillator\ncomparators inside the device, are shown in Figure 24. The oscillator frequency can be calculated in Equation 1.\n1\nf =\nSW R ´ C ´ 0.105\nRC RC (1)\nwhere\nf is the clock frequency\nSW\nR is the timing resistor value in Ω\nRC\nC is the timing capacitor value in F\nRC\nR must be kept large enough that the current through it does not exceed 750 μA when the internal switch\nRC\n(shown in Figure 24) is discharging the timing capacitor. This condition may be expressed by Equation 2.\nV\nIN £ 750 mA\nR\nRC (2)",
+    "context": ""
+  },
+  {
+    "id": "sync",
+    "page": 12,
+    "printed_page": "12",
+    "bbox": [
+      54,
+      587,
+      558,
+      674
+    ],
+    "title": "7.3.4 外部时钟同步",
+    "aliases": [
+      "同步",
+      "外部时钟",
+      "synchronizing",
+      "synchronization",
+      "150mV",
+      "20ns"
+    ],
+    "summary": "同步需要将 RC 拉至 150 mV 以下至少 20 ns，外部时钟高于自由振荡频率；拉低时间还受到上限约束，须完整阅读本节。",
+    "context_bboxes": [],
+    "curated": true,
+    "text": "7.3.4 Synchronizing the Oscillator\nFigure 24 shows the functional diagram of the oscillator. When synchronizing the oscillator to an external clock,\nthe RC pin must be pulled below 150 mV for 20 ns or more. The external clock frequency must be higher than\nthe free running frequency of the converter as well. When synchronizing the controller, if the RC pin is held low\nfor an excessive amount of time, erratic operation may occur. The maximum amount of time that the RC pin\nshould be held low is 50% of a nominal output pulse, or 10% of the period of the synchronization frequency\nwhichever is less.",
+    "context": ""
+  },
+  {
+    "id": "overcurrent-recovery",
+    "page": 14,
+    "printed_page": "14",
+    "bbox": [
+      54,
+      93,
+      558,
+      264
+    ],
+    "title": "7.3.5 过流后的关断与重启",
+    "aliases": [
+      "过流恢复",
+      "过流后",
+      "打嗝",
+      "重启",
+      "过流原理",
+      "故障恢复",
+      "current limit recovery",
+      "hiccup",
+      "overcurrent"
+    ],
+    "summary": "过流触发后关断 MOSFET 并放电软启动电容；软启动电压降至复位阈值以下后重试。持续故障会重复此过程；正文约 100 mV、150 mV 为机制描述，保证界限需查第 5 页。",
+    "context_bboxes": [],
+    "curated": true,
+    "text": "7.3.5 Current Limit Resistor Selection\nAs shown in Figure 28, a resistor in series with the power MOSFET sets the overcurrent protection level. Use a\nlow-inductance resistor to avoid ringing signals and nuisance tripping. When the FET is on and the controller\nsenses 100 mV or more drop from the VDD pin to the ISNS pin, an overcurrent condition is declared. When this\nhappens, the FET is turned off, and as shown in Figure 26, the soft-start capacitor is discharged. When the soft-\nstart capacitor reaches a level below 150 mV, the converter clears the overcurrent condition flag and attempts to\nrestart. If the condition that caused the overcurrent event to occur is still present on the output of the converter\n(see Figure 27), another overcurrent condition is declared and the process repeats indefinitely. Figure 27 shows\nthe soft-start capacitor voltage during an extended output fault condition. The overall duty cycle of current\nconduction during a persistent fault is approximately 2%.\nV\nSS\nTPS40200",
+    "context": ""
+  },
+  {
+    "id": "softstart-mechanism",
+    "page": 17,
+    "printed_page": "17",
+    "bbox": [
+      54,
+      93,
+      558,
+      282
+    ],
+    "title": "7.3.6 软启动机制",
+    "aliases": [
+      "软启动原理",
+      "软启动过程",
+      "延迟启动",
+      "soft-start",
+      "CSS",
+      "软启动时间"
+    ],
+    "summary": "SS 电容控制软启动过程，内部充电电阻形成上升参考。首版只提供机制证据，暂不自动计算软启动时间。",
+    "context_bboxes": [],
+    "curated": true,
+    "text": "7.3.6 Calculating the Soft-Start Time\nAn external capacitor C , connected from the SS pin to ground, controls the soft-start interval. An internal\nSS\ncharging resistor connected to V produces a rising reference voltage which is connected though a 700-mV\nDD\noffset to the reference input of the TPS40200 error amplifier. When the soft-start capacitor voltage (V ) is\nCSS\nbelow 150 mV, there is no switching activity. When V rises above the 700 mV offset, the error amplifier starts\nCSS\nto follow V – 700 mV, and uses this rising voltage as a reference. When V reaches 1.4 V, the internal\nSST CSS\nreference takes over, and further increases have no effect. An advantage of initiating a slow start in this fashion\nis that the controller cannot overshoot because its output follows a scaled version of the controller reference\nvoltage. A conceptual drawing of the circuit that produces these results is shown in Figure 29. A consequence of\nthe 700 mV offset is that the controller does not start switching until V has risen to 700 mV. The output\nCSS\nremains at 0 V during the resulting delay. When V exceeds the 700 mV offset, the TPS40200 output follows\nCSS\nthe soft-start time constant. Once above 1.4 V, the 700-mV internal reference takes over, and normal operation\nbegins.\nVSST TPS40200",
+    "context": ""
+  },
+  {
+    "id": "application-boundary",
+    "page": 19,
+    "printed_page": "19",
+    "bbox": [
+      54,
+      75,
+      558,
+      145
+    ],
+    "title": "8 应用信息的适用范围",
+    "aliases": [
+      "输出电流额定",
+      "额定电流",
+      "最大输出电流",
+      "2.5A",
+      "应用示例",
+      "design example",
+      "output current"
+    ],
+    "summary": "TPS40200 是控制器，应用示例中的负载电流不等于芯片保证的输出电流能力；实际能力取决于外部功率器件等设计。",
+    "context_bboxes": [],
+    "curated": true,
+    "text": "8 Application and Implementation\nNOTE\nInformation in the following applications sections is not part of the TI component\nspecification, and TI does not warrant its accuracy or completeness. TI’s customers are\nresponsible for determining suitability of components for their purposes. Customers should",
+    "context": ""
+  },
+  {
+    "id": "design-note",
+    "page": 5,
+    "printed_page": "5",
+    "bbox": [
+      54,
+      546,
+      558,
+      558
+    ],
+    "title": "6.5 脚注 (1)：设计保证",
+    "aliases": [
+      "设计保证",
+      "生产测试",
+      "production tested",
+      "ensured by design"
+    ],
+    "summary": "脚注 (1) 表示仅由设计保证，未进行生产测试。",
+    "context_bboxes": [],
+    "curated": true,
+    "text": "(1) Ensured by design. Not production tested.",
+    "context": ""
+  }
+]

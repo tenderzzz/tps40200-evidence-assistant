@@ -1,0 +1,207 @@
+{
+  "format_version": "1.0",
+  "result": {
+    "chip_id": "lm2596-adj",
+    "status": "answered",
+    "question": "VFB",
+    "answer": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+    "inputs": {},
+    "parameters": [
+      {
+        "id": "vfb-25",
+        "symbol": "VFB",
+        "name": "反馈基准",
+        "rating": "electrical",
+        "minimum": 1.193,
+        "typical": 1.23,
+        "maximum": 1.267,
+        "unit": "V",
+        "conditions": "TJ = 25°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+        "notes": [],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+      },
+      {
+        "id": "vfb-full",
+        "symbol": "VFB",
+        "name": "反馈基准",
+        "rating": "electrical",
+        "minimum": 1.18,
+        "typical": null,
+        "maximum": 1.28,
+        "unit": "V",
+        "conditions": "−40≤TJ≤125°C；4.5≤VIN≤40 V；0.2≤ILOAD≤3 A；VOUT programmed for 3 V",
+        "notes": [
+          "TYP 只在 TJ=25°C 给出；全温行留空表示未单独给出全温典型值，不否认同组的室温典型值。"
+        ],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+      },
+      {
+        "id": "efficiency",
+        "symbol": "η",
+        "name": "效率",
+        "rating": "electrical",
+        "minimum": null,
+        "typical": 73.0,
+        "maximum": null,
+        "unit": "%",
+        "conditions": "VIN=12 V；VOUT=3 V；ILOAD=3 A；TJ=25°C；Figure 9-13 外部元件",
+        "notes": [
+          "典型效率不保证其他电路、负载或布局下的效率。"
+        ],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ],
+        "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。"
+      }
+    ],
+    "checks": [],
+    "evidence_ids": [
+      "vfb",
+      "vfb-note"
+    ],
+    "hits": [
+      {
+        "evidence_id": "vfb",
+        "score": 106.14313
+      },
+      {
+        "evidence_id": "abs",
+        "score": 104.69665
+      }
+    ],
+    "notices": [
+      "典型值不等于保证上下限；空白表示手册未给出该列数值。各条件行分别有效，不自动合并或插值。",
+      "本页只使用当前TI型号适用行；原文片段可能同时列出其他型号，其数值不会自动转用于当前型号。",
+      "没有提供的测试设置不会默认满足。TA、TJ 与芯片型号分别匹配；多个适用行不自动合并。"
+    ],
+    "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+    "source_revision": "SNVS124G (Rev. G)",
+    "condition_inputs": {
+      "vin": "12 V",
+      "tj": "25 °C",
+      "load_current": "0.5 A",
+      "output_voltage": "3 V"
+    },
+    "applicability": [
+      {
+        "parameter_id": "vfb-25",
+        "status": "applicable",
+        "reasons": [
+          "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+        ],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ]
+      },
+      {
+        "parameter_id": "vfb-full",
+        "status": "applicable",
+        "reasons": [
+          "已提供条件符合此行已整理的表头与行条件；典型值仍只按原表注明的温度有效。"
+        ],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ]
+      },
+      {
+        "parameter_id": "efficiency",
+        "status": "not_evaluated",
+        "reasons": [
+          "此行含未建模的测试设置，请核对原文与脚注；不自动判断全部测试条件。"
+        ],
+        "evidence_ids": [
+          "vfb",
+          "vfb-note"
+        ]
+      }
+    ],
+    "condition_errors": {}
+  },
+  "source": {
+    "doc_id": "lm2596-adj-snvs124g",
+    "chip_id": "lm2596-adj",
+    "manufacturer": "TI",
+    "model": "LM2596-ADJ",
+    "title": "LM2596 SIMPLE SWITCHER Power Converter 150-kHz 3-A Step-Down Voltage Regulator",
+    "revision": "SNVS124G (Rev. G)",
+    "revision_date": "2023-03",
+    "url": "https://www.ti.com/lit/ds/symlink/lm2596.pdf",
+    "downloaded_at": "2026-10-22T14:47:50.489164+00:00",
+    "sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+    "pages": 47,
+    "indexed_core_pages": 35,
+    "pdf_file": "lm2596.pdf",
+    "extraction": {
+      "tool": "pdfplumber",
+      "version": "0.11.10",
+      "x_tolerance": 1
+    },
+    "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+  },
+  "evidence": [
+    {
+      "id": "vfb",
+      "title": "反馈基准",
+      "page": 6,
+      "printed_page": "6",
+      "bbox": [
+        54.0,
+        589.0,
+        558.0,
+        695.0
+      ],
+      "context_bboxes": [
+        [
+          54.0,
+          703.0,
+          558.0,
+          733.0
+        ]
+      ],
+      "text": "7.8 Electrical Characteristics – Adjustable Voltage Version\nSpecifications are for T = 25°C (unless otherwise noted)\nJ\nPARAMETER TEST CONDITIONS MIN(1) TYP(2) MAX(1) UNIT\nSYSTEM PARAMETERS (3) (see Figure 9-13 for test circuit)\n4.5 V ≤ VIN ≤ 40 V, 0.2 A ≤ ILOAD ≤ 3 A 1.23\nVFB Feedback voltage VOUT programmed for 3 V TJ = 25°C 1.193 1.267 V\n(see Figure 9-13 for test circuit) –40°C ≤ TJ ≤ 125°C 1.18 1.28\nη Efficiency VIN = 12 V, VOUT = 3 V, ILOAD = 3 A 73%",
+      "context": "(1) All room temperature limits are 100% production tested. All limits at temperature extremes are specified via correlation using standard\nStatistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).\n(2) Typical numbers are at 25°C and represent the most likely norm.",
+      "aliases": [
+        "反馈基准",
+        "反馈参考电压",
+        "VFB",
+        "VREF",
+        "参考电压"
+      ],
+      "summary": "可调版本 VFB 的典型值为 1.23 V；室温和完整结温范围的保证上下限分别列出，且有输入、负载和输出设置条件。",
+      "curated": true,
+      "context_only": false
+    },
+    {
+      "id": "vfb-note",
+      "title": "系统参数外部元件脚注",
+      "page": 7,
+      "printed_page": "7",
+      "bbox": [
+        54.0,
+        71.0,
+        558.0,
+        93.0
+      ],
+      "context_bboxes": [],
+      "text": "(3) External components such as the catch diode, inductor, input and output capacitors can affect switching regulator system performance.\nWhen the LM2596 is used as shown in Figure 9-13, system performance is shown in the test conditions column.",
+      "context": "",
+      "aliases": [
+        "系统参数外部元件脚注"
+      ],
+      "summary": "系统参数受外部二极管、电感与电容影响；系统性能按 Figure 9-13 测试设置读取。",
+      "curated": true,
+      "context_only": true
+    }
+  ]
+}

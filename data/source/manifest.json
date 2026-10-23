@@ -1,0 +1,18 @@
+{
+  "doc_id": "tps40200-slus659g",
+  "title": "TPS40200 Wide Input Range Non-Synchronous Voltage Mode Controller",
+  "revision": "SLUS659G (Rev. G)",
+  "revision_date": "2014-11",
+  "url": "https://www.ti.com/lit/ds/symlink/tps40200.pdf",
+  "downloaded_at": "2026-10-21T13:03:03.278425+00:00",
+  "sha256": "a3e23ec7367038ecd8f6ddbfc38392fcb87d997352eabb715b573de538a76240",
+  "pages": 52,
+  "indexed_core_pages": 40,
+  "pdf_file": "tps40200-rev-g.pdf",
+  "extraction": {
+    "tool": "pdfplumber",
+    "version": "0.11.10",
+    "x_tolerance": 1
+  },
+  "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+}

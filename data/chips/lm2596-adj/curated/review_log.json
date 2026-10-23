@@ -1,0 +1,10 @@
+{
+  "source_sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+  "review": "Codex 对照固定 PDF 页面整理；尚无独立第三方复核。",
+  "decisions": [
+    "第5页 SD/SS、Delay、Flag 引脚无法与第4页5引脚表对应，排除结构化答案及规则；原文完整保留。工作温度行未明确写 TA/TJ，按原表 Temperature 保存，不据此换算环境温度与结温。",
+    "按温度拆行时，共享的室温典型值放入25°C行；全温保证限值行不伪造全温典型值，原始合并单元格在PDF与raw中保留。"
+  ],
+  "coverage": "适用型号的绝对最大额定值、工作条件和电气特性；NE555 另含开关特性。排除项见 decisions；ESD、热阻和封装不是本轮结构化参数表。",
+  "manual_transcription": true
+}

@@ -1,0 +1,21 @@
+{
+  "doc_id": "lm2596-adj-snvs124g",
+  "chip_id": "lm2596-adj",
+  "manufacturer": "TI",
+  "model": "LM2596-ADJ",
+  "title": "LM2596 SIMPLE SWITCHER Power Converter 150-kHz 3-A Step-Down Voltage Regulator",
+  "revision": "SNVS124G (Rev. G)",
+  "revision_date": "2023-03",
+  "url": "https://www.ti.com/lit/ds/symlink/lm2596.pdf",
+  "downloaded_at": "2026-10-22T14:47:50.489164+00:00",
+  "sha256": "2eec90879908cf711b84d4f0c5d534c3cd12c576d25254b7019247435af4ab0f",
+  "pages": 47,
+  "indexed_core_pages": 35,
+  "pdf_file": "lm2596.pdf",
+  "extraction": {
+    "tool": "pdfplumber",
+    "version": "0.11.10",
+    "x_tolerance": 1
+  },
+  "bbox_convention": "PDF points (x0, top, x1, bottom), top-left origin; page numbers are 1-based"
+}
